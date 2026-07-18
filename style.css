@@ -465,3 +465,38 @@ nav ul li{
     color:#9c27b0;
 
 }
+/* ===== BLOG ===== */
+
+.box img{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+}
+
+.box p{
+
+    color:#555;
+
+    font-size:16px;
+
+    line-height:26px;
+
+    margin-bottom:20px;
+
+}
+
+.box .btn{
+
+    display:inline-block;
+
+    padding:10px 25px;
+
+}
