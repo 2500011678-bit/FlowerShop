@@ -181,16 +181,20 @@ nav ul li a.active::after {
     position: relative;
 
     /*
-    Dùng 100vw để banner phủ toàn bộ chiều rộng màn hình
+    Banner phủ toàn bộ chiều rộng màn hình
     */
 
     width: 100vw;
 
+    max-width: 100vw;
+
     /*
-    Xóa giới hạn chiều rộng nếu có phần tử cha giới hạn
+    Đưa banner ra sát hai mép màn hình
     */
 
-    max-width: none;
+    left: 50%;
+
+    transform: translateX(-50%);
 
     min-height: 650px;
 
@@ -200,13 +204,7 @@ nav ul li a.active::after {
 
     justify-content: flex-start;
 
-    /*
-    Đẩy banner sát mép trái màn hình
-    */
-
-    margin-left: calc(50% - 50vw);
-
-    margin-right: calc(50% - 50vw);
+    margin: 0;
 
     padding: 0;
 
@@ -347,6 +345,8 @@ nav ul li a.active::after {
 
     color: rgba(255, 255, 255, 0.8);
 }
+
+
 /* =====================================================
    ABOUT HOME
 ===================================================== */
@@ -1596,6 +1596,8 @@ footer hr {
         padding: 45px 20px 20px;
     }
 }
+
+
 /* =====================================================
    SEARCH BOX - SHOP HOA
 ===================================================== */
@@ -2043,26 +2045,4 @@ footer hr {
 
         width: 100%;
     }
-}
-/* =====================================================
-   FIX BANNER - XÓA VIỀN TRẮNG HAI BÊN
-===================================================== */
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.hero {
-    width: 100vw;
-    min-width: 100%;
-    margin: 0;
-    padding: 0;
-
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
