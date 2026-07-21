@@ -28,7 +28,6 @@ body {
         #fffdfd,
         #f8fff9
     );
-
     color: #444;
 }
 
@@ -180,21 +179,7 @@ nav ul li a.active::after {
 
     position: relative;
 
-    /*
-    Banner phủ toàn bộ chiều rộng màn hình
-    */
-
-    width: 100vw;
-
-    max-width: 100vw;
-
-    /*
-    Đưa banner ra sát hai mép màn hình
-    */
-
-    left: 50%;
-
-    transform: translateX(-50%);
+    width: 100%;
 
     min-height: 650px;
 
