@@ -1483,3 +1483,65 @@ footer p{
     background:#ff2f73;
 
 }
+/* ============================= */
+/* ĐIỀU CHỈNH NÚT TRONG HERO */
+/* ============================= */
+
+.hero-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 35px;
+}
+
+.hero-btn .btn {
+    width: 250px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border-radius: 35px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+/* Nút Xem Thêm */
+.hero-btn .btn-outline {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid white;
+    color: white;
+}
+
+/* Hiệu ứng khi rê chuột */
+.hero-btn .btn:hover {
+    transform: translateY(-4px);
+}
+
+/* ============================= */
+/* GIAO DIỆN ĐIỆN THOẠI */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .hero-btn {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-btn .btn {
+        width: 220px;
+        height: 55px;
+        font-size: 16px;
+    }
+
+}
