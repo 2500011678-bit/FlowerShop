@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Flower Shop</title>
@@ -14,26 +15,44 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+
     <!-- CSS Bổ sung trực tiếp để sửa lỗi lệch chữ trên Mobile & Máy tính -->
+
     <style>
 
-        /* Tối ưu tổng thể chống vỡ khung */
+        /* ========================================= */
+        /* TỐI ƯU TỔNG THỂ */
+        /* ========================================= */
+
         * {
+
             box-sizing: border-box;
+
         }
+
 
         body {
+
             overflow-x: hidden;
+
             word-wrap: break-word;
+
         }
 
-        /* Đảm bảo hình ảnh co giãn tốt */
+
         img {
+
             max-width: 100%;
+
             height: auto;
+
         }
 
-        /* Tự động căn giữa & co giãn nội dung các section */
+
+        /* ========================================= */
+        /* KHUNG CÁC SECTION */
+        /* ========================================= */
+
         .hero,
         .about-home,
         .service,
@@ -42,13 +61,19 @@
         footer {
 
             width: 100%;
+
             max-width: 1200px;
+
             margin: 0 auto;
+
             padding: 20px;
 
         }
 
-        /* ================= HERO BUTTON ================= */
+
+        /* ========================================= */
+        /* HERO BUTTON */
+        /* ========================================= */
 
         .hero-btn {
 
@@ -64,7 +89,7 @@
 
         }
 
-        /* Hai nút trong Hero */
+
         .hero-btn .btn {
 
             width: 250px;
@@ -91,20 +116,24 @@
 
         }
 
-        /* Nút Mua Hoa Ngay */
+
         .hero-btn .btn:not(.btn-outline) {
 
             background: linear-gradient(
+
                 135deg,
+
                 #ff4f81,
+
                 #ff9d1c
+
             );
 
             color: white;
 
         }
 
-        /* Nút Xem Thêm */
+
         .hero-btn .btn-outline {
 
             background: rgba(255, 255, 255, 0.15);
@@ -115,40 +144,428 @@
 
         }
 
-        /* Hiệu ứng hover */
+
         .hero-btn .btn:hover {
 
             transform: translateY(-4px);
 
         }
 
-        /* ================= MOBILE ================= */
+
+        /* ========================================= */
+        /* ABOUT HOME - GIỚI THIỆU CAO CẤP */
+        /* ========================================= */
+
+        .about-home {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            min-height: 560px;
+
+            margin: 80px auto;
+
+            padding: 60px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 80px;
+
+            background: linear-gradient(
+
+                135deg,
+
+                #fffafa,
+
+                #fff5f7
+
+            );
+
+            border-radius: 30px;
+
+            box-shadow:
+
+                0 20px 50px rgba(150, 70, 90, 0.08);
+
+        }
+
+
+        /* ========================================= */
+        /* ẢNH GIỚI THIỆU */
+        /* ========================================= */
+
+        .about-image {
+
+            position: relative;
+
+            height: 440px;
+
+            border-radius: 24px;
+
+        }
+
+
+        .about-image img {
+
+            position: relative;
+
+            z-index: 1;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 24px;
+
+            box-shadow:
+
+                0 20px 40px rgba(0, 0, 0, 0.15);
+
+            transition: transform 0.5s ease;
+
+        }
+
+
+        .about-image:hover img {
+
+            transform: scale(1.03);
+
+        }
+
+
+        /* Khung trang trí phía sau ảnh */
+
+        .about-image::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 100%;
+
+            top: 18px;
+
+            left: 18px;
+
+            border: 2px solid #f4a1b8;
+
+            border-radius: 24px;
+
+            z-index: 0;
+
+        }
+
+
+        /* ========================================= */
+        /* BADGE 100% HOA TƯƠI */
+        /* ========================================= */
+
+        .about-badge {
+
+            position: absolute;
+
+            right: -25px;
+
+            bottom: 30px;
+
+            z-index: 2;
+
+            width: 155px;
+
+            height: 125px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background: white;
+
+            border-radius: 18px;
+
+            box-shadow:
+
+                0 15px 35px rgba(0, 0, 0, 0.15);
+
+        }
+
+
+        .about-badge strong {
+
+            color: #f24f82;
+
+            font-size: 32px;
+
+            font-weight: 800;
+
+        }
+
+
+        .about-badge span {
+
+            margin-top: 5px;
+
+            color: #555;
+
+            font-size: 14px;
+
+        }
+
+
+        /* ========================================= */
+        /* NỘI DUNG ABOUT */
+        /* ========================================= */
+
+        .about-text {
+
+            text-align: left;
+
+        }
+
+
+        .about-label {
+
+            display: inline-block;
+
+            margin-bottom: 15px;
+
+            color: #f24f82;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .about-text h2 {
+
+            margin: 0 0 22px;
+
+            color: #2d2d2d;
+
+            font-size: 42px;
+
+            line-height: 1.2;
+
+            font-weight: 800;
+
+        }
+
+
+        .about-intro {
+
+            margin-bottom: 30px;
+
+            color: #666;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* ========================================= */
+        /* FEATURES */
+        /* ========================================= */
+
+        .about-features {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 22px;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .about-feature {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 16px;
+
+        }
+
+
+        .about-feature > i {
+
+            width: 45px;
+
+            height: 45px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            background: linear-gradient(
+
+                135deg,
+
+                #ff5d8f,
+
+                #ff9d1c
+
+            );
+
+            border-radius: 50%;
+
+            font-size: 18px;
+
+        }
+
+
+        .about-feature h3 {
+
+            margin: 0 0 5px;
+
+            color: #333;
+
+            font-size: 17px;
+
+        }
+
+
+        .about-feature p {
+
+            margin: 0;
+
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* ========================================= */
+        /* NÚT ABOUT */
+        /* ========================================= */
+
+        .about-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 14px 24px;
+
+            color: white;
+
+            background: linear-gradient(
+
+                135deg,
+
+                #ff4f81,
+
+                #ff9d1c
+
+            );
+
+            border-radius: 30px;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            box-shadow:
+
+                0 8px 20px rgba(255, 79, 129, 0.25);
+
+            transition: all 0.3s ease;
+
+        }
+
+
+        .about-btn:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow:
+
+                0 12px 25px rgba(255, 79, 129, 0.35);
+
+        }
+
+
+        /* ========================================= */
+        /* MOBILE RESPONSIVE */
+        /* ========================================= */
 
         @media (max-width: 768px) {
 
+
             h1 {
+
                 font-size: 1.8rem !important;
+
             }
+
 
             h2 {
+
                 font-size: 1.5rem !important;
+
             }
+
 
             h3 {
+
                 font-size: 1.2rem !important;
+
             }
+
 
             p {
+
                 font-size: 0.95rem !important;
+
             }
 
 
-            /* Bố cục Giới thiệu, Dịch vụ & Sản phẩm tự xếp chồng trên điện thoại */
+            /* Các phần khác */
 
-            .about-home,
             .card,
+
             .products,
+
             .news-box,
+
             .footer-content {
 
                 display: flex !important;
@@ -162,7 +579,7 @@
             }
 
 
-            /* Điều chỉnh riêng 2 nút Hero trên điện thoại */
+            /* Nút Hero */
 
             .hero-btn {
 
@@ -174,6 +591,7 @@
 
             }
 
+
             .hero-btn .btn {
 
                 width: 220px;
@@ -184,17 +602,162 @@
 
             }
 
+
+            /* About */
+
+            .about-home {
+
+                width: calc(100% - 30px);
+
+                margin: 50px auto;
+
+                padding: 30px 20px;
+
+                display: flex !important;
+
+                flex-direction: column !important;
+
+                gap: 40px;
+
+                border-radius: 22px;
+
+            }
+
+
+            .about-image {
+
+                width: 100%;
+
+                height: 300px;
+
+            }
+
+
+            .about-image::before {
+
+                top: 10px;
+
+                left: 10px;
+
+            }
+
+
+            .about-badge {
+
+                right: -8px;
+
+                bottom: 20px;
+
+                width: 130px;
+
+                height: 100px;
+
+            }
+
+
+            .about-badge strong {
+
+                font-size: 26px;
+
+            }
+
+
+            .about-badge span {
+
+                font-size: 12px;
+
+            }
+
+
+            .about-text {
+
+                text-align: center;
+
+            }
+
+
+            .about-text h2 {
+
+                font-size: 32px !important;
+
+            }
+
+
+            .about-intro {
+
+                font-size: 15px !important;
+
+            }
+
+
+            .about-feature {
+
+                text-align: left;
+
+            }
+
+
+            .about-btn {
+
+                font-size: 14px;
+
+            }
+
+        }
+
+
+        /* ========================================= */
+        /* TABLET */
+        /* ========================================= */
+
+        @media (min-width: 769px) and (max-width: 900px) {
+
+
+            .about-home {
+
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+
+                padding: 45px;
+
+            }
+
+
+            .about-image {
+
+                height: 400px;
+
+            }
+
+
+            .about-text {
+
+                text-align: center;
+
+            }
+
+
+            .about-feature {
+
+                text-align: left;
+
+            }
+
         }
 
     </style>
 
 </head>
 
+
 <body>
+
 
 <!-- ================= HEADER ================= -->
 
 <header>
+
 
     <a href="index.html" class="logo">
 
@@ -205,7 +768,9 @@
 
     <nav>
 
+
         <ul>
+
 
             <li>
 
@@ -272,9 +837,12 @@
 
             </li>
 
+
         </ul>
 
+
     </nav>
+
 
 </header>
 
@@ -283,7 +851,9 @@
 
 <section class="hero">
 
+
     <div class="hero-content">
+
 
         <h1>
 
@@ -305,6 +875,7 @@
 
         <div class="hero-btn">
 
+
             <a href="shop.html" class="btn">
 
                 Mua Hoa Ngay 🌸
@@ -318,9 +889,12 @@
 
             </a>
 
+
         </div>
 
+
     </div>
+
 
 </section>
 
@@ -329,50 +903,158 @@
 
 <section class="about-home">
 
+
+    <div class="about-image">
+
+
+        <img src="images/about.jpg" alt="Flower Shop">
+
+
+        <div class="about-badge">
+
+
+            <strong>100%</strong>
+
+
+            <span>
+
+                Hoa tươi mỗi ngày
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
     <div class="about-text">
+
+
+        <span class="about-label">
+
+
+            🌸 VỀ CHÚNG TÔI
+
+
+        </span>
+
 
         <h2>
 
-            Về Flower Shop
+
+            Mang yêu thương<br>
+
+            đến mọi khoảnh khắc
+
 
         </h2>
 
 
-        <p>
-
-            Flower Shop chuyên cung cấp hoa tươi cao cấp với nhiều mẫu mã đẹp,
-
-            phù hợp cho mọi dịp như sinh nhật, khai trương, lễ cưới,
-
-            ngày lễ, sự kiện và những khoảnh khắc đáng nhớ.
+        <p class="about-intro">
 
 
-            <br><br>
+            Flower Shop chuyên cung cấp hoa tươi cao cấp
 
+            với những thiết kế tinh tế, phù hợp cho mọi
 
-            Chúng tôi luôn lựa chọn những bông hoa tươi nhất,
+            dịp đặc biệt trong cuộc sống.
 
-            thiết kế tinh tế và giao hàng nhanh chóng,
-
-            giúp bạn gửi trọn yêu thương đến người thân và bạn bè.
 
         </p>
 
 
-        <a href="gioithieu.html" class="btn2">
+        <div class="about-features">
 
-            Xem thêm
+
+            <div class="about-feature">
+
+
+                <i class="fa-solid fa-leaf"></i>
+
+
+                <div>
+
+
+                    <h3>
+
+
+                        Hoa tươi tuyển chọn
+
+
+                    </h3>
+
+
+                    <p>
+
+
+                        Những bông hoa tươi đẹp,
+
+                        được lựa chọn kỹ càng mỗi ngày.
+
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="about-feature">
+
+
+                <i class="fa-solid fa-heart"></i>
+
+
+                <div>
+
+
+                    <h3>
+
+
+                        Thiết kế đầy yêu thương
+
+
+                    </h3>
+
+
+                    <p>
+
+
+                        Mỗi bó hoa là một món quà
+
+                        mang theo những cảm xúc đặc biệt.
+
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <a href="gioithieu.html" class="about-btn">
+
+
+            Khám phá Flower Shop
+
+
+            <i class="fa-solid fa-arrow-right"></i>
+
 
         </a>
 
-    </div>
-
-
-    <div class="about-image">
-
-        <img src="images/about.jpg" alt="Flower Shop">
 
     </div>
+
 
 </section>
 
@@ -380,6 +1062,7 @@
 <!-- ================= DỊCH VỤ ================= -->
 
 <section class="service">
+
 
     <h2>
 
@@ -390,7 +1073,9 @@
 
     <div class="card">
 
+
         <div class="box">
+
 
             <i class="fa-solid fa-gift"></i>
 
@@ -412,10 +1097,12 @@
 
             </p>
 
+
         </div>
 
 
         <div class="box">
+
 
             <i class="fa-solid fa-truck-fast"></i>
 
@@ -437,10 +1124,12 @@
 
             </p>
 
+
         </div>
 
 
         <div class="box">
+
 
             <i class="fa-solid fa-building"></i>
 
@@ -464,10 +1153,12 @@
 
             </p>
 
+
         </div>
 
 
         <div class="box">
+
 
             <i class="fa-solid fa-book-open"></i>
 
@@ -491,9 +1182,12 @@
 
             </p>
 
+
         </div>
 
+
     </div>
+
 
 </section>
 
@@ -501,6 +1195,7 @@
 <!-- ================= SẢN PHẨM NỔI BẬT ================= -->
 
 <section class="featured">
+
 
     <h2>
 
@@ -511,7 +1206,9 @@
 
     <div class="products">
 
+
         <div class="product-card">
+
 
             <img src="images/rose.jpg" alt="Hoa Hồng">
 
@@ -536,10 +1233,12 @@
 
             </a>
 
+
         </div>
 
 
         <div class="product-card">
+
 
             <img src="images/tulip.jpg" alt="Hoa Tulip">
 
@@ -564,10 +1263,12 @@
 
             </a>
 
+
         </div>
 
 
         <div class="product-card">
+
 
             <img src="images/sunflower.jpg" alt="Hoa Hướng Dương">
 
@@ -592,10 +1293,12 @@
 
             </a>
 
+
         </div>
 
 
         <div class="product-card">
+
 
             <img src="images/orchid.jpg" alt="Hoa Lan Hồ Điệp">
 
@@ -620,9 +1323,12 @@
 
             </a>
 
+
         </div>
 
+
     </div>
+
 
 </section>
 
@@ -630,6 +1336,7 @@
 <!-- ================= BLOG ================= -->
 
 <section class="news">
+
 
     <h2>
 
@@ -640,7 +1347,9 @@
 
     <div class="news-box">
 
+
         <div class="news-card">
+
 
             <img src="images/blog1.jpg" alt="Ý nghĩa hoa hồng">
 
@@ -669,10 +1378,12 @@
 
             </a>
 
+
         </div>
 
 
         <div class="news-card">
+
 
             <img src="images/blog2.jpg" alt="Chăm sóc hoa">
 
@@ -701,10 +1412,12 @@
 
             </a>
 
+
         </div>
 
 
         <div class="news-card">
+
 
             <img src="images/blog3.jpg" alt="Xu hướng hoa">
 
@@ -733,9 +1446,12 @@
 
             </a>
 
+
         </div>
 
+
     </div>
+
 
 </section>
 
@@ -744,11 +1460,14 @@
 
 <footer>
 
+
     <div class="footer-content">
+
 
         <!-- Cột 1 -->
 
         <div class="footer-box">
+
 
             <h3>
 
@@ -767,12 +1486,14 @@
 
             </p>
 
+
         </div>
 
 
         <!-- Cột 2 -->
 
         <div class="footer-box">
+
 
             <h3>
 
@@ -782,6 +1503,7 @@
 
 
             <ul>
+
 
                 <li>
 
@@ -848,7 +1570,9 @@
 
                 </li>
 
+
             </ul>
+
 
         </div>
 
@@ -856,6 +1580,7 @@
         <!-- Cột 3 -->
 
         <div class="footer-box">
+
 
             <h3>
 
@@ -866,32 +1591,42 @@
 
             <p>
 
+
                 <i class="fa-solid fa-phone"></i>
+
 
                 Hotline: 0123 456 789
 
+
             </p>
 
 
             <p>
+
 
                 <i class="fa-solid fa-envelope"></i>
 
+
                 Email: flowershop@gmail.com
+
 
             </p>
 
 
             <p>
 
+
                 <i class="fa-solid fa-location-dot"></i>
 
+
                 Địa chỉ: TP. HCM, Việt Nam
+
 
             </p>
 
 
             <div class="social">
+
 
                 <a href="#">
 
@@ -920,9 +1655,12 @@
 
                 </a>
 
+
             </div>
 
+
         </div>
+
 
     </div>
 
@@ -932,11 +1670,15 @@
 
     <p class="copyright">
 
+
         © 2026 Flower Shop | All Rights Reserved.
+
 
     </p>
 
+
 </footer>
+
 
 </body>
 
