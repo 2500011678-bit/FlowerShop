@@ -199,15 +199,15 @@ nav ul li a.active::after {
 
     width: 100vw;
 
-    max-width: 100vw;
+    max-width:1200px ;
 
     /*
     Đưa banner ra sát hai mép màn hình
     */
 
-    left: 50%;
+    left: 100%;
 
-    transform: translateX(-50%);
+    transform: translateX(-100%);
 
     min-height: 650px;
 
