@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Flower Shop</title>
+    <title>Flower Shop - Trao Hoa, Trao Yêu Thương</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -359,7 +359,7 @@
 
 
         /* ========================================= */
-        /* ABOUT HOME - GIỚI THIỆU CAO CẤP */
+        /* ABOUT HOME */
         /* ========================================= */
 
         .about-home {
@@ -715,7 +715,236 @@
 
 
         /* ========================================= */
-        /* MOBILE RESPONSIVE */
+        /* BLOG / TIN TỨC */
+        /* ========================================= */
+
+        .news {
+
+            max-width: 1200px;
+
+            margin: 80px auto;
+
+            padding: 70px 30px;
+
+            background: linear-gradient(
+
+                135deg,
+
+                #fffafa,
+
+                #fff5f7
+
+            );
+
+            border-radius: 30px;
+
+        }
+
+        .news-header {
+
+            max-width: 700px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+
+        }
+
+        .news-label {
+
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: #f24f82;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+        }
+
+        .news-header h2 {
+
+            margin: 0 0 15px;
+
+            color: #2d2d2d;
+
+            font-size: 36px;
+
+            font-weight: 800;
+
+        }
+
+        .news-header p {
+
+            margin: 0;
+
+            color: #777;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+        }
+
+        .news-box {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+
+        }
+
+        .news-card {
+
+            overflow: hidden;
+
+            display: flex;
+
+            flex-direction: column;
+
+            background: white;
+
+            border: 1px solid rgba(242, 79, 130, 0.1);
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(150, 70, 90, 0.08);
+
+            transition: all 0.35s ease;
+
+        }
+
+        .news-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 18px 40px rgba(150, 70, 90, 0.15);
+
+        }
+
+        .news-card img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+
+        }
+
+        .news-card:hover img {
+
+            transform: scale(1.05);
+
+        }
+
+        .news-card-content {
+
+            display: flex;
+
+            flex-direction: column;
+
+            flex: 1;
+
+            padding: 25px;
+
+        }
+
+        .news-category {
+
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            color: #f24f82;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
+
+        }
+
+        .news-card h3 {
+
+            margin: 0 0 12px;
+
+            color: #333;
+
+            font-size: 21px;
+
+            line-height: 1.4;
+
+        }
+
+        .news-card p {
+
+            flex: 1;
+
+            margin: 0 0 20px;
+
+            color: #777;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+        }
+
+        .btn2 {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            width: fit-content;
+
+            color: #f24f82;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            transition: all 0.3s ease;
+
+        }
+
+        .btn2::after {
+
+            content: "→";
+
+            transition: transform 0.3s ease;
+
+        }
+
+        .btn2:hover {
+
+            color: #d9366e;
+
+        }
+
+        .btn2:hover::after {
+
+            transform: translateX(5px);
+
+        }
+
+
+        /* ========================================= */
+        /* RESPONSIVE */
         /* ========================================= */
 
         @media (max-width: 768px) {
@@ -833,28 +1062,7 @@
             }
 
 
-            /* Các phần khác */
-
-            .card,
-
-            .products,
-
-            .news-box,
-
-            .footer-content {
-
-                display: flex !important;
-
-                flex-direction: column !important;
-
-                align-items: center !important;
-
-                text-align: center !important;
-
-            }
-
-
-            /* Nút Hero */
+            /* Hero button */
 
             .hero-btn {
 
@@ -967,6 +1175,47 @@
 
             }
 
+
+            /* News */
+
+            .news {
+
+                width: calc(100% - 30px);
+
+                margin: 50px auto;
+
+                padding: 40px 15px;
+
+                border-radius: 22px;
+
+            }
+
+            .news-header {
+
+                margin-bottom: 30px;
+
+            }
+
+            .news-header h2 {
+
+                font-size: 28px;
+
+            }
+
+            .news-box {
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+            }
+
+            .news-card img {
+
+                height: 210px;
+
+            }
+
         }
 
 
@@ -1016,6 +1265,12 @@
             .about-feature {
 
                 text-align: left;
+
+            }
+
+            .news-box {
+
+                grid-template-columns: repeat(2, 1fr);
 
             }
 
@@ -1375,11 +1630,11 @@
 
         <p class="about-intro">
 
-            Flower Shop chuyên cung cấp hoa tươi cao cấp
+            Flower Shop chuyên cung cấp hoa tươi
 
-            với những thiết kế tinh tế, phù hợp cho mọi
+            với những thiết kế tinh tế, phù hợp
 
-            dịp đặc biệt trong cuộc sống.
+            cho những dịp đặc biệt trong cuộc sống.
 
         </p>
 
@@ -1685,100 +1940,170 @@
 
 <section class="news">
 
-    <h2>
+    <div class="news-header">
 
-        Tin tức & Kiến thức về Hoa
+        <span class="news-label">
 
-    </h2>
+            ✦ BLOG FLOWER SHOP
+
+        </span>
+
+
+        <h2>
+
+            Tin tức & Kiến thức về Hoa
+
+        </h2>
+
+
+        <p>
+
+            Cùng Flower Shop khám phá những câu chuyện thú vị,
+
+            kiến thức hữu ích và cảm hứng đẹp đẽ từ thế giới hoa.
+
+        </p>
+
+    </div>
 
 
     <div class="news-box">
 
+
+        <!-- BÀI VIẾT 1 -->
+
         <div class="news-card">
 
-            <img src="images/blog1.jpg" alt="Ý nghĩa hoa hồng">
+            <img src="images/blog1.jpg" alt="Ý nghĩa các màu hoa hồng">
 
-            <h3>
 
-                Ý nghĩa của Hoa Hồng
+            <div class="news-card-content">
 
-            </h3>
+                <span class="news-category">
 
-            <p>
+                    🌹 Ý NGHĨA LOÀI HOA
 
-                Hoa hồng là biểu tượng của tình yêu,
+                </span>
 
-                sự lãng mạn và lòng biết ơn.
 
-                Mỗi màu hoa mang một thông điệp riêng.
+                <h3>
 
-            </p>
+                    Hoa Hồng và những thông điệp đầy cảm xúc
 
-            <a href="blog.html" class="btn2">
+                </h3>
 
-                Đọc thêm
 
-            </a>
+                <p>
+
+                    Tìm hiểu ý nghĩa đặc biệt của hoa hồng
+
+                    và cách mỗi màu sắc truyền tải một thông điệp
+
+                    riêng trong tình yêu, tình bạn và cuộc sống.
+
+                </p>
+
+
+                <a href="blog.html" class="btn2">
+
+                    Khám phá bài viết
+
+                </a>
+
+            </div>
 
         </div>
 
 
+        <!-- BÀI VIẾT 2 -->
+
         <div class="news-card">
 
-            <img src="images/blog2.jpg" alt="Chăm sóc hoa">
+            <img src="images/blog2.jpg" alt="Cách chăm sóc hoa tươi">
 
-            <h3>
 
-                Bí quyết giữ hoa tươi lâu
+            <div class="news-card-content">
 
-            </h3>
+                <span class="news-category">
 
-            <p>
+                    🌿 CHĂM SÓC HOA
 
-                Hướng dẫn thay nước, cắt gốc,
+                </span>
 
-                sử dụng dưỡng chất để hoa luôn
 
-                tươi đẹp trong nhiều ngày.
+                <h3>
 
-            </p>
+                    Bí quyết giữ hoa tươi đẹp lâu hơn
 
-            <a href="blog.html" class="btn2">
+                </h3>
 
-                Đọc thêm
 
-            </a>
+                <p>
+
+                    Những cách đơn giản giúp hoa giữ được
+
+                    vẻ tươi tắn lâu hơn, từ việc thay nước,
+
+                    cắt gốc đến lựa chọn vị trí đặt hoa.
+
+                </p>
+
+
+                <a href="blog.html" class="btn2">
+
+                    Xem hướng dẫn
+
+                </a>
+
+            </div>
 
         </div>
 
 
+        <!-- BÀI VIẾT 3 -->
+
         <div class="news-card">
 
-            <img src="images/blog3.jpg" alt="Xu hướng hoa">
+            <img src="images/blog3.jpg" alt="Xu hướng hoa năm 2026">
 
-            <h3>
 
-                Xu hướng hoa năm 2026
+            <div class="news-card-content">
 
-            </h3>
+                <span class="news-category">
 
-            <p>
+                    ✨ XU HƯỚNG 2026
 
-                Khám phá những mẫu hoa,
+                </span>
 
-                màu sắc và phong cách cắm hoa
 
-                được yêu thích nhất hiện nay.
+                <h3>
 
-            </p>
+                    Những xu hướng hoa nổi bật trong năm 2026
 
-            <a href="blog.html" class="btn2">
+                </h3>
 
-                Đọc thêm
 
-            </a>
+                <p>
+
+                    Cập nhật những phong cách bó hoa,
+
+                    màu sắc và cách kết hợp hoa đang được
+
+                    nhiều người yêu thích trong năm nay.
+
+                </p>
+
+
+                <a href="blog.html" class="btn2">
+
+                    Xem xu hướng
+
+                </a>
+
+            </div>
 
         </div>
+
 
     </div>
 
