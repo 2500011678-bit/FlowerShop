@@ -2062,12 +2062,12 @@ footer hr {
 @media(max-width:768px){
 
 .logo img{
-    width:45px;
-    height:45px;
+    width:55px;
+    height:55px;
 }
 
 .logo span{
-    font-size:24px;
+    font-size:30px;
 }
 
 }
