@@ -84,7 +84,7 @@
 
             font-weight: 800;
 
-            text-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 
         }
 
@@ -139,7 +139,7 @@
 
             box-shadow:
 
-                0 15px 40px rgba(0,0,0,0.12);
+                0 15px 40px rgba(0, 0, 0, 0.12);
 
             transition: 0.3s ease;
 
@@ -230,7 +230,7 @@
 
             box-shadow:
 
-                0 20px 45px rgba(0,0,0,0.15);
+                0 20px 45px rgba(0, 0, 0, 0.15);
 
             transition: 0.5s ease;
 
@@ -295,18 +295,16 @@
 
 
         /* =========================================
-           ĐỘI NGŨ
+           TIMELINE
         ========================================= */
 
-        .team-section {
+        .timeline-section {
 
-            max-width: 1200px;
+            max-width: 1000px;
 
             margin: 0 auto 100px;
 
             padding: 0 30px;
-
-            text-align: center;
 
         }
 
@@ -318,6 +316,8 @@
             color: #2d2d2d;
 
             font-size: 40px;
+
+            text-align: center;
 
         }
 
@@ -332,93 +332,7 @@
 
             line-height: 1.7;
 
-        }
-
-
-        .team-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 25px;
-
-        }
-
-
-        .team-card {
-
-            overflow: hidden;
-
-            background: white;
-
-            border-radius: 20px;
-
-            box-shadow:
-
-                0 12px 35px rgba(0,0,0,0.1);
-
-            transition: 0.3s ease;
-
-        }
-
-
-        .team-card:hover {
-
-            transform: translateY(-8px);
-
-        }
-
-
-        .team-card img {
-
-            width: 100%;
-
-            height: 260px;
-
-            object-fit: cover;
-
-            display: block;
-
-        }
-
-
-        .team-info {
-
-            padding: 20px;
-
-        }
-
-
-        .team-info h3 {
-
-            margin-bottom: 8px;
-
-            color: #333;
-
-        }
-
-
-        .team-info p {
-
-            color: #f24f82;
-
-            font-size: 14px;
-
-        }
-
-
-        /* =========================================
-           TIMELINE
-        ========================================= */
-
-        .timeline-section {
-
-            max-width: 1000px;
-
-            margin: 0 auto 100px;
-
-            padding: 0 30px;
+            text-align: center;
 
         }
 
@@ -490,7 +404,7 @@
 
             box-shadow:
 
-                0 10px 30px rgba(0,0,0,0.08);
+                0 10px 30px rgba(0, 0, 0, 0.08);
 
         }
 
@@ -570,7 +484,7 @@
 
             box-shadow:
 
-                0 15px 35px rgba(0,0,0,0.1);
+                0 15px 35px rgba(0, 0, 0, 0.1);
 
         }
 
@@ -705,8 +619,6 @@
             }
 
 
-            .team-section,
-
             .timeline-section,
 
             .values-section {
@@ -719,22 +631,6 @@
             .section-title {
 
                 font-size: 30px;
-
-            }
-
-
-            .team-grid {
-
-                grid-template-columns: 1fr 1fr;
-
-                gap: 15px;
-
-            }
-
-
-            .team-card img {
-
-                height: 200px;
 
             }
 
@@ -773,24 +669,6 @@
 
         }
 
-
-        @media (max-width: 480px) {
-
-
-            .team-grid {
-
-                grid-template-columns: 1fr;
-
-            }
-
-
-            .team-card img {
-
-                height: 260px;
-
-            }
-
-        }
 
     </style>
 
@@ -1026,127 +904,6 @@
 </section>
 
 
-<!-- ================= ĐỘI NGŨ ================= -->
-
-<section class="team-section">
-
-
-    <h2 class="section-title">
-
-        Đội Ngũ Florist
-
-    </h2>
-
-
-    <p class="section-subtitle">
-
-        Đằng sau mỗi bó hoa đẹp là những con người tận tâm,
-
-        sáng tạo và luôn đặt cảm xúc của khách hàng lên hàng đầu.
-
-    </p>
-
-
-    <div class="team-grid">
-
-
-        <div class="team-card">
-
-            <img src="images/team1.jpg" alt="Florist">
-
-            <div class="team-info">
-
-                <h3>
-
-                    Minh Anh
-
-                </h3>
-
-                <p>
-
-                    Floral Designer
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="team-card">
-
-            <img src="images/team2.jpg" alt="Florist">
-
-            <div class="team-info">
-
-                <h3>
-
-                    Ngọc Linh
-
-                </h3>
-
-                <p>
-
-                    Senior Florist
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="team-card">
-
-            <img src="images/team3.jpg" alt="Florist">
-
-            <div class="team-info">
-
-                <h3>
-
-                    Hoàng Nam
-
-                </h3>
-
-                <p>
-
-                    Event Florist
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="team-card">
-
-            <img src="images/team4.jpg" alt="Florist">
-
-            <div class="team-info">
-
-                <h3>
-
-                    Khánh Vy
-
-                </h3>
-
-                <p>
-
-                    Flower Stylist
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
 <!-- ================= TIMELINE ================= -->
 
 <section class="timeline-section">
@@ -1358,6 +1115,7 @@
 
     <div class="footer-content">
 
+
         <div class="footer-box">
 
             <h3>
@@ -1365,6 +1123,7 @@
                 🌸 Flower Shop
 
             </h3>
+
 
             <p>
 
@@ -1385,6 +1144,7 @@
 
             </h3>
 
+
             <ul>
 
                 <li>
@@ -1397,6 +1157,7 @@
 
                 </li>
 
+
                 <li>
 
                     <a href="shop.html">
@@ -1406,6 +1167,7 @@
                     </a>
 
                 </li>
+
 
                 <li>
 
@@ -1417,6 +1179,7 @@
 
                 </li>
 
+
                 <li>
 
                     <a href="blog.html">
@@ -1427,6 +1190,7 @@
 
                 </li>
 
+
                 <li>
 
                     <a href="gioithieu.html">
@@ -1436,6 +1200,7 @@
                     </a>
 
                 </li>
+
 
                 <li>
 
@@ -1460,6 +1225,7 @@
 
             </h3>
 
+
             <p>
 
                 <i class="fa-solid fa-phone"></i>
@@ -1468,6 +1234,7 @@
 
             </p>
 
+
             <p>
 
                 <i class="fa-solid fa-envelope"></i>
@@ -1475,6 +1242,7 @@
                 flowershop@gmail.com
 
             </p>
+
 
             <p>
 
@@ -1485,6 +1253,7 @@
             </p>
 
         </div>
+
 
     </div>
 
