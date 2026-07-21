@@ -16,8 +16,6 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 
-    <!-- CSS Bổ sung trực tiếp để sửa lỗi lệch chữ trên Mobile & Máy tính -->
-
     <style>
 
         /* ========================================= */
@@ -25,27 +23,17 @@
         /* ========================================= */
 
         * {
-
             box-sizing: border-box;
-
         }
-
 
         body {
-
             overflow-x: hidden;
-
             word-wrap: break-word;
-
         }
 
-
         img {
-
             max-width: 100%;
-
             height: auto;
-
         }
 
 
@@ -61,11 +49,8 @@
         footer {
 
             width: 100%;
-
             max-width: 1200px;
-
             margin: 0 auto;
-
             padding: 20px;
 
         }
@@ -78,13 +63,10 @@
         .hero-description {
 
             max-width: 850px;
-
             margin: 0 auto;
-
             text-align: center;
 
         }
-
 
         .hero-intro {
 
@@ -93,22 +75,18 @@
             color: white;
 
             font-size: 20px;
-
             line-height: 1.7;
-
             font-weight: 400;
 
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
 
         }
 
-
         .hero-categories {
 
             display: flex;
 
             justify-content: center;
-
             align-items: center;
 
             flex-wrap: wrap;
@@ -116,7 +94,6 @@
             gap: 14px 28px;
 
         }
-
 
         .hero-categories span {
 
@@ -136,13 +113,11 @@
 
         }
 
-
         .hero-categories strong {
 
             font-weight: 500;
 
         }
-
 
         .hero-categories span:not(:last-child)::after {
 
@@ -164,7 +139,6 @@
             display: flex;
 
             justify-content: center;
-
             align-items: center;
 
             gap: 24px;
@@ -173,17 +147,14 @@
 
         }
 
-
         .hero-btn .btn {
 
             width: 250px;
-
             height: 62px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             padding: 0;
@@ -191,7 +162,6 @@
             border-radius: 35px;
 
             font-size: 18px;
-
             font-weight: 700;
 
             white-space: nowrap;
@@ -200,23 +170,17 @@
 
         }
 
-
         .hero-btn .btn:not(.btn-outline) {
 
             background: linear-gradient(
-
                 135deg,
-
                 #ff4f81,
-
                 #ff9d1c
-
             );
 
             color: white;
 
         }
-
 
         .hero-btn .btn-outline {
 
@@ -228,10 +192,168 @@
 
         }
 
-
         .hero-btn .btn:hover {
 
             transform: translateY(-4px);
+
+        }
+
+
+        /* ========================================= */
+        /* ĐIỂM KHÁC BIỆT */
+        /* ========================================= */
+
+        .why-us {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 35px auto 80px;
+
+            padding: 0 20px;
+
+        }
+
+        .why-us-header {
+
+            text-align: center;
+
+            margin-bottom: 35px;
+
+        }
+
+        .why-us-label {
+
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: #f24f82;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+        }
+
+        .why-us-header h2 {
+
+            margin: 0;
+
+            color: #2d2d2d;
+
+            font-size: 34px;
+
+            font-weight: 800;
+
+        }
+
+        .why-us-header p {
+
+            max-width: 650px;
+
+            margin: 12px auto 0;
+
+            color: #777;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+        }
+
+        .why-us-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+        .why-us-card {
+
+            position: relative;
+
+            padding: 30px 22px;
+
+            text-align: center;
+
+            background: white;
+
+            border: 1px solid rgba(242, 79, 130, 0.12);
+
+            border-radius: 22px;
+
+            box-shadow: 0 12px 35px rgba(150, 70, 90, 0.08);
+
+            transition: all 0.35s ease;
+
+        }
+
+        .why-us-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 18px 40px rgba(150, 70, 90, 0.15);
+
+        }
+
+        .why-us-icon {
+
+            width: 64px;
+
+            height: 64px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin: 0 auto 18px;
+
+            color: white;
+
+            background: linear-gradient(
+
+                135deg,
+
+                #ff5d8f,
+
+                #ff9d1c
+
+            );
+
+            border-radius: 50%;
+
+            font-size: 25px;
+
+        }
+
+        .why-us-card h3 {
+
+            margin: 0 0 10px;
+
+            color: #333;
+
+            font-size: 18px;
+
+        }
+
+        .why-us-card p {
+
+            margin: 0;
+
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.7;
 
         }
 
@@ -293,7 +415,6 @@
 
         }
 
-
         .about-image img {
 
             position: relative;
@@ -318,13 +439,11 @@
 
         }
 
-
         .about-image:hover img {
 
             transform: scale(1.03);
 
         }
-
 
         .about-image::before {
 
@@ -350,7 +469,7 @@
 
 
         /* ========================================= */
-        /* BADGE 100% HOA TƯƠI */
+        /* BADGE */
         /* ========================================= */
 
         .about-badge {
@@ -387,7 +506,6 @@
 
         }
 
-
         .about-badge strong {
 
             color: #f24f82;
@@ -397,7 +515,6 @@
             font-weight: 800;
 
         }
-
 
         .about-badge span {
 
@@ -420,7 +537,6 @@
 
         }
 
-
         .about-label {
 
             display: inline-block;
@@ -437,7 +553,6 @@
 
         }
 
-
         .about-text h2 {
 
             margin: 0 0 22px;
@@ -451,7 +566,6 @@
             font-weight: 800;
 
         }
-
 
         .about-intro {
 
@@ -482,7 +596,6 @@
 
         }
 
-
         .about-feature {
 
             display: flex;
@@ -492,7 +605,6 @@
             gap: 16px;
 
         }
-
 
         .about-feature > i {
 
@@ -526,7 +638,6 @@
 
         }
 
-
         .about-feature h3 {
 
             margin: 0 0 5px;
@@ -536,7 +647,6 @@
             font-size: 17px;
 
         }
-
 
         .about-feature p {
 
@@ -593,7 +703,6 @@
 
         }
 
-
         .about-btn:hover {
 
             transform: translateY(-4px);
@@ -611,32 +720,20 @@
 
         @media (max-width: 768px) {
 
-
             h1 {
-
                 font-size: 1.8rem !important;
-
             }
-
 
             h2 {
-
                 font-size: 1.5rem !important;
-
             }
-
 
             h3 {
-
                 font-size: 1.2rem !important;
-
             }
 
-
             p {
-
                 font-size: 0.95rem !important;
-
             }
 
 
@@ -648,7 +745,6 @@
 
             }
 
-
             .hero-intro {
 
                 font-size: 16px;
@@ -659,13 +755,11 @@
 
             }
 
-
             .hero-categories {
 
                 gap: 12px 18px;
 
             }
-
 
             .hero-categories span {
 
@@ -673,10 +767,68 @@
 
             }
 
-
             .hero-categories span:not(:last-child)::after {
 
                 margin-left: 10px;
+
+            }
+
+
+            /* Why Us */
+
+            .why-us {
+
+                margin: 25px auto 55px;
+
+                padding: 0 15px;
+
+            }
+
+            .why-us-header h2 {
+
+                font-size: 28px;
+
+            }
+
+            .why-us-header p {
+
+                font-size: 14px;
+
+            }
+
+            .why-us-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 15px;
+
+            }
+
+            .why-us-card {
+
+                padding: 24px 15px;
+
+            }
+
+            .why-us-card h3 {
+
+                font-size: 16px;
+
+            }
+
+            .why-us-card p {
+
+                font-size: 13px;
+
+            }
+
+            .why-us-icon {
+
+                width: 55px;
+
+                height: 55px;
+
+                font-size: 21px;
 
             }
 
@@ -714,7 +866,6 @@
 
             }
 
-
             .hero-btn .btn {
 
                 width: 220px;
@@ -746,7 +897,6 @@
 
             }
 
-
             .about-image {
 
                 width: 100%;
@@ -755,7 +905,6 @@
 
             }
 
-
             .about-image::before {
 
                 top: 10px;
@@ -763,7 +912,6 @@
                 left: 10px;
 
             }
-
 
             .about-badge {
 
@@ -777,13 +925,11 @@
 
             }
 
-
             .about-badge strong {
 
                 font-size: 26px;
 
             }
-
 
             .about-badge span {
 
@@ -791,13 +937,11 @@
 
             }
 
-
             .about-text {
 
                 text-align: center;
 
             }
-
 
             .about-text h2 {
 
@@ -805,13 +949,11 @@
 
             }
 
-
             .about-intro {
 
                 font-size: 15px !important;
 
             }
-
 
             .about-feature {
 
@@ -819,10 +961,24 @@
 
             }
 
-
             .about-btn {
 
                 font-size: 14px;
+
+            }
+
+        }
+
+
+        /* ========================================= */
+        /* MOBILE NHỎ */
+        /* ========================================= */
+
+        @media (max-width: 480px) {
+
+            .why-us-grid {
+
+                grid-template-columns: 1fr;
 
             }
 
@@ -835,7 +991,6 @@
 
         @media (min-width: 769px) and (max-width: 900px) {
 
-
             .about-home {
 
                 grid-template-columns: 1fr;
@@ -846,20 +1001,17 @@
 
             }
 
-
             .about-image {
 
                 height: 400px;
 
             }
 
-
             .about-text {
 
                 text-align: center;
 
             }
-
 
             .about-feature {
 
@@ -881,7 +1033,6 @@
 
 <header>
 
-
     <a href="index.html" class="logo">
 
         🌸 Flower Shop
@@ -891,9 +1042,7 @@
 
     <nav>
 
-
         <ul>
-
 
             <li>
 
@@ -905,7 +1054,6 @@
 
             </li>
 
-
             <li>
 
                 <a href="shop.html">
@@ -915,7 +1063,6 @@
                 </a>
 
             </li>
-
 
             <li>
 
@@ -927,7 +1074,6 @@
 
             </li>
 
-
             <li>
 
                 <a href="blog.html">
@@ -937,7 +1083,6 @@
                 </a>
 
             </li>
-
 
             <li>
 
@@ -949,7 +1094,6 @@
 
             </li>
 
-
             <li>
 
                 <a href="hotro.html">
@@ -960,12 +1104,9 @@
 
             </li>
 
-
         </ul>
 
-
     </nav>
-
 
 </header>
 
@@ -974,9 +1115,7 @@
 
 <section class="hero">
 
-
     <div class="hero-content">
-
 
         <h1>
 
@@ -985,10 +1124,7 @@
         </h1>
 
 
-        <!-- Phần mô tả đã được thiết kế lại -->
-
         <div class="hero-description">
-
 
             <p class="hero-intro">
 
@@ -1001,7 +1137,6 @@
 
             <div class="hero-categories">
 
-
                 <span>
 
                     🌹
@@ -1009,7 +1144,6 @@
                     <strong>Hoa sinh nhật</strong>
 
                 </span>
-
 
                 <span>
 
@@ -1019,7 +1153,6 @@
 
                 </span>
 
-
                 <span>
 
                     🎉
@@ -1027,7 +1160,6 @@
                     <strong>Hoa khai trương</strong>
 
                 </span>
-
 
                 <span>
 
@@ -1037,15 +1169,12 @@
 
                 </span>
 
-
             </div>
-
 
         </div>
 
 
         <div class="hero-btn">
-
 
             <a href="shop.html" class="btn">
 
@@ -1053,19 +1182,152 @@
 
             </a>
 
-
             <a href="gioithieu.html" class="btn btn-outline">
 
                 Xem Thêm
 
             </a>
 
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ĐIỂM KHÁC BIỆT ================= -->
+
+<section class="why-us">
+
+    <div class="why-us-header">
+
+        <span class="why-us-label">
+
+            ✦ VÌ SAO CHỌN FLOWER SHOP
+
+        </span>
+
+        <h2>
+
+            Trao hoa, trao cả yêu thương
+
+        </h2>
+
+        <p>
+
+            Chúng tôi chăm chút từng bông hoa để mỗi món quà
+
+            bạn gửi đi đều trở nên thật đặc biệt.
+
+        </p>
+
+    </div>
+
+
+    <div class="why-us-grid">
+
+
+        <div class="why-us-card">
+
+            <div class="why-us-icon">
+
+                <i class="fa-solid fa-leaf"></i>
+
+            </div>
+
+            <h3>
+
+                Hoa tươi mỗi ngày
+
+            </h3>
+
+            <p>
+
+                Những bông hoa được tuyển chọn kỹ lưỡng
+
+                để luôn giữ được vẻ đẹp tự nhiên.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-us-card">
+
+            <div class="why-us-icon">
+
+                <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+            <h3>
+
+                Thiết kế tinh tế
+
+            </h3>
+
+            <p>
+
+                Mỗi bó hoa được thiết kế riêng
+
+                để truyền tải trọn vẹn cảm xúc.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-us-card">
+
+            <div class="why-us-icon">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+            </div>
+
+            <h3>
+
+                Giao hàng tận nơi
+
+            </h3>
+
+            <p>
+
+                Giao hoa nhanh chóng, đúng hẹn
+
+                và được đóng gói cẩn thận.
+
+            </p>
+
+        </div>
+
+
+        <div class="why-us-card">
+
+            <div class="why-us-icon">
+
+                <i class="fa-solid fa-star"></i>
+
+            </div>
+
+            <h3>
+
+                Phục vụ tận tâm
+
+            </h3>
+
+            <p>
+
+                Luôn lắng nghe và đồng hành
+
+                để bạn chọn được món quà phù hợp nhất.
+
+            </p>
 
         </div>
 
 
     </div>
-
 
 </section>
 
@@ -1074,18 +1336,13 @@
 
 <section class="about-home">
 
-
     <div class="about-image">
-
 
         <img src="images/about.jpg" alt="Flower Shop">
 
-
         <div class="about-badge">
 
-
             <strong>100%</strong>
-
 
             <span>
 
@@ -1093,38 +1350,30 @@
 
             </span>
 
-
         </div>
-
 
     </div>
 
 
     <div class="about-text">
 
-
         <span class="about-label">
 
-
             🌸 VỀ CHÚNG TÔI
-
 
         </span>
 
 
         <h2>
 
-
             Mang yêu thương<br>
 
             đến mọi khoảnh khắc
-
 
         </h2>
 
 
         <p class="about-intro">
-
 
             Flower Shop chuyên cung cấp hoa tươi cao cấp
 
@@ -1132,100 +1381,72 @@
 
             dịp đặc biệt trong cuộc sống.
 
-
         </p>
 
 
         <div class="about-features">
 
-
             <div class="about-feature">
-
 
                 <i class="fa-solid fa-leaf"></i>
 
-
                 <div>
-
 
                     <h3>
 
-
                         Hoa tươi tuyển chọn
-
 
                     </h3>
 
-
                     <p>
-
 
                         Những bông hoa tươi đẹp,
 
                         được lựa chọn kỹ càng mỗi ngày.
 
-
                     </p>
 
-
                 </div>
-
 
             </div>
 
 
             <div class="about-feature">
 
-
                 <i class="fa-solid fa-heart"></i>
-
 
                 <div>
 
-
                     <h3>
-
 
                         Thiết kế đầy yêu thương
 
-
                     </h3>
 
-
                     <p>
-
 
                         Mỗi bó hoa là một món quà
 
                         mang theo những cảm xúc đặc biệt.
 
-
                     </p>
-
 
                 </div>
 
-
             </div>
-
 
         </div>
 
 
         <a href="gioithieu.html" class="about-btn">
 
-
             Khám phá Flower Shop
-
 
             <i class="fa-solid fa-arrow-right"></i>
 
-
         </a>
 
-
     </div>
-
 
 </section>
 
@@ -1233,7 +1454,6 @@
 <!-- ================= DỊCH VỤ ================= -->
 
 <section class="service">
-
 
     <h2>
 
@@ -1244,19 +1464,15 @@
 
     <div class="card">
 
-
         <div class="box">
 
-
             <i class="fa-solid fa-gift"></i>
-
 
             <h3>
 
                 Hoa Theo Dịp
 
             </h3>
-
 
             <p>
 
@@ -1268,22 +1484,18 @@
 
             </p>
 
-
         </div>
 
 
         <div class="box">
 
-
             <i class="fa-solid fa-truck-fast"></i>
-
 
             <h3>
 
                 Giao Hoa Nhanh
 
             </h3>
-
 
             <p>
 
@@ -1295,22 +1507,18 @@
 
             </p>
 
-
         </div>
 
 
         <div class="box">
 
-
             <i class="fa-solid fa-building"></i>
-
 
             <h3>
 
                 Hoa Doanh Nghiệp
 
             </h3>
-
 
             <p>
 
@@ -1324,22 +1532,18 @@
 
             </p>
 
-
         </div>
 
 
         <div class="box">
 
-
             <i class="fa-solid fa-book-open"></i>
-
 
             <h3>
 
                 Blog Hoa
 
             </h3>
-
 
             <p>
 
@@ -1353,12 +1557,9 @@
 
             </p>
 
-
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -1366,7 +1567,6 @@
 <!-- ================= SẢN PHẨM NỔI BẬT ================= -->
 
 <section class="featured">
-
 
     <h2>
 
@@ -1377,12 +1577,9 @@
 
     <div class="products">
 
-
         <div class="product-card">
 
-
             <img src="images/rose.jpg" alt="Hoa Hồng">
-
 
             <h3>
 
@@ -1390,13 +1587,11 @@
 
             </h3>
 
-
             <p class="price">
 
                 350.000đ
 
             </p>
-
 
             <a href="shop.html" class="btn">
 
@@ -1404,15 +1599,12 @@
 
             </a>
 
-
         </div>
 
 
         <div class="product-card">
 
-
             <img src="images/tulip.jpg" alt="Hoa Tulip">
-
 
             <h3>
 
@@ -1420,13 +1612,11 @@
 
             </h3>
 
-
             <p class="price">
 
                 450.000đ
 
             </p>
-
 
             <a href="shop.html" class="btn">
 
@@ -1434,15 +1624,12 @@
 
             </a>
 
-
         </div>
 
 
         <div class="product-card">
 
-
             <img src="images/sunflower.jpg" alt="Hoa Hướng Dương">
-
 
             <h3>
 
@@ -1450,13 +1637,11 @@
 
             </h3>
 
-
             <p class="price">
 
                 400.000đ
 
             </p>
-
 
             <a href="shop.html" class="btn">
 
@@ -1464,15 +1649,12 @@
 
             </a>
 
-
         </div>
 
 
         <div class="product-card">
 
-
             <img src="images/orchid.jpg" alt="Hoa Lan Hồ Điệp">
-
 
             <h3>
 
@@ -1480,13 +1662,11 @@
 
             </h3>
 
-
             <p class="price">
 
                 550.000đ
 
             </p>
-
 
             <a href="shop.html" class="btn">
 
@@ -1494,12 +1674,9 @@
 
             </a>
 
-
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -1507,7 +1684,6 @@
 <!-- ================= BLOG ================= -->
 
 <section class="news">
-
 
     <h2>
 
@@ -1518,19 +1694,15 @@
 
     <div class="news-box">
 
-
         <div class="news-card">
 
-
             <img src="images/blog1.jpg" alt="Ý nghĩa hoa hồng">
-
 
             <h3>
 
                 Ý nghĩa của Hoa Hồng
 
             </h3>
-
 
             <p>
 
@@ -1542,29 +1714,24 @@
 
             </p>
 
-
             <a href="blog.html" class="btn2">
 
                 Đọc thêm
 
             </a>
 
-
         </div>
 
 
         <div class="news-card">
 
-
             <img src="images/blog2.jpg" alt="Chăm sóc hoa">
-
 
             <h3>
 
                 Bí quyết giữ hoa tươi lâu
 
             </h3>
-
 
             <p>
 
@@ -1576,29 +1743,24 @@
 
             </p>
 
-
             <a href="blog.html" class="btn2">
 
                 Đọc thêm
 
             </a>
 
-
         </div>
 
 
         <div class="news-card">
 
-
             <img src="images/blog3.jpg" alt="Xu hướng hoa">
-
 
             <h3>
 
                 Xu hướng hoa năm 2026
 
             </h3>
-
 
             <p>
 
@@ -1610,19 +1772,15 @@
 
             </p>
 
-
             <a href="blog.html" class="btn2">
 
                 Đọc thêm
 
             </a>
 
-
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -1631,21 +1789,15 @@
 
 <footer>
 
-
     <div class="footer-content">
 
-
-        <!-- Cột 1 -->
-
         <div class="footer-box">
-
 
             <h3>
 
                 🌸 Flower Shop
 
             </h3>
-
 
             <p>
 
@@ -1657,14 +1809,10 @@
 
             </p>
 
-
         </div>
 
 
-        <!-- Cột 2 -->
-
         <div class="footer-box">
-
 
             <h3>
 
@@ -1672,9 +1820,7 @@
 
             </h3>
 
-
             <ul>
-
 
                 <li>
 
@@ -1686,7 +1832,6 @@
 
                 </li>
 
-
                 <li>
 
                     <a href="shop.html">
@@ -1696,7 +1841,6 @@
                     </a>
 
                 </li>
-
 
                 <li>
 
@@ -1708,7 +1852,6 @@
 
                 </li>
 
-
                 <li>
 
                     <a href="blog.html">
@@ -1718,7 +1861,6 @@
                     </a>
 
                 </li>
-
 
                 <li>
 
@@ -1730,7 +1872,6 @@
 
                 </li>
 
-
                 <li>
 
                     <a href="hotro.html">
@@ -1741,17 +1882,12 @@
 
                 </li>
 
-
             </ul>
-
 
         </div>
 
 
-        <!-- Cột 3 -->
-
         <div class="footer-box">
-
 
             <h3>
 
@@ -1759,45 +1895,32 @@
 
             </h3>
 
-
             <p>
-
 
                 <i class="fa-solid fa-phone"></i>
 
-
                 Hotline: 0123 456 789
-
 
             </p>
 
-
             <p>
-
 
                 <i class="fa-solid fa-envelope"></i>
 
-
                 Email: flowershop@gmail.com
-
 
             </p>
 
-
             <p>
-
 
                 <i class="fa-solid fa-location-dot"></i>
 
-
                 Địa chỉ: TP. HCM, Việt Nam
-
 
             </p>
 
 
             <div class="social">
-
 
                 <a href="#">
 
@@ -1805,13 +1928,11 @@
 
                 </a>
 
-
                 <a href="#">
 
                     <i class="fab fa-instagram"></i>
 
                 </a>
-
 
                 <a href="#">
 
@@ -1819,19 +1940,15 @@
 
                 </a>
 
-
                 <a href="#">
 
                     <i class="fab fa-youtube"></i>
 
                 </a>
 
-
             </div>
 
-
         </div>
-
 
     </div>
 
@@ -1841,12 +1958,9 @@
 
     <p class="copyright">
 
-
         © 2026 Flower Shop | All Rights Reserved.
 
-
     </p>
-
 
 </footer>
 
