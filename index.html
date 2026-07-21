@@ -72,6 +72,90 @@
 
 
         /* ========================================= */
+        /* HERO DESCRIPTION */
+        /* ========================================= */
+
+        .hero-description {
+
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            text-align: center;
+
+        }
+
+
+        .hero-intro {
+
+            margin: 0 auto 28px;
+
+            color: white;
+
+            font-size: 20px;
+
+            line-height: 1.7;
+
+            font-weight: 400;
+
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+
+        }
+
+
+        .hero-categories {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px 28px;
+
+        }
+
+
+        .hero-categories span {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color: white;
+
+            font-size: 16px;
+
+            white-space: nowrap;
+
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+        }
+
+
+        .hero-categories strong {
+
+            font-weight: 500;
+
+        }
+
+
+        .hero-categories span:not(:last-child)::after {
+
+            content: "•";
+
+            margin-left: 20px;
+
+            color: rgba(255, 255, 255, 0.8);
+
+        }
+
+
+        /* ========================================= */
         /* HERO BUTTON */
         /* ========================================= */
 
@@ -241,8 +325,6 @@
 
         }
 
-
-        /* Khung trang trí phía sau ảnh */
 
         .about-image::before {
 
@@ -558,6 +640,47 @@
             }
 
 
+            /* Hero */
+
+            .hero-description {
+
+                max-width: 95%;
+
+            }
+
+
+            .hero-intro {
+
+                font-size: 16px;
+
+                line-height: 1.6;
+
+                margin-bottom: 22px;
+
+            }
+
+
+            .hero-categories {
+
+                gap: 12px 18px;
+
+            }
+
+
+            .hero-categories span {
+
+                font-size: 14px;
+
+            }
+
+
+            .hero-categories span:not(:last-child)::after {
+
+                margin-left: 10px;
+
+            }
+
+
             /* Các phần khác */
 
             .card,
@@ -862,15 +985,63 @@
         </h1>
 
 
-        <p>
+        <!-- Phần mô tả đã được thiết kế lại -->
 
-            Những bó hoa tươi đẹp gửi gắm yêu thương, hạnh phúc và những lời chúc ý nghĩa nhất.
+        <div class="hero-description">
 
-            <br><br>
 
-            🌹 Hoa sinh nhật • 💍 Hoa cưới • 🎉 Hoa khai trương • 🤍 Hoa chia buồn
+            <p class="hero-intro">
 
-        </p>
+                Những bó hoa tươi đẹp gửi gắm yêu thương,
+
+                hạnh phúc và những lời chúc ý nghĩa nhất.
+
+            </p>
+
+
+            <div class="hero-categories">
+
+
+                <span>
+
+                    🌹
+
+                    <strong>Hoa sinh nhật</strong>
+
+                </span>
+
+
+                <span>
+
+                    💍
+
+                    <strong>Hoa cưới</strong>
+
+                </span>
+
+
+                <span>
+
+                    🎉
+
+                    <strong>Hoa khai trương</strong>
+
+                </span>
+
+
+                <span>
+
+                    🤍
+
+                    <strong>Hoa chia buồn</strong>
+
+                </span>
+
+
+            </div>
+
+
+        </div>
 
 
         <div class="hero-btn">
