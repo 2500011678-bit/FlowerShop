@@ -28,6 +28,7 @@ body {
         #fffdfd,
         #f8fff9
     );
+
     color: #444;
 }
 
@@ -172,29 +173,27 @@ nav ul li a.active::after {
 
 
 /* =====================================================
-   HERO BANNER - FULL WIDTH
+   HERO BANNER - FULL WIDTH (FIX LỖI LỆCH TRÁI)
 ===================================================== */
 
 .hero {
-
     position: relative;
-
-    width: 100%;
-
+    
+    /* Ép tràn viền tuyệt đối phá vỡ giới hạn của container */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    
     min-height: 650px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: flex-start;
-
-    margin: 0;
-
+    
+    /* Đảm bảo không bị lề mặc định */
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
-
+    
     background-image:
-
         linear-gradient(
             90deg,
             rgba(40, 20, 20, 0.72) 0%,
@@ -202,15 +201,12 @@ nav ul li a.active::after {
             rgba(40, 20, 20, 0.12) 80%,
             rgba(40, 20, 20, 0.05) 100%
         ),
-
         url("images/banner.jpg");
-
+        
     background-size: cover;
-
     background-position: center center;
-
     background-repeat: no-repeat;
-
+    
     overflow: hidden;
 }
 
