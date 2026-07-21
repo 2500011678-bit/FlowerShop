@@ -14,6 +14,59 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <!-- CSS Bổ sung trực tiếp để sửa lỗi lệch chữ trên Mobile & Máy tính -->
+    <style>
+        /* Tối ưu tổng thể chống vỡ khung */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            word-wrap: break-word;
+        }
+
+        /* Đảm bảo hình ảnh co giãn tốt */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Tự động căn giữa & co giãn nội dung các section */
+        .hero, .about-home, .service, .featured, .news, footer {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Sửa lỗi lệch chữ trên di động */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem !important; }
+            h2 { font-size: 1.5rem !important; }
+            h3 { font-size: 1.2rem !important; }
+            p  { font-size: 0.95rem !important; }
+
+            /* Bố cục Giới thiệu, Dịch vụ & Sản phẩm tự xếp chồng trên điện thoại */
+            .about-home, 
+            .card, 
+            .products, 
+            .news-box, 
+            .footer-content {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
+
+            .hero-btn {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -47,6 +100,7 @@
     </nav>
 
 </header>
+
 <!-- ================= HERO BANNER ================= -->
 
 <section class="hero">
@@ -54,15 +108,14 @@
     <div class="hero-content">
 
         <h1>
-            Mang Sắc Hoa
-            <br>
-            Đến Mọi Khoảnh Khắc
+            Mang Sắc Hoa Đến Mọi Khoảnh Khắc
         </h1>
 
 
         <p>
-            Những bó hoa tươi đẹp gửi gắm yêu thương,
-            hạnh phúc và những lời chúc ý nghĩa nhất.
+            Những bó hoa tươi đẹp gửi gắm yêu thương, hạnh phúc và những lời chúc ý nghĩa nhất.
+            <br><br>
+            🌹 Hoa sinh nhật • 💍 Hoa cưới • 🎉 Hoa khai trương • 🤍 Hoa chia buồn
         </p>
 
 
@@ -83,35 +136,7 @@
     </div>
 
 </section>
-<!-- ================= HERO ================= -->
 
-<section class="hero">
-
-    <div class="hero-text">
-
-        <h1>
-            Chào mừng đến với Flower Shop
-        </h1>
-
-        <p>
-
-            Mang yêu thương đến mọi người bằng những bó hoa tươi đẹp.
-
-            <br><br>
-
-            🌹 Hoa sinh nhật • 💍 Hoa cưới • 🎉 Hoa khai trương • 🤍 Hoa chia buồn
-
-        </p>
-
-        <a href="shop.html" class="btn">
-
-            Mua Hoa Ngay
-
-        </a>
-
-    </div>
-
-</section>
 <!-- ================= GIỚI THIỆU ================= -->
 
 <section class="about-home">
@@ -227,6 +252,7 @@
     </div>
 
 </section>
+
 <!-- ================= SẢN PHẨM NỔI BẬT ================= -->
 
 <section class="featured">
@@ -366,6 +392,7 @@
     </div>
 
 </section>
+
 <!-- ================= FOOTER ================= -->
 
 <footer>
