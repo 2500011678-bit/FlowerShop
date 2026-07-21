@@ -1319,3 +1319,62 @@ footer p{
     animation:fadeIn .8s ease;
 
 }
+/* Ô tìm kiếm */
+
+.search-box{
+
+    width:100%;
+
+    max-width:550px;
+
+    margin:0 auto 50px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    padding:15px 20px;
+
+    border:2px solid #ff4f87;
+
+    border-right:none;
+
+    border-radius:40px 0 0 40px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.search-box button{
+
+    width:65px;
+
+    border:none;
+
+    background:#ff4f87;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    border-radius:0 40px 40px 0;
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    background:#ff2f73;
+
+}
