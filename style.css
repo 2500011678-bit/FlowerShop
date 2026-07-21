@@ -2260,3 +2260,143 @@ footer p{
     }
 
 }
+/* ========================================= */
+/* HERO DESCRIPTION - PHẦN MÔ TẢ BANNER */
+/* ========================================= */
+
+.hero-description {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+/* Câu giới thiệu */
+
+.hero-intro {
+
+    margin: 0 auto 28px;
+
+    color: white;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
+
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+
+}
+
+
+/* Các loại hoa */
+
+.hero-categories {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px 28px;
+
+}
+
+
+/* Từng loại hoa */
+
+.hero-categories span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: white;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* Tên loại hoa */
+
+.hero-categories strong {
+
+    font-weight: 500;
+
+}
+
+
+/* Dấu phân cách nhẹ giữa các mục */
+
+.hero-categories span:not(:last-child)::after {
+
+    content: "•";
+
+    margin-left: 20px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+
+    .hero-description {
+
+        max-width: 95%;
+
+    }
+
+
+    .hero-intro {
+
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        margin-bottom: 22px;
+
+    }
+
+
+    .hero-categories {
+
+        gap: 12px 18px;
+
+    }
+
+
+    .hero-categories span {
+
+        font-size: 14px;
+
+    }
+
+
+    .hero-categories span:not(:last-child)::after {
+
+        margin-left: 10px;
+
+    }
+
+}
