@@ -2,31 +2,367 @@
 <html lang="vi">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Flower Shop</title>
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
-    <!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
-    <header>
+<header>
 
-       <a href="index.html" class="logo">
-    🌸 Flower Shop
-</a>
+    <a href="index.html" class="logo">
+        🌸 Flower Shop
+    </a>
 
-        <nav>
+    <nav>
+
+        <ul>
+
+            <li><a href="index.html" class="active">Trang chủ</a></li>
+
+            <li><a href="shop.html">Shop Hoa</a></li>
+
+            <li><a href="dichvu.html">Dịch vụ</a></li>
+
+            <li><a href="blog.html">Blog</a></li>
+
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+
+            <li><a href="hotro.html">Hỗ trợ</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            Chào mừng đến với Flower Shop
+        </h1>
+
+        <p>
+
+            Mang yêu thương đến mọi người bằng những bó hoa tươi đẹp.
+
+            <br><br>
+
+            🌹 Hoa sinh nhật • 💍 Hoa cưới • 🎉 Hoa khai trương • 🤍 Hoa chia buồn
+
+        </p>
+
+        <a href="shop.html" class="btn">
+
+            Mua Hoa Ngay
+
+        </a>
+
+    </div>
+
+</section>
+<!-- ================= GIỚI THIỆU ================= -->
+
+<section class="about-home">
+
+    <div class="about-text">
+
+        <h2>Về Flower Shop</h2>
+
+        <p>
+
+            Flower Shop chuyên cung cấp hoa tươi cao cấp với nhiều mẫu mã đẹp,
+            phù hợp cho mọi dịp như sinh nhật, khai trương, lễ cưới,
+            ngày lễ, sự kiện và những khoảnh khắc đáng nhớ.
+
+            <br><br>
+
+            Chúng tôi luôn lựa chọn những bông hoa tươi nhất,
+            thiết kế tinh tế và giao hàng nhanh chóng,
+            giúp bạn gửi trọn yêu thương đến người thân và bạn bè.
+
+        </p>
+
+        <a href="gioithieu.html" class="btn2">
+
+            Xem thêm
+
+        </a>
+
+    </div>
+
+    <div class="about-image">
+
+        <img src="images/about.jpg" alt="Flower Shop">
+
+    </div>
+
+</section>
+
+<!-- ================= DỊCH VỤ ================= -->
+
+<section class="service">
+
+    <h2>Dịch vụ nổi bật</h2>
+
+    <div class="card">
+
+        <div class="box">
+
+            <i class="fa-solid fa-gift"></i>
+
+            <h3>Hoa Theo Dịp</h3>
+
+            <p>
+
+                Hoa sinh nhật, hoa khai trương,
+                hoa cưới, hoa chúc mừng,
+                hoa chia buồn và nhiều mẫu hoa theo yêu cầu.
+
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <i class="fa-solid fa-truck-fast"></i>
+
+            <h3>Giao Hoa Nhanh</h3>
+
+            <p>
+
+                Giao hoa tận nơi trong ngày,
+                đúng giờ, đảm bảo hoa luôn tươi mới
+                và được đóng gói cẩn thận.
+
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <i class="fa-solid fa-building"></i>
+
+            <h3>Hoa Doanh Nghiệp</h3>
+
+            <p>
+
+                Thiết kế hoa văn phòng,
+                hoa hội nghị,
+                hoa sự kiện,
+                hoa khai trương chuyên nghiệp.
+
+            </p>
+
+        </div>
+
+        <div class="box">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <h3>Blog Hoa</h3>
+
+            <p>
+
+                Chia sẻ kiến thức,
+                cách chăm sóc hoa,
+                ý nghĩa từng loài hoa
+                và xu hướng cắm hoa hiện đại.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= SẢN PHẨM NỔI BẬT ================= -->
+
+<section class="featured">
+
+    <h2>Sản phẩm nổi bật</h2>
+
+    <div class="products">
+
+        <div class="product-card">
+
+            <img src="images/rose.jpg" alt="Hoa Hồng">
+
+            <h3>Bó Hoa Hồng Đỏ</h3>
+
+            <p class="price">350.000đ</p>
+
+            <a href="shop.html" class="btn">
+                Mua ngay
+            </a>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/tulip.jpg" alt="Hoa Tulip">
+
+            <h3>Bó Hoa Tulip</h3>
+
+            <p class="price">450.000đ</p>
+
+            <a href="shop.html" class="btn">
+                Mua ngay
+            </a>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/sunflower.jpg" alt="Hoa Hướng Dương">
+
+            <h3>Hoa Hướng Dương</h3>
+
+            <p class="price">400.000đ</p>
+
+            <a href="shop.html" class="btn">
+                Mua ngay
+            </a>
+
+        </div>
+
+        <div class="product-card">
+
+            <img src="images/orchid.jpg" alt="Hoa Lan Hồ Điệp">
+
+            <h3>Hoa Lan Hồ Điệp</h3>
+
+            <p class="price">550.000đ</p>
+
+            <a href="shop.html" class="btn">
+                Mua ngay
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= BLOG ================= -->
+
+<section class="news">
+
+    <h2>Tin tức & Kiến thức về Hoa</h2>
+
+    <div class="news-box">
+
+        <div class="news-card">
+
+            <img src="images/blog1.jpg" alt="Ý nghĩa hoa hồng">
+
+            <h3>Ý nghĩa của Hoa Hồng</h3>
+
+            <p>
+
+                Hoa hồng là biểu tượng của tình yêu,
+                sự lãng mạn và lòng biết ơn.
+                Mỗi màu hoa mang một thông điệp riêng.
+
+            </p>
+
+            <a href="blog.html" class="btn2">
+                Đọc thêm
+            </a>
+
+        </div>
+
+        <div class="news-card">
+
+            <img src="images/blog2.jpg" alt="Chăm sóc hoa">
+
+            <h3>Bí quyết giữ hoa tươi lâu</h3>
+
+            <p>
+
+                Hướng dẫn thay nước, cắt gốc,
+                sử dụng dưỡng chất để hoa luôn
+                tươi đẹp trong nhiều ngày.
+
+            </p>
+
+            <a href="blog.html" class="btn2">
+                Đọc thêm
+            </a>
+
+        </div>
+
+        <div class="news-card">
+
+            <img src="images/blog3.jpg" alt="Xu hướng hoa">
+
+            <h3>Xu hướng hoa năm 2026</h3>
+
+            <p>
+
+                Khám phá những mẫu hoa,
+                màu sắc và phong cách cắm hoa
+                được yêu thích nhất hiện nay.
+
+            </p>
+
+            <a href="blog.html" class="btn2">
+                Đọc thêm
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <!-- Cột 1 -->
+        <div class="footer-box">
+
+            <h3>🌸 Flower Shop</h3>
+
+            <p>
+
+                Mang yêu thương đến mọi người bằng những bó hoa tươi đẹp.
+
+                Chuyên cung cấp hoa sinh nhật, hoa cưới,
+
+                hoa khai trương, hoa chia buồn và hoa sự kiện.
+
+            </p>
+
+        </div>
+
+        <!-- Cột 2 -->
+
+        <div class="footer-box">
+
+            <h3>Liên kết nhanh</h3>
 
             <ul>
 
-                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="index.html">Trang chủ</a></li>
 
                 <li><a href="shop.html">Shop Hoa</a></li>
 
@@ -40,328 +376,63 @@
 
             </ul>
 
-        </nav>
+        </div>
 
-    </header>
+        <!-- Cột 3 -->
 
-    <!-- HERO -->
+        <div class="footer-box">
 
-    <section class="hero">
-
-        <div class="hero-text">
-
-            <h1>Chào mừng đến Flower Shop</h1>
+            <h3>Liên hệ</h3>
 
             <p>
 
-                Mang yêu thương đến mọi người bằng những bó hoa tươi đẹp.
-                <br>
-                Hoa sinh nhật • Hoa cưới • Hoa khai trương • Hoa chia buồn
+                <i class="fa-solid fa-phone"></i>
+
+                Hotline: 0123 456 789
 
             </p>
-
-            <a href="shop.html" class="btn">
-
-                Mua Hoa Ngay
-
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- GIỚI THIỆU -->
-
-    <section class="about-home">
-
-        <div class="about-text">
-
-            <h2>Về Flower Shop</h2>
 
             <p>
 
-                Flower Shop chuyên cung cấp hoa tươi cao cấp với nhiều mẫu mã
-                đẹp, phù hợp cho mọi dịp như sinh nhật, khai trương, lễ cưới,
-                ngày lễ và các sự kiện quan trọng.
+                <i class="fa-solid fa-envelope"></i>
+
+                Email: flowershop@gmail.com
 
             </p>
 
-            <a href="gioithieu.html" class="btn2">
+            <p>
 
-                Xem thêm
+                <i class="fa-solid fa-location-dot"></i>
 
-            </a>
+                Địa chỉ: Bến Tre, Việt Nam
 
-        </div>
+            </p>
 
-        <div class="about-image">
+            <div class="social">
 
-            <img src="images/about.jpg" alt="Flower Shop">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
 
-        </div>
+                <a href="#"><i class="fab fa-instagram"></i></a>
 
-    </section>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
 
-    <!-- DỊCH VỤ -->
-
-    <section class="service">
-
-        <h2>Dịch vụ nổi bật</h2>
-
-        <div class="card">
-
-            <div class="box">
-
-                <i class="fa-solid fa-gift"></i>
-
-                <h3>Theo Dịp</h3>
-
-                <p>
-
-                    Hoa sinh nhật, hoa chúc mừng,
-                    hoa khai trương, hoa cưới...
-
-                </p>
-
-            </div>
-
-            <div class="box">
-
-                <i class="fa-solid fa-truck-fast"></i>
-
-                <h3>Giao Hoa</h3>
-
-                <p>
-
-                    Giao hoa trong ngày,
-                    đúng giờ, toàn quốc.
-
-                </p>
-
-            </div>
-
-            <div class="box">
-
-                <i class="fa-solid fa-building"></i>
-
-                <h3>Doanh nghiệp</h3>
-
-                <p>
-
-                    Hoa văn phòng,
-                    hoa hội nghị,
-                    hoa sự kiện.
-
-                </p>
-
-            </div>
-
-            <div class="box">
-
-                <i class="fa-solid fa-book-open"></i>
-
-                <h3>Blog</h3>
-
-                <p>
-
-                    Cẩm nang chăm sóc hoa
-                    và ý nghĩa các loài hoa.
-
-                </p>
+                <a href="#"><i class="fab fa-youtube"></i></a>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-    <!-- SẢN PHẨM NỔI BẬT -->
+    <hr>
 
-    <section class="featured">
+    <p class="copyright">
 
-        <h2>Sản phẩm nổi bật</h2>
+        © 2026 Flower Shop | All Rights Reserved.
 
-        <div class="products">
+    </p>
 
-            <div class="product-card">
-
-                <img src="images/rose.jpg" alt="Hoa Hồng">
-
-                <h3>Bó Hoa Hồng</h3>
-
-                <p>350.000đ</p>
-
-                <a href="shop.html" class="btn">
-
-                    Mua ngay
-
-                </a>
-
-            </div>
-
-            <div class="product-card">
-
-                <img src="images/tulip.jpg" alt="Tulip">
-
-                <h3>Hoa Tulip</h3>
-
-                <p>450.000đ</p>
-
-                <a href="shop.html" class="btn">
-
-                    Mua ngay
-
-                </a>
-
-            </div>
-
-            <div class="product-card">
-
-                <img src="images/sunflower.jpg" alt="Hướng Dương">
-
-                <h3>Hoa Hướng Dương</h3>
-
-                <p>400.000đ</p>
-
-                <a href="shop.html" class="btn">
-
-                    Mua ngay
-
-                </a>
-
-            </div>
-
-            <div class="product-card">
-
-                <img src="images/orchid.jpg" alt="Hoa Lan">
-
-                <h3>Hoa Lan</h3>
-
-                <p>250.000đ</p>
-
-                <a href="shop.html" class="btn">
-
-                    Mua ngay
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- BLOG -->
-
-    <section class="news">
-
-        <h2>Tin tức mới</h2>
-
-        <div class="news-box">
-
-            <div class="news-card">
-
-                <img src="images/blog1.jpg" alt="Blog">
-
-                <h3>Ý nghĩa của Hoa Hồng</h3>
-
-                <p>
-
-                    Hoa hồng tượng trưng cho tình yêu,
-                    sự lãng mạn và lòng biết ơn.
-
-                </p>
-
-            </div>
-
-            <div class="news-card">
-
-                <img src="images/blog2.jpg" alt="Blog">
-
-                <h3>Cách chăm sóc hoa tươi</h3>
-
-                <p>
-
-                    Những mẹo giúp hoa luôn tươi lâu
-                    sau khi mua về.
-
-                </p>
-
-            </div>
-
-            <div class="news-card">
-
-                <img src="images/blog3.jpg" alt="Blog">
-
-                <h3>Xu hướng hoa năm 2026</h3>
-
-                <p>
-
-                    Những mẫu bó hoa được yêu thích
-                    nhất hiện nay.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="footer-content">
-
-            <div>
-
-                <h3>🌸 Flower Shop</h3>
-
-                <p>
-
-                    Mang yêu thương đến mọi người
-                    bằng những bó hoa tươi.
-
-                </p>
-
-            </div>
-
-            <div>
-
-                <h3>Liên kết</h3>
-
-                <p><a href="shop.html">Shop Hoa</a></p>
-
-                <p><a href="dichvu.html">Dịch vụ</a></p>
-
-                <p><a href="blog.html">Blog</a></p>
-
-            </div>
-
-            <div>
-
-                <h3>Liên hệ</h3>
-
-                <p><i class="fa-solid fa-phone"></i> 0123 456 789</p>
-
-                <p><i class="fa-solid fa-envelope"></i> flowershop@gmail.com</p>
-
-                <p><i class="fa-solid fa-location-dot"></i> Bến Tre, Việt Nam</p>
-
-            </div>
-
-        </div>
-
-        <hr>
-
-        <p class="copyright">
-
-            © 2026 Flower Shop. All Rights Reserved.
-
-        </p>
-
-    </footer>
+</footer>
 
 </body>
 
