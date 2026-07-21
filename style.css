@@ -106,18 +106,31 @@ header {
 
 /* LOGO */
 
-.logo {
-    color: var(--pink);
-
-    font-size: 32px;
-    font-weight: 700;
-
-    transition: 0.3s;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    font-size:30px;
+    font-weight:700;
+    color:#ff4f81;
+    transition:.3s;
 }
 
-.logo:hover {
-    color: var(--pink-dark);
-    transform: scale(1.03);
+.logo img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+.logo span{
+    background:linear-gradient(90deg,#ff4f81,#ff9800);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.logo:hover{
+    transform:scale(1.05);
 }
 
 
@@ -2045,4 +2058,16 @@ footer hr {
 
         width: 100%;
     }
+}
+@media(max-width:768px){
+
+.logo img{
+    width:45px;
+    height:45px;
+}
+
+.logo span{
+    font-size:24px;
+}
+
 }
