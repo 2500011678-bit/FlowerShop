@@ -1753,3 +1753,324 @@ footer hr {
     }
 
 }
+/* ========================================= */
+/* FIX HERO BANNER - KHÔNG BỊ THU NHỎ */
+/* ========================================= */
+
+.hero {
+    position: relative;
+
+    width: 100vw !important;
+    max-width: none !important;
+
+    min-height: 650px;
+
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+
+    padding: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(40, 20, 20, 0.68),
+            rgba(40, 20, 20, 0.35),
+            rgba(40, 20, 20, 0.08)
+        ),
+        url("images/banner.jpg") !important;
+
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    overflow: hidden;
+}
+
+
+/* Nội dung trong banner */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 80px 60px;
+
+    text-align: left;
+}
+
+
+/* ========================================= */
+/* BLOG PAGE */
+/* ========================================= */
+
+.blog {
+    width: 100%;
+
+    padding: 90px 8%;
+
+    background: linear-gradient(
+        135deg,
+        #fff8fb,
+        #ffffff,
+        #fffaf5
+    );
+}
+
+.blog-header {
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+
+    text-align: center;
+}
+
+.blog-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--pink);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.blog-header h1 {
+    margin-bottom: 18px;
+
+    color: #2d2d2d;
+
+    font-size: 44px;
+    font-weight: 800;
+}
+
+.blog-header p {
+    color: #777;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+.blog-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.blog-card {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(120, 60, 80, .10);
+
+    transition: .35s;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(120, 60, 80, .18);
+}
+
+.blog-image {
+    position: relative;
+
+    height: 240px;
+
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.08);
+}
+
+.blog-category {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 8px 15px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--orange)
+    );
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.blog-content {
+    padding: 25px;
+}
+
+.blog-date {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--pink);
+
+    font-size: 13px;
+}
+
+.blog-date i {
+    margin-right: 5px;
+}
+
+.blog-content h2 {
+    margin-bottom: 14px;
+
+    color: #2d2d2d;
+
+    font-size: 23px;
+
+    line-height: 1.35;
+}
+
+.blog-content p {
+    margin-bottom: 20px;
+
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.blog-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--pink);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.blog-link:hover {
+    gap: 14px;
+
+    color: var(--pink-dark);
+}
+
+
+/* ========================================= */
+/* TABLET */
+/* ========================================= */
+
+@media (max-width: 992px) {
+
+    .blog-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-content {
+        padding: 70px 40px;
+    }
+}
+
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 700px;
+
+        background-position: center center !important;
+    }
+
+    .hero-content {
+        padding: 60px 24px 40px;
+
+        text-align: center;
+    }
+
+    .blog {
+        padding: 60px 20px;
+    }
+
+    .blog-header h1 {
+        font-size: 32px;
+    }
+
+    .blog-header p {
+        font-size: 15px;
+    }
+
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-image {
+        height: 230px;
+    }
+}
+
+
+/* ========================================= */
+/* ĐIỆN THOẠI NHỎ */
+/* ========================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        min-height: 680px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .blog-header h1 {
+        font-size: 28px;
+    }
+}
