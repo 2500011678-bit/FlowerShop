@@ -2072,4 +2072,94 @@ footer hr {
 }
 
 }
+/* ================= LOGIN ================= */
 
+.login{
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#fff7fb;
+
+    padding:40px;
+
+}
+
+.login-box{
+
+    width:420px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.login-box h2{
+
+    text-align:center;
+
+    color:#ff4d88;
+
+    margin-bottom:30px;
+
+}
+
+.login-box input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:18px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.login-box input:focus{
+
+    border-color:#ff4d88;
+
+    outline:none;
+
+}
+
+.login-box button{
+
+    width:100%;
+
+    cursor:pointer;
+
+}
+
+.login-box p{
+
+    margin-top:20px;
+
+    text-align:center;
+
+}
+
+.login-box a{
+
+    color:#ff4d88;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
