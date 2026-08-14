@@ -3649,3 +3649,524 @@ footer hr {
         font-size: 25px;
     }
 }
+/* =====================================================
+   HOTRO.HTML - HEADER RIÊNG
+   Không ảnh hưởng các trang khác
+===================================================== */
+
+.support-page .support-header {
+
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    z-index: 9999;
+
+    width: 100%;
+    min-height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 7%;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 3px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.support-page .support-logo {
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    text-decoration: none;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.support-page .support-logo img {
+
+    width: 68px;
+    height: 68px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+.support-page .support-logo span {
+
+    display: inline-block;
+
+    font-size: 34px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -1.2px;
+
+    white-space: nowrap;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4f87 0%,
+            #ff5b70 48%,
+            #ff9800 100%
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+.support-page .support-logo:hover {
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.support-page .support-nav {
+
+    display: flex;
+    align-items: center;
+}
+
+
+.support-page .support-nav ul {
+
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.support-page .support-nav ul li {
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.support-page .support-nav ul li a {
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 10px 0;
+
+    color: #444;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.support-page .support-nav ul li a:hover,
+.support-page .support-nav ul li a.active {
+
+    color: #ff4f87;
+}
+
+
+/* GẠCH DƯỚI MENU */
+
+.support-page .support-nav ul li a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4f87,
+            #ff9800
+        );
+
+    transition:
+        width 0.3s ease;
+}
+
+
+.support-page .support-nav ul li a:hover::after,
+.support-page .support-nav ul li a.active::after {
+
+    width: 100%;
+}
+
+
+
+/* =====================================================
+   HEADER RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .support-page .support-header {
+
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .support-page .support-logo img {
+
+        width: 62px;
+        height: 62px;
+    }
+
+
+    .support-page .support-logo span {
+
+        font-size: 30px;
+    }
+
+
+    .support-page .support-nav ul {
+
+        gap: 22px;
+    }
+
+
+    .support-page .support-nav ul li a {
+
+        font-size: 15px;
+    }
+
+}
+
+
+
+/* =====================================================
+   HEADER RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .support-page .support-header {
+
+        min-height: auto;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        padding: 10px 20px 12px;
+    }
+
+
+    .support-page .support-logo {
+
+        justify-content: center;
+    }
+
+
+    .support-page .support-logo img {
+
+        width: 58px;
+        height: 58px;
+    }
+
+
+    .support-page .support-logo span {
+
+        font-size: 28px;
+    }
+
+
+    .support-page .support-nav {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .support-page .support-nav ul {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 5px 20px;
+    }
+
+
+    .support-page .support-nav ul li a {
+
+        font-size: 14px;
+
+        padding: 6px 0;
+    }
+
+}
+
+
+
+/* =====================================================
+   HEADER RESPONSIVE - MOBILE NHỎ
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .support-page .support-header {
+
+        padding: 9px 12px 11px;
+
+        gap: 8px;
+    }
+
+
+    .support-page .support-logo {
+
+        gap: 10px;
+    }
+
+
+    .support-page .support-logo img {
+
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .support-page .support-logo span {
+
+        font-size: 24px;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    .support-page .support-nav ul {
+
+        gap: 4px 13px;
+    }
+
+
+    .support-page .support-nav ul li a {
+
+        font-size: 12px;
+    }
+
+}
+
+
+
+/* =====================================================
+   HOTRO - TINH CHỈNH HERO
+===================================================== */
+
+.support-page .support-hero {
+
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 75px 8% 65px;
+}
+
+
+.support-page .support-hero-content {
+
+    width: 100%;
+    max-width: 850px;
+}
+
+
+.support-page .support-hero h1 {
+
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+
+
+/* =====================================================
+   HOTRO - CONTACT CARDS
+===================================================== */
+
+.support-page .support-contact-card {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.support-page .support-contact-card:hover {
+
+    border-color: #ffd4e1;
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px rgba(65, 30, 45, 0.11);
+}
+
+
+
+/* =====================================================
+   HOTRO - FORM
+===================================================== */
+
+.support-page .support-form-box {
+
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.support-page .support-form-box:hover {
+
+    box-shadow:
+        0 18px 50px rgba(65, 30, 45, 0.10);
+}
+
+
+.support-page .support-submit {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f87,
+            #ff7b63,
+            #ff9800
+        );
+
+    box-shadow:
+        0 8px 20px rgba(255, 79, 135, 0.18);
+}
+
+
+.support-page .support-submit:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ed3f76,
+            #f56b55,
+            #f28a00
+        );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(255, 79, 135, 0.24);
+}
+
+
+
+/* =====================================================
+   HOTRO - FAQ
+===================================================== */
+
+.support-page .faq-card {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.support-page .faq-card:hover {
+
+    border-color: #ffd4e1;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(65, 30, 45, 0.09);
+}
+
+
+
+/* =====================================================
+   HOTRO - FOOTER
+===================================================== */
+
+.support-page footer {
+
+    margin-top: 0;
+}
+
+
+
+/* =====================================================
+   HOTRO - MOBILE CONTENT
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .support-page .support-hero {
+
+        min-height: 340px;
+
+        padding: 60px 6% 50px;
+    }
+
+
+    .support-page .support-contact-grid {
+
+        margin-top: 0;
+    }
+
+}
