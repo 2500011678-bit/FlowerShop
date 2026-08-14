@@ -2,6 +2,7 @@
 <html lang="vi">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,23 +13,113 @@
 
     <title>Flower Shop | Mang Sắc Hoa Đến Mọi Khoảnh Khắc</title>
 
-    <!-- Google Font -->
+
+    <!-- =====================================================
+         GOOGLE FONT - HỖ TRỢ TIẾNG VIỆT
+    ====================================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Font Awesome -->
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     >
 
-    <!-- CSS -->
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
     <link rel="stylesheet" href="style.css">
+
+
+    <!-- =====================================================
+         FIX FONT RIÊNG CHO INDEX
+    ====================================================== -->
+
+    <style>
+
+        html {
+            font-family: "Be Vietnam Pro", sans-serif;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+        }
+
+        .home-page,
+        .home-page h1,
+        .home-page h2,
+        .home-page h3,
+        .home-page h4,
+        .home-page h5,
+        .home-page h6,
+        .home-page p,
+        .home-page a,
+        .home-page span,
+        .home-page strong,
+        .home-page button,
+        .home-page input,
+        .home-page textarea,
+        .home-page select {
+            font-family: "Be Vietnam Pro", sans-serif;
+        }
+
+        .home-page img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .home-page .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .home-page .logo img {
+            width: auto;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .home-page .logo span {
+            display: inline-block;
+        }
+
+        .home-page .hero,
+        .home-page .home-cta {
+            overflow: hidden;
+        }
+
+        .home-page .product-image,
+        .home-page .news-image {
+            overflow: hidden;
+        }
+
+        .home-page .product-image img,
+        .home-page .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+
 </head>
 
 
@@ -41,20 +132,37 @@
 
 <header>
 
+    <!-- LOGO GỐC -->
+
     <a href="index.html" class="logo">
-        🌸 Flower Shop
+
+        <img
+            src="images/logo.png"
+            alt="Flower Shop Logo"
+        >
+
+        <span>
+            Flower Shop
+        </span>
+
     </a>
 
+
+    <!-- MENU -->
 
     <nav>
 
         <ul>
 
             <li>
-                <a href="index.html" class="active">
+                <a
+                    href="index.html"
+                    class="active"
+                >
                     Trang chủ
                 </a>
             </li>
+
 
             <li>
                 <a href="shop.html">
@@ -62,11 +170,13 @@
                 </a>
             </li>
 
+
             <li>
                 <a href="dichvu.html">
                     Dịch vụ
                 </a>
             </li>
+
 
             <li>
                 <a href="blog.html">
@@ -74,11 +184,13 @@
                 </a>
             </li>
 
+
             <li>
                 <a href="gioithieu.html">
                     Giới thiệu
                 </a>
             </li>
+
 
             <li>
                 <a href="hotro.html">
@@ -95,12 +207,13 @@
 
 
 <!-- =====================================================
-     HERO
+     HERO BANNER
 ===================================================== -->
 
 <section class="hero">
 
     <div class="hero-overlay"></div>
+
 
     <div class="hero-content">
 
@@ -110,39 +223,47 @@
 
 
         <h1>
-            Mang sắc hoa
-            <span>đến mọi khoảnh khắc</span>
+            Mang Sắc Hoa
+            <span>Đến Mọi Khoảnh Khắc</span>
         </h1>
 
 
-        <p>
-            Những bó hoa tươi đẹp gửi gắm yêu thương,
-            hạnh phúc và những lời chúc ý nghĩa nhất
-            đến những người quan trọng trong cuộc sống.
-        </p>
+        <div class="hero-description">
+
+            <p class="hero-intro">
+
+                Những bó hoa tươi đẹp gửi gắm yêu thương,
+                hạnh phúc và những lời chúc ý nghĩa nhất.
+
+            </p>
 
 
-        <div class="hero-categories">
+            <div class="hero-categories">
 
-            <span>
-                🌹
-                <strong>Hoa sinh nhật</strong>
-            </span>
+                <span>
+                    🌹
+                    <strong>Hoa sinh nhật</strong>
+                </span>
 
-            <span>
-                💍
-                <strong>Hoa cưới</strong>
-            </span>
 
-            <span>
-                🎉
-                <strong>Hoa khai trương</strong>
-            </span>
+                <span>
+                    💍
+                    <strong>Hoa cưới</strong>
+                </span>
 
-            <span>
-                🤍
-                <strong>Hoa chia buồn</strong>
-            </span>
+
+                <span>
+                    🎉
+                    <strong>Hoa khai trương</strong>
+                </span>
+
+
+                <span>
+                    🤍
+                    <strong>Hoa chia buồn</strong>
+                </span>
+
+            </div>
 
         </div>
 
@@ -153,7 +274,7 @@
                 href="shop.html"
                 class="btn"
             >
-                Khám phá Shop Hoa
+                Mua Hoa Ngay
                 <i class="fa-solid fa-arrow-right"></i>
             </a>
 
@@ -162,7 +283,7 @@
                 href="gioithieu.html"
                 class="btn btn-outline"
             >
-                Về chúng tôi
+                Xem Thêm
             </a>
 
         </div>
@@ -181,7 +302,7 @@
 
     <div class="why-us-header">
 
-        <span class="section-label">
+        <span class="why-us-label section-label">
             ✦ VÌ SAO CHỌN FLOWER SHOP
         </span>
 
@@ -193,9 +314,11 @@
 
 
         <p>
+
             Chúng tôi chăm chút từng bông hoa
             để mỗi món quà bạn gửi đi
             đều trở nên thật đặc biệt.
+
         </p>
 
     </div>
@@ -206,85 +329,110 @@
 
         <!-- CARD 1 -->
 
-        <article class="why-us-card">
+        <div class="why-us-card">
 
             <div class="why-us-icon">
+
                 <i class="fa-solid fa-leaf"></i>
+
             </div>
+
 
             <h3>
                 Hoa tươi mỗi ngày
             </h3>
 
+
             <p>
+
                 Những bông hoa được tuyển chọn kỹ lưỡng
                 để luôn giữ được vẻ đẹp tự nhiên.
+
             </p>
 
-        </article>
+        </div>
 
 
 
         <!-- CARD 2 -->
 
-        <article class="why-us-card">
+        <div class="why-us-card">
 
             <div class="why-us-icon">
+
                 <i class="fa-solid fa-heart"></i>
+
             </div>
+
 
             <h3>
                 Thiết kế tinh tế
             </h3>
 
+
             <p>
+
                 Mỗi bó hoa được thiết kế riêng
                 để truyền tải trọn vẹn cảm xúc.
+
             </p>
 
-        </article>
+        </div>
 
 
 
         <!-- CARD 3 -->
 
-        <article class="why-us-card">
+        <div class="why-us-card">
 
             <div class="why-us-icon">
+
                 <i class="fa-solid fa-truck-fast"></i>
+
             </div>
+
 
             <h3>
                 Giao hàng tận nơi
             </h3>
 
+
             <p>
+
                 Giao hoa nhanh chóng, đúng hẹn
                 và được đóng gói cẩn thận.
+
             </p>
 
-        </article>
+        </div>
 
 
 
         <!-- CARD 4 -->
 
-        <article class="why-us-card">
+        <div class="why-us-card">
 
             <div class="why-us-icon">
+
                 <i class="fa-solid fa-star"></i>
+
             </div>
+
 
             <h3>
                 Phục vụ tận tâm
             </h3>
 
+
             <p>
+
                 Luôn lắng nghe và đồng hành
                 để bạn chọn được món quà phù hợp nhất.
+
             </p>
 
-        </article>
+        </div>
+
 
     </div>
 
@@ -299,7 +447,7 @@
 <section class="about-home">
 
 
-    <!-- IMAGE -->
+    <!-- HÌNH ẢNH -->
 
     <div class="about-image">
 
@@ -315,6 +463,7 @@
                 100%
             </strong>
 
+
             <span>
                 Hoa tươi mỗi ngày
             </span>
@@ -325,34 +474,41 @@
 
 
 
-    <!-- CONTENT -->
+    <!-- NỘI DUNG -->
 
     <div class="about-text">
 
-        <span class="section-label">
+        <span class="about-label section-label">
             🌸 VỀ CHÚNG TÔI
         </span>
 
 
         <h2>
-            Mang yêu thương
+
+            Mang yêu thương<br>
             <span>đến mọi khoảnh khắc</span>
+
         </h2>
 
 
         <p class="about-intro">
+
             Flower Shop chuyên cung cấp hoa tươi
             với những thiết kế tinh tế, phù hợp
             cho những dịp đặc biệt trong cuộc sống.
+
         </p>
 
 
         <div class="about-features">
 
 
+            <!-- FEATURE 1 -->
+
             <div class="about-feature">
 
                 <i class="fa-solid fa-leaf"></i>
+
 
                 <div>
 
@@ -360,9 +516,12 @@
                         Hoa tươi tuyển chọn
                     </h3>
 
+
                     <p>
+
                         Những bông hoa tươi đẹp,
                         được lựa chọn kỹ càng mỗi ngày.
+
                     </p>
 
                 </div>
@@ -371,9 +530,12 @@
 
 
 
+            <!-- FEATURE 2 -->
+
             <div class="about-feature">
 
                 <i class="fa-solid fa-heart"></i>
+
 
                 <div>
 
@@ -381,9 +543,12 @@
                         Thiết kế đầy yêu thương
                     </h3>
 
+
                     <p>
+
                         Mỗi bó hoa là một món quà
                         mang theo những cảm xúc đặc biệt.
+
                     </p>
 
                 </div>
@@ -392,9 +557,12 @@
 
 
 
+            <!-- FEATURE 3 -->
+
             <div class="about-feature">
 
                 <i class="fa-solid fa-gift"></i>
+
 
                 <div>
 
@@ -402,9 +570,12 @@
                         Phù hợp mọi dịp
                     </h3>
 
+
                     <p>
+
                         Từ sinh nhật, kỷ niệm đến khai trương,
                         cưới hỏi và những dịp đặc biệt.
+
                     </p>
 
                 </div>
@@ -419,8 +590,11 @@
             href="gioithieu.html"
             class="about-btn"
         >
+
             Khám phá Flower Shop
+
             <i class="fa-solid fa-arrow-right"></i>
+
         </a>
 
     </div>
@@ -435,20 +609,25 @@
 
 <section class="service">
 
+
     <div class="section-heading">
 
         <span class="section-label">
-            ✦ DỊCH VỤ CỦA CHÚNG TÔI
+            ✦ DỊCH VỤ FLOWER SHOP
         </span>
 
+
         <h2>
-            Những dịch vụ
-            <span>được yêu thích</span>
+            Dịch vụ
+            <span>nổi bật</span>
         </h2>
 
+
         <p>
-            Những lựa chọn được thiết kế để
-            giúp bạn gửi trao yêu thương dễ dàng hơn.
+
+            Những dịch vụ được thiết kế
+            để mỗi khoảnh khắc trao hoa trở nên đặc biệt hơn.
+
         </p>
 
     </div>
@@ -457,113 +636,153 @@
     <div class="card">
 
 
-        <!-- SERVICE 1 -->
+        <!-- DỊCH VỤ 1 -->
 
-        <article class="box">
+        <div class="box">
 
             <div class="service-icon">
+
                 <i class="fa-solid fa-gift"></i>
+
             </div>
+
 
             <h3>
                 Hoa Theo Dịp
             </h3>
 
+
             <p>
+
                 Hoa sinh nhật, hoa khai trương,
                 hoa cưới, hoa chúc mừng,
                 hoa chia buồn và nhiều mẫu hoa theo yêu cầu.
+
             </p>
 
+
             <a href="shop.html">
+
                 Xem sản phẩm
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
-        </article>
+        </div>
 
 
 
-        <!-- SERVICE 2 -->
+        <!-- DỊCH VỤ 2 -->
 
-        <article class="box">
+        <div class="box">
 
             <div class="service-icon">
+
                 <i class="fa-solid fa-truck-fast"></i>
+
             </div>
+
 
             <h3>
                 Giao Hoa Nhanh
             </h3>
 
+
             <p>
+
                 Giao hoa tận nơi trong ngày,
                 đúng giờ, đảm bảo hoa luôn tươi mới
                 và được đóng gói cẩn thận.
+
             </p>
 
+
             <a href="dichvu.html">
+
                 Tìm hiểu thêm
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
-        </article>
+        </div>
 
 
 
-        <!-- SERVICE 3 -->
+        <!-- DỊCH VỤ 3 -->
 
-        <article class="box">
+        <div class="box">
 
             <div class="service-icon">
+
                 <i class="fa-solid fa-building"></i>
+
             </div>
+
 
             <h3>
                 Hoa Doanh Nghiệp
             </h3>
 
+
             <p>
+
                 Thiết kế hoa văn phòng,
                 hoa hội nghị,
                 hoa sự kiện,
                 hoa khai trương chuyên nghiệp.
+
             </p>
 
+
             <a href="dichvu.html">
+
                 Tìm hiểu thêm
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
-        </article>
+        </div>
 
 
 
-        <!-- SERVICE 4 -->
+        <!-- DỊCH VỤ 4 -->
 
-        <article class="box">
+        <div class="box">
 
             <div class="service-icon">
+
                 <i class="fa-solid fa-book-open"></i>
+
             </div>
+
 
             <h3>
                 Blog Hoa
             </h3>
 
+
             <p>
+
                 Chia sẻ kiến thức,
                 cách chăm sóc hoa,
                 ý nghĩa từng loài hoa
                 và xu hướng cắm hoa hiện đại.
+
             </p>
 
+
             <a href="blog.html">
+
                 Đọc Blog
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
-        </article>
+        </div>
 
 
     </div>
@@ -578,20 +797,25 @@
 
 <section class="featured">
 
+
     <div class="section-heading">
 
         <span class="section-label">
             ✦ GỢI Ý CHO BẠN
         </span>
 
+
         <h2>
             Sản phẩm
             <span>nổi bật</span>
         </h2>
 
+
         <p>
+
             Một vài mẫu hoa được yêu thích
             dành cho những dịp đặc biệt.
+
         </p>
 
     </div>
@@ -600,9 +824,9 @@
     <div class="products">
 
 
-        <!-- PRODUCT 1 -->
+        <!-- SẢN PHẨM 1 -->
 
-        <article class="product-card">
+        <div class="product-card">
 
             <div class="product-image">
 
@@ -610,19 +834,26 @@
                     BÁN CHẠY
                 </span>
 
+
                 <img
                     src="images/rose.jpg"
                     alt="Bó Hoa Hồng Đỏ"
                 >
 
+
                 <div class="product-actions">
 
                     <button aria-label="Yêu thích">
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
+
                     <button aria-label="Xem sản phẩm">
+
                         <i class="fa-regular fa-eye"></i>
+
                     </button>
 
                 </div>
@@ -636,9 +867,11 @@
                     HOA TƯƠI
                 </span>
 
+
                 <h3>
                     Bó Hoa Hồng Đỏ
                 </h3>
+
 
                 <p>
                     Những đóa hồng đỏ tươi,
@@ -654,6 +887,7 @@
                             350.000đ
                         </strong>
 
+
                         <del>
                             400.000đ
                         </del>
@@ -664,22 +898,24 @@
                     <a
                         href="shop.html"
                         class="product-buy"
-                        aria-label="Mua hoa"
+                        aria-label="Mua sản phẩm"
                     >
+
                         <i class="fa-solid fa-bag-shopping"></i>
+
                     </a>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
 
 
 
-        <!-- PRODUCT 2 -->
+        <!-- SẢN PHẨM 2 -->
 
-        <article class="product-card">
+        <div class="product-card">
 
             <div class="product-image">
 
@@ -687,19 +923,26 @@
                     MỚI
                 </span>
 
+
                 <img
                     src="images/tulip.jpg"
                     alt="Bó Hoa Tulip"
                 >
 
+
                 <div class="product-actions">
 
                     <button aria-label="Yêu thích">
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
+
                     <button aria-label="Xem sản phẩm">
+
                         <i class="fa-regular fa-eye"></i>
+
                     </button>
 
                 </div>
@@ -713,9 +956,11 @@
                     HOA TƯƠI
                 </span>
 
+
                 <h3>
-                    Bó Hoa Tulip Thanh Lịch
+                    Bó Hoa Tulip
                 </h3>
+
 
                 <p>
                     Vẻ đẹp nhẹ nhàng và tinh tế,
@@ -737,22 +982,24 @@
                     <a
                         href="shop.html"
                         class="product-buy"
-                        aria-label="Mua hoa"
+                        aria-label="Mua sản phẩm"
                     >
+
                         <i class="fa-solid fa-bag-shopping"></i>
+
                     </a>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
 
 
 
-        <!-- PRODUCT 3 -->
+        <!-- SẢN PHẨM 3 -->
 
-        <article class="product-card">
+        <div class="product-card">
 
             <div class="product-image">
 
@@ -760,19 +1007,26 @@
                     YÊU THÍCH
                 </span>
 
+
                 <img
                     src="images/sunflower.jpg"
                     alt="Hoa Hướng Dương"
                 >
 
+
                 <div class="product-actions">
 
                     <button aria-label="Yêu thích">
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
+
                     <button aria-label="Xem sản phẩm">
+
                         <i class="fa-regular fa-eye"></i>
+
                     </button>
 
                 </div>
@@ -786,9 +1040,11 @@
                     HOA TƯƠI
                 </span>
 
+
                 <h3>
-                    Bó Hoa Hướng Dương
+                    Hoa Hướng Dương
                 </h3>
+
 
                 <p>
                     Màu vàng rực rỡ mang đến
@@ -801,7 +1057,7 @@
                     <div class="product-price">
 
                         <strong>
-                            300.000đ
+                            400.000đ
                         </strong>
 
                     </div>
@@ -810,22 +1066,24 @@
                     <a
                         href="shop.html"
                         class="product-buy"
-                        aria-label="Mua hoa"
+                        aria-label="Mua sản phẩm"
                     >
+
                         <i class="fa-solid fa-bag-shopping"></i>
+
                     </a>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
 
 
 
-        <!-- PRODUCT 4 -->
+        <!-- SẢN PHẨM 4 -->
 
-        <article class="product-card">
+        <div class="product-card">
 
             <div class="product-image">
 
@@ -834,14 +1092,20 @@
                     alt="Hoa Lan Hồ Điệp"
                 >
 
+
                 <div class="product-actions">
 
                     <button aria-label="Yêu thích">
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
+
                     <button aria-label="Xem sản phẩm">
+
                         <i class="fa-regular fa-eye"></i>
+
                     </button>
 
                 </div>
@@ -855,9 +1119,11 @@
                     HOA CAO CẤP
                 </span>
 
+
                 <h3>
-                    Lan Hồ Điệp Sang Trọng
+                    Hoa Lan Hồ Điệp
                 </h3>
+
 
                 <p>
                     Một lựa chọn thanh lịch,
@@ -879,16 +1145,18 @@
                     <a
                         href="shop.html"
                         class="product-buy"
-                        aria-label="Mua hoa"
+                        aria-label="Mua sản phẩm"
                     >
+
                         <i class="fa-solid fa-bag-shopping"></i>
+
                     </a>
 
                 </div>
 
             </div>
 
-        </article>
+        </div>
 
 
     </div>
@@ -896,9 +1164,15 @@
 
     <div class="featured-more">
 
-        <a href="shop.html" class="btn">
+        <a
+            href="shop.html"
+            class="btn"
+        >
+
             Xem toàn bộ sản phẩm
+
             <i class="fa-solid fa-arrow-right"></i>
+
         </a>
 
     </div>
@@ -919,20 +1193,26 @@
     <div class="home-cta-content">
 
         <span>
-            ✦ FLOWER SHOP SPECIAL
+            🌷 MÓN QUÀ ĐẶC BIỆT CHO NGƯỜI BẠN YÊU THƯƠNG
         </span>
 
 
         <h2>
-            Một bó hoa nhỏ,
-            <br>
-            <strong>một tình cảm thật lớn.</strong>
+
+            Một bó hoa nhỏ,<br>
+
+            <strong>
+                một tình cảm thật lớn
+            </strong>
+
         </h2>
 
 
         <p>
+
             Hãy để Flower Shop giúp bạn gửi những lời yêu thương
             đến những người quan trọng nhất.
+
         </p>
 
 
@@ -940,8 +1220,11 @@
             href="shop.html"
             class="btn"
         >
+
             Khám phá các mẫu hoa
+
             <i class="fa-solid fa-arrow-right"></i>
+
         </a>
 
     </div>
@@ -951,27 +1234,35 @@
 
 
 <!-- =====================================================
-     BLOG
+     BLOG / TIN TỨC
 ===================================================== -->
 
 <section class="news">
 
+
     <div class="news-header">
 
-        <span class="section-label">
+        <span class="news-label section-label">
             ✦ BLOG FLOWER SHOP
         </span>
 
 
         <h2>
+
             Tin tức &
-            <span>Kiến thức về Hoa</span>
+
+            <span>
+                Kiến thức về Hoa
+            </span>
+
         </h2>
 
 
         <p>
+
             Cùng Flower Shop khám phá những câu chuyện thú vị,
             kiến thức hữu ích và cảm hứng đẹp đẽ từ thế giới hoa.
+
         </p>
 
     </div>
@@ -980,7 +1271,7 @@
     <div class="news-box">
 
 
-        <!-- BLOG 1 -->
+        <!-- BÀI VIẾT 1 -->
 
         <article class="news-card">
 
@@ -997,19 +1288,25 @@
             <div class="news-card-content">
 
                 <span class="news-category">
+
                     🌹 Ý NGHĨA LOÀI HOA
+
                 </span>
 
 
                 <h3>
+
                     Hoa Hồng và những thông điệp đầy cảm xúc
+
                 </h3>
 
 
                 <p>
+
                     Tìm hiểu ý nghĩa đặc biệt của hoa hồng
                     và cách mỗi màu sắc truyền tải một thông điệp
                     riêng trong tình yêu, tình bạn và cuộc sống.
+
                 </p>
 
 
@@ -1017,8 +1314,11 @@
                     href="blog.html"
                     class="btn2"
                 >
+
                     Khám phá bài viết
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1027,7 +1327,7 @@
 
 
 
-        <!-- BLOG 2 -->
+        <!-- BÀI VIẾT 2 -->
 
         <article class="news-card">
 
@@ -1044,19 +1344,25 @@
             <div class="news-card-content">
 
                 <span class="news-category">
+
                     🌿 CHĂM SÓC HOA
+
                 </span>
 
 
                 <h3>
+
                     Bí quyết giữ hoa tươi đẹp lâu hơn
+
                 </h3>
 
 
                 <p>
+
                     Những cách đơn giản giúp hoa giữ được
                     vẻ tươi tắn lâu hơn, từ việc thay nước,
                     cắt gốc đến lựa chọn vị trí đặt hoa.
+
                 </p>
 
 
@@ -1064,8 +1370,11 @@
                     href="blog.html"
                     class="btn2"
                 >
+
                     Khám phá bài viết
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1085,40 +1394,69 @@
 
 <footer>
 
+
     <div class="footer-content">
 
 
-        <!-- ABOUT -->
+        <!-- THÔNG TIN -->
 
         <div class="footer-box">
 
             <h3>
-                🌸 Flower Shop
+                Flower Shop 🌸
             </h3>
 
+
             <p>
+
                 Mang sắc hoa đến mọi khoảnh khắc.
                 Những bó hoa tươi đẹp được tạo nên
                 để gửi gắm yêu thương và cảm xúc.
+
             </p>
 
 
+            <!-- SOCIAL -->
+
             <div class="social">
 
-                <a href="#" aria-label="Facebook">
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+
                     <i class="fab fa-facebook-f"></i>
+
                 </a>
 
-                <a href="#" aria-label="Instagram">
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                >
+
                     <i class="fab fa-instagram"></i>
+
                 </a>
 
-                <a href="#" aria-label="TikTok">
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                >
+
                     <i class="fab fa-tiktok"></i>
+
                 </a>
 
-                <a href="#" aria-label="YouTube">
+
+                <a
+                    href="#"
+                    aria-label="YouTube"
+                >
+
                     <i class="fab fa-youtube"></i>
+
                 </a>
 
             </div>
@@ -1127,7 +1465,7 @@
 
 
 
-        <!-- LINKS -->
+        <!-- LIÊN KẾT -->
 
         <div class="footer-box">
 
@@ -1135,42 +1473,60 @@
                 Liên kết
             </h3>
 
+
             <ul>
 
                 <li>
+
                     <a href="index.html">
                         Trang chủ
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="shop.html">
                         Shop Hoa
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="dichvu.html">
                         Dịch vụ
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="blog.html">
                         Blog
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="gioithieu.html">
                         Giới thiệu
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="hotro.html">
                         Hỗ trợ
                     </a>
+
                 </li>
 
             </ul>
@@ -1179,7 +1535,7 @@
 
 
 
-        <!-- CONTACT -->
+        <!-- LIÊN HỆ -->
 
         <div class="footer-box">
 
@@ -1187,19 +1543,31 @@
                 Liên hệ
             </h3>
 
+
             <p>
+
                 <i class="fa-solid fa-location-dot"></i>
+
                 Bến Tre, Việt Nam
+
             </p>
 
+
             <p>
+
                 <i class="fa-solid fa-phone"></i>
+
                 0123 456 789
+
             </p>
 
+
             <p>
+
                 <i class="fa-solid fa-envelope"></i>
+
                 flowershop@gmail.com
+
             </p>
 
         </div>
@@ -1212,7 +1580,9 @@
 
 
     <p class="copyright">
+
         © 2026 Flower Shop | All Rights Reserved.
+
     </p>
 
 </footer>
