@@ -2163,3 +2163,1517 @@ footer hr {
     font-weight:600;
 
 }
+/* =====================================================
+   INDEX PAGE
+   CSS BỔ SUNG CHO TRANG CHỦ
+===================================================== */
+
+
+/* =====================================================
+   BUTTON GLOBAL
+===================================================== */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 28px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--orange)
+        );
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(255, 79, 129, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+}
+
+
+.btn:hover {
+
+    color: #ffffff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(255, 79, 129, 0.30);
+
+}
+
+
+/* =====================================================
+   HERO BUTTON
+===================================================== */
+
+.hero-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+
+.hero-btn .btn {
+
+    width: 230px;
+
+    height: 60px;
+
+    padding: 0;
+
+    border-radius: 35px;
+
+    font-size: 17px;
+
+}
+
+
+.hero-btn .btn-outline {
+
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border: 2px solid #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.hero-btn .btn-outline:hover {
+
+    color: var(--pink);
+
+    background: #ffffff;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 620px;
+
+    aspect-ratio: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("images/banner.jpg");
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    padding: 80px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.hero h1 {
+
+    max-width: 1000px;
+
+    margin-bottom: 22px;
+
+    color: #ffffff;
+
+    font-size: 58px;
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    text-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.45);
+
+}
+
+
+.hero-description {
+
+    width: 100%;
+
+    max-width: 850px;
+
+}
+
+
+.hero-intro {
+
+    margin-bottom: 28px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.45);
+
+}
+
+
+.hero-categories {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px 25px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-categories span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.40);
+
+}
+
+
+.hero-categories span:not(:last-child)::after {
+
+    content: "•";
+
+    margin-left: 18px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+}
+
+
+/* =====================================================
+   WHY US
+===================================================== */
+
+.why-us {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 90px 20px 80px;
+
+}
+
+
+.why-us-header {
+
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+
+}
+
+
+.why-us-label {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--pink);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.why-us-header h2 {
+
+    margin-bottom: 18px;
+
+    color: var(--dark);
+
+    font-size: 42px;
+
+    line-height: 1.3;
+
+    font-weight: 800;
+
+}
+
+
+.why-us-header p {
+
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.why-us-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.why-us-card {
+
+    min-height: 280px;
+
+    padding: 35px 25px;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 35px rgba(120, 60, 80, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.why-us-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(120, 60, 80, 0.16);
+
+}
+
+
+.why-us-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--orange)
+        );
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+}
+
+
+.why-us-card h3 {
+
+    margin-bottom: 12px;
+
+    color: #2d2d2d;
+
+    font-size: 19px;
+
+    line-height: 1.4;
+
+}
+
+
+.why-us-card p {
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   ABOUT HOME - INDEX
+===================================================== */
+
+.about-home {
+
+    position: relative;
+
+}
+
+
+/* =====================================================
+   SERVICE
+===================================================== */
+
+.service {
+
+    width: calc(100% - 40px);
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 90px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fb,
+            #fffdfd
+        );
+
+    border-radius: 30px;
+
+}
+
+
+.service h2 {
+
+    margin-bottom: 55px;
+
+    color: var(--pink);
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+}
+
+
+.card {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.box {
+
+    min-height: 290px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding: 35px 25px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.box:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.14);
+
+}
+
+
+.box i {
+
+    margin-bottom: 20px;
+
+    color: var(--pink);
+
+    font-size: 50px;
+
+}
+
+
+.box h3 {
+
+    margin-bottom: 15px;
+
+    color: #222;
+
+    font-size: 21px;
+
+}
+
+
+.box p {
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   FEATURED PRODUCTS
+===================================================== */
+
+.featured {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 90px 20px;
+
+}
+
+
+.featured h2 {
+
+    margin-bottom: 55px;
+
+    color: var(--pink);
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+}
+
+
+.products {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.product-card {
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.product-card img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.product-card:hover img {
+
+    transform: scale(1.06);
+
+}
+
+
+.product-card h3 {
+
+    margin: 20px 15px 10px;
+
+    color: #222;
+
+    font-size: 19px;
+
+}
+
+
+.price {
+
+    margin-bottom: 18px;
+
+    color: var(--pink);
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+}
+
+
+.product-card .btn {
+
+    margin-top: auto;
+
+    margin-bottom: 22px;
+
+    padding: 11px 25px;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   NEWS / BLOG PREVIEW
+===================================================== */
+
+.news {
+
+    width: calc(100% - 40px);
+
+    max-width: 1200px;
+
+    margin: 0 auto 80px;
+
+    padding: 80px 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fb,
+            #ffffff,
+            #fffaf5
+        );
+
+    border-radius: 30px;
+
+}
+
+
+.news-header {
+
+    max-width: 760px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+
+}
+
+
+.news-label {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--pink);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.news-header h2 {
+
+    margin-bottom: 18px;
+
+    color: #2d2d2d;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+
+}
+
+
+.news-header p {
+
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.news-box {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.news-card {
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px rgba(120, 60, 80, 0.10);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.news-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 45px rgba(120, 60, 80, 0.16);
+
+}
+
+
+.news-card > img {
+
+    width: 100%;
+
+    height: 260px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+
+}
+
+
+.news-card:hover > img {
+
+    transform: scale(1.05);
+
+}
+
+
+.news-card-content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 28px;
+
+}
+
+
+.news-category {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-bottom: 12px;
+
+    color: var(--pink);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.news-card h3 {
+
+    margin: 0 0 12px;
+
+    color: #333;
+
+    font-size: 21px;
+
+    line-height: 1.4;
+
+}
+
+
+.news-card p {
+
+    flex: 1;
+
+    margin: 0 0 20px;
+
+    color: #777;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+.btn2 {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    color: var(--pink);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+
+}
+
+
+.btn2::after {
+
+    content: "→";
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.btn2:hover {
+
+    color: var(--pink-dark);
+
+}
+
+
+.btn2:hover::after {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =====================================================
+   FOOTER - INDEX FIX
+===================================================== */
+
+footer {
+
+    position: relative;
+
+}
+
+
+.footer-box p {
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =====================================================
+   INDEX RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 580px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero-intro {
+
+        font-size: 18px;
+
+    }
+
+
+    /* WHY US */
+
+    .why-us-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* SERVICE */
+
+    .card {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* PRODUCTS */
+
+    .products {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* NEWS */
+
+    .news-box {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   INDEX RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: 680px;
+
+        background-position: center;
+
+    }
+
+
+    .hero-content {
+
+        padding: 60px 24px 40px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 40px;
+
+        line-height: 1.25;
+
+    }
+
+
+    .hero-intro {
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .hero-categories {
+
+        gap: 12px 18px;
+
+    }
+
+
+    .hero-categories span {
+
+        font-size: 14px;
+
+    }
+
+
+    .hero-btn {
+
+        flex-direction: column;
+
+        gap: 14px;
+
+    }
+
+
+    .hero-btn .btn {
+
+        width: 220px;
+
+        height: 55px;
+
+        font-size: 16px;
+
+    }
+
+
+    /* WHY US */
+
+    .why-us {
+
+        padding: 65px 15px;
+
+    }
+
+
+    .why-us-header {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .why-us-header h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .why-us-header p {
+
+        font-size: 14px;
+
+    }
+
+
+    .why-us-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+
+    }
+
+
+    .why-us-card {
+
+        min-height: auto;
+
+        padding: 25px 15px;
+
+    }
+
+
+    .why-us-icon {
+
+        width: 55px;
+
+        height: 55px;
+
+        margin-bottom: 18px;
+
+        font-size: 22px;
+
+    }
+
+
+    .why-us-card h3 {
+
+        font-size: 16px;
+
+    }
+
+
+    .why-us-card p {
+
+        font-size: 13px;
+
+    }
+
+
+    /* ABOUT */
+
+    .about-home {
+
+        width: calc(100% - 30px);
+
+        margin: 40px auto;
+
+        padding: 30px 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .about-image {
+
+        width: 100%;
+
+        height: 300px;
+
+    }
+
+
+    .about-image::before {
+
+        top: 10px;
+
+        left: 10px;
+
+    }
+
+
+    .about-badge {
+
+        right: -8px;
+
+        bottom: 20px;
+
+        width: 130px;
+
+        height: 100px;
+
+    }
+
+
+    .about-badge strong {
+
+        font-size: 26px;
+
+    }
+
+
+    .about-badge span {
+
+        font-size: 12px;
+
+    }
+
+
+    .about-text {
+
+        text-align: center;
+
+    }
+
+
+    .about-text h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .about-intro {
+
+        font-size: 15px;
+
+    }
+
+
+    .about-feature {
+
+        text-align: left;
+
+    }
+
+
+    /* SERVICE */
+
+    .service {
+
+        width: calc(100% - 30px);
+
+        padding: 65px 15px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .service h2 {
+
+        font-size: 30px;
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .card {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* PRODUCTS */
+
+    .featured {
+
+        padding: 65px 20px;
+
+    }
+
+
+    .featured h2 {
+
+        font-size: 30px;
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .products {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .product-card img {
+
+        height: 280px;
+
+    }
+
+
+    /* NEWS */
+
+    .news {
+
+        width: calc(100% - 30px);
+
+        margin: 50px auto;
+
+        padding: 45px 15px;
+
+        border-radius: 22px;
+
+    }
+
+
+    .news-header {
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .news-header h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .news-header p {
+
+        font-size: 14px;
+
+    }
+
+
+    .news-box {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .news-card > img {
+
+        height: 210px;
+
+    }
+
+
+    .news-card-content {
+
+        padding: 24px;
+
+    }
+
+
+}
+
+
+/* =====================================================
+   INDEX RESPONSIVE - MOBILE NHỎ
+===================================================== */
+
+@media (max-width: 480px) {
+
+
+    .hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 33px;
+
+    }
+
+
+    .hero-intro {
+
+        font-size: 15px;
+
+    }
+
+
+    .hero-categories {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    .hero-categories span {
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-categories span:not(:last-child)::after {
+
+        display: none;
+
+    }
+
+
+    .why-us-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .why-us-header h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .about-text h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .news-header h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .product-card img {
+
+        height: 250px;
+
+    }
+
+}
