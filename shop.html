@@ -13,11 +13,7 @@
 
     <title>Shop Hoa - Flower Shop</title>
 
-
-    <!-- =====================================================
-         GOOGLE FONT - GIỐNG INDEX
-    ====================================================== -->
-
+    <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -31,34 +27,23 @@
         rel="stylesheet"
     >
 
-
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
-
+    <!-- FONT AWESOME -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     >
 
-
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
-
+    <!-- CSS CŨ CỦA BẠN -->
     <link rel="stylesheet" href="style.css">
 
 
     <!-- =====================================================
-         FIX FONT + LOGO SHOP
+         FIX FONT + LOGO + GIỎ HÀNG
     ====================================================== -->
 
     <style>
 
-        html {
-            font-family: "Be Vietnam Pro", sans-serif;
-        }
-
+        html,
         body {
             font-family: "Be Vietnam Pro", sans-serif;
         }
@@ -83,7 +68,7 @@
 
 
         /* =================================================
-           LOGO GỐC - GIỐNG INDEX
+           LOGO
         ================================================= */
 
         .shop-page header .logo {
@@ -107,7 +92,7 @@
 
 
         /* =================================================
-           FIX ẢNH SHOP
+           FIX ẢNH
         ================================================= */
 
         .shop-page img {
@@ -115,11 +100,9 @@
             max-width: 100%;
         }
 
-
         .shop-page .shop-product-image {
             overflow: hidden;
         }
-
 
         .shop-page .shop-product-image img {
             width: 100%;
@@ -127,22 +110,165 @@
             object-fit: cover;
         }
 
-
-        /* =================================================
-           FIX HERO
-        ================================================= */
-
         .shop-page .shop-hero {
+            overflow: hidden;
+        }
+
+        .shop-page .shop-promo {
             overflow: hidden;
         }
 
 
         /* =================================================
-           FIX PROMO
+           GIỎ HÀNG TRÊN HEADER
         ================================================= */
 
-        .shop-page .shop-promo {
-            overflow: hidden;
+        .cart-header-button {
+            position: relative;
+
+            width: 46px;
+            height: 46px;
+
+            margin-left: 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #fff0f5;
+
+            color: #ff4f81;
+
+            text-decoration: none;
+
+            font-size: 20px;
+
+            transition: all 0.25s ease;
+        }
+
+        .cart-header-button:hover {
+            background: #ff4f81;
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* SỐ LƯỢNG */
+
+        .cart-count {
+            position: absolute;
+
+            top: -5px;
+            right: -5px;
+
+            min-width: 20px;
+            height: 20px;
+
+            padding: 0 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #ff3f73;
+            color: white;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            border: 2px solid white;
+        }
+
+
+        /* =================================================
+           NÚT THÊM GIỎ HÀNG
+        ================================================= */
+
+        .shop-buy-button {
+            border: none;
+            cursor: pointer;
+        }
+
+
+        /* =================================================
+           THÔNG BÁO
+        ================================================= */
+
+        .cart-toast {
+            position: fixed;
+
+            top: 90px;
+            right: 25px;
+
+            z-index: 99999;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 14px 20px;
+
+            background: white;
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 10px 35px rgba(255, 79, 129, 0.22);
+
+            color: #333;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            opacity: 0;
+
+            transform: translateY(-20px);
+
+            pointer-events: none;
+
+            transition: all 0.3s ease;
+        }
+
+        .cart-toast.show {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+        .cart-toast i {
+            color: #ff4f81;
+
+            font-size: 20px;
+        }
+
+
+        /* =================================================
+           MOBILE HEADER
+        ================================================= */
+
+        @media (max-width: 768px) {
+
+            .cart-header-button {
+                width: 42px;
+                height: 42px;
+
+                margin-left: 10px;
+            }
+
+            .cart-toast {
+                left: 15px;
+                right: 15px;
+
+                top: 80px;
+
+                justify-content: center;
+            }
+
         }
 
     </style>
@@ -159,7 +285,7 @@
 
 <header>
 
-    <!-- LOGO GỐC -->
+    <!-- LOGO -->
 
     <a
         href="index.html"
@@ -185,78 +311,90 @@
         <ul>
 
             <li>
-
                 <a href="index.html">
-
                     Trang chủ
-
                 </a>
-
             </li>
 
-
             <li>
-
                 <a
                     href="shop.html"
                     class="active"
                 >
-
                     Shop Hoa
-
                 </a>
-
             </li>
 
-
             <li>
-
                 <a href="dichvu.html">
-
                     Dịch vụ
-
                 </a>
-
             </li>
 
-
             <li>
-
                 <a href="blog.html">
-
                     Blog
-
                 </a>
-
             </li>
 
-
             <li>
-
                 <a href="gioithieu.html">
-
                     Giới thiệu
-
                 </a>
-
             </li>
 
-
             <li>
-
                 <a href="hotro.html">
-
                     Hỗ trợ
-
                 </a>
-
             </li>
 
         </ul>
 
     </nav>
 
+
+    <!-- =================================================
+         ICON GIỎ HÀNG
+    ================================================== -->
+
+    <a
+        href="giohang.html"
+        class="cart-header-button"
+        aria-label="Giỏ hàng"
+    >
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <span
+            class="cart-count"
+            id="cartCount"
+        >
+            0
+        </span>
+
+    </a>
+
 </header>
+
+
+
+<!-- =====================================================
+     THÔNG BÁO THÊM GIỎ
+===================================================== -->
+
+<div
+    class="cart-toast"
+    id="cartToast"
+>
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="cartToastText">
+        Đã thêm sản phẩm vào giỏ hàng!
+    </span>
+
+</div>
 
 
 
@@ -272,9 +410,7 @@
     <div class="shop-hero-content">
 
         <span class="shop-hero-label">
-
             ✦ FLOWER SHOP
-
         </span>
 
 
@@ -322,225 +458,50 @@
 <main class="shop-main">
 
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
-
-<div class="shop-intro">
-
-
-    <div>
-
-        <span class="shop-section-label">
-
-            BỘ SƯU TẬP HOA
-
-        </span>
-
-
-        <h2>
-
-            Chọn một bó hoa
-
-            <span>
-                thật đặc biệt
-            </span>
-
-        </h2>
-
-
-        <p>
-
-            Những mẫu hoa được thiết kế cẩn thận,
-            phù hợp để trao gửi yêu thương trong
-            mọi dịp quan trọng.
-
-        </p>
-
-    </div>
-
-
-    <div class="shop-product-count">
-
-        <strong>
-
-            100+
-
-        </strong>
-
-
-        <span>
-
-            mẫu hoa
-
-        </span>
-
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     CATEGORY
-===================================================== -->
-
-<div class="shop-categories">
-
-
-    <button class="shop-category active">
-
-        <i class="fa-solid fa-border-all"></i>
-
-        Tất cả
-
-    </button>
-
-
-    <button class="shop-category">
-
-        <i class="fa-solid fa-heart"></i>
-
-        Tình yêu
-
-    </button>
-
-
-    <button class="shop-category">
-
-        <i class="fa-solid fa-cake-candles"></i>
-
-        Sinh nhật
-
-    </button>
-
-
-    <button class="shop-category">
-
-        <i class="fa-solid fa-gift"></i>
-
-        Quà tặng
-
-    </button>
-
-
-    <button class="shop-category">
-
-        <i class="fa-solid fa-ring"></i>
-
-        Kỷ niệm
-
-    </button>
-
-
-    <button class="shop-category">
-
-        <i class="fa-solid fa-star"></i>
-
-        Đặc biệt
-
-    </button>
-
-
-</div>
-
-
-
-<!-- =====================================================
-     SEARCH
-===================================================== -->
-
-<div class="shop-search">
-
-
-    <div class="shop-search-input">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-
-        <input
-            type="text"
-            placeholder="Bạn đang tìm kiếm loài hoa nào?"
-        >
-
-    </div>
-
-
-    <button class="shop-search-button">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-        Tìm kiếm
-
-    </button>
-
-</div>
-
-
-
-<!-- =====================================================
-     PRODUCTS
-===================================================== -->
-
-<section
-    class="shop-products-section"
-    id="shop-products"
->
-
-
-    <div class="shop-products-heading">
-
+    <!-- =================================================
+         INTRO
+    ================================================== -->
+
+    <div class="shop-intro">
 
         <div>
 
             <span class="shop-section-label">
-
-                GỢI Ý CHO BẠN
-
+                BỘ SƯU TẬP HOA
             </span>
 
 
             <h2>
 
-                Sản phẩm
+                Chọn một bó hoa
 
                 <span>
-                    nổi bật
+                    thật đặc biệt
                 </span>
 
             </h2>
 
+
+            <p>
+
+                Những mẫu hoa được thiết kế cẩn thận,
+                phù hợp để trao gửi yêu thương trong
+                mọi dịp quan trọng.
+
+            </p>
+
         </div>
 
 
-        <div class="shop-sort">
+        <div class="shop-product-count">
+
+            <strong>
+                100+
+            </strong>
 
             <span>
-
-                Sắp xếp:
-
+                mẫu hoa
             </span>
-
-
-            <select>
-
-                <option>
-                    Phổ biến nhất
-                </option>
-
-                <option>
-                    Giá thấp đến cao
-                </option>
-
-                <option>
-                    Giá cao đến thấp
-                </option>
-
-                <option>
-                    Mới nhất
-                </option>
-
-            </select>
 
         </div>
 
@@ -549,512 +510,594 @@
 
 
     <!-- =================================================
-         PRODUCT GRID
-    ================================================= -->
+         CATEGORY
+    ================================================== -->
 
-    <div class="shop-product-grid">
+    <div class="shop-categories">
 
+        <button class="shop-category active">
 
-        <!-- =================================================
-             PRODUCT 1
-        ================================================= -->
+            <i class="fa-solid fa-border-all"></i>
 
-        <article class="shop-product-card">
+            Tất cả
 
+        </button>
 
-            <div class="shop-product-image">
 
+        <button class="shop-category">
 
-                <span class="shop-product-badge">
+            <i class="fa-solid fa-heart"></i>
 
-                    BÁN CHẠY
+            Tình yêu
 
-                </span>
+        </button>
 
 
-                <img
-                    src="images/rose.jpg"
-                    alt="Bó Hoa Hồng Tình Yêu"
-                >
+        <button class="shop-category">
 
+            <i class="fa-solid fa-cake-candles"></i>
 
-                <div class="shop-product-actions">
+            Sinh nhật
 
+        </button>
 
-                    <button
-                        type="button"
-                        aria-label="Yêu thích"
-                    >
 
-                        <i class="fa-regular fa-heart"></i>
+        <button class="shop-category">
 
-                    </button>
+            <i class="fa-solid fa-gift"></i>
 
+            Quà tặng
 
-                    <button
-                        type="button"
-                        aria-label="Xem sản phẩm"
-                    >
+        </button>
 
-                        <i class="fa-regular fa-eye"></i>
 
-                    </button>
+        <button class="shop-category">
 
+            <i class="fa-solid fa-ring"></i>
 
-                </div>
+            Kỷ niệm
 
-            </div>
+        </button>
 
 
+        <button class="shop-category">
 
-            <div class="shop-product-info">
+            <i class="fa-solid fa-star"></i>
 
+            Đặc biệt
 
-                <span class="shop-product-type">
-
-                    HOA TƯƠI
-
-                </span>
-
-
-                <h3>
-
-                    Bó Hoa Hồng Tình Yêu
-
-                </h3>
-
-
-                <p class="shop-product-description">
-
-                    Những đóa hồng đỏ tươi,
-                    thích hợp dành tặng người thương.
-
-                </p>
-
-
-                <div class="shop-product-bottom">
-
-
-                    <div class="shop-product-price">
-
-
-                        <strong>
-
-                            350.000đ
-
-                        </strong>
-
-
-                        <del>
-
-                            400.000đ
-
-                        </del>
-
-
-                    </div>
-
-
-                    <a
-                        href="#"
-                        class="shop-buy-button"
-                        aria-label="Mua sản phẩm"
-                    >
-
-                        <i class="fa-solid fa-bag-shopping"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- =================================================
-             PRODUCT 2
-        ================================================= -->
-
-        <article class="shop-product-card">
-
-
-            <div class="shop-product-image">
-
-
-                <span class="shop-product-badge new">
-
-                    MỚI
-
-                </span>
-
-
-                <img
-                    src="images/tulip.jpg"
-                    alt="Bó Hoa Tulip Thanh Lịch"
-                >
-
-
-                <div class="shop-product-actions">
-
-
-                    <button
-                        type="button"
-                        aria-label="Yêu thích"
-                    >
-
-                        <i class="fa-regular fa-heart"></i>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        aria-label="Xem sản phẩm"
-                    >
-
-                        <i class="fa-regular fa-eye"></i>
-
-                    </button>
-
-
-                </div>
-
-            </div>
-
-
-
-            <div class="shop-product-info">
-
-
-                <span class="shop-product-type">
-
-                    HOA TƯƠI
-
-                </span>
-
-
-                <h3>
-
-                    Bó Hoa Tulip Thanh Lịch
-
-                </h3>
-
-
-                <p class="shop-product-description">
-
-                    Vẻ đẹp nhẹ nhàng và tinh tế,
-                    phù hợp cho những dịp đặc biệt.
-
-                </p>
-
-
-                <div class="shop-product-bottom">
-
-
-                    <div class="shop-product-price">
-
-
-                        <strong>
-
-                            450.000đ
-
-                        </strong>
-
-
-                    </div>
-
-
-                    <a
-                        href="#"
-                        class="shop-buy-button"
-                        aria-label="Mua sản phẩm"
-                    >
-
-                        <i class="fa-solid fa-bag-shopping"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- =================================================
-             PRODUCT 3
-        ================================================= -->
-
-        <article class="shop-product-card">
-
-
-            <div class="shop-product-image">
-
-
-                <span class="shop-product-badge">
-
-                    YÊU THÍCH
-
-                </span>
-
-
-                <img
-                    src="images/sunflower.jpg"
-                    alt="Bó Hoa Hướng Dương"
-                >
-
-
-                <div class="shop-product-actions">
-
-
-                    <button
-                        type="button"
-                        aria-label="Yêu thích"
-                    >
-
-                        <i class="fa-regular fa-heart"></i>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        aria-label="Xem sản phẩm"
-                    >
-
-                        <i class="fa-regular fa-eye"></i>
-
-                    </button>
-
-
-                </div>
-
-            </div>
-
-
-
-            <div class="shop-product-info">
-
-
-                <span class="shop-product-type">
-
-                    HOA TƯƠI
-
-                </span>
-
-
-                <h3>
-
-                    Bó Hoa Hướng Dương
-
-                </h3>
-
-
-                <p class="shop-product-description">
-
-                    Màu vàng rực rỡ mang đến
-                    năng lượng và niềm vui.
-
-                </p>
-
-
-                <div class="shop-product-bottom">
-
-
-                    <div class="shop-product-price">
-
-
-                        <strong>
-
-                            300.000đ
-
-                        </strong>
-
-
-                    </div>
-
-
-                    <a
-                        href="#"
-                        class="shop-buy-button"
-                        aria-label="Mua sản phẩm"
-                    >
-
-                        <i class="fa-solid fa-bag-shopping"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- =================================================
-             PRODUCT 4
-        ================================================= -->
-
-        <article class="shop-product-card">
-
-
-            <div class="shop-product-image">
-
-
-                <img
-                    src="images/orchid.jpg"
-                    alt="Lan Hồ Điệp Sang Trọng"
-                >
-
-
-                <div class="shop-product-actions">
-
-
-                    <button
-                        type="button"
-                        aria-label="Yêu thích"
-                    >
-
-                        <i class="fa-regular fa-heart"></i>
-
-                    </button>
-
-
-                    <button
-                        type="button"
-                        aria-label="Xem sản phẩm"
-                    >
-
-                        <i class="fa-regular fa-eye"></i>
-
-                    </button>
-
-
-                </div>
-
-            </div>
-
-
-
-            <div class="shop-product-info">
-
-
-                <span class="shop-product-type">
-
-                    HOA CAO CẤP
-
-                </span>
-
-
-                <h3>
-
-                    Lan Hồ Điệp Sang Trọng
-
-                </h3>
-
-
-                <p class="shop-product-description">
-
-                    Một lựa chọn thanh lịch,
-                    sang trọng dành cho người đặc biệt.
-
-                </p>
-
-
-                <div class="shop-product-bottom">
-
-
-                    <div class="shop-product-price">
-
-
-                        <strong>
-
-                            350.000đ
-
-                        </strong>
-
-
-                    </div>
-
-
-                    <a
-                        href="#"
-                        class="shop-buy-button"
-                        aria-label="Mua sản phẩm"
-                    >
-
-                        <i class="fa-solid fa-bag-shopping"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
+        </button>
 
     </div>
 
-</section>
 
 
+    <!-- =================================================
+         SEARCH
+    ================================================== -->
 
-<!-- =====================================================
-     PROMOTION
-===================================================== -->
+    <div class="shop-search">
 
-<section class="shop-promo">
+        <div class="shop-search-input">
 
+            <i class="fa-solid fa-magnifying-glass"></i>
 
-    <div class="shop-promo-content">
+            <input
+                type="text"
+                placeholder="Bạn đang tìm kiếm loài hoa nào?"
+            >
 
-
-        <span>
-
-            ✦ FLOWER SHOP SPECIAL
-
-        </span>
-
-
-        <h2>
-
-            Một bó hoa,
-
-            <br>
-
-            <strong>
-                một câu chuyện yêu thương.
-            </strong>
-
-        </h2>
+        </div>
 
 
-        <p>
+        <button class="shop-search-button">
 
-            Hãy để Flower Shop giúp bạn gửi gắm
-            những điều khó nói thành một món quà
-            thật đẹp.
+            <i class="fa-solid fa-magnifying-glass"></i>
 
-        </p>
+            Tìm kiếm
 
-
-        <a href="hotro.html">
-
-            Cần tư vấn?
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
+        </button>
 
     </div>
 
-</section>
+
+
+    <!-- =================================================
+         PRODUCTS
+    ================================================== -->
+
+    <section
+        class="shop-products-section"
+        id="shop-products"
+    >
+
+
+        <div class="shop-products-heading">
+
+            <div>
+
+                <span class="shop-section-label">
+                    GỢI Ý CHO BẠN
+                </span>
+
+
+                <h2>
+
+                    Sản phẩm
+
+                    <span>
+                        nổi bật
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="shop-sort">
+
+                <span>
+                    Sắp xếp:
+                </span>
+
+
+                <select>
+
+                    <option>
+                        Phổ biến nhất
+                    </option>
+
+                    <option>
+                        Giá thấp đến cao
+                    </option>
+
+                    <option>
+                        Giá cao đến thấp
+                    </option>
+
+                    <option>
+                        Mới nhất
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PRODUCT GRID
+        ================================================== -->
+
+        <div class="shop-product-grid">
+
+
+            <!-- PRODUCT 1 -->
+
+            <article class="shop-product-card">
+
+                <div class="shop-product-image">
+
+                    <span class="shop-product-badge">
+                        BÁN CHẠY
+                    </span>
+
+
+                    <img
+                        src="images/rose.jpg"
+                        alt="Bó Hoa Hồng Tình Yêu"
+                    >
+
+
+                    <div class="shop-product-actions">
+
+                        <button
+                            type="button"
+                            aria-label="Yêu thích"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            aria-label="Xem sản phẩm"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="shop-product-info">
+
+                    <span class="shop-product-type">
+                        HOA TƯƠI
+                    </span>
+
+
+                    <h3>
+                        Bó Hoa Hồng Tình Yêu
+                    </h3>
+
+
+                    <p class="shop-product-description">
+
+                        Những đóa hồng đỏ tươi,
+                        thích hợp dành tặng người thương.
+
+                    </p>
+
+
+                    <div class="shop-product-bottom">
+
+                        <div class="shop-product-price">
+
+                            <strong>
+                                350.000đ
+                            </strong>
+
+                            <del>
+                                400.000đ
+                            </del>
+
+                        </div>
+
+
+                        <!-- NÚT THÊM GIỎ -->
+
+                        <button
+                            type="button"
+                            class="shop-buy-button"
+                            aria-label="Thêm vào giỏ hàng"
+
+                            data-id="rose-love"
+                            data-name="Bó Hoa Hồng Tình Yêu"
+                            data-price="350000"
+                            data-image="images/rose.jpg"
+                        >
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <article class="shop-product-card">
+
+                <div class="shop-product-image">
+
+                    <span class="shop-product-badge new">
+                        MỚI
+                    </span>
+
+
+                    <img
+                        src="images/tulip.jpg"
+                        alt="Bó Hoa Tulip Thanh Lịch"
+                    >
+
+
+                    <div class="shop-product-actions">
+
+                        <button
+                            type="button"
+                            aria-label="Yêu thích"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            aria-label="Xem sản phẩm"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="shop-product-info">
+
+                    <span class="shop-product-type">
+                        HOA TƯƠI
+                    </span>
+
+
+                    <h3>
+                        Bó Hoa Tulip Thanh Lịch
+                    </h3>
+
+
+                    <p class="shop-product-description">
+
+                        Vẻ đẹp nhẹ nhàng và tinh tế,
+                        phù hợp cho những dịp đặc biệt.
+
+                    </p>
+
+
+                    <div class="shop-product-bottom">
+
+                        <div class="shop-product-price">
+
+                            <strong>
+                                450.000đ
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="shop-buy-button"
+                            aria-label="Thêm vào giỏ hàng"
+
+                            data-id="tulip-elegant"
+                            data-name="Bó Hoa Tulip Thanh Lịch"
+                            data-price="450000"
+                            data-image="images/tulip.jpg"
+                        >
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <article class="shop-product-card">
+
+                <div class="shop-product-image">
+
+                    <span class="shop-product-badge">
+                        YÊU THÍCH
+                    </span>
+
+
+                    <img
+                        src="images/sunflower.jpg"
+                        alt="Bó Hoa Hướng Dương"
+                    >
+
+
+                    <div class="shop-product-actions">
+
+                        <button
+                            type="button"
+                            aria-label="Yêu thích"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            aria-label="Xem sản phẩm"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="shop-product-info">
+
+                    <span class="shop-product-type">
+                        HOA TƯƠI
+                    </span>
+
+
+                    <h3>
+                        Bó Hoa Hướng Dương
+                    </h3>
+
+
+                    <p class="shop-product-description">
+
+                        Màu vàng rực rỡ mang đến
+                        năng lượng và niềm vui.
+
+                    </p>
+
+
+                    <div class="shop-product-bottom">
+
+                        <div class="shop-product-price">
+
+                            <strong>
+                                300.000đ
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="shop-buy-button"
+                            aria-label="Thêm vào giỏ hàng"
+
+                            data-id="sunflower"
+                            data-name="Bó Hoa Hướng Dương"
+                            data-price="300000"
+                            data-image="images/sunflower.jpg"
+                        >
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PRODUCT 4 -->
+
+            <article class="shop-product-card">
+
+                <div class="shop-product-image">
+
+                    <img
+                        src="images/orchid.jpg"
+                        alt="Lan Hồ Điệp Sang Trọng"
+                    >
+
+
+                    <div class="shop-product-actions">
+
+                        <button
+                            type="button"
+                            aria-label="Yêu thích"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+
+                        <button
+                            type="button"
+                            aria-label="Xem sản phẩm"
+                        >
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="shop-product-info">
+
+                    <span class="shop-product-type">
+                        HOA CAO CẤP
+                    </span>
+
+
+                    <h3>
+                        Lan Hồ Điệp Sang Trọng
+                    </h3>
+
+
+                    <p class="shop-product-description">
+
+                        Một lựa chọn thanh lịch,
+                        sang trọng dành cho người đặc biệt.
+
+                    </p>
+
+
+                    <div class="shop-product-bottom">
+
+                        <div class="shop-product-price">
+
+                            <strong>
+                                350.000đ
+                            </strong>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="shop-buy-button"
+                            aria-label="Thêm vào giỏ hàng"
+
+                            data-id="orchid"
+                            data-name="Lan Hồ Điệp Sang Trọng"
+                            data-price="350000"
+                            data-image="images/orchid.jpg"
+                        >
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROMOTION
+    ================================================== -->
+
+    <section class="shop-promo">
+
+        <div class="shop-promo-content">
+
+            <span>
+                ✦ FLOWER SHOP SPECIAL
+            </span>
+
+
+            <h2>
+
+                Một bó hoa,
+
+                <br>
+
+                <strong>
+                    một câu chuyện yêu thương.
+                </strong>
+
+            </h2>
+
+
+            <p>
+
+                Hãy để Flower Shop giúp bạn gửi gắm
+                những điều khó nói thành một món quà
+                thật đẹp.
+
+            </p>
+
+
+            <a href="hotro.html">
+
+                Cần tư vấn?
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
 
 
 </main>
@@ -1067,19 +1110,13 @@
 
 <footer>
 
-
     <div class="footer-content">
 
 
-        <!-- THÔNG TIN -->
-
         <div class="footer-box">
 
-
             <h3>
-
                 Flower Shop 🌸
-
             </h3>
 
 
@@ -1094,46 +1131,21 @@
 
             <div class="social">
 
-
-                <a
-                    href="#"
-                    aria-label="Facebook"
-                >
-
+                <a href="#" aria-label="Facebook">
                     <i class="fab fa-facebook-f"></i>
-
                 </a>
 
-
-                <a
-                    href="#"
-                    aria-label="Instagram"
-                >
-
+                <a href="#" aria-label="Instagram">
                     <i class="fab fa-instagram"></i>
-
                 </a>
 
-
-                <a
-                    href="#"
-                    aria-label="TikTok"
-                >
-
+                <a href="#" aria-label="TikTok">
                     <i class="fab fa-tiktok"></i>
-
                 </a>
 
-
-                <a
-                    href="#"
-                    aria-label="YouTube"
-                >
-
+                <a href="#" aria-label="YouTube">
                     <i class="fab fa-youtube"></i>
-
                 </a>
-
 
             </div>
 
@@ -1141,86 +1153,50 @@
 
 
 
-        <!-- LIÊN KẾT -->
-
         <div class="footer-box">
 
-
             <h3>
-
                 Liên kết
-
             </h3>
 
 
             <ul>
 
-
                 <li>
-
                     <a href="index.html">
-
                         Trang chủ
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="shop.html">
-
                         Shop Hoa
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="dichvu.html">
-
                         Dịch vụ
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="blog.html">
-
                         Blog
-
                     </a>
-
                 </li>
 
-
                 <li>
-
                     <a href="gioithieu.html">
-
                         Giới thiệu
-
                     </a>
-
                 </li>
-
 
                 <li>
-
                     <a href="hotro.html">
-
                         Hỗ trợ
-
                     </a>
-
                 </li>
-
 
             </ul>
 
@@ -1228,15 +1204,10 @@
 
 
 
-        <!-- LIÊN HỆ -->
-
         <div class="footer-box">
 
-
             <h3>
-
                 Liên hệ
-
             </h3>
 
 
@@ -1266,12 +1237,9 @@
 
             </p>
 
-
         </div>
 
-
     </div>
-
 
 
     <hr>
@@ -1283,9 +1251,15 @@
 
     </p>
 
-
 </footer>
 
+
+
+<!-- =====================================================
+     JAVASCRIPT GIỎ HÀNG
+===================================================== -->
+
+<script src="cart.js"></script>
 
 </body>
 
