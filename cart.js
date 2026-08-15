@@ -1,164 +1,163 @@
 ```javascript
 /* =====================================================
    FLOWER SHOP - CART.JS
-   DÙNG CHUNG CHO SHOP.HTML + GIOHANG.HTML
+   DÙNG CHO SHOP.HTML
 ===================================================== */
 
+(function () {
 
-/* =====================================================
-   LẤY GIỎ HÀNG
-===================================================== */
+    "use strict";
 
-function getCart() {
 
-    const savedCart =
-        localStorage.getItem("flowerCart");
+    /* =====================================================
+       LẤY GIỎ HÀNG
+    ===================================================== */
 
-    if (!savedCart) {
-        return [];
+    function getCart() {
+
+        try {
+
+            const data =
+                localStorage.getItem("flowerCart");
+
+            if (!data) {
+                return [];
+            }
+
+            const cart = JSON.parse(data);
+
+            return Array.isArray(cart)
+                ? cart
+                : [];
+
+        } catch (error) {
+
+            console.error(
+                "Lỗi đọc flowerCart:",
+                error
+            );
+
+            return [];
+
+        }
+
     }
 
-    try {
 
-        const cart = JSON.parse(savedCart);
+    /* =====================================================
+       LƯU GIỎ HÀNG
+    ===================================================== */
 
-        return Array.isArray(cart)
-            ? cart
-            : [];
+    function saveCart(cart) {
 
-    } catch (error) {
-
-        console.error(
-            "Không thể đọc giỏ hàng:",
-            error
+        localStorage.setItem(
+            "flowerCart",
+            JSON.stringify(cart)
         );
 
-        return [];
-
-    }
-
-}
-
-
-/* =====================================================
-   LƯU GIỎ HÀNG
-===================================================== */
-
-function saveCart(cart) {
-
-    localStorage.setItem(
-        "flowerCart",
-        JSON.stringify(cart)
-    );
-
-}
-
-
-/* =====================================================
-   CẬP NHẬT SỐ TRÊN ICON GIỎ HÀNG
-===================================================== */
-
-function updateCartCount() {
-
-    const cart = getCart();
-
-    const count = cart.reduce(
-        function (total, item) {
-
-            return total +
-                Number(item.quantity || 0);
-
-        },
-        0
-    );
-
-
-    const cartCount =
-        document.getElementById("cartCount");
-
-
-    if (cartCount) {
-
-        cartCount.textContent = count;
-
-    }
-
-}
-
-
-/* =====================================================
-   THÔNG BÁO TRÊN SHOP
-===================================================== */
-
-function showCartToast(message) {
-
-    const toast =
-        document.getElementById("cartToast");
-
-    const toastText =
-        document.getElementById("cartToastText");
-
-
-    if (!toast || !toastText) {
-        return;
     }
 
 
-    toastText.textContent = message;
+    /* =====================================================
+       CẬP NHẬT SỐ LƯỢNG TRÊN ICON
+    ===================================================== */
 
-    toast.classList.add("show");
+    function updateCartCount() {
+
+        const cart = getCart();
+
+        let count = 0;
 
 
-    clearTimeout(
-        window.cartToastTimer
-    );
+        cart.forEach(function (item) {
+
+            count += Number(
+                item.quantity || 0
+            );
+
+        });
 
 
-    window.cartToastTimer =
-        setTimeout(
-            function () {
+        const cartCount =
+            document.getElementById("cartCount");
+
+
+        if (cartCount) {
+
+            cartCount.textContent = count;
+
+        }
+
+    }
+
+
+    /* =====================================================
+       HIỂN THỊ THÔNG BÁO
+    ===================================================== */
+
+    function showToast(message) {
+
+        const toast =
+            document.getElementById("cartToast");
+
+        const toastText =
+            document.getElementById(
+                "cartToastText"
+            );
+
+
+        if (!toast || !toastText) {
+            return;
+        }
+
+
+        toastText.textContent = message;
+
+        toast.classList.add("show");
+
+
+        clearTimeout(
+            window.flowerCartToastTimer
+        );
+
+
+        window.flowerCartToastTimer =
+            setTimeout(function () {
 
                 toast.classList.remove(
                     "show"
                 );
 
-            },
-            2500
-        );
+            }, 2500);
 
-}
+    }
 
 
-/* =====================================================
-   THÊM SẢN PHẨM VÀO GIỎ
-===================================================== */
+    /* =====================================================
+       THÊM SẢN PHẨM
+    ===================================================== */
 
-function addToCart(button) {
+    function addProductToCart(button) {
 
-    const id =
-        button.dataset.id;
+        /* Lấy dữ liệu từ data-* */
 
-    const name =
-        button.dataset.name;
+        const id =
+            button.getAttribute("data-id");
 
-    const price =
-        Number(button.dataset.price);
+        const name =
+            button.getAttribute("data-name");
 
-    const image =
-        button.dataset.image;
+        const price =
+            Number(
+                button.getAttribute("data-price")
+            );
+
+        const image =
+            button.getAttribute("data-image");
 
 
-    /* Kiểm tra dữ liệu */
-
-    if (
-        !id ||
-        !name ||
-        !price ||
-        !image
-    ) {
-
-        console.error(
-            "Sản phẩm thiếu dữ liệu:",
+        console.log(
+            "Đang thêm sản phẩm:",
             {
                 id,
                 name,
@@ -167,119 +166,182 @@ function addToCart(button) {
             }
         );
 
-        return;
 
-    }
+        /* Kiểm tra */
+
+        if (!id || !name || !price || !image) {
+
+            console.error(
+                "Thiếu dữ liệu sản phẩm.",
+                {
+                    id,
+                    name,
+                    price,
+                    image
+                }
+            );
+
+            alert(
+                "Sản phẩm đang thiếu dữ liệu. Vui lòng kiểm tra lại code sản phẩm."
+            );
+
+            return;
+
+        }
 
 
-    /* Lấy giỏ hàng hiện tại */
+        /* Lấy giỏ hiện tại */
 
-    const cart = getCart();
+        const cart = getCart();
 
 
-    /* Kiểm tra sản phẩm đã tồn tại */
+        /* Tìm sản phẩm */
 
-    const existingProduct =
-        cart.find(
-            function (item) {
+        const existingProduct =
+            cart.find(function (item) {
 
-                return item.id === id;
+                return String(item.id) ===
+                    String(id);
 
-            }
+            });
+
+
+        /* Nếu đã có */
+
+        if (existingProduct) {
+
+            existingProduct.quantity =
+                Number(
+                    existingProduct.quantity || 0
+                ) + 1;
+
+        }
+
+
+        /* Nếu chưa có */
+
+        else {
+
+            cart.push({
+
+                id: id,
+
+                name: name,
+
+                price: price,
+
+                image: image,
+
+                type: "HOA TƯƠI",
+
+                quantity: 1
+
+            });
+
+        }
+
+
+        /* Lưu */
+
+        saveCart(cart);
+
+
+        /* Cập nhật số lượng */
+
+        updateCartCount();
+
+
+        /* Thông báo */
+
+        showToast(
+            "Đã thêm \"" +
+            name +
+            "\" vào giỏ hàng!"
         );
 
 
-    if (existingProduct) {
-
-        /* Nếu đã có → tăng số lượng */
-
-        existingProduct.quantity += 1;
+        console.log(
+            "Giỏ hàng hiện tại:",
+            cart
+        );
 
     }
-    else {
 
-        /* Nếu chưa có → thêm mới */
 
-        cart.push({
+    /* =====================================================
+       GẮN SỰ KIỆN CHO NÚT THÊM GIỎ
+    ===================================================== */
 
-            id: id,
+    function initCartButtons() {
 
-            name: name,
+        const buttons =
+            document.querySelectorAll(
+                ".shop-buy-button"
+            );
 
-            price: price,
 
-            image: image,
+        console.log(
+            "Tìm thấy",
+            buttons.length,
+            "nút thêm giỏ hàng."
+        );
 
-            type: "HOA TƯƠI",
 
-            quantity: 1
+        buttons.forEach(function (button) {
+
+            button.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+                    event.stopPropagation();
+
+                    addProductToCart(
+                        this
+                    );
+
+                }
+            );
 
         });
 
     }
 
 
-    /* Lưu */
+    /* =====================================================
+       KHỞI ĐỘNG
+    ===================================================== */
 
-    saveCart(cart);
-
-
-    /* Cập nhật số */
-
-    updateCartCount();
-
-
-    /* Thông báo */
-
-    showCartToast(
-        `"${name}" đã được thêm vào giỏ hàng!`
-    );
-
-}
-
-
-/* =====================================================
-   GẮN SỰ KIỆN CHO CÁC NÚT THÊM GIỎ
-===================================================== */
-
-function setupCartButtons() {
-
-    const buttons =
-        document.querySelectorAll(
-            ".shop-buy-button"
-        );
-
-
-    buttons.forEach(
-        function (button) {
-
-            button.addEventListener(
-                "click",
-                function () {
-
-                    addToCart(this);
-
-                }
-            );
-
-        }
-    );
-
-}
-
-
-/* =====================================================
-   KHỞI ĐỘNG
-===================================================== */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+    function init() {
 
         updateCartCount();
 
-        setupCartButtons();
+        initCartButtons();
 
     }
-);
+
+
+    /* =====================================================
+       CHẠY SAU KHI HTML ĐÃ TẢI
+    ===================================================== */
+
+    if (
+        document.readyState ===
+        "loading"
+    ) {
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            init
+        );
+
+    } else {
+
+        init();
+
+    }
+
+
+})();
 ```
