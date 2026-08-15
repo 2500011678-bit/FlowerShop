@@ -6025,3 +6025,100 @@ h6 {
         color 0.25s ease,
         transform 0.25s ease;
 }
+/* =====================================================
+   FIX ICON TRANG CHỦ - GIỮ NGUYÊN THIẾT KẾ INDEX
+   Không thay đổi màu sắc / bố cục
+===================================================== */
+
+/* Ép icon không bị ảnh hưởng bởi font chữ của website */
+.home-page i[class*="fa-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* =====================================================
+   4 ICON - VÌ SAO CHỌN FLOWER SHOP
+===================================================== */
+
+.home-page .why-us-icon i {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    font-style: normal !important;
+    font-size: 27px;
+    line-height: 1;
+    color: #a94359;
+}
+
+/* =====================================================
+   ICON TRONG CÁC NÚT
+===================================================== */
+
+.home-page .btn i,
+.home-page .about-btn i,
+.home-page .btn2 i,
+.home-page .product-buy i {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    font-style: normal !important;
+}
+
+/* =====================================================
+   ICON SẢN PHẨM
+===================================================== */
+
+.home-page .product-actions i {
+    font-family: "Font Awesome 6 Free" !important;
+    font-style: normal !important;
+}
+
+.home-page .product-buy i {
+    font-size: 16px;
+}
+
+/* =====================================================
+   ICON DỊCH VỤ
+===================================================== */
+
+.home-page .service-icon i {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    font-style: normal !important;
+    font-size: inherit;
+}
+
+/* =====================================================
+   ICON LIÊN HỆ FOOTER
+===================================================== */
+
+.home-page footer i {
+    font-style: normal;
+}
+
+/* =====================================================
+   KHÔNG CHO ICON BỊ MÉO / THÀNH Ô VUÔNG
+===================================================== */
+
+.home-page i[class*="fa-"]::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =====================================================
+   ICON HOVER
+===================================================== */
+
+.home-page .why-us-card:hover .why-us-icon {
+    transform: scale(1.05);
+}
+
+.home-page .why-us-icon {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
