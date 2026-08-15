@@ -115,6 +115,7 @@
 
         /* =====================================================
            HEADER
+           ĐỒNG BỘ LOGO VỚI CÁC TRANG KHÁC
         ====================================================== */
 
         header {
@@ -137,14 +138,17 @@
 
             z-index: 1000;
 
-            box-shadow: 0 4px 18px rgba(90, 50, 60, 0.04);
+            box-shadow:
+                0 4px 18px rgba(90, 50, 60, 0.04);
 
         }
 
 
-        /* LOGO */
+        /* =====================================================
+           LOGO - ĐÃ ĐỒNG BỘ
+        ====================================================== */
 
-        .logo {
+        header .logo {
 
             display: flex;
             align-items: center;
@@ -153,32 +157,67 @@
 
             color: #f13f78;
 
-            font-size: 30px;
+            font-size: 28px;
             font-weight: 800;
+
+            line-height: 1;
 
             white-space: nowrap;
 
-            transition: 0.3s ease;
+            text-decoration: none;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
 
         }
 
 
-        .logo:hover {
+        header .logo:hover {
+
+            color: #d92f68;
+
             transform: translateY(-1px);
+
         }
 
 
-        .logo img {
+        header .logo img {
 
-            width: 38px;
-            height: 38px;
+            display: block;
+
+            width: auto;
+            height: 45px;
+
+            max-width: 55px;
 
             object-fit: contain;
 
+            flex-shrink: 0;
+
         }
 
 
-        /* NAVIGATION */
+        header .logo span {
+
+            display: inline-block;
+
+            color: inherit;
+
+            font-family: "Be Vietnam Pro", sans-serif;
+
+            font-size: inherit;
+
+            font-weight: inherit;
+
+            line-height: 1;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ====================================================== */
 
         nav ul {
 
@@ -209,7 +248,9 @@
 
 
         nav ul li a:hover {
+
             color: var(--flower-pink);
+
         }
 
 
@@ -235,11 +276,12 @@
 
             border-radius: 10px;
 
-            background: linear-gradient(
-                90deg,
-                #ff4f8b,
-                #ff9d36
-            );
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff4f8b,
+                    #ff9d36
+                );
 
         }
 
@@ -347,7 +389,9 @@
 
 
         .blog-hero h1 span {
+
             color: var(--flower-pink);
+
         }
 
 
@@ -423,7 +467,9 @@
 
 
         .section-heading h2 span {
+
             color: var(--flower-pink);
+
         }
 
 
@@ -556,7 +602,8 @@
 
             font-weight: 700;
 
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.08);
 
         }
 
@@ -590,7 +637,9 @@
 
 
         .blog-date i {
+
             color: var(--flower-pink);
+
         }
 
 
@@ -636,8 +685,9 @@
 
             font-weight: 700;
 
-            transition: gap 0.25s ease,
-                        color 0.25s ease;
+            transition:
+                gap 0.25s ease,
+                color 0.25s ease;
 
         }
 
@@ -706,7 +756,9 @@
 
 
         .featured-blog:hover .featured-image img {
+
             transform: scale(1.04);
+
         }
 
 
@@ -982,12 +1034,16 @@
 
 
         .footer-box ul li a:hover {
+
             color: #ff91ae;
+
         }
 
 
         .footer-box p + p {
+
             margin-top: 9px;
+
         }
 
 
@@ -1000,7 +1056,9 @@
         }
 
 
-        /* SOCIAL */
+        /* =====================================================
+           SOCIAL
+        ====================================================== */
 
         .social {
 
@@ -1094,9 +1152,18 @@
             }
 
 
-            .logo {
+            header .logo {
 
                 font-size: 24px;
+
+            }
+
+
+            header .logo img {
+
+                height: 42px;
+
+                max-width: 50px;
 
             }
 
@@ -1154,17 +1221,20 @@
             }
 
 
-            .logo {
+            header .logo {
 
                 font-size: 24px;
 
             }
 
 
-            .logo img {
+            header .logo img {
 
-                width: 34px;
-                height: 34px;
+                width: auto;
+
+                height: 40px;
+
+                max-width: 48px;
 
             }
 
@@ -1331,56 +1401,91 @@
 
 <header>
 
-    <a href="index.html" class="logo">
+
+    <!-- =================================================
+         LOGO
+         ĐỒNG BỘ VỚI INDEX + SHOP
+    ================================================== -->
+
+    <a
+        href="index.html"
+        class="logo"
+    >
 
         <img
             src="images/logo.png"
             alt="Flower Shop Logo"
         >
 
-        <span>Flower Shop</span>
+        <span>
+            Flower Shop
+        </span>
 
     </a>
 
+
+    <!-- =================================================
+         NAVIGATION
+    ================================================== -->
 
     <nav>
 
         <ul>
 
             <li>
+
                 <a href="index.html">
                     Trang chủ
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="shop.html">
                     Shop Hoa
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="dichvu.html">
                     Dịch vụ
                 </a>
+
             </li>
 
+
             <li>
-                <a href="blog.html" class="active">
+
+                <a
+                    href="blog.html"
+                    class="active"
+                >
                     Blog
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="gioithieu.html">
                     Giới thiệu
                 </a>
+
             </li>
 
+
             <li>
+
                 <a href="hotro.html">
                     Hỗ trợ
                 </a>
+
             </li>
 
         </ul>
@@ -1403,14 +1508,21 @@
 
 
     <h1>
+
         Tin tức &
-        <span>Kiến thức về Hoa</span>
+
+        <span>
+            Kiến thức về Hoa
+        </span>
+
     </h1>
 
 
     <p>
+
         Cùng Flower Shop khám phá những câu chuyện thú vị,
         ý nghĩa của các loài hoa và bí quyết chăm sóc hoa tươi mỗi ngày.
+
     </p>
 
 </section>
@@ -1434,20 +1546,35 @@
             🌸 KHÁM PHÁ THẾ GIỚI HOA
         </span>
 
+
         <h2>
+
             Những câu chuyện
-            <span>đáng yêu về hoa</span>
+
+            <span>
+                đáng yêu về hoa
+            </span>
+
         </h2>
 
+
         <p>
+
             Những bài viết được Flower Shop chọn lọc
             để giúp bạn hiểu hơn về vẻ đẹp và ý nghĩa của hoa.
+
         </p>
 
     </div>
 
 
+
+    <!-- =================================================
+         FEATURED BLOG
+    ================================================== -->
+
     <article class="featured-blog">
+
 
         <div class="featured-image">
 
@@ -1472,10 +1599,12 @@
 
 
             <p>
+
                 Hoa hồng là biểu tượng của tình yêu,
                 sự lãng mạn và lòng biết ơn.
                 Mỗi màu hoa lại mang một thông điệp
                 và ý nghĩa riêng biệt.
+
             </p>
 
 
@@ -1483,8 +1612,11 @@
                 href="#blog-list"
                 class="featured-button"
             >
+
                 Đọc bài viết
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
         </div>
@@ -1508,11 +1640,17 @@
 
 
         <h2>
+
             Khám phá thêm
-            <span>nhiều điều thú vị</span>
+
+            <span>
+                nhiều điều thú vị
+            </span>
+
         </h2>
 
     </div>
+
 
 
     <div class="blog-grid">
@@ -1524,6 +1662,7 @@
 
         <article class="blog-card">
 
+
             <div class="blog-image">
 
                 <img
@@ -1534,13 +1673,17 @@
 
 
                 <span class="blog-category">
+
                     🌹 Ý NGHĨA HOA
+
                 </span>
 
             </div>
 
 
+
             <div class="blog-content">
+
 
                 <div class="blog-date">
 
@@ -1557,10 +1700,12 @@
 
 
                 <p>
+
                     Hoa hồng là biểu tượng của tình yêu,
                     sự lãng mạn và lòng biết ơn.
                     Mỗi màu hoa lại mang một thông điệp
                     và ý nghĩa riêng biệt.
+
                 </p>
 
 
@@ -1568,8 +1713,11 @@
                     href="#"
                     class="read-more"
                 >
+
                     Đọc bài viết
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1584,6 +1732,7 @@
 
         <article class="blog-card">
 
+
             <div class="blog-image">
 
                 <img
@@ -1594,13 +1743,17 @@
 
 
                 <span class="blog-category">
+
                     🌿 CHĂM SÓC HOA
+
                 </span>
 
             </div>
 
 
+
             <div class="blog-content">
+
 
                 <div class="blog-date">
 
@@ -1617,9 +1770,11 @@
 
 
                 <p>
+
                     Từ cách thay nước, cắt gốc đến vị trí
                     đặt hoa, những mẹo nhỏ này sẽ giúp bó hoa
                     của bạn luôn tươi đẹp trong nhiều ngày.
+
                 </p>
 
 
@@ -1627,8 +1782,11 @@
                     href="#"
                     class="read-more"
                 >
+
                     Đọc bài viết
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1643,6 +1801,7 @@
 
         <article class="blog-card">
 
+
             <div class="blog-image">
 
                 <img
@@ -1653,13 +1812,17 @@
 
 
                 <span class="blog-category">
+
                     🌸 HOA THEO MÙA
+
                 </span>
 
             </div>
 
 
+
             <div class="blog-content">
+
 
                 <div class="blog-date">
 
@@ -1676,9 +1839,11 @@
 
 
                 <p>
+
                     Mỗi mùa trong năm đều có những loài hoa
                     đặc trưng và vẻ đẹp riêng. Hãy cùng khám phá
                     cách chọn những loại hoa phù hợp theo từng mùa.
+
                 </p>
 
 
@@ -1686,8 +1851,11 @@
                     href="#"
                     class="read-more"
                 >
+
                     Đọc bài viết
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1702,6 +1870,7 @@
 
         <article class="blog-card">
 
+
             <div class="blog-image">
 
                 <img
@@ -1712,13 +1881,17 @@
 
 
                 <span class="blog-category">
+
                     💐 KINH NGHIỆM
+
                 </span>
 
             </div>
 
 
+
             <div class="blog-content">
+
 
                 <div class="blog-date">
 
@@ -1735,9 +1908,11 @@
 
 
                 <p>
+
                     Lựa chọn hoa phù hợp cho sinh nhật,
                     khai trương, cưới hỏi hay những dịp đặc biệt
                     sẽ trở nên dễ dàng hơn.
+
                 </p>
 
 
@@ -1745,8 +1920,11 @@
                     href="#"
                     class="read-more"
                 >
+
                     Đọc bài viết
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1764,6 +1942,7 @@
 
     <section class="blog-cta">
 
+
         <span>
             🌷 FLOWER SHOP
         </span>
@@ -1775,8 +1954,10 @@
 
 
         <p>
+
             Khám phá những mẫu hoa đẹp và gửi trao
             những thông điệp yêu thương đến người quan trọng.
+
         </p>
 
 
@@ -1784,8 +1965,11 @@
             href="shop.html"
             class="cta-button"
         >
+
             Khám phá Shop Hoa
+
             <i class="fa-solid fa-arrow-right"></i>
+
         </a>
 
     </section>
@@ -1801,12 +1985,16 @@
 
 <footer>
 
+
     <div class="footer-content">
 
 
-        <!-- THÔNG TIN -->
+        <!-- =================================================
+             THÔNG TIN
+        ================================================== -->
 
         <div class="footer-box">
+
 
             <h3>
                 Flower Shop 🌸
@@ -1814,19 +2002,24 @@
 
 
             <p>
+
                 Mang sắc hoa đến mọi khoảnh khắc.
                 Những bó hoa tươi đẹp được tạo nên
                 để gửi gắm yêu thương và cảm xúc.
+
             </p>
 
 
             <div class="social">
 
+
                 <a
                     href="#"
                     aria-label="Facebook"
                 >
+
                     <i class="fab fa-facebook-f"></i>
+
                 </a>
 
 
@@ -1834,7 +2027,9 @@
                     href="#"
                     aria-label="Instagram"
                 >
+
                     <i class="fab fa-instagram"></i>
+
                 </a>
 
 
@@ -1842,7 +2037,9 @@
                     href="#"
                     aria-label="TikTok"
                 >
+
                     <i class="fab fa-tiktok"></i>
+
                 </a>
 
 
@@ -1850,7 +2047,9 @@
                     href="#"
                     aria-label="YouTube"
                 >
+
                     <i class="fab fa-youtube"></i>
+
                 </a>
 
             </div>
@@ -1859,9 +2058,12 @@
 
 
 
-        <!-- LIÊN KẾT -->
+        <!-- =================================================
+             LIÊN KẾT
+        ================================================== -->
 
         <div class="footer-box">
+
 
             <h3>
                 Liên kết
@@ -1870,41 +2072,60 @@
 
             <ul>
 
+
                 <li>
+
                     <a href="index.html">
                         Trang chủ
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="shop.html">
                         Shop Hoa
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="dichvu.html">
                         Dịch vụ
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="blog.html">
                         Blog
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="gioithieu.html">
                         Giới thiệu
                     </a>
+
                 </li>
 
+
                 <li>
+
                     <a href="hotro.html">
                         Hỗ trợ
                     </a>
+
                 </li>
+
 
             </ul>
 
@@ -1912,9 +2133,12 @@
 
 
 
-        <!-- LIÊN HỆ -->
+        <!-- =================================================
+             LIÊN HỆ
+        ================================================== -->
 
         <div class="footer-box">
+
 
             <h3>
                 Liên hệ
@@ -1953,6 +2177,7 @@
     </div>
 
 
+
     <hr>
 
 
@@ -1961,6 +2186,7 @@
         © 2026 Flower Shop | All Rights Reserved.
 
     </p>
+
 
 </footer>
 
