@@ -4,15 +4,1320 @@
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog Hoa - Flower Shop</title>
+    <meta
+        name="description"
+        content="Blog Flower Shop - Ý nghĩa hoa, cách chăm sóc hoa và những kiến thức thú vị về hoa."
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <title>Blog | Flower Shop</title>
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- =====================================================
+         GOOGLE FONT - HỖ TRỢ TIẾNG VIỆT
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS BLOG
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+            color: #3b3033;
+            background: #fffafc;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        button,
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           MÀU CHỦ ĐẠO
+        ====================================================== */
+
+        :root {
+
+            --flower-pink: #d96c8b;
+            --flower-pink-dark: #b94f70;
+            --flower-pink-light: #fcecef;
+
+            --flower-cream: #fffaf7;
+
+            --flower-text: #3b3033;
+            --flower-text-light: #75666b;
+
+            --flower-border: #f1dce2;
+
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        header {
+
+            width: 100%;
+            height: 88px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            border-bottom: 1px solid #f3e5e9;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow: 0 4px 18px rgba(90, 50, 60, 0.04);
+
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            color: #f13f78;
+
+            font-size: 30px;
+            font-weight: 800;
+
+            white-space: nowrap;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .logo:hover {
+            transform: translateY(-1px);
+        }
+
+
+        .logo img {
+
+            width: 38px;
+            height: 38px;
+
+            object-fit: contain;
+
+        }
+
+
+        /* NAVIGATION */
+
+        nav ul {
+
+            list-style: none;
+
+            display: flex;
+            align-items: center;
+
+            gap: 34px;
+
+        }
+
+
+        nav ul li a {
+
+            position: relative;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            color: #40383b;
+
+            padding: 32px 0;
+
+            transition: color 0.25s ease;
+
+        }
+
+
+        nav ul li a:hover {
+            color: var(--flower-pink);
+        }
+
+
+        nav ul li a.active {
+
+            color: #f13f78;
+
+        }
+
+
+        nav ul li a.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+
+            bottom: 16px;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background: linear-gradient(
+                90deg,
+                #ff4f8b,
+                #ff9d36
+            );
+
+        }
+
+
+        /* =====================================================
+           BLOG HERO
+        ====================================================== */
+
+        .blog-hero {
+
+            position: relative;
+
+            padding: 80px 20px 75px;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at 15% 30%,
+                    rgba(255, 194, 210, 0.35),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 70%,
+                    rgba(255, 222, 232, 0.4),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff8fa,
+                    #fffdfc
+                );
+
+            overflow: hidden;
+
+        }
+
+
+        .blog-hero::before {
+
+            content: "✿";
+
+            position: absolute;
+
+            left: 7%;
+            top: 30px;
+
+            font-size: 70px;
+
+            color: rgba(217, 108, 139, 0.08);
+
+            transform: rotate(-15deg);
+
+        }
+
+
+        .blog-hero::after {
+
+            content: "❀";
+
+            position: absolute;
+
+            right: 8%;
+            bottom: 20px;
+
+            font-size: 90px;
+
+            color: rgba(217, 108, 139, 0.08);
+
+            transform: rotate(15deg);
+
+        }
+
+
+        .blog-label {
+
+            display: inline-block;
+
+            color: var(--flower-pink);
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .blog-hero h1 {
+
+            font-size: clamp(32px, 4vw, 52px);
+
+            line-height: 1.2;
+
+            color: var(--flower-text);
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .blog-hero h1 span {
+            color: var(--flower-pink);
+        }
+
+
+        .blog-hero p {
+
+            max-width: 750px;
+
+            margin: 0 auto;
+
+            color: var(--flower-text-light);
+
+            font-size: 16px;
+
+        }
+
+
+        /* =====================================================
+           BLOG CONTAINER
+        ====================================================== */
+
+        .blog-container {
+
+            width: min(1180px, 90%);
+
+            margin: 0 auto;
+
+            padding: 75px 0 90px;
+
+        }
+
+
+        /* =====================================================
+           SECTION TITLE
+        ====================================================== */
+
+        .section-heading {
+
+            text-align: center;
+
+            margin-bottom: 42px;
+
+        }
+
+
+        .section-heading .label {
+
+            color: var(--flower-pink);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.4px;
+
+            display: block;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .section-heading h2 {
+
+            font-size: 32px;
+
+            color: var(--flower-text);
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .section-heading h2 span {
+            color: var(--flower-pink);
+        }
+
+
+        .section-heading p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: var(--flower-text-light);
+
+            font-size: 15px;
+
+        }
+
+
+        /* =====================================================
+           BLOG GRID
+        ====================================================== */
+
+        .blog-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+
+        }
+
+
+        /* =====================================================
+           BLOG CARD
+        ====================================================== */
+
+        .blog-card {
+
+            background: #ffffff;
+
+            border: 1px solid var(--flower-border);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 28px rgba(80, 40, 50, 0.06);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        .blog-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 40px rgba(170, 70, 100, 0.14);
+
+        }
+
+
+        /* =====================================================
+           BLOG IMAGE
+        ====================================================== */
+
+        .blog-image {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 330px;
+
+            overflow: hidden;
+
+            background: #f9edf0;
+
+        }
+
+
+        .blog-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+
+        }
+
+
+        .blog-card:hover .blog-image img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        /* =====================================================
+           CATEGORY
+        ====================================================== */
+
+        .blog-category {
+
+            position: absolute;
+
+            left: 18px;
+            top: 18px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            padding: 7px 13px;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            color: var(--flower-pink);
+
+            border-radius: 30px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+        }
+
+
+        /* =====================================================
+           BLOG CONTENT
+        ====================================================== */
+
+        .blog-content {
+
+            padding: 25px 26px 28px;
+
+        }
+
+
+        .blog-date {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color: #8b7c81;
+
+            font-size: 13px;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .blog-date i {
+            color: var(--flower-pink);
+        }
+
+
+        .blog-content h3 {
+
+            color: var(--flower-text);
+
+            font-size: 22px;
+
+            line-height: 1.35;
+
+            font-weight: 750;
+
+            margin-bottom: 11px;
+
+        }
+
+
+        .blog-content p {
+
+            color: var(--flower-text-light);
+
+            font-size: 14px;
+
+            line-height: 1.75;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .read-more {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: var(--flower-pink);
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: gap 0.25s ease,
+                        color 0.25s ease;
+
+        }
+
+
+        .read-more i {
+
+            font-size: 12px;
+
+        }
+
+
+        .read-more:hover {
+
+            color: var(--flower-pink-dark);
+
+            gap: 13px;
+
+        }
+
+
+        /* =====================================================
+           FEATURED ARTICLE
+        ====================================================== */
+
+        .featured-blog {
+
+            display: grid;
+
+            grid-template-columns: 1.15fr 0.85fr;
+
+            margin-bottom: 70px;
+
+            background: #ffffff;
+
+            border: 1px solid var(--flower-border);
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 28px rgba(80, 40, 50, 0.06);
+
+        }
+
+
+        .featured-image {
+
+            min-height: 420px;
+
+            overflow: hidden;
+
+        }
+
+
+        .featured-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+
+        }
+
+
+        .featured-blog:hover .featured-image img {
+            transform: scale(1.04);
+        }
+
+
+        .featured-content {
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding: 45px;
+
+        }
+
+
+        .featured-content .small-label {
+
+            color: var(--flower-pink);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .featured-content h2 {
+
+            color: var(--flower-text);
+
+            font-size: 30px;
+
+            line-height: 1.3;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .featured-content p {
+
+            color: var(--flower-text-light);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 23px;
+
+        }
+
+
+        .featured-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            width: fit-content;
+
+            padding: 12px 22px;
+
+            border-radius: 30px;
+
+            background: var(--flower-pink);
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: all 0.25s ease;
+
+        }
+
+
+        .featured-button:hover {
+
+            background: var(--flower-pink-dark);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(185, 79, 112, 0.25);
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .blog-cta {
+
+            margin-top: 75px;
+
+            padding: 65px 30px;
+
+            text-align: center;
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fcecef,
+                    #fff4f7
+                );
+
+            border: 1px solid #f3d9e1;
+
+        }
+
+
+        .blog-cta span {
+
+            display: block;
+
+            color: var(--flower-pink);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .blog-cta h2 {
+
+            color: var(--flower-text);
+
+            font-size: 30px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .blog-cta p {
+
+            color: var(--flower-text-light);
+
+            max-width: 650px;
+
+            margin: 0 auto 22px;
+
+            font-size: 15px;
+
+        }
+
+
+        .cta-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 13px 24px;
+
+            border-radius: 30px;
+
+            background: var(--flower-pink);
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .cta-button:hover {
+
+            background: var(--flower-pink-dark);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            background: #342b2e;
+
+            color: #ffffff;
+
+            padding: 65px 7% 25px;
+
+        }
+
+
+        .footer-content {
+
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: 1.4fr 1fr 1fr;
+
+            gap: 60px;
+
+        }
+
+
+        .footer-box h3 {
+
+            font-size: 19px;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .footer-box p {
+
+            color: #d8cdd0;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .footer-box ul {
+
+            list-style: none;
+
+        }
+
+
+        .footer-box ul li {
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .footer-box ul li a {
+
+            color: #d8cdd0;
+
+            font-size: 14px;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .footer-box ul li a:hover {
+            color: #ff91ae;
+        }
+
+
+        .footer-box p + p {
+            margin-top: 9px;
+        }
+
+
+        .footer-box p i {
+
+            width: 22px;
+
+            color: #ff91ae;
+
+        }
+
+
+        /* SOCIAL */
+
+        .social {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .social a {
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.08);
+
+            color: white;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .social a:hover {
+
+            background: var(--flower-pink);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        footer hr {
+
+            max-width: 1180px;
+
+            margin: 45px auto 20px;
+
+            border: 0;
+
+            border-top: 1px solid rgba(255,255,255,0.1);
+
+        }
+
+
+        .copyright {
+
+            text-align: center;
+
+            color: #a99da1;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE TABLET
+        ====================================================== */
+
+        @media (max-width: 900px) {
+
+            header {
+
+                padding: 0 4%;
+
+            }
+
+
+            nav ul {
+
+                gap: 18px;
+
+            }
+
+
+            nav ul li a {
+
+                font-size: 14px;
+
+            }
+
+
+            .logo {
+
+                font-size: 24px;
+
+            }
+
+
+            .blog-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .featured-blog {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .featured-image {
+
+                min-height: 330px;
+
+            }
+
+
+            .footer-content {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 35px;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE MOBILE
+        ====================================================== */
+
+        @media (max-width: 650px) {
+
+            header {
+
+                height: auto;
+
+                min-height: 75px;
+
+                padding: 14px 5%;
+
+                flex-direction: column;
+
+                gap: 12px;
+
+            }
+
+
+            .logo {
+
+                font-size: 24px;
+
+            }
+
+
+            .logo img {
+
+                width: 34px;
+                height: 34px;
+
+            }
+
+
+            nav {
+
+                width: 100%;
+
+                overflow-x: auto;
+
+                padding-bottom: 3px;
+
+            }
+
+
+            nav ul {
+
+                width: max-content;
+
+                gap: 22px;
+
+                margin: auto;
+
+            }
+
+
+            nav ul li a {
+
+                padding: 5px 0;
+
+                font-size: 13px;
+
+            }
+
+
+            nav ul li a.active::after {
+
+                bottom: -4px;
+
+            }
+
+
+            .blog-hero {
+
+                padding: 55px 20px;
+
+            }
+
+
+            .blog-hero h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .blog-hero p {
+
+                font-size: 14px;
+
+            }
+
+
+            .blog-container {
+
+                width: 90%;
+
+                padding: 55px 0 65px;
+
+            }
+
+
+            .section-heading h2 {
+
+                font-size: 27px;
+
+            }
+
+
+            .blog-grid {
+
+                gap: 22px;
+
+            }
+
+
+            .blog-image {
+
+                height: 250px;
+
+            }
+
+
+            .blog-content {
+
+                padding: 21px;
+
+            }
+
+
+            .blog-content h3 {
+
+                font-size: 20px;
+
+            }
+
+
+            .featured-content {
+
+                padding: 28px 22px;
+
+            }
+
+
+            .featured-content h2 {
+
+                font-size: 25px;
+
+            }
+
+
+            .featured-image {
+
+                min-height: 250px;
+
+            }
+
+
+            .blog-cta {
+
+                padding: 45px 20px;
+
+            }
+
+
+            .blog-cta h2 {
+
+                font-size: 25px;
+
+            }
+
+
+            .footer-content {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -20,13 +1325,20 @@
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
 <header>
 
     <a href="index.html" class="logo">
 
-        🌸 Flower Shop
+        <img
+            src="images/logo.png"
+            alt="Flower Shop Logo"
+        >
+
+        <span>Flower Shop</span>
 
     </a>
 
@@ -41,13 +1353,11 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="shop.html">
                     Shop Hoa
                 </a>
             </li>
-
 
             <li>
                 <a href="dichvu.html">
@@ -55,20 +1365,17 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="blog.html" class="active">
                     Blog
                 </a>
             </li>
 
-
             <li>
                 <a href="gioithieu.html">
                     Giới thiệu
                 </a>
             </li>
-
 
             <li>
                 <a href="hotro.html">
@@ -83,60 +1390,151 @@
 </header>
 
 
-<!-- ================= BLOG ================= -->
 
-<section class="blog">
+<!-- =====================================================
+     BLOG HERO
+====================================================== -->
+
+<section class="blog-hero">
+
+    <span class="blog-label">
+        ✦ BLOG FLOWER SHOP
+    </span>
 
 
-    <!-- TIÊU ĐỀ BLOG -->
+    <h1>
+        Tin tức &
+        <span>Kiến thức về Hoa</span>
+    </h1>
 
-    <div class="blog-header">
 
-        <span class="blog-label">
+    <p>
+        Cùng Flower Shop khám phá những câu chuyện thú vị,
+        ý nghĩa của các loài hoa và bí quyết chăm sóc hoa tươi mỗi ngày.
+    </p>
 
-            ✦ BLOG FLOWER SHOP
+</section>
 
+
+
+<!-- =====================================================
+     BLOG CONTENT
+====================================================== -->
+
+<main class="blog-container">
+
+
+    <!-- =================================================
+         BÀI NỔI BẬT
+    ================================================== -->
+
+    <div class="section-heading">
+
+        <span class="label">
+            🌸 KHÁM PHÁ THẾ GIỚI HOA
         </span>
 
-
-        <h1>
-
-            Tin tức & Kiến thức về Hoa
-
-        </h1>
-
+        <h2>
+            Những câu chuyện
+            <span>đáng yêu về hoa</span>
+        </h2>
 
         <p>
-
-            Khám phá những câu chuyện thú vị,
-
-            ý nghĩa của các loài hoa và bí quyết
-
-            chăm sóc hoa tươi mỗi ngày.
-
+            Những bài viết được Flower Shop chọn lọc
+            để giúp bạn hiểu hơn về vẻ đẹp và ý nghĩa của hoa.
         </p>
 
     </div>
 
 
-    <!-- ================= DANH SÁCH BÀI VIẾT ================= -->
+    <article class="featured-blog">
 
-    <div class="blog-container">
+        <div class="featured-image">
+
+            <img
+                src="images/blog1.jpg"
+                alt="Ý nghĩa của hoa hồng"
+            >
+
+        </div>
 
 
-        <!-- ================= BÀI VIẾT 1 ================= -->
+        <div class="featured-content">
+
+            <span class="small-label">
+                🌹 Ý NGHĨA LOÀI HOA
+            </span>
+
+
+            <h2>
+                Hoa Hồng và những thông điệp đầy cảm xúc
+            </h2>
+
+
+            <p>
+                Hoa hồng là biểu tượng của tình yêu,
+                sự lãng mạn và lòng biết ơn.
+                Mỗi màu hoa lại mang một thông điệp
+                và ý nghĩa riêng biệt.
+            </p>
+
+
+            <a
+                href="#blog-list"
+                class="featured-button"
+            >
+                Đọc bài viết
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =================================================
+         DANH SÁCH BÀI VIẾT
+    ================================================== -->
+
+    <div
+        class="section-heading"
+        id="blog-list"
+    >
+
+        <span class="label">
+            ✦ BÀI VIẾT MỚI
+        </span>
+
+
+        <h2>
+            Khám phá thêm
+            <span>nhiều điều thú vị</span>
+        </h2>
+
+    </div>
+
+
+    <div class="blog-grid">
+
+
+        <!-- =================================================
+             BLOG 1
+        ================================================== -->
 
         <article class="blog-card">
 
             <div class="blog-image">
 
-                <img src="images/blog1.jpg"
-                     alt="Ý nghĩa của hoa hồng">
+                <img
+                    src="images/blog1.jpg"
+                    alt="Ý nghĩa của Hoa Hồng"
+                    loading="lazy"
+                >
+
 
                 <span class="blog-category">
-
-                    Ý nghĩa hoa
-
+                    🌹 Ý NGHĨA HOA
                 </span>
 
             </div>
@@ -144,41 +1542,34 @@
 
             <div class="blog-content">
 
-                <span class="blog-date">
+                <div class="blog-date">
 
                     <i class="fa-regular fa-calendar"></i>
 
                     15/07/2026
 
-                </span>
+                </div>
 
 
-                <h2>
-
+                <h3>
                     Ý nghĩa của Hoa Hồng
-
-                </h2>
+                </h3>
 
 
                 <p>
-
                     Hoa hồng là biểu tượng của tình yêu,
-
                     sự lãng mạn và lòng biết ơn.
-
                     Mỗi màu hoa lại mang một thông điệp
-
                     và ý nghĩa riêng biệt.
-
                 </p>
 
 
-                <a href="#" class="blog-link">
-
+                <a
+                    href="#"
+                    class="read-more"
+                >
                     Đọc bài viết
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
 
             </div>
@@ -186,19 +1577,24 @@
         </article>
 
 
-        <!-- ================= BÀI VIẾT 2 ================= -->
+
+        <!-- =================================================
+             BLOG 2
+        ================================================== -->
 
         <article class="blog-card">
 
             <div class="blog-image">
 
-                <img src="images/blog2.jpg"
-                     alt="Bí quyết chăm sóc hoa">
+                <img
+                    src="images/blog2.jpg"
+                    alt="Bí quyết giữ hoa tươi lâu"
+                    loading="lazy"
+                >
+
 
                 <span class="blog-category">
-
-                    Chăm sóc hoa
-
+                    🌿 CHĂM SÓC HOA
                 </span>
 
             </div>
@@ -206,41 +1602,33 @@
 
             <div class="blog-content">
 
-                <span class="blog-date">
+                <div class="blog-date">
 
                     <i class="fa-regular fa-calendar"></i>
 
                     12/07/2026
 
-                </span>
+                </div>
 
 
-                <h2>
-
+                <h3>
                     Bí quyết giữ hoa tươi lâu
-
-                </h2>
+                </h3>
 
 
                 <p>
-
-                    Từ cách thay nước, cắt gốc đến
-
-                    vị trí đặt hoa, những mẹo nhỏ này
-
-                    sẽ giúp bó hoa của bạn luôn tươi đẹp
-
-                    trong nhiều ngày.
-
+                    Từ cách thay nước, cắt gốc đến vị trí
+                    đặt hoa, những mẹo nhỏ này sẽ giúp bó hoa
+                    của bạn luôn tươi đẹp trong nhiều ngày.
                 </p>
 
 
-                <a href="#" class="blog-link">
-
+                <a
+                    href="#"
+                    class="read-more"
+                >
                     Đọc bài viết
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
 
             </div>
@@ -248,19 +1636,24 @@
         </article>
 
 
-        <!-- ================= BÀI VIẾT 3 ================= -->
+
+        <!-- =================================================
+             BLOG 3
+        ================================================== -->
 
         <article class="blog-card">
 
             <div class="blog-image">
 
-                <img src="images/blog3.jpg"
-                     alt="Cách chọn hoa theo mùa">
+                <img
+                    src="images/blog3.jpg"
+                    alt="Cách chọn hoa theo mùa"
+                    loading="lazy"
+                >
+
 
                 <span class="blog-category">
-
-                    Hoa theo mùa
-
+                    🌸 HOA THEO MÙA
                 </span>
 
             </div>
@@ -268,39 +1661,33 @@
 
             <div class="blog-content">
 
-                <span class="blog-date">
+                <div class="blog-date">
 
                     <i class="fa-regular fa-calendar"></i>
 
                     10/07/2026
 
-                </span>
+                </div>
 
 
-                <h2>
-
+                <h3>
                     Cách chọn hoa theo mùa
-
-                </h2>
+                </h3>
 
 
                 <p>
-
                     Mỗi mùa trong năm đều có những loài hoa
-
                     đặc trưng và vẻ đẹp riêng. Hãy cùng khám phá
-
                     cách chọn những loại hoa phù hợp theo từng mùa.
-
                 </p>
 
 
-                <a href="#" class="blog-link">
-
+                <a
+                    href="#"
+                    class="read-more"
+                >
                     Đọc bài viết
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
 
             </div>
@@ -308,19 +1695,24 @@
         </article>
 
 
-        <!-- ================= BÀI VIẾT 4 ================= -->
+
+        <!-- =================================================
+             BLOG 4
+        ================================================== -->
 
         <article class="blog-card">
 
             <div class="blog-image">
 
-                <img src="images/blog4.jpg"
-                     alt="Bí quyết chọn hoa">
+                <img
+                    src="images/blog4.jpg"
+                    alt="Bí quyết chọn hoa phù hợp"
+                    loading="lazy"
+                >
+
 
                 <span class="blog-category">
-
-                    Kinh nghiệm
-
+                    💐 KINH NGHIỆM
                 </span>
 
             </div>
@@ -328,39 +1720,33 @@
 
             <div class="blog-content">
 
-                <span class="blog-date">
+                <div class="blog-date">
 
                     <i class="fa-regular fa-calendar"></i>
 
                     08/07/2026
 
-                </span>
+                </div>
 
 
-                <h2>
-
+                <h3>
                     Bí quyết chọn hoa phù hợp
-
-                </h2>
+                </h3>
 
 
                 <p>
-
                     Lựa chọn hoa phù hợp cho sinh nhật,
-
-                    khai trương, cưới hỏi hay những dịp
-
-                    đặc biệt sẽ trở nên dễ dàng hơn.
-
+                    khai trương, cưới hỏi hay những dịp đặc biệt
+                    sẽ trở nên dễ dàng hơn.
                 </p>
 
 
-                <a href="#" class="blog-link">
-
+                <a
+                    href="#"
+                    class="read-more"
+                >
                     Đọc bài viết
-
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
 
             </div>
@@ -370,47 +1756,115 @@
 
     </div>
 
-</section>
 
 
-<!-- ================= FOOTER ================= -->
+    <!-- =================================================
+         CTA
+    ================================================== -->
+
+    <section class="blog-cta">
+
+        <span>
+            🌷 FLOWER SHOP
+        </span>
+
+
+        <h2>
+            Để mỗi bó hoa kể một câu chuyện
+        </h2>
+
+
+        <p>
+            Khám phá những mẫu hoa đẹp và gửi trao
+            những thông điệp yêu thương đến người quan trọng.
+        </p>
+
+
+        <a
+            href="shop.html"
+            class="cta-button"
+        >
+            Khám phá Shop Hoa
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
 <footer>
-
 
     <div class="footer-content">
 
 
-        <!-- CỘT 1 -->
+        <!-- THÔNG TIN -->
 
         <div class="footer-box">
 
             <h3>
-
-                🌸 Flower Shop
-
+                Flower Shop 🌸
             </h3>
 
 
             <p>
-
-                Mang yêu thương đến mọi người
-
-                bằng những bó hoa tươi đẹp.
-
+                Mang sắc hoa đến mọi khoảnh khắc.
+                Những bó hoa tươi đẹp được tạo nên
+                để gửi gắm yêu thương và cảm xúc.
             </p>
+
+
+            <div class="social">
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                >
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="YouTube"
+                >
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
 
         </div>
 
 
-        <!-- CỘT 2 -->
+
+        <!-- LIÊN KẾT -->
 
         <div class="footer-box">
 
             <h3>
-
-                Liên kết nhanh
-
+                Liên kết
             </h3>
 
 
@@ -422,13 +1876,11 @@
                     </a>
                 </li>
 
-
                 <li>
                     <a href="shop.html">
                         Shop Hoa
                     </a>
                 </li>
-
 
                 <li>
                     <a href="dichvu.html">
@@ -436,20 +1888,17 @@
                     </a>
                 </li>
 
-
                 <li>
                     <a href="blog.html">
                         Blog
                     </a>
                 </li>
 
-
                 <li>
                     <a href="gioithieu.html">
                         Giới thiệu
                     </a>
                 </li>
-
 
                 <li>
                     <a href="hotro.html">
@@ -462,22 +1911,30 @@
         </div>
 
 
-        <!-- CỘT 3 -->
+
+        <!-- LIÊN HỆ -->
 
         <div class="footer-box">
 
             <h3>
-
                 Liên hệ
-
             </h3>
+
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Bến Tre, Việt Nam
+
+            </p>
 
 
             <p>
 
                 <i class="fa-solid fa-phone"></i>
 
-                Hotline: 0123 456 789
+                0123 456 789
 
             </p>
 
@@ -486,44 +1943,12 @@
 
                 <i class="fa-solid fa-envelope"></i>
 
-                Email: flowershop@gmail.com
+                flowershop@gmail.com
 
             </p>
-
-
-            <p>
-
-                <i class="fa-solid fa-location-dot"></i>
-
-                TP. HCM, Việt Nam
-
-            </p>
-
-
-            <div class="social">
-
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-
-
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-
-
-                <a href="#">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-
-
-                <a href="#">
-                    <i class="fab fa-youtube"></i>
-                </a>
-
-            </div>
 
         </div>
+
 
     </div>
 
@@ -536,7 +1961,6 @@
         © 2026 Flower Shop | All Rights Reserved.
 
     </p>
-
 
 </footer>
 
