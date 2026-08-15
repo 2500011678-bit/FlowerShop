@@ -584,7 +584,48 @@
         }
 
     </style>
+<!-- FONT TIẾNG VIỆT RIÊNG CHO TRANG DỊCH VỤ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+    /* ================================
+       FIX FONT TIẾNG VIỆT
+       CHỈ ÁP DỤNG CHO DICHVU.HTML
+    ================================= */
+
+    html,
+    body {
+        font-family: "Be Vietnam Pro", sans-serif !important;
+    }
+
+    body *,
+    header,
+    header *,
+    nav,
+    nav *,
+    .service,
+    .service *,
+    footer,
+    footer * {
+        font-family: "Be Vietnam Pro", sans-serif !important;
+    }
+
+    /* Icon Font Awesome vẫn dùng đúng font icon */
+    i[class^="fa-"],
+    i[class*=" fa-"] {
+        font-family: "Font Awesome 6 Free" !important;
+    }
+
+    i.fab {
+        font-family: "Font Awesome 6 Brands" !important;
+    }
+</style>
 </head>
 
 
