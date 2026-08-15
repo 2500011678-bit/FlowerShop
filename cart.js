@@ -1,28 +1,37 @@
-/* =========================================================
-   FLOWER SHOP - SHOPPING CART
-   localStorage
-========================================================= */
+```javascript
+/* =====================================================
+   FLOWER SHOP - CART.JS
+   DÙNG CHUNG CHO SHOP.HTML + GIOHANG.HTML
+===================================================== */
 
 
-const CART_KEY = "flowerShopCart";
-
-
-
-/* =========================================================
+/* =====================================================
    LẤY GIỎ HÀNG
-========================================================= */
+===================================================== */
 
 function getCart() {
 
+    const savedCart =
+        localStorage.getItem("flowerCart");
+
+    if (!savedCart) {
+        return [];
+    }
+
     try {
 
-        const cart = localStorage.getItem(CART_KEY);
+        const cart = JSON.parse(savedCart);
 
-        return cart ? JSON.parse(cart) : [];
+        return Array.isArray(cart)
+            ? cart
+            : [];
 
     } catch (error) {
 
-        console.error("Không thể đọc giỏ hàng:", error);
+        console.error(
+            "Không thể đọc giỏ hàng:",
+            error
+        );
 
         return [];
 
@@ -31,141 +40,177 @@ function getCart() {
 }
 
 
-
-/* =========================================================
+/* =====================================================
    LƯU GIỎ HÀNG
-========================================================= */
+===================================================== */
 
 function saveCart(cart) {
 
     localStorage.setItem(
-        CART_KEY,
+        "flowerCart",
         JSON.stringify(cart)
     );
 
 }
 
 
-
-/* =========================================================
-   FORMAT TIỀN
-========================================================= */
-
-function formatPrice(price) {
-
-    return Number(price).toLocaleString("vi-VN") + "đ";
-
-}
-
-
-
-/* =========================================================
-   CẬP NHẬT SỐ LƯỢNG TRÊN ICON GIỎ HÀNG
-========================================================= */
+/* =====================================================
+   CẬP NHẬT SỐ TRÊN ICON GIỎ HÀNG
+===================================================== */
 
 function updateCartCount() {
 
     const cart = getCart();
 
-    const totalQuantity = cart.reduce(
-        (total, item) => total + item.quantity,
+    const count = cart.reduce(
+        function (total, item) {
+
+            return total +
+                Number(item.quantity || 0);
+
+        },
         0
     );
 
 
-    const cartCount = document.getElementById("cartCount");
+    const cartCount =
+        document.getElementById("cartCount");
 
 
     if (cartCount) {
 
-        cartCount.textContent = totalQuantity;
-
-        if (totalQuantity === 0) {
-
-            cartCount.style.display = "none";
-
-        } else {
-
-            cartCount.style.display = "flex";
-
-        }
+        cartCount.textContent = count;
 
     }
 
 }
 
 
-
-/* =========================================================
-   THÔNG BÁO
-========================================================= */
+/* =====================================================
+   THÔNG BÁO TRÊN SHOP
+===================================================== */
 
 function showCartToast(message) {
 
-    const toast = document.getElementById("cartToast");
+    const toast =
+        document.getElementById("cartToast");
 
     const toastText =
         document.getElementById("cartToastText");
 
 
-    if (!toast) return;
-
-
-    if (toastText) {
-
-        toastText.textContent = message;
-
+    if (!toast || !toastText) {
+        return;
     }
 
+
+    toastText.textContent = message;
 
     toast.classList.add("show");
 
 
-    clearTimeout(window.cartToastTimer);
-
-
-    window.cartToastTimer = setTimeout(
-        () => {
-
-            toast.classList.remove("show");
-
-        },
-        2200
+    clearTimeout(
+        window.cartToastTimer
     );
+
+
+    window.cartToastTimer =
+        setTimeout(
+            function () {
+
+                toast.classList.remove(
+                    "show"
+                );
+
+            },
+            2500
+        );
 
 }
 
 
+/* =====================================================
+   THÊM SẢN PHẨM VÀO GIỎ
+===================================================== */
 
-/* =========================================================
-   THÊM SẢN PHẨM
-========================================================= */
+function addToCart(button) {
 
-function addToCart(product) {
+    const id =
+        button.dataset.id;
+
+    const name =
+        button.dataset.name;
+
+    const price =
+        Number(button.dataset.price);
+
+    const image =
+        button.dataset.image;
+
+
+    /* Kiểm tra dữ liệu */
+
+    if (
+        !id ||
+        !name ||
+        !price ||
+        !image
+    ) {
+
+        console.error(
+            "Sản phẩm thiếu dữ liệu:",
+            {
+                id,
+                name,
+                price,
+                image
+            }
+        );
+
+        return;
+
+    }
+
+
+    /* Lấy giỏ hàng hiện tại */
 
     const cart = getCart();
 
 
-    const existingProduct = cart.find(
-        item => item.id === product.id
-    );
+    /* Kiểm tra sản phẩm đã tồn tại */
+
+    const existingProduct =
+        cart.find(
+            function (item) {
+
+                return item.id === id;
+
+            }
+        );
 
 
     if (existingProduct) {
 
+        /* Nếu đã có → tăng số lượng */
+
         existingProduct.quantity += 1;
 
-    } else {
+    }
+    else {
+
+        /* Nếu chưa có → thêm mới */
 
         cart.push({
 
-            id: product.id,
+            id: id,
 
-            name: product.name,
+            name: name,
 
-            price: Number(product.price),
+            price: price,
 
-            image: product.image,
+            image: image,
+
+            type: "HOA TƯƠI",
 
             quantity: 1
 
@@ -174,203 +219,30 @@ function addToCart(product) {
     }
 
 
+    /* Lưu */
+
     saveCart(cart);
+
+
+    /* Cập nhật số */
 
     updateCartCount();
 
+
+    /* Thông báo */
 
     showCartToast(
-        `${product.name} đã được thêm vào giỏ hàng!`
+        `"${name}" đã được thêm vào giỏ hàng!`
     );
 
 }
 
 
-
-/* =========================================================
-   XÓA SẢN PHẨM
-========================================================= */
-
-function removeFromCart(productId) {
-
-    let cart = getCart();
-
-
-    cart = cart.filter(
-        item => item.id !== productId
-    );
-
-
-    saveCart(cart);
-
-    updateCartCount();
-
-
-    if (
-        typeof renderCart === "function"
-    ) {
-
-        renderCart();
-
-    }
-
-}
-
-
-
-/* =========================================================
-   TĂNG SỐ LƯỢNG
-========================================================= */
-
-function increaseQuantity(productId) {
-
-    const cart = getCart();
-
-
-    const product = cart.find(
-        item => item.id === productId
-    );
-
-
-    if (!product) return;
-
-
-    product.quantity += 1;
-
-
-    saveCart(cart);
-
-    updateCartCount();
-
-
-    if (
-        typeof renderCart === "function"
-    ) {
-
-        renderCart();
-
-    }
-
-}
-
-
-
-/* =========================================================
-   GIẢM SỐ LƯỢNG
-========================================================= */
-
-function decreaseQuantity(productId) {
-
-    const cart = getCart();
-
-
-    const product = cart.find(
-        item => item.id === productId
-    );
-
-
-    if (!product) return;
-
-
-    if (product.quantity > 1) {
-
-        product.quantity -= 1;
-
-    } else {
-
-        removeFromCart(productId);
-
-        return;
-
-    }
-
-
-    saveCart(cart);
-
-    updateCartCount();
-
-
-    if (
-        typeof renderCart === "function"
-    ) {
-
-        renderCart();
-
-    }
-
-}
-
-
-
-/* =========================================================
-   XÓA TOÀN BỘ GIỎ
-========================================================= */
-
-function clearCart() {
-
-    localStorage.removeItem(CART_KEY);
-
-    updateCartCount();
-
-
-    if (
-        typeof renderCart === "function"
-    ) {
-
-        renderCart();
-
-    }
-
-}
-
-
-
-/* =========================================================
-   TỔNG SỐ LƯỢNG
-========================================================= */
-
-function getTotalQuantity() {
-
-    const cart = getCart();
-
-
-    return cart.reduce(
-        (total, item) => total + item.quantity,
-        0
-    );
-
-}
-
-
-
-/* =========================================================
-   TỔNG TIỀN
-========================================================= */
-
-function getCartTotal() {
-
-    const cart = getCart();
-
-
-    return cart.reduce(
-        (total, item) => {
-
-            return total +
-                (item.price * item.quantity);
-
-        },
-        0
-    );
-
-}
-
-
-
-/* =========================================================
-   BẮT SỰ KIỆN NÚT THÊM GIỎ
-========================================================= */
-
-function initAddToCartButtons() {
+/* =====================================================
+   GẮN SỰ KIỆN CHO CÁC NÚT THÊM GIỎ
+===================================================== */
+
+function setupCartButtons() {
 
     const buttons =
         document.querySelectorAll(
@@ -378,41 +250,27 @@ function initAddToCartButtons() {
         );
 
 
-    buttons.forEach(button => {
+    buttons.forEach(
+        function (button) {
 
-        button.addEventListener(
-            "click",
-            function () {
+            button.addEventListener(
+                "click",
+                function () {
 
-                const product = {
+                    addToCart(this);
 
-                    id: this.dataset.id,
+                }
+            );
 
-                    name: this.dataset.name,
-
-                    price: Number(
-                        this.dataset.price
-                    ),
-
-                    image: this.dataset.image
-
-                };
-
-
-                addToCart(product);
-
-            }
-        );
-
-    });
+        }
+    );
 
 }
 
 
-
-/* =========================================================
-   KHỞI TẠO
-========================================================= */
+/* =====================================================
+   KHỞI ĐỘNG
+===================================================== */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -420,31 +278,8 @@ document.addEventListener(
 
         updateCartCount();
 
-        initAddToCartButtons();
+        setupCartButtons();
 
     }
 );
-
-
-
-/* =========================================================
-   CẬP NHẬT KHI TAB KHÁC THAY ĐỔI LOCAL STORAGE
-========================================================= */
-
-window.addEventListener(
-    "storage",
-    function () {
-
-        updateCartCount();
-
-
-        if (
-            typeof renderCart === "function"
-        ) {
-
-            renderCart();
-
-        }
-
-    }
-);
+```
