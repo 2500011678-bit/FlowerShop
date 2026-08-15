@@ -8,23 +8,18 @@
 
     <meta
         name="description"
-        content="Giới thiệu Flower Shop - Nơi mỗi bó hoa kể một câu chuyện"
+        content="Giới thiệu Flower Shop - Mang sắc hoa đến mọi khoảnh khắc"
     >
 
     <title>Giới thiệu - Flower Shop</title>
 
 
     <!-- =====================================================
-         GOOGLE FONT - FIX TIẾNG VIỆT
+         GOOGLE FONT - HỖ TRỢ TIẾNG VIỆT
     ====================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
@@ -33,7 +28,7 @@
 
 
     <!-- =====================================================
-         FONT AWESOME
+         FONT AWESOME - ICON
     ====================================================== -->
 
     <link
@@ -42,129 +37,60 @@
     >
 
 
-    <!-- CSS CHÍNH -->
+    <!-- CSS CHUNG -->
 
     <link rel="stylesheet" href="style.css">
 
 
     <!-- =====================================================
-         CSS RIÊNG CHO TRANG GIỚI THIỆU
+         CSS RIÊNG TRANG GIỚI THIỆU
     ====================================================== -->
 
     <style>
 
         /* =====================================================
-           BIẾN MÀU - ĐỒNG BỘ VỚI INDEX
+           RESET + FONT
         ====================================================== */
 
-        :root {
-
-            --flower-pink: #d96c8b;
-            --flower-pink-dark: #b94f70;
-            --flower-pink-light: #fcecef;
-
-            --flower-cream: #fffaf7;
-
-            --flower-text: #3b3033;
-            --flower-gray: #6f6568;
-
-        }
-
-
-        /* =====================================================
-           FONT TIẾNG VIỆT
-        ====================================================== */
-
-        html,
-        body,
-        body *,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        a,
-        span,
-        strong,
-        button,
-        input,
-        textarea,
-        select {
-
-            font-family: "Be Vietnam Pro", sans-serif !important;
-
-        }
-
-
-        * {
+        .about-page,
+        .about-page * {
+            font-family: "Be Vietnam Pro", sans-serif;
             box-sizing: border-box;
         }
 
-
-        body {
-
+        .about-page {
             overflow-x: hidden;
-
-            background: #fffaf9;
-
-            color: var(--flower-text);
-
+            background: #fffafc;
+            color: #3b3033;
         }
 
 
         /* =====================================================
-           HEADER - LOGO GỐC
+           HEADER
         ====================================================== */
 
-        header {
-
+        .about-page header {
             position: relative;
-
             z-index: 100;
-
         }
 
-
-        header .logo {
-
+        .about-page header .logo {
             display: flex;
-
             align-items: center;
-
             gap: 10px;
-
             text-decoration: none;
-
-            white-space: nowrap;
-
         }
 
-
-        header .logo img {
-
-            display: block;
-
+        .about-page header .logo img {
             width: auto;
-
             height: 45px;
-
             max-width: 60px;
-
             object-fit: contain;
-
+            display: block;
         }
 
-
-        header .logo span {
-
-            display: inline-block;
-
-            color: inherit;
-
+        .about-page header .logo span {
             white-space: nowrap;
-
         }
 
 
@@ -173,280 +99,213 @@
         ====================================================== */
 
         .about-hero {
-
             position: relative;
 
             min-height: 470px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
-            text-align: center;
 
             padding: 90px 20px;
 
-            overflow: hidden;
+            text-align: center;
 
             background:
-
                 linear-gradient(
-                    rgba(70, 20, 40, 0.48),
-                    rgba(70, 20, 40, 0.60)
+                    rgba(74, 24, 44, 0.55),
+                    rgba(74, 24, 44, 0.58)
                 ),
-
                 url("images/about-banner.jpg");
 
             background-size: cover;
-
             background-position: center;
 
-            color: white;
-
+            color: #ffffff;
         }
 
 
-        /* lớp sáng nhẹ */
-
-        .about-hero::after {
-
-            content: "";
-
+        .about-hero::before {
+            content: "✦";
             position: absolute;
 
-            inset: 0;
+            top: 70px;
+            left: 10%;
 
-            background:
+            color: rgba(255,255,255,0.45);
+            font-size: 28px;
 
-                radial-gradient(
-                    circle at 50% 40%,
-                    rgba(255,255,255,0.12),
-                    transparent 45%
-                );
+            animation: aboutFloat 3s ease-in-out infinite;
+        }
 
-            pointer-events: none;
 
+        .about-hero::after {
+            content: "✿";
+            position: absolute;
+
+            right: 10%;
+            bottom: 70px;
+
+            color: rgba(255,255,255,0.4);
+            font-size: 32px;
+
+            animation: aboutFloat 4s ease-in-out infinite;
         }
 
 
         .about-hero-content {
-
             position: relative;
-
             z-index: 2;
 
             max-width: 850px;
-
         }
 
 
-        .about-hero-content::before {
-
-            content: "✦ FLOWER SHOP ✦";
-
+        .about-hero-label {
             display: inline-block;
 
-            margin-bottom: 20px;
+            margin-bottom: 18px;
 
             padding: 8px 18px;
 
-            border: 1px solid rgba(255,255,255,0.45);
-
+            border: 1px solid rgba(255,255,255,0.4);
             border-radius: 50px;
 
-            background: rgba(255,255,255,0.10);
+            background: rgba(255,255,255,0.12);
 
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
 
             font-size: 13px;
-
-            font-weight: 600;
-
-            letter-spacing: 2px;
-
+            font-weight: 700;
+            letter-spacing: 1.5px;
         }
 
 
         .about-hero h1 {
+            margin: 0 0 22px;
 
-            margin: 0 auto 20px;
-
-            font-size: clamp(36px, 5vw, 56px);
-
+            font-size: 52px;
             line-height: 1.2;
 
             font-weight: 800;
 
-            letter-spacing: -1px;
+            text-shadow:
+                0 4px 15px rgba(0,0,0,0.3);
+        }
 
-            text-shadow: 0 4px 15px rgba(0,0,0,0.25);
 
+        .about-hero h1 span {
+            color: #ffd2df;
         }
 
 
         .about-hero p {
-
             max-width: 720px;
 
             margin: auto;
 
-            font-size: 17px;
-
-            line-height: 1.9;
+            font-size: 18px;
+            line-height: 1.8;
 
             color: rgba(255,255,255,0.94);
-
         }
 
 
         /* =====================================================
-           THỐNG KÊ
+           STATS
         ====================================================== */
 
         .about-stats {
+            position: relative;
+            z-index: 5;
 
-            max-width: 1120px;
+            max-width: 1100px;
 
             margin: -65px auto 90px;
 
             padding: 0 20px;
 
-            position: relative;
-
-            z-index: 5;
-
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
 
             gap: 20px;
-
         }
 
 
         .stat-box {
-
-            position: relative;
-
             padding: 32px 20px;
 
             text-align: center;
 
-            background: rgba(255,255,255,0.98);
+            background: #ffffff;
 
-            border: 1px solid rgba(217,108,139,0.10);
+            border: 1px solid #f8dce5;
 
             border-radius: 20px;
 
             box-shadow:
-
-                0 18px 45px rgba(91, 40, 55, 0.10);
+                0 15px 40px rgba(86, 39, 54, 0.10);
 
             transition:
-
                 transform 0.3s ease,
-
                 box-shadow 0.3s ease;
-
-            overflow: hidden;
-
-        }
-
-
-        .stat-box::before {
-
-            content: "";
-
-            position: absolute;
-
-            top: 0;
-
-            left: 0;
-
-            width: 100%;
-
-            height: 4px;
-
-            background:
-
-                linear-gradient(
-                    90deg,
-                    var(--flower-pink-light),
-                    var(--flower-pink),
-                    var(--flower-pink-light)
-                );
-
         }
 
 
         .stat-box:hover {
-
             transform: translateY(-8px);
 
             box-shadow:
-
-                0 24px 50px rgba(91, 40, 55, 0.15);
-
+                0 20px 45px rgba(217, 108, 139, 0.18);
         }
 
 
         .stat-box i {
-
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             width: 58px;
-
             height: 58px;
 
-            margin-bottom: 15px;
+            margin-bottom: 16px;
 
             border-radius: 50%;
 
-            background: var(--flower-pink-light);
+            background: #fff0f4;
 
-            color: var(--flower-pink);
+            color: #d96c8b;
 
             font-size: 24px;
-
         }
 
 
         .stat-box strong {
-
             display: block;
 
-            margin-bottom: 7px;
+            margin-bottom: 6px;
 
-            color: var(--flower-pink);
+            color: #d96c8b;
 
-            font-size: 30px;
-
+            font-size: 31px;
             font-weight: 800;
-
         }
 
 
         .stat-box span {
-
-            color: var(--flower-gray);
+            color: #777;
 
             font-size: 14px;
-
+            line-height: 1.5;
         }
 
 
         /* =====================================================
-           CÂU CHUYỆN
+           STORY
         ====================================================== */
 
         .story-section {
-
             max-width: 1200px;
 
             margin: 0 auto 110px;
@@ -460,77 +319,37 @@
             align-items: center;
 
             gap: 70px;
-
         }
 
 
         .story-image {
-
             position: relative;
-
-        }
-
-
-        .story-image::before {
-
-            content: "";
-
-            position: absolute;
-
-            width: 110px;
-
-            height: 110px;
-
-            left: -18px;
-
-            top: -18px;
-
-            border-radius: 25px;
-
-            background: var(--flower-pink-light);
-
-            z-index: -1;
-
         }
 
 
         .story-image::after {
-
-            content: "🌸";
+            content: "";
 
             position: absolute;
 
-            right: -18px;
+            left: -15px;
+            bottom: -15px;
 
-            bottom: -18px;
+            width: 100%;
+            height: 100%;
 
-            width: 70px;
+            border: 2px solid #f3bfd0;
 
-            height: 70px;
+            border-radius: 25px;
 
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: white;
-
-            box-shadow: 0 10px 30px rgba(0,0,0,0.10);
-
-            font-size: 28px;
-
+            z-index: -1;
         }
 
 
         .story-image img {
-
             display: block;
 
             width: 100%;
-
             height: 450px;
 
             object-fit: cover;
@@ -538,150 +357,142 @@
             border-radius: 25px;
 
             box-shadow:
+                0 20px 45px rgba(0,0,0,0.14);
 
-                0 20px 45px rgba(70, 30, 45, 0.15);
-
-            transition: 0.5s ease;
-
+            transition: transform 0.5s ease;
         }
 
 
         .story-image:hover img {
-
             transform: scale(1.025);
-
         }
 
 
         .story-text {
-
             padding: 10px 0;
-
         }
 
 
-        .story-text::before {
-
-            content: "✦ CÂU CHUYỆN CỦA CHÚNG TÔI";
-
-            display: block;
+        .story-label {
+            display: inline-block;
 
             margin-bottom: 14px;
 
-            color: var(--flower-pink);
+            color: #d96c8b;
 
             font-size: 13px;
-
             font-weight: 700;
 
             letter-spacing: 1.5px;
-
         }
 
 
         .story-text h2 {
+            margin: 0 0 22px;
 
-            margin: 0 0 20px;
-
-            color: var(--flower-text);
+            color: #342c2f;
 
             font-size: 40px;
-
             line-height: 1.25;
 
             font-weight: 800;
-
         }
 
 
         .story-text h2 span {
-
-            color: var(--flower-pink);
-
+            color: #d96c8b;
         }
 
 
         .story-text p {
-
             margin-bottom: 18px;
 
-            color: var(--flower-gray);
+            color: #6c6265;
 
             font-size: 16px;
-
-            line-height: 1.9;
-
+            line-height: 1.85;
         }
 
 
         .story-quote {
-
             position: relative;
 
             margin-top: 28px;
 
             padding: 22px 24px 22px 28px;
 
-            border-left: 4px solid var(--flower-pink);
+            border-left: 4px solid #d96c8b;
 
             border-radius: 0 15px 15px 0;
 
             background:
-
                 linear-gradient(
                     135deg,
-                    #fff7f9,
-                    #fffafa
+                    #fff4f7,
+                    #fffafd
                 );
 
-            color: #62575a;
+            color: #63575b;
 
             font-size: 15px;
 
             font-style: italic;
 
             line-height: 1.8;
-
-            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
-
         }
 
 
         /* =====================================================
-           TIÊU ĐỀ SECTION
+           SECTION TITLE
         ====================================================== */
 
-        .section-title {
-
-            margin: 0 0 15px;
-
-            color: var(--flower-text);
-
-            font-size: 40px;
-
-            line-height: 1.3;
-
-            font-weight: 800;
-
+        .section-title-wrap {
             text-align: center;
 
+            margin-bottom: 48px;
+        }
+
+
+        .section-label {
+            display: inline-block;
+
+            margin-bottom: 12px;
+
+            color: #d96c8b;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .section-title {
+            margin: 0 0 12px;
+
+            color: #342c2f;
+
+            font-size: 40px;
+            line-height: 1.25;
+
+            font-weight: 800;
+        }
+
+
+        .section-title span {
+            color: #d96c8b;
         }
 
 
         .section-subtitle {
-
             max-width: 680px;
 
-            margin: 0 auto 50px;
+            margin: 0 auto;
 
-            color: var(--flower-gray);
+            color: #777;
 
+            font-size: 16px;
             line-height: 1.8;
-
-            text-align: center;
-
-            font-size: 15px;
-
         }
 
 
@@ -690,33 +501,27 @@
         ====================================================== */
 
         .timeline-section {
-
             max-width: 1000px;
 
             margin: 0 auto 110px;
 
             padding: 0 30px;
-
         }
 
 
         .timeline {
-
             position: relative;
 
             margin-top: 50px;
-
         }
 
 
         .timeline::before {
-
             content: "";
 
             position: absolute;
 
             top: 0;
-
             bottom: 0;
 
             left: 50%;
@@ -724,153 +529,141 @@
             width: 3px;
 
             background:
-
                 linear-gradient(
                     to bottom,
-                    transparent,
-                    #f4a1b8,
-                    #f4a1b8,
-                    transparent
+                    #f3b4c7,
+                    #d96c8b,
+                    #f3b4c7
                 );
 
             transform: translateX(-50%);
-
         }
 
 
         .timeline-item {
-
             position: relative;
 
             width: 50%;
 
-            padding: 20px 40px;
-
+            padding: 18px 40px;
         }
 
 
         .timeline-item:nth-child(odd) {
-
             left: 0;
 
             text-align: right;
-
         }
 
 
-        .timeline-item::after {
-
-            content: "";
-
-            position: absolute;
-
-            top: 42px;
-
-            right: -9px;
-
-            width: 18px;
-
-            height: 18px;
-
-            border: 4px solid white;
-
-            border-radius: 50%;
-
-            background: var(--flower-pink);
-
-            box-shadow:
-
-                0 0 0 4px rgba(217,108,139,0.20);
-
+        .timeline-item:nth-child(even) {
+            left: 50%;
         }
 
 
         .timeline-content {
-
             position: relative;
 
             padding: 28px;
 
-            background: white;
+            background: #ffffff;
 
-            border: 1px solid rgba(217,108,139,0.10);
+            border: 1px solid #f6dce4;
 
             border-radius: 20px;
 
             box-shadow:
+                0 12px 35px rgba(70, 30, 45, 0.08);
 
-                0 12px 35px rgba(0,0,0,0.08);
-
-            transition: 0.3s ease;
-
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
         }
 
 
         .timeline-content:hover {
-
             transform: translateY(-5px);
 
             box-shadow:
+                0 18px 40px rgba(217,108,139,0.15);
+        }
 
-                0 18px 40px rgba(0,0,0,0.11);
 
+        .timeline-content::after {
+            content: "";
+
+            position: absolute;
+
+            top: 30px;
+
+            width: 14px;
+            height: 14px;
+
+            border-radius: 50%;
+
+            background: #d96c8b;
+
+            border: 4px solid #fff;
+
+            box-shadow:
+                0 0 0 3px #f4bfd0;
+        }
+
+
+        .timeline-item:nth-child(odd)
+        .timeline-content::after {
+            right: -48px;
+        }
+
+
+        .timeline-item:nth-child(even)
+        .timeline-content::after {
+            left: -48px;
         }
 
 
         .timeline-content h3 {
-
             margin: 0 0 10px;
 
-            color: var(--flower-pink);
+            color: #d96c8b;
 
-            font-size: 19px;
-
-            font-weight: 700;
-
+            font-size: 20px;
+            font-weight: 800;
         }
 
 
         .timeline-content p {
-
             margin: 0;
 
-            color: var(--flower-gray);
+            color: #6c6265;
 
-            line-height: 1.8;
-
-            font-size: 15px;
-
+            line-height: 1.75;
         }
 
 
         /* =====================================================
-           GIÁ TRỊ
+           VALUES
         ====================================================== */
 
         .values-section {
-
             max-width: 1200px;
 
             margin: 0 auto 110px;
 
             padding: 0 30px;
-
         }
 
 
         .values-grid {
-
             display: grid;
 
             grid-template-columns: repeat(3, 1fr);
 
             gap: 25px;
-
         }
 
 
         .value-card {
-
             position: relative;
 
             padding: 38px 30px;
@@ -878,114 +671,89 @@
             text-align: center;
 
             background:
-
                 linear-gradient(
                     135deg,
-                    #fffafa,
-                    #fff1f5
+                    #ffffff,
+                    #fff2f6
                 );
 
-            border: 1px solid rgba(217,108,139,0.10);
+            border: 1px solid #f5dce4;
 
-            border-radius: 22px;
+            border-radius: 23px;
 
             overflow: hidden;
 
             transition:
-
                 transform 0.3s ease,
-
                 box-shadow 0.3s ease;
-
         }
 
 
         .value-card::before {
-
             content: "";
 
             position: absolute;
 
-            top: -50px;
+            top: 0;
+            left: 0;
 
-            right: -50px;
+            width: 100%;
+            height: 4px;
 
-            width: 130px;
-
-            height: 130px;
-
-            border-radius: 50%;
-
-            background: rgba(217,108,139,0.07);
-
+            background:
+                linear-gradient(
+                    90deg,
+                    #f4bfd0,
+                    #d96c8b,
+                    #f4bfd0
+                );
         }
 
 
         .value-card:hover {
-
             transform: translateY(-8px);
 
             box-shadow:
-
-                0 18px 40px rgba(70, 30, 45, 0.10);
-
+                0 18px 40px rgba(217,108,139,0.14);
         }
 
 
         .value-card i {
-
-            position: relative;
-
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
-            width: 70px;
-
-            height: 70px;
+            width: 72px;
+            height: 72px;
 
             margin-bottom: 20px;
 
             border-radius: 50%;
 
-            background: white;
+            background: #fff0f4;
 
-            color: var(--flower-pink);
+            color: #d96c8b;
 
-            font-size: 29px;
-
-            box-shadow:
-
-                0 8px 25px rgba(217,108,139,0.12);
-
+            font-size: 30px;
         }
 
 
         .value-card h3 {
-
             margin: 0 0 14px;
 
-            color: var(--flower-text);
+            color: #393134;
 
-            font-size: 20px;
-
-            font-weight: 700;
-
+            font-size: 21px;
         }
 
 
         .value-card p {
-
             margin: 0;
 
-            color: var(--flower-gray);
+            color: #6d6367;
 
-            line-height: 1.8;
-
-            font-size: 15px;
-
+            line-height: 1.75;
         }
 
 
@@ -993,9 +761,25 @@
            FOOTER
         ====================================================== */
 
-        footer {
+        .about-page footer {
+            margin-top: 0;
+        }
 
-            margin-top: 30px;
+
+        /* =====================================================
+           ANIMATION
+        ====================================================== */
+
+        @keyframes aboutFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
 
         }
 
@@ -1006,40 +790,26 @@
 
         @media (max-width: 900px) {
 
-            .about-stats {
-
-                grid-template-columns: repeat(2, 1fr);
-
+            .about-hero h1 {
+                font-size: 42px;
             }
 
+            .about-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             .story-section {
-
                 grid-template-columns: 1fr;
 
                 gap: 45px;
-
             }
 
-
-            .story-text {
-
-                text-align: center;
-
+            .story-image img {
+                height: 380px;
             }
-
-
-            .story-text::before {
-
-                text-align: center;
-
-            }
-
 
             .values-grid {
-
                 grid-template-columns: 1fr;
-
             }
 
         }
@@ -1047,239 +817,146 @@
 
         @media (max-width: 768px) {
 
-            header .logo img {
-
+            .about-page header .logo img {
                 height: 38px;
-
                 max-width: 52px;
-
             }
 
-
-            header .logo {
-
+            .about-page header .logo {
                 gap: 7px;
-
             }
 
 
             .about-hero {
-
                 min-height: 400px;
 
                 padding: 70px 20px;
-
             }
 
 
             .about-hero h1 {
-
-                font-size: 34px;
-
+                font-size: 32px;
             }
 
 
             .about-hero p {
-
                 font-size: 15px;
-
-                line-height: 1.8;
-
             }
 
 
             .about-stats {
+                margin-top: -40px;
 
-                margin-top: -45px;
+                gap: 14px;
 
                 padding: 0 15px;
-
-                gap: 13px;
-
             }
 
 
             .stat-box {
-
                 padding: 24px 10px;
+            }
 
-                border-radius: 16px;
 
+            .stat-box i {
+                width: 48px;
+                height: 48px;
+
+                font-size: 20px;
             }
 
 
             .stat-box strong {
-
                 font-size: 25px;
-
             }
 
 
             .stat-box span {
-
                 font-size: 12px;
-
             }
 
 
-            .story-section {
-
-                margin-bottom: 80px;
-
-                padding: 0 20px;
-
+            .story-section,
+            .timeline-section,
+            .values-section {
+                padding-left: 20px;
+                padding-right: 20px;
             }
 
 
             .story-image img {
-
                 height: 300px;
-
-                border-radius: 20px;
-
             }
 
 
-            .story-image::before {
-
-                width: 70px;
-
-                height: 70px;
-
+            .story-text {
+                text-align: center;
             }
 
 
             .story-text h2 {
-
                 font-size: 30px;
-
             }
 
 
             .story-text p {
-
-                font-size: 14px;
-
+                font-size: 15px;
             }
 
 
             .section-title {
-
                 font-size: 30px;
-
             }
 
 
             .section-subtitle {
-
                 font-size: 14px;
-
-                margin-bottom: 35px;
-
-            }
-
-
-            .timeline-section,
-
-            .values-section {
-
-                padding: 0 20px;
-
-                margin-bottom: 80px;
-
             }
 
 
             .timeline {
-
-                margin-top: 30px;
-
+                margin-top: 35px;
             }
 
 
             .timeline::before {
-
                 left: 10px;
-
             }
 
 
-            .timeline-item {
-
-                left: 0 !important;
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                left: 0;
 
                 width: 100%;
 
-                padding: 15px 0 15px 35px;
+                padding:
+                    15px 0 15px 35px;
 
-                text-align: left !important;
-
+                text-align: left;
             }
 
 
-            .timeline-item::after {
-
-                left: 1px;
-
+            .timeline-content::after,
+            .timeline-item:nth-child(odd)
+            .timeline-content::after,
+            .timeline-item:nth-child(even)
+            .timeline-content::after {
+                left: -31px;
                 right: auto;
 
-                top: 36px;
-
+                width: 12px;
+                height: 12px;
             }
 
 
             .timeline-content {
-
                 padding: 22px;
-
-            }
-
-
-            .timeline-content h3 {
-
-                font-size: 17px;
-
-            }
-
-
-            .timeline-content p {
-
-                font-size: 14px;
-
             }
 
 
             .value-card {
-
-                padding: 30px 22px;
-
-            }
-
-        }
-
-
-        @media (max-width: 500px) {
-
-            .about-stats {
-
-                grid-template-columns: 1fr 1fr;
-
-            }
-
-
-            .about-hero-content::before {
-
-                font-size: 11px;
-
-                letter-spacing: 1px;
-
-            }
-
-
-            .about-hero h1 {
-
-                font-size: 30px;
-
+                padding: 32px 22px;
             }
 
         }
@@ -1289,7 +966,7 @@
 </head>
 
 
-<body>
+<body class="about-page">
 
 
 <!-- =====================================================
@@ -1322,11 +999,13 @@
                 </a>
             </li>
 
+
             <li>
                 <a href="shop.html">
                     Shop Hoa
                 </a>
             </li>
+
 
             <li>
                 <a href="dichvu.html">
@@ -1334,11 +1013,13 @@
                 </a>
             </li>
 
+
             <li>
                 <a href="blog.html">
                     Blog
                 </a>
             </li>
+
 
             <li>
                 <a
@@ -1348,6 +1029,7 @@
                     Giới thiệu
                 </a>
             </li>
+
 
             <li>
                 <a href="hotro.html">
@@ -1370,14 +1052,27 @@
 
     <div class="about-hero-content">
 
+        <span class="about-hero-label">
+            ✦ VỀ FLOWER SHOP
+        </span>
+
+
         <h1>
-            Nơi Mỗi Bó Hoa Kể Một Câu Chuyện
+
+            Nơi Mỗi Bó Hoa
+            <span>Kể Một Câu Chuyện</span>
+
         </h1>
 
+
         <p>
+
             Flower Shop không chỉ bán hoa.
-            Chúng tôi tạo nên những món quà chứa đựng cảm xúc,
-            yêu thương và những khoảnh khắc đáng nhớ.
+
+            Chúng tôi tạo nên những món quà chứa đựng
+            cảm xúc, yêu thương và những khoảnh khắc
+            đáng nhớ.
+
         </p>
 
     </div>
@@ -1391,11 +1086,14 @@
 
 <section class="about-stats">
 
+
     <div class="stat-box">
 
         <i class="fa-solid fa-box-open"></i>
 
-        <strong>500+</strong>
+        <strong>
+            500+
+        </strong>
 
         <span>
             Đơn hàng đã hoàn thành
@@ -1408,7 +1106,9 @@
 
         <i class="fa-solid fa-calendar-days"></i>
 
-        <strong>2026</strong>
+        <strong>
+            2026
+        </strong>
 
         <span>
             Năm khởi nghiệp
@@ -1421,7 +1121,9 @@
 
         <i class="fa-solid fa-seedling"></i>
 
-        <strong>100%</strong>
+        <strong>
+            100%
+        </strong>
 
         <span>
             Hoa tươi mỗi ngày
@@ -1434,13 +1136,16 @@
 
         <i class="fa-solid fa-headset"></i>
 
-        <strong>24/7</strong>
+        <strong>
+            24/7
+        </strong>
 
         <span>
             Luôn sẵn sàng hỗ trợ
         </span>
 
     </div>
+
 
 </section>
 
@@ -1464,26 +1169,39 @@
 
     <div class="story-text">
 
+        <span class="story-label">
+            ✦ CÂU CHUYỆN CỦA CHÚNG TÔI
+        </span>
+
+
         <h2>
+
             Bắt đầu từ một
             <span>tình yêu với hoa</span>
+
         </h2>
 
 
         <p>
+
             Flower Shop được bắt đầu từ một niềm tin đơn giản:
+
             một bó hoa đẹp có thể thay lời muốn nói và khiến
             một ngày bình thường trở nên đặc biệt hơn.
+
         </p>
 
 
         <p>
+
             Năm 2026 đánh dấu cột mốc Flower Shop chính thức
             bắt đầu hành trình của mình.
+
             Từ những ý tưởng đầu tiên, chúng tôi mong muốn
-            tạo nên những thiết kế hoa tinh tế,
-            phù hợp với từng cảm xúc và khoảnh khắc
-            đặc biệt của khách hàng.
+            tạo nên những thiết kế hoa tinh tế, phù hợp
+            với từng cảm xúc và khoảnh khắc đặc biệt
+            của khách hàng.
+
         </p>
 
 
@@ -1506,19 +1224,31 @@
 <section class="timeline-section">
 
 
-    <h2 class="section-title">
-        Hành Trình Phát Triển
-    </h2>
+    <div class="section-title-wrap">
+
+        <span class="section-label">
+            ✦ HÀNH TRÌNH CỦA CHÚNG TÔI
+        </span>
 
 
-    <p class="section-subtitle">
+        <h2 class="section-title">
 
-        Mỗi hành trình lớn đều bắt đầu từ một bước đi đầu tiên.
-        Năm 2026 đánh dấu sự khởi đầu của Flower Shop
-        với niềm đam mê dành cho hoa và mong muốn
-        lan tỏa những cảm xúc đẹp đến mọi người.
+            Hành Trình
+            <span>Phát Triển</span>
 
-    </p>
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Mỗi hành trình lớn đều bắt đầu từ một bước đi đầu tiên.
+            Năm 2026 đánh dấu sự khởi đầu của Flower Shop
+            với niềm đam mê dành cho hoa và mong muốn
+            lan tỏa những cảm xúc đẹp đến mọi người.
+
+        </p>
+
+    </div>
 
 
     <div class="timeline">
@@ -1534,10 +1264,12 @@
 
 
                 <p>
+
                     Flower Shop chính thức bắt đầu hành trình
                     với tình yêu dành cho hoa và mong muốn
                     mang đến những bó hoa tươi đẹp,
                     tinh tế và ý nghĩa cho mọi khách hàng.
+
                 </p>
 
             </div>
@@ -1557,21 +1289,35 @@
 <section class="values-section">
 
 
-    <h2 class="section-title">
-        Điều Chúng Tôi Theo Đuổi
-    </h2>
+    <div class="section-title-wrap">
+
+        <span class="section-label">
+            ✦ GIÁ TRỊ FLOWER SHOP
+        </span>
 
 
-    <p class="section-subtitle">
+        <h2 class="section-title">
 
-        Những giá trị tạo nên sự khác biệt
-        và là nền tảng cho hành trình của Flower Shop.
+            Điều Chúng Tôi
+            <span>Theo Đuổi</span>
 
-    </p>
+        </h2>
+
+
+        <p class="section-subtitle">
+
+            Những giá trị tạo nên sự khác biệt
+            và là nền tảng cho hành trình của Flower Shop.
+
+        </p>
+
+    </div>
 
 
     <div class="values-grid">
 
+
+        <!-- SỨ MỆNH -->
 
         <div class="value-card">
 
@@ -1583,13 +1329,17 @@
 
 
             <p>
+
                 Mang đến những sản phẩm hoa tươi đẹp,
                 giúp mọi người dễ dàng trao gửi yêu thương
                 và tạo nên những khoảnh khắc đáng nhớ.
+
             </p>
 
         </div>
 
+
+        <!-- TẦM NHÌN -->
 
         <div class="value-card">
 
@@ -1601,13 +1351,17 @@
 
 
             <p>
+
                 Trở thành thương hiệu hoa được yêu thích
                 bởi sự tinh tế, chất lượng và trải nghiệm
                 phục vụ tận tâm.
+
             </p>
 
         </div>
 
+
+        <!-- GIÁ TRỊ -->
 
         <div class="value-card">
 
@@ -1619,9 +1373,11 @@
 
 
             <p>
+
                 Tận tâm trong từng chi tiết,
                 sáng tạo trong từng thiết kế
                 và chân thành trong từng dịch vụ.
+
             </p>
 
         </div>
@@ -1638,8 +1394,11 @@
 
 <footer>
 
+
     <div class="footer-content">
 
+
+        <!-- THÔNG TIN -->
 
         <div class="footer-box">
 
@@ -1649,12 +1408,16 @@
 
 
             <p>
+
                 Mang yêu thương đến mọi người
                 bằng những bó hoa tươi đẹp.
+
             </p>
 
         </div>
 
+
+        <!-- LIÊN KẾT -->
 
         <div class="footer-box">
 
@@ -1671,11 +1434,13 @@
                     </a>
                 </li>
 
+
                 <li>
                     <a href="shop.html">
                         Shop Hoa
                     </a>
                 </li>
+
 
                 <li>
                     <a href="dichvu.html">
@@ -1683,17 +1448,20 @@
                     </a>
                 </li>
 
+
                 <li>
                     <a href="blog.html">
                         Blog
                     </a>
                 </li>
 
+
                 <li>
                     <a href="gioithieu.html">
                         Giới thiệu
                     </a>
                 </li>
+
 
                 <li>
                     <a href="hotro.html">
@@ -1705,6 +1473,8 @@
 
         </div>
 
+
+        <!-- LIÊN HỆ -->
 
         <div class="footer-box">
 
@@ -1754,7 +1524,15 @@
 
     </p>
 
+
 </footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
 
 
 </body>
