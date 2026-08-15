@@ -5970,3 +5970,58 @@ h6 {
     }
 
 }
+/* =====================================================
+   FIX ICON - TRANG CHỦ
+   Chỉ sửa icon trong mục "Vì sao chọn Flower Shop"
+===================================================== */
+
+.home-page .why-us-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 22px;
+
+    background: #fcecef;
+    color: #d96c8b;
+
+    border-radius: 16px;
+
+    font-size: 27px;
+    line-height: 1;
+
+    box-sizing: border-box;
+}
+
+/* ICON FONT AWESOME */
+.home-page .why-us-icon i {
+    display: inline-block;
+
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+
+    font-style: normal;
+    line-height: 1;
+
+    color: #d96c8b;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: auto;
+}
+
+/* Hiệu ứng hover nhẹ */
+.home-page .why-us-card:hover .why-us-icon {
+    background: #f9e0e7;
+    transform: scale(1.05);
+}
+
+.home-page .why-us-icon,
+.home-page .why-us-icon i {
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
