@@ -8,10 +8,10 @@
 
     <meta
         name="description"
-        content="Flower Shop - Dịch vụ hoa tươi chuyên nghiệp"
+        content="Dịch vụ Flower Shop - Giao hoa, đặt hoa theo yêu cầu, hoa doanh nghiệp và hoa cưới."
     >
 
-    <title>Dịch vụ | Flower Shop</title>
+    <title>Dịch vụ - Flower Shop</title>
 
 
     <!-- =====================================================
@@ -43,125 +43,137 @@
 
 
     <!-- =====================================================
-         CSS CHÍNH
+         CSS CHUNG
     ====================================================== -->
 
     <link rel="stylesheet" href="style.css">
 
 
     <!-- =====================================================
-         CSS RIÊNG TRANG DỊCH VỤ
+         CSS RIÊNG CHỈ CHO TRANG DỊCH VỤ
+         Không cần chỉnh style.css
     ====================================================== -->
 
     <style>
 
         /* =====================================================
-           RESET RIÊNG
+           FONT TIẾNG VIỆT
         ====================================================== */
 
         html,
         body {
-            margin: 0;
-            padding: 0;
+            font-family: "Be Vietnam Pro", sans-serif !important;
         }
 
-        body {
-            font-family: "Be Vietnam Pro", sans-serif;
-            color: #30272a;
-            background: #fffafb;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
+        body *,
+        header,
+        header *,
+        nav,
+        nav *,
+        .service-page,
+        .service-page *,
+        footer,
+        footer * {
+            font-family: "Be Vietnam Pro", sans-serif !important;
         }
 
 
         /* =====================================================
-           HEADER
+           FONT AWESOME
         ====================================================== */
 
-        header {
-            font-family: "Be Vietnam Pro", sans-serif;
+        i[class^="fa-"],
+        i[class*=" fa-"] {
+            font-family: "Font Awesome 6 Free" !important;
         }
+
+
+        /* =====================================================
+           LOGO
+        ====================================================== */
 
         header .logo {
-            font-family: "Be Vietnam Pro", sans-serif;
+            display: flex !important;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
         }
 
-        header nav a {
-            font-family: "Be Vietnam Pro", sans-serif;
+        header .logo img {
+            display: block;
+            width: auto;
+            height: 45px;
+            max-width: 60px;
+            object-fit: contain;
+        }
+
+        header .logo span {
+            display: inline-block;
+            white-space: nowrap;
         }
 
 
         /* =====================================================
-           SERVICE SECTION
+           NỀN TRANG
         ====================================================== */
 
-        .service {
-            position: relative;
-
-            min-height: 720px;
-
-            padding: 105px 6% 120px;
-
+        body.service-page {
             background:
-                radial-gradient(
-                    circle at 8% 18%,
-                    rgba(255, 112, 153, 0.10),
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 92% 78%,
-                    rgba(255, 170, 194, 0.13),
-                    transparent 30%
-                ),
                 linear-gradient(
                     180deg,
-                    #fff9fc 0%,
-                    #fffdfd 100%
+                    #fffafb 0%,
+                    #fff7f9 45%,
+                    #ffffff 100%
                 );
-
-            overflow: hidden;
+            color: #3b3033;
         }
 
 
         /* =====================================================
-           HOA TRANG TRÍ NỀN
+           PHẦN DỊCH VỤ
         ====================================================== */
 
-        .service::before {
+        .service-page .service {
+            position: relative;
+            padding: 85px 7% 100px;
+            overflow: hidden;
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(217, 108, 139, 0.08),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 30%,
+                    rgba(217, 108, 139, 0.07),
+                    transparent 28%
+                );
+        }
+
+
+        /* =====================================================
+           TRANG TRÍ NỀN
+        ====================================================== */
+
+        .service-page .service::before {
             content: "✿";
-
             position: absolute;
-
-            top: 20px;
-            left: 4%;
-
-            font-size: 135px;
-
-            color: rgba(244, 81, 127, 0.055);
-
-            transform: rotate(-18deg);
-
+            top: 40px;
+            left: 5%;
+            font-size: 55px;
+            color: rgba(217, 108, 139, 0.08);
+            transform: rotate(-15deg);
             pointer-events: none;
         }
 
-        .service::after {
-            content: "❀";
-
+        .service-page .service::after {
+            content: "✿";
             position: absolute;
-
-            right: 3%;
-            bottom: 10px;
-
-            font-size: 155px;
-
-            color: rgba(244, 81, 127, 0.055);
-
-            transform: rotate(18deg);
-
+            right: 6%;
+            bottom: 40px;
+            font-size: 65px;
+            color: rgba(217, 108, 139, 0.08);
+            transform: rotate(20deg);
             pointer-events: none;
         }
 
@@ -170,46 +182,70 @@
            TIÊU ĐỀ
         ====================================================== */
 
-        .service > h2 {
+        .service-page .service-header {
             position: relative;
             z-index: 2;
-
-            margin: 0 auto 65px;
-
+            max-width: 760px;
+            margin: 0 auto 55px;
             text-align: center;
-
-            color: #f4517f;
-
-            font-size: clamp(38px, 4vw, 52px);
-
-            font-weight: 800;
-
-            line-height: 1.2;
-
-            letter-spacing: -1px;
         }
 
 
-        /* Dòng trang trí dưới tiêu đề */
+        .service-page .service-label {
+            display: inline-block;
+            margin-bottom: 14px;
+            color: #d96c8b;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
 
-        .service > h2::after {
-            content: "";
 
+        .service-page .service-header h1 {
+            margin: 0 0 18px;
+            color: #3b3033;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+
+        .service-page .service-header h1 span {
+            color: #d96c8b;
+        }
+
+
+        .service-page .service-header p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #75686c;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           ĐƯỜNG TRANG TRÍ
+        ====================================================== */
+
+        .service-page .service-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .service-page .service-divider span {
             display: block;
+            width: 45px;
+            height: 1px;
+            background: #e8a8b8;
+        }
 
-            width: 58px;
-            height: 4px;
-
-            margin: 20px auto 0;
-
-            border-radius: 50px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #ff9ab6,
-                    #f4517f
-                );
+        .service-page .service-divider i {
+            color: #d96c8b;
+            font-size: 14px;
         }
 
 
@@ -217,55 +253,158 @@
            CARD CONTAINER
         ====================================================== */
 
-        .service .card {
+        .service-page .card {
             position: relative;
             z-index: 2;
 
-            width: 100%;
-            max-width: 1250px;
-
-            margin: 0 auto;
-
             display: grid;
-
             grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
 
-            gap: 25px;
+            max-width: 1250px;
+            margin: 0 auto;
         }
 
 
         /* =====================================================
-           SERVICE CARD
+           CARD DỊCH VỤ
         ====================================================== */
 
-        .service .box {
+        .service-page .box {
             position: relative;
+            min-height: 315px;
 
-            min-height: 350px;
+            padding: 38px 28px 32px;
 
-            padding: 45px 28px 35px;
+            background: rgba(255, 255, 255, 0.92);
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            text-align: center;
-
-            background: rgba(255, 255, 255, 0.94);
-
-            border: 1px solid rgba(244, 81, 127, 0.09);
-
-            border-radius: 28px;
+            border: 1px solid rgba(217, 108, 139, 0.12);
+            border-radius: 22px;
 
             box-shadow:
-                0 15px 40px rgba(65, 35, 45, 0.07);
+                0 12px 35px rgba(93, 48, 61, 0.07);
+
+            text-align: center;
 
             overflow: hidden;
 
             transition:
-                transform 0.35s ease,
-                box-shadow 0.35s ease,
-                border-color 0.35s ease;
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        /* đường hồng phía trên card */
+
+        .service-page .box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 30px;
+            right: 30px;
+
+            height: 3px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #d96c8b,
+                    transparent
+                );
+
+            opacity: 0.7;
+        }
+
+
+        /* hiệu ứng vòng tròn */
+
+        .service-page .box::after {
+            content: "";
+            position: absolute;
+
+            width: 150px;
+            height: 150px;
+
+            right: -70px;
+            bottom: -70px;
+
+            border-radius: 50%;
+
+            background: rgba(217, 108, 139, 0.055);
+
+            transition: transform 0.4s ease;
+        }
+
+
+        /* hover */
+
+        .service-page .box:hover {
+            transform: translateY(-10px);
+
+            border-color: rgba(217, 108, 139, 0.25);
+
+            box-shadow:
+                0 20px 45px rgba(93, 48, 61, 0.12);
+        }
+
+        .service-page .box:hover::after {
+            transform: scale(1.4);
+        }
+
+
+        /* =====================================================
+           ICON
+        ====================================================== */
+
+        .service-page .service-icon {
+            position: relative;
+            z-index: 2;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 76px;
+            height: 76px;
+
+            margin: 0 auto 24px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #fcecef,
+                    #fff5f7
+                );
+
+            color: #d96c8b;
+
+            font-size: 27px;
+
+            box-shadow:
+                0 8px 22px rgba(217, 108, 139, 0.13);
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                color 0.3s ease;
+        }
+
+
+        .service-page .box:hover .service-icon {
+            transform: translateY(-4px) scale(1.06);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #d96c8b,
+                    #e889a3
+                );
+
+            color: #ffffff;
         }
 
 
@@ -273,112 +412,16 @@
            SỐ THỨ TỰ
         ====================================================== */
 
-        .service .box::before {
+        .service-page .service-number {
             position: absolute;
-
             top: 18px;
             right: 22px;
 
+            color: #e7c2cb;
+
             font-size: 12px;
-
-            font-weight: 800;
-
-            color: #e7a4b5;
-
+            font-weight: 700;
             letter-spacing: 1px;
-        }
-
-        .service .box:nth-child(1)::before {
-            content: "01";
-        }
-
-        .service .box:nth-child(2)::before {
-            content: "02";
-        }
-
-        .service .box:nth-child(3)::before {
-            content: "03";
-        }
-
-        .service .box:nth-child(4)::before {
-            content: "04";
-        }
-
-
-        /* =====================================================
-           HOVER CARD
-        ====================================================== */
-
-        .service .box:hover {
-            transform: translateY(-12px);
-
-            border-color:
-                rgba(244, 81, 127, 0.20);
-
-            box-shadow:
-                0 28px 60px
-                rgba(220, 75, 115, 0.14);
-        }
-
-
-        /* =====================================================
-           ICON CIRCLE
-        ====================================================== */
-
-        .service .box > i {
-            width: 78px;
-            height: 78px;
-
-            margin-bottom: 28px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #fff1f5,
-                    #ffe0ea
-                );
-
-            color: #f4517f;
-
-            font-size: 29px;
-
-            box-shadow:
-                0 10px 25px
-                rgba(245, 81, 127, 0.12);
-
-            transition:
-                transform 0.35s ease,
-                background 0.35s ease,
-                color 0.35s ease,
-                box-shadow 0.35s ease;
-        }
-
-
-        /* Icon khi hover */
-
-        .service .box:hover > i {
-            transform:
-                translateY(-5px)
-                rotate(-6deg);
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #f4517f,
-                    #ff7199
-                );
-
-            color: #ffffff;
-
-            box-shadow:
-                0 15px 30px
-                rgba(244, 81, 127, 0.25);
         }
 
 
@@ -386,104 +429,114 @@
            TIÊU ĐỀ CARD
         ====================================================== */
 
-        .service .box h3 {
-            margin: 0 0 15px;
+        .service-page .box h3 {
+            position: relative;
+            z-index: 2;
 
-            color: #30272a;
+            margin: 0 0 14px;
 
-            font-size: 19px;
+            color: #3b3033;
 
-            font-weight: 800;
-
-            line-height: 1.4;
+            font-size: 20px;
+            font-weight: 700;
         }
 
 
         /* =====================================================
-           LINE NHỎ DƯỚI TIÊU ĐỀ
+           NỘI DUNG CARD
         ====================================================== */
 
-        .service .box h3::after {
-            content: "";
-
-            display: block;
-
-            width: 28px;
-            height: 3px;
-
-            margin: 12px auto 0;
-
-            border-radius: 50px;
-
-            background: #f7a2b8;
-
-            transition:
-                width 0.3s ease,
-                background 0.3s ease;
-        }
-
-        .service .box:hover h3::after {
-            width: 50px;
-
-            background: #f4517f;
-        }
-
-
-        /* =====================================================
-           MÔ TẢ
-        ====================================================== */
-
-        .service .box p {
-            max-width: 250px;
+        .service-page .box p {
+            position: relative;
+            z-index: 2;
 
             margin: 0;
 
-            color: #756c70;
+            color: #75686c;
 
-            font-size: 14.5px;
-
-            font-weight: 400;
-
-            line-height: 1.85;
+            font-size: 14px;
+            line-height: 1.8;
         }
 
 
         /* =====================================================
-           THANH NHẤN DƯỚI CARD
+           DÒNG NHẤN CUỐI CARD
         ====================================================== */
 
-        .service .box span {
-            display: none;
+        .service-page .box .service-link {
+            position: relative;
+            z-index: 2;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
+            margin-top: 22px;
+
+            color: #d96c8b;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            text-decoration: none;
+
+            transition: gap 0.25s ease;
         }
 
-        .service .box::after {
-            content: "";
 
-            position: absolute;
-
-            left: 50%;
-            bottom: 0;
-
-            width: 0;
-            height: 4px;
-
-            border-radius: 50px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #ff9ab6,
-                    #f4517f
-                );
-
-            transform: translateX(-50%);
-
-            transition:
-                width 0.35s ease;
+        .service-page .box .service-link:hover {
+            gap: 12px;
         }
 
-        .service .box:hover::after {
-            width: 45%;
+
+        /* =====================================================
+           PHẦN ĐIỂM NHẤN BÊN DƯỚI
+        ====================================================== */
+
+        .service-page .service-note {
+            position: relative;
+            z-index: 2;
+
+            max-width: 900px;
+
+            margin: 65px auto 0;
+            padding: 25px 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+
+            background: rgba(255, 255, 255, 0.8);
+
+            border: 1px solid rgba(217, 108, 139, 0.12);
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 30px rgba(93, 48, 61, 0.05);
+
+            text-align: center;
+        }
+
+
+        .service-page .service-note i {
+            color: #d96c8b;
+            font-size: 22px;
+        }
+
+
+        .service-page .service-note p {
+            margin: 0;
+
+            color: #66585d;
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        .service-page .service-note strong {
+            color: #3b3033;
         }
 
 
@@ -491,25 +544,8 @@
            FOOTER
         ====================================================== */
 
-        footer {
+        .service-page footer {
             position: relative;
-
-            padding: 25px 20px;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ff5c88,
-                    #ff8a62
-                );
-
-            color: #ffffff;
-
-            font-family: "Be Vietnam Pro", sans-serif;
-
-            font-size: 14px;
         }
 
 
@@ -517,24 +553,13 @@
            RESPONSIVE TABLET
         ====================================================== */
 
-        @media (max-width: 1100px) {
+        @media (max-width: 1050px) {
 
-            .service {
-                padding:
-                    90px 5%
-                    100px;
-            }
-
-            .service .card {
+            .service-page .card {
+                grid-template-columns: repeat(2, 1fr);
                 max-width: 850px;
-
-                grid-template-columns:
-                    repeat(2, 1fr);
             }
 
-            .service .box {
-                min-height: 330px;
-            }
         }
 
 
@@ -542,106 +567,113 @@
            RESPONSIVE MOBILE
         ====================================================== */
 
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
 
-            .service {
-                padding:
-                    75px 20px
-                    85px;
+            header .logo img {
+                height: 38px;
+                max-width: 52px;
             }
 
-            .service > h2 {
-                margin-bottom: 45px;
-
-                font-size: 34px;
+            header .logo {
+                gap: 7px;
             }
 
-            .service .card {
+
+            .service-page .service {
+                padding: 60px 5% 75px;
+            }
+
+
+            .service-page .service-header {
+                margin-bottom: 40px;
+            }
+
+
+            .service-page .service-header h1 {
+                font-size: 32px;
+            }
+
+
+            .service-page .service-header p {
+                font-size: 14px;
+            }
+
+
+            .service-page .card {
                 grid-template-columns: 1fr;
-
-                max-width: 450px;
+                gap: 18px;
             }
 
-            .service .box {
+
+            .service-page .box {
                 min-height: auto;
-
-                padding:
-                    38px 25px
-                    35px;
+                padding: 35px 25px 30px;
             }
 
-            .service .box p {
-                max-width: 300px;
+
+            .service-page .service-note {
+                flex-direction: column;
+                gap: 10px;
+
+                margin-top: 45px;
+                padding: 22px 20px;
             }
 
-            .service::before {
-                font-size: 90px;
+        }
+
+
+        /* =====================================================
+           MOBILE NHỎ
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            .service-page .service-header h1 {
+                font-size: 28px;
             }
 
-            .service::after {
-                font-size: 100px;
+            .service-page .service-label {
+                font-size: 11px;
+                letter-spacing: 1.5px;
             }
+
+            .service-page .box h3 {
+                font-size: 18px;
+            }
+
         }
 
     </style>
-<!-- FONT TIẾNG VIỆT RIÊNG CHO TRANG DỊCH VỤ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
->
-
-<style>
-    /* ================================
-       FIX FONT TIẾNG VIỆT
-       CHỈ ÁP DỤNG CHO DICHVU.HTML
-    ================================= */
-
-    html,
-    body {
-        font-family: "Be Vietnam Pro", sans-serif !important;
-    }
-
-    body *,
-    header,
-    header *,
-    nav,
-    nav *,
-    .service,
-    .service *,
-    footer,
-    footer * {
-        font-family: "Be Vietnam Pro", sans-serif !important;
-    }
-
-    /* Icon Font Awesome vẫn dùng đúng font icon */
-    i[class^="fa-"],
-    i[class*=" fa-"] {
-        font-family: "Font Awesome 6 Free" !important;
-    }
-
-    i.fab {
-        font-family: "Font Awesome 6 Brands" !important;
-    }
-</style>
 </head>
 
 
-<body>
+<body class="service-page">
 
 
 <!-- =====================================================
      HEADER
-===================================================== -->
+====================================================== -->
 
 <header>
 
+    <!-- LOGO GỐC -->
+
     <a href="index.html" class="logo">
-        🌸 Flower Shop
+
+        <img
+            src="images/logo.png"
+            alt="Flower Shop Logo"
+        >
+
+        <span>
+            Flower Shop
+        </span>
+
     </a>
 
+
+    <!-- MENU -->
 
     <nav>
 
@@ -696,103 +728,223 @@
 
 <!-- =====================================================
      DỊCH VỤ
-===================================================== -->
+====================================================== -->
 
 <section class="service">
 
 
-    <h2>
-        Dịch Vụ Của Chúng Tôi
-    </h2>
+    <!-- TIÊU ĐỀ -->
 
+    <div class="service-header">
+
+        <span class="service-label">
+            ✦ DỊCH VỤ FLOWER SHOP
+        </span>
+
+
+        <h1>
+            Dịch vụ
+            <span>của chúng tôi</span>
+        </h1>
+
+
+        <p>
+            Không chỉ mang đến những bó hoa tươi đẹp,
+            Flower Shop còn cung cấp nhiều dịch vụ
+            để mỗi món quà của bạn trở nên trọn vẹn và ý nghĩa hơn.
+        </p>
+
+
+        <div class="service-divider">
+
+            <span></span>
+
+            <i class="fa-solid fa-flower-daffodil"></i>
+
+            <span></span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CÁC DỊCH VỤ -->
 
     <div class="card">
 
 
-        <!-- =================================================
-             DỊCH VỤ 01
-        ================================================== -->
+        <!-- DỊCH VỤ 01 -->
 
         <div class="box">
 
-            <i class="fa-solid fa-truck-fast"></i>
+            <span class="service-number">
+                01
+            </span>
+
+
+            <div class="service-icon">
+                <i class="fa-solid fa-truck-fast"></i>
+            </div>
+
 
             <h3>
                 Giao Hoa Nhanh
             </h3>
 
+
             <p>
                 Giao hoa tận nơi trong vòng 2 giờ
-                tại nội thành.
+                tại nội thành, giúp bạn gửi yêu thương
+                đến người đặc biệt đúng lúc.
             </p>
+
+
+            <a
+                href="hotro.html"
+                class="service-link"
+            >
+                Tìm hiểu thêm
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
         </div>
 
 
 
-        <!-- =================================================
-             DỊCH VỤ 02
-        ================================================== -->
+        <!-- DỊCH VỤ 02 -->
 
         <div class="box">
 
-            <i class="fa-solid fa-calendar-check"></i>
+            <span class="service-number">
+                02
+            </span>
+
+
+            <div class="service-icon">
+                <i class="fa-solid fa-calendar-check"></i>
+            </div>
+
 
             <h3>
                 Đặt Hoa Theo Yêu Cầu
             </h3>
 
+
             <p>
-                Thiết kế bó hoa theo màu sắc
-                và ngân sách của khách hàng.
+                Thiết kế bó hoa theo màu sắc,
+                phong cách và ngân sách riêng
+                của từng khách hàng.
             </p>
+
+
+            <a
+                href="hotro.html"
+                class="service-link"
+            >
+                Đặt theo yêu cầu
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
         </div>
 
 
 
-        <!-- =================================================
-             DỊCH VỤ 03
-        ================================================== -->
+        <!-- DỊCH VỤ 03 -->
 
         <div class="box">
 
-            <i class="fa-solid fa-building"></i>
+            <span class="service-number">
+                03
+            </span>
+
+
+            <div class="service-icon">
+                <i class="fa-solid fa-building"></i>
+            </div>
+
 
             <h3>
                 Hoa Doanh Nghiệp
             </h3>
 
+
             <p>
                 Cung cấp hoa cho văn phòng,
-                khách sạn và sự kiện.
+                khách sạn, hội nghị, sự kiện
+                và các chương trình doanh nghiệp.
             </p>
+
+
+            <a
+                href="hotro.html"
+                class="service-link"
+            >
+                Tìm hiểu thêm
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
         </div>
 
 
 
-        <!-- =================================================
-             DỊCH VỤ 04
-        ================================================== -->
+        <!-- DỊCH VỤ 04 -->
 
         <div class="box">
 
-            <i class="fa-solid fa-heart"></i>
+            <span class="service-number">
+                04
+            </span>
+
+
+            <div class="service-icon">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
 
             <h3>
                 Hoa Cưới
             </h3>
 
+
             <p>
                 Hoa cưới, hoa cầm tay cô dâu
-                và trang trí tiệc cưới.
+                và trang trí tiệc cưới
+                theo phong cách riêng của bạn.
             </p>
+
+
+            <a
+                href="hotro.html"
+                class="service-link"
+            >
+                Tư vấn hoa cưới
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
 
         </div>
 
 
     </div>
+
+
+
+    <!-- ĐIỂM NHẤN -->
+
+    <div class="service-note">
+
+        <i class="fa-solid fa-heart"></i>
+
+        <p>
+            <strong>
+                Mỗi bó hoa là một câu chuyện.
+            </strong>
+            Chúng tôi chăm chút từng chi tiết
+            để món quà bạn trao đi luôn thật đặc biệt.
+        </p>
+
+    </div>
+
 
 </section>
 
@@ -800,11 +952,157 @@
 
 <!-- =====================================================
      FOOTER
-===================================================== -->
+====================================================== -->
 
 <footer>
 
-    © 2026 Flower Shop
+    <div class="footer-content">
+
+
+        <!-- THÔNG TIN -->
+
+        <div class="footer-box">
+
+            <h3>
+                Flower Shop 🌸
+            </h3>
+
+            <p>
+                Mang sắc hoa đến mọi khoảnh khắc.
+                Những bó hoa tươi đẹp được tạo nên
+                để gửi gắm yêu thương và cảm xúc.
+            </p>
+
+
+            <div class="social">
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                >
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="YouTube"
+                >
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LIÊN KẾT -->
+
+        <div class="footer-box">
+
+            <h3>
+                Liên kết
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Trang chủ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="shop.html">
+                        Shop Hoa
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dichvu.html">
+                        Dịch vụ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gioithieu.html">
+                        Giới thiệu
+                    </a>
+                </li>
+
+                <li>
+                    <a href="hotro.html">
+                        Hỗ trợ
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- LIÊN HỆ -->
+
+        <div class="footer-box">
+
+            <h3>
+                Liên hệ
+            </h3>
+
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Bến Tre, Việt Nam
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                0123 456 789
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                flowershop@gmail.com
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+        © 2026 Flower Shop | All Rights Reserved.
+    </p>
 
 </footer>
 
