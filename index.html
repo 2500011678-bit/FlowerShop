@@ -4,7 +4,11 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
@@ -15,7 +19,7 @@
 
 
     <!-- =====================================================
-         GOOGLE FONT - HỖ TRỢ TIẾNG VIỆT
+         GOOGLE FONT
     ====================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,32 +47,53 @@
 
 
     <!-- =====================================================
-         CSS CHÍNH
+         CSS CHUNG
     ====================================================== -->
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 
     <!-- =====================================================
-         FIX FONT + LOGO RIÊNG CHO TRANG CHỦ
-         
-         Không ảnh hưởng shop.html vì chỉ áp dụng cho
-         .home-page
+         CSS RIÊNG TRANG CHỦ
+
+         QUAN TRỌNG:
+         Tất cả selector đều bắt đầu bằng .home-page
+         nên không ảnh hưởng các trang khác.
     ====================================================== -->
 
     <style>
 
-        /* =========================
+        /* =====================================================
+           BIẾN MÀU - LẤY SHOP.HTML LÀM CHUẨN
+        ====================================================== */
+
+        .home-page {
+
+            --home-pink: #ff4f87;
+            --home-pink-dark: #e63b72;
+            --home-pink-light: #ffe5ee;
+
+            --home-orange: #ff9800;
+            --home-orange-light: #ffc46b;
+
+            --home-dark: #2d2d2d;
+            --home-gray: #666666;
+            --home-gray-light: #888888;
+
+            --home-background: #fff9fb;
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
+        }
+
+
+        /* =====================================================
            FONT TIẾNG VIỆT
-        ========================= */
-
-        html {
-            font-family: "Be Vietnam Pro", sans-serif;
-        }
-
-        body.home-page {
-            font-family: "Be Vietnam Pro", sans-serif;
-        }
+        ====================================================== */
 
         .home-page,
         .home-page *,
@@ -86,277 +111,2300 @@
         .home-page input,
         .home-page textarea,
         .home-page select {
-            font-family: "Be Vietnam Pro", sans-serif;
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
         }
 
 
-        /* =========================
-           TRÁNH LỖI ẢNH
-        ========================= */
+        /* =====================================================
+           ICON FONT AWESOME
+        ====================================================== */
+
+        .home-page i[class*="fa-"] {
+
+            font-family:
+                "Font Awesome 6 Free",
+                "Font Awesome 6 Brands" !important;
+
+            font-style: normal;
+
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        .home-page .fab {
+
+            font-family:
+                "Font Awesome 6 Brands" !important;
+        }
+
+
+        /* =====================================================
+           ẢNH
+        ====================================================== */
 
         .home-page img {
+
             display: block;
+
             max-width: 100%;
         }
 
 
-        /* =========================
-           LOGO GỐC
-        ========================= */
+        /* =====================================================
+           HEADER
+           GIỐNG SHOP.HTML
+        ====================================================== */
 
-        .home-page header .logo {
+        .home-page header {
+
+            position: sticky;
+
+            top: 0;
+
+            left: 0;
+
+            z-index: 9999;
+
+            width: 100%;
+
+            min-height: 88px;
+
             display: flex;
+
             align-items: center;
-            gap: 10px;
-            text-decoration: none;
+
+            justify-content: space-between;
+
+            padding: 14px 7%;
+
+            background:
+                rgba(255, 255, 255, 0.96);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid rgba(255, 79, 135, 0.08);
+
+            box-shadow:
+                0 3px 18px rgba(0, 0, 0, 0.07);
         }
 
+
+        /* =====================================================
+           LOGO
+        ====================================================== */
+
+        .home-page header .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: var(--home-pink);
+
+            font-size: 28px;
+
+            font-weight: 700;
+
+            letter-spacing: -0.5px;
+
+            text-decoration: none;
+
+            transition: 0.3s ease;
+        }
+
+
         .home-page header .logo img {
+
             display: block;
+
             width: auto;
+
             height: 45px;
-            max-width: 60px;
+
+            max-width: 55px;
+
             object-fit: contain;
         }
 
+
         .home-page header .logo span {
+
             display: inline-block;
+
             white-space: nowrap;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--home-pink),
+                    var(--home-orange)
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
         }
 
 
-        /* =========================
-           ẢNH HERO
-        ========================= */
+        .home-page header .logo:hover {
+
+            transform:
+                translateY(-1px);
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+        .home-page header nav ul {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+            margin: 0;
+
+            padding: 0;
+
+            list-style: none;
+        }
+
+
+        .home-page header nav ul li {
+
+            margin: 0;
+
+            padding: 0;
+        }
+
+
+        .home-page header nav ul li a {
+
+            position: relative;
+
+            display: inline-block;
+
+            padding: 8px 0;
+
+            color: #444;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            text-decoration: none;
+
+            transition: 0.3s ease;
+        }
+
+
+        .home-page header nav ul li a:hover,
+
+        .home-page header nav ul li a.active {
+
+            color: var(--home-pink);
+        }
+
+
+        .home-page header nav ul li a::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: 0;
+
+            width: 0;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--home-pink),
+                    var(--home-orange)
+                );
+
+            transition: 0.3s ease;
+        }
+
+
+        .home-page header nav ul li a:hover::after,
+
+        .home-page header nav ul li a.active::after {
+
+            width: 100%;
+        }
+
+
+        /* =====================================================
+           HERO
+           GIỮ HÌNH BANNER CŨ
+        ====================================================== */
 
         .home-page .hero {
-            overflow: hidden;
-        }
 
+            position: relative;
 
-        /* =========================
-           ẢNH SẢN PHẨM
-        ========================= */
-
-        .home-page .product-image {
-            overflow: hidden;
-        }
-
-        .home-page .product-image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 
+            min-height: 620px;
 
-        /* =========================
-           ẢNH BLOG
-        ========================= */
+            display: flex;
 
-        .home-page .news-image {
+            align-items: center;
+
+            justify-content: center;
+
             overflow: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.28),
+                    rgba(0, 0, 0, 0.28)
+                ),
+                url("images/banner.jpg");
+
+            background-repeat: no-repeat;
+
+            background-position: center;
+
+            background-size: cover;
         }
 
-        .home-page .news-image img {
+
+        .home-page .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+            max-width: 1200px;
+
+            padding: 90px 30px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
         }
 
 
-        /* =========================
-           ĐỒNG BỘ MÀU TRANG CHỦ
-           VỚI SHOP HOA
-        ========================= */
+        .home-page .hero-label {
 
-        .home-page {
-            --flower-pink: #d96c8b;
-            --flower-pink-dark: #b94f70;
-            --flower-pink-light: #fcecef;
-            --flower-cream: #fffaf7;
-            --flower-text: #3b3033;
+            display: inline-block;
+
+            margin-bottom: 15px;
+
+            color: #ffffff;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
         }
 
 
-        /* =========================
-           TIÊU ĐỀ CÓ ĐIỂM NHẤN
-        ========================= */
+        .home-page .hero h1 {
 
-        .home-page .hero h1 span,
-        .home-page .why-us h2 span,
-        .home-page .about-text h2 span,
+            max-width: 1000px;
+
+            margin: 0 0 22px;
+
+            color: #ffffff;
+
+            font-size: 58px;
+
+            font-weight: 800;
+
+            line-height: 1.2;
+
+            letter-spacing: -1px;
+
+            text-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.45);
+        }
+
+
+        .home-page .hero h1 span {
+
+            display: block;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff4f87,
+                    #ff9800
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+        }
+
+
+        .home-page .hero-description {
+
+            width: 100%;
+
+            max-width: 850px;
+        }
+
+
+        .home-page .hero-intro {
+
+            margin: 0 0 28px;
+
+            color: #ffffff;
+
+            font-size: 18px;
+
+            font-weight: 400;
+
+            line-height: 1.8;
+
+            text-shadow:
+                0 2px 8px rgba(0, 0, 0, 0.45);
+        }
+
+
+        .home-page .hero-categories {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px 25px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .home-page .hero-categories span {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            color: #ffffff;
+
+            font-size: 15px;
+
+            font-weight: 500;
+
+            text-shadow:
+                0 2px 6px rgba(0, 0, 0, 0.4);
+        }
+
+
+        .home-page .hero-categories strong {
+
+            font-weight: 600;
+        }
+
+
+        .home-page .hero-btn {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 18px;
+        }
+
+
+        .home-page .hero-btn .btn {
+
+            width: 220px;
+
+            height: 56px;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 0;
+
+            border-radius: 35px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--home-pink),
+                    var(--home-orange)
+                );
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            box-shadow:
+                0 8px 20px rgba(255, 79, 129, 0.20);
+
+            transition: 0.3s ease;
+        }
+
+
+        .home-page .hero-btn .btn:hover {
+
+            color: #ffffff;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 14px 30px rgba(255, 79, 129, 0.28);
+        }
+
+
+        .home-page .hero-btn .btn-outline {
+
+            color: #ffffff;
+
+            background:
+                rgba(255, 255, 255, 0.12);
+
+            border:
+                2px solid #ffffff;
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .home-page .hero-btn .btn-outline:hover {
+
+            color: var(--home-pink);
+
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           SECTION HEADING
+        ====================================================== */
+
+        .home-page .section-label {
+
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            color: var(--home-pink);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        .home-page .section-heading {
+
+            max-width: 760px;
+
+            margin: 0 auto 50px;
+
+            text-align: center;
+        }
+
+
+        .home-page .section-heading h2,
+
+        .home-page .why-us-header h2,
+
+        .home-page .news-header h2 {
+
+            margin: 0 0 18px;
+
+            color: var(--home-dark);
+
+            font-size: 42px;
+
+            font-weight: 800;
+
+            line-height: 1.3;
+        }
+
+
         .home-page .section-heading h2 span,
-        .home-page .featured h2 span,
-        .home-page .news-header h2 span {
-            color: var(--flower-pink);
+
+        .home-page .why-us-header h2 span,
+
+        .home-page .news-header h2 span,
+
+        .home-page .about-text h2 span {
+
+            color: var(--home-pink);
         }
 
 
-        /* =========================
-           BUTTON ĐỒNG BỘ SHOP
-        ========================= */
+        .home-page .section-heading p,
 
-        .home-page .btn {
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease,
-                background 0.25s ease;
-        }
+        .home-page .why-us-header p,
 
-        .home-page .btn:hover {
-            transform: translateY(-3px);
-        }
+        .home-page .news-header p {
 
+            color: #777;
 
-        /* =========================
-           CARD SẢN PHẨM
-        ========================= */
+            font-size: 15px;
 
-        .home-page .product-card {
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-        }
-
-        .home-page .product-card:hover {
-            transform: translateY(-8px);
+            line-height: 1.8;
         }
 
 
-        /* =========================
-           CARD DỊCH VỤ
-        ========================= */
+        /* =====================================================
+           WHY US
+        ====================================================== */
 
-        .home-page .box {
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
+        .home-page .why-us {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 90px 20px 80px;
         }
 
-        .home-page .box:hover {
-            transform: translateY(-7px);
+
+        .home-page .why-us-header {
+
+            max-width: 760px;
+
+            margin: 0 auto 50px;
+
+            text-align: center;
         }
 
 
-        /* =========================
-           CARD WHY US
-        ========================= */
+        .home-page .why-us-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
 
         .home-page .why-us-card {
+
+            min-height: 270px;
+
+            padding: 32px 25px;
+
+            background: #ffffff;
+
+            border:
+                1px solid #f2e6ea;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
         }
+
 
         .home-page .why-us-card:hover {
-            transform: translateY(-7px);
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 18px 45px rgba(0, 0, 0, 0.14);
         }
 
 
-        /* =========================
-           CARD BLOG
-        ========================= */
+        .home-page .why-us-icon {
 
-        .home-page .news-card {
+            width: 70px;
+
+            height: 70px;
+
+            margin: 0 auto 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--home-pink),
+                    var(--home-orange)
+                );
+
+            font-size: 27px;
+        }
+
+
+        .home-page .why-us-card h3 {
+
+            margin: 0 0 12px;
+
+            color: #2d2d2d;
+
+            font-size: 18px;
+
+            font-weight: 700;
+        }
+
+
+        .home-page .why-us-card p {
+
+            color: #777;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ====================================================== */
+
+        .home-page .about-home {
+
+            position: relative;
+
+            width: calc(100% - 40px);
+
+            max-width: 1200px;
+
+            min-height: 540px;
+
+            margin: 20px auto 80px;
+
+            padding: 55px;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            align-items: center;
+
+            gap: 70px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8fa,
+                    #fffdfd
+                );
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 45px rgba(65, 30, 45, 0.08);
+        }
+
+
+        .home-page .about-image {
+
+            position: relative;
+
+            height: 430px;
+
+            border-radius: 20px;
+
+            overflow: visible;
+        }
+
+
+        .home-page .about-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.15);
+
+            transition: 0.4s ease;
+        }
+
+
+        .home-page .about-image:hover img {
+
+            transform:
+                scale(1.02);
+        }
+
+
+        .home-page .about-image::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 15px;
+
+            width: 100%;
+
+            height: 100%;
+
+            border:
+                2px solid #f4a1b8;
+
+            border-radius: 20px;
+
+            z-index: 0;
+        }
+
+
+        .home-page .about-image img {
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+
+        .home-page .about-badge {
+
+            position: absolute;
+
+            right: -20px;
+
+            bottom: 25px;
+
+            z-index: 3;
+
+            width: 145px;
+
+            height: 115px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background: #ffffff;
+
+            border-radius: 17px;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .home-page .about-badge strong {
+
+            color: var(--home-pink);
+
+            font-size: 30px;
+
+            font-weight: 800;
+        }
+
+
+        .home-page .about-badge span {
+
+            margin-top: 5px;
+
+            color: #555;
+
+            font-size: 12px;
+        }
+
+
+        .home-page .about-text {
+
+            text-align: left;
+        }
+
+
+        .home-page .about-label {
+
+            display: inline-block;
+
+            margin-bottom: 15px;
+
+            color: var(--home-pink);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        .home-page .about-text h2 {
+
+            margin: 0 0 20px;
+
+            color: var(--home-dark);
+
+            font-size: 40px;
+
+            font-weight: 800;
+
+            line-height: 1.25;
+        }
+
+
+        .home-page .about-intro {
+
+            margin-bottom: 30px;
+
+            color: #666;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+
+        .home-page .about-features {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 20px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .home-page .about-feature {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 15px;
+        }
+
+
+        .home-page .about-feature > i {
+
+            width: 44px;
+
+            height: 44px;
+
+            min-width: 44px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--home-pink),
+                    var(--home-orange)
+                );
+
+            font-size: 17px;
+        }
+
+
+        .home-page .about-feature h3 {
+
+            margin: 0 0 4px;
+
+            color: #333;
+
+            font-size: 16px;
+
+            font-weight: 700;
+        }
+
+
+        .home-page .about-feature p {
+
+            color: #777;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+
+        .home-page .about-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 13px 23px;
+
+            border-radius: 30px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--home-pink),
+                    var(--home-orange)
+                );
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            box-shadow:
+                0 8px 20px rgba(255, 79, 129, 0.20);
+
+            transition: 0.3s ease;
+        }
+
+
+        .home-page .about-btn:hover {
+
+            color: #ffffff;
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        /* =====================================================
+           DỊCH VỤ
+        ====================================================== */
+
+        .home-page .service {
+
+            width: calc(100% - 40px);
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 85px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff7fb,
+                    #fffdfd
+                );
+
+            border-radius: 25px;
+        }
+
+
+        .home-page .card {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .home-page .box {
+
+            min-height: 275px;
+
+            padding: 32px 24px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: flex-start;
+
+            background: #ffffff;
+
+            border:
+                1px solid #f2e6ea;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
         }
 
-        .home-page .news-card:hover {
-            transform: translateY(-7px);
+
+        .home-page .box:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 18px 45px rgba(0, 0, 0, 0.14);
         }
 
-
-        /* =========================
-           ICON DỊCH VỤ
-        ========================= */
 
         .home-page .service-icon {
-            color: var(--flower-pink);
+
+            width: 62px;
+
+            height: 62px;
+
+            margin-bottom: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: var(--home-pink);
+
+            background: #fff0f5;
+
+            font-size: 25px;
         }
 
 
-        /* =========================
-           PRODUCT BADGE
-        ========================= */
+        .home-page .box h3 {
+
+            margin: 0 0 12px;
+
+            color: #222;
+
+            font-size: 18px;
+
+            font-weight: 700;
+        }
+
+
+        .home-page .box p {
+
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        .home-page .box a {
+
+            margin-top: auto;
+
+            padding-top: 18px;
+
+            color: var(--home-pink);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: 0.3s ease;
+        }
+
+
+        .home-page .box a:hover {
+
+            color: var(--home-orange);
+        }
+
+
+        /* =====================================================
+           SẢN PHẨM NỔI BẬT
+        ====================================================== */
+
+        .home-page .featured {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 90px 20px;
+
+            overflow: hidden;
+        }
+
+
+        .home-page .products {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .home-page .product-card {
+
+            overflow: hidden;
+
+            display: flex;
+
+            flex-direction: column;
+
+            background: #ffffff;
+
+            border:
+                1px solid #f2e6ea;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .home-page .product-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 18px 45px rgba(0, 0, 0, 0.14);
+        }
+
+
+        .home-page .product-image {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 290px;
+
+            overflow: hidden;
+
+            background: #fff4f7;
+        }
+
+
+        .home-page .product-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s ease;
+        }
+
+
+        .home-page .product-card:hover .product-image img {
+
+            transform:
+                scale(1.04);
+        }
+
 
         .home-page .product-badge {
-            background: var(--flower-pink);
+
+            position: absolute;
+
+            top: 15px;
+
+            left: 15px;
+
+            z-index: 2;
+
+            padding: 6px 10px;
+
+            border-radius: 20px;
+
+            color: #ffffff;
+
+            background: var(--home-pink);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
         }
 
+
         .home-page .product-badge.new {
+
             background: #7fb58a;
         }
 
 
-        /* =========================
-           GIÁ SẢN PHẨM
-        ========================= */
+        .home-page .product-actions {
+
+            position: absolute;
+
+            right: 15px;
+
+            bottom: 15px;
+
+            display: flex;
+
+            gap: 8px;
+        }
+
+
+        .home-page .product-actions button {
+
+            width: 38px;
+
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: none;
+
+            border-radius: 50%;
+
+            color: #555;
+
+            background: #ffffff;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 5px 15px rgba(0, 0, 0, 0.10);
+
+            transition: 0.3s ease;
+        }
+
+
+        .home-page .product-actions button:hover {
+
+            color: #ffffff;
+
+            background: var(--home-pink);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        .home-page .product-info {
+
+            padding: 22px;
+        }
+
+
+        .home-page .product-type {
+
+            display: inline-block;
+
+            margin-bottom: 7px;
+
+            color: var(--home-pink);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        .home-page .product-info h3 {
+
+            margin: 0 0 8px;
+
+            color: #333;
+
+            font-size: 17px;
+
+            font-weight: 700;
+        }
+
+
+        .home-page .product-info > p {
+
+            min-height: 45px;
+
+            margin: 0 0 18px;
+
+            color: #777;
+
+            font-size: 12px;
+
+            line-height: 1.6;
+        }
+
+
+        .home-page .product-bottom {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 10px;
+        }
+
+
+        .home-page .product-price {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+        }
+
 
         .home-page .product-price strong {
-            color: var(--flower-pink);
+
+            color: var(--home-pink);
+
+            font-size: 17px;
+
+            font-weight: 800;
         }
 
 
-        /* =========================
-           NÚT MUA SẢN PHẨM
-        ========================= */
+        .home-page .product-price del {
+
+            color: #aaa;
+
+            font-size: 11px;
+        }
+
 
         .home-page .product-buy {
-            background: var(--flower-pink);
-            color: #fff;
+
+            width: 42px;
+
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--home-pink),
+                    var(--home-orange)
+                );
+
+            font-size: 15px;
+
+            box-shadow:
+                0 7px 18px rgba(255, 79, 129, 0.20);
+
+            transition: 0.3s ease;
         }
+
 
         .home-page .product-buy:hover {
-            background: var(--flower-pink-dark);
+
+            color: #ffffff;
+
+            transform:
+                translateY(-3px);
         }
 
 
-        /* =========================
-           SECTION LABEL
-        ========================= */
+        .home-page .featured-more {
 
-        .home-page .section-label {
-            color: var(--flower-pink);
+            margin-top: 35px;
+
+            text-align: center;
         }
 
 
-        /* =========================
-           ABOUT BADGE
-        ========================= */
+        .home-page .featured-more .btn {
 
-        .home-page .about-badge strong {
-            color: var(--flower-pink);
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--home-pink),
+                    var(--home-orange)
+                );
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            box-shadow:
+                0 8px 20px rgba(255, 79, 129, 0.20);
+
+            transition: 0.3s ease;
         }
 
 
-        /* =========================
-           TRÁNH OVERFLOW
-        ========================= */
+        .home-page .featured-more .btn:hover {
 
-        .home-page .hero,
-        .home-page .home-cta,
-        .home-page .news,
-        .home-page .featured,
-        .home-page .service {
+            transform:
+                translateY(-3px);
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .home-page .home-cta {
+
+            position: relative;
+
+            min-height: 430px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(35, 20, 25, 0.52),
+                    rgba(35, 20, 25, 0.52)
+                ),
+                url("images/banner.jpg");
+
+            background-position: center;
+
+            background-size: cover;
+
+            text-align: center;
+        }
+
+
+        .home-page .home-cta-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 760px;
+
+            padding: 60px 20px;
+        }
+
+
+        .home-page .home-cta-content > span {
+
+            display: inline-block;
+
+            margin-bottom: 15px;
+
+            color: #ffffff;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .home-page .home-cta-content h2 {
+
+            margin: 0 0 18px;
+
+            color: #ffffff;
+
+            font-size: 42px;
+
+            font-weight: 800;
+
+            line-height: 1.25;
+        }
+
+
+        .home-page .home-cta-content h2 strong {
+
+            color: #ff8eae;
+        }
+
+
+        .home-page .home-cta-content p {
+
+            margin-bottom: 28px;
+
+            color: rgba(255,255,255,0.88);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        .home-page .home-cta-content .btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 14px 25px;
+
+            border-radius: 30px;
+
+            color: #ffffff;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--home-pink),
+                    var(--home-orange)
+                );
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: 0.3s ease;
+        }
+
+
+        .home-page .home-cta-content .btn:hover {
+
+            color: #ffffff;
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        /* =====================================================
+           BLOG
+        ====================================================== */
+
+        .home-page .news {
+
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 90px 20px 100px;
+
             overflow: hidden;
         }
 
 
-        /* =========================
-           RESPONSIVE LOGO
-        ========================= */
+        .home-page .news-header {
+
+            max-width: 760px;
+
+            margin: 0 auto 50px;
+
+            text-align: center;
+        }
+
+
+        .home-page .news-box {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        .home-page .news-card {
+
+            overflow: hidden;
+
+            display: grid;
+
+            grid-template-columns:
+                0.9fr 1.1fr;
+
+            background: #ffffff;
+
+            border:
+                1px solid #f2e6ea;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .home-page .news-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 18px 45px rgba(0, 0, 0, 0.14);
+        }
+
+
+        .home-page .news-image {
+
+            height: 100%;
+
+            min-height: 260px;
+
+            overflow: hidden;
+        }
+
+
+        .home-page .news-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s ease;
+        }
+
+
+        .home-page .news-card:hover .news-image img {
+
+            transform:
+                scale(1.04);
+        }
+
+
+        .home-page .news-card-content {
+
+            padding: 28px;
+        }
+
+
+        .home-page .news-category {
+
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            color: var(--home-pink);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+
+        .home-page .news-card-content h3 {
+
+            margin: 0 0 10px;
+
+            color: #333;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            line-height: 1.4;
+        }
+
+
+        .home-page .news-card-content p {
+
+            margin-bottom: 18px;
+
+            color: #777;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+        .home-page .btn2 {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color: var(--home-pink);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: 0.3s ease;
+        }
+
+
+        .home-page .btn2:hover {
+
+            color: var(--home-orange);
+
+            transform:
+                translateX(3px);
+        }
+
+
+        /* =====================================================
+           FOOTER - ĐỒNG BỘ SHOP
+        ====================================================== */
+
+        .home-page footer {
+
+            margin-top: 0;
+
+            background:
+                #2b2024;
+        }
+
+
+        .home-page footer .footer-content {
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding:
+                65px 20px 45px;
+        }
+
+
+        .home-page footer .footer-box h3 {
+
+            font-size: 18px;
+        }
+
+
+        .home-page footer .footer-box p,
+
+        .home-page footer .footer-box li,
+
+        .home-page footer .footer-box a {
+
+            font-size: 13px;
+        }
+
+
+        .home-page footer .social a {
+
+            transition: 0.3s ease;
+        }
+
+
+        .home-page footer .social a:hover {
+
+            background: var(--home-pink);
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE TABLET
+        ====================================================== */
+
+        @media (max-width: 1000px) {
+
+            .home-page header {
+
+                padding:
+                    14px 5%;
+            }
+
+
+            .home-page header nav ul {
+
+                gap: 18px;
+            }
+
+
+            .home-page .hero h1 {
+
+                font-size: 48px;
+            }
+
+
+            .home-page .why-us-grid,
+
+            .home-page .card,
+
+            .home-page .products {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .home-page .about-home {
+
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+
+                padding: 45px;
+            }
+
+
+            .home-page .about-text {
+
+                text-align: center;
+            }
+
+
+            .home-page .about-feature {
+
+                text-align: left;
+            }
+
+
+            .home-page .news-box {
+
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
 
         @media (max-width: 768px) {
 
+            .home-page header {
+
+                min-height: auto;
+
+                flex-direction: column;
+
+                gap: 10px;
+
+                padding:
+                    12px 20px;
+            }
+
+
+            .home-page header .logo {
+
+                gap: 8px;
+
+                font-size: 25px;
+            }
+
+
             .home-page header .logo img {
-                height: 38px;
+
+                height: 42px;
+
                 max-width: 52px;
             }
 
+
+            .home-page header nav ul {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap:
+                    5px 16px;
+            }
+
+
+            .home-page header nav ul li a {
+
+                font-size: 12px;
+            }
+
+
+            .home-page .hero {
+
+                min-height: 600px;
+            }
+
+
+            .home-page .hero-content {
+
+                padding:
+                    70px 20px;
+            }
+
+
+            .home-page .hero h1 {
+
+                font-size: 38px;
+
+                letter-spacing: -0.5px;
+            }
+
+
+            .home-page .hero-intro {
+
+                font-size: 15px;
+            }
+
+
+            .home-page .hero-categories {
+
+                display: grid;
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 12px;
+            }
+
+
+            .home-page .hero-categories span {
+
+                justify-content: center;
+
+                font-size: 13px;
+            }
+
+
+            .home-page .hero-categories span::after {
+
+                display: none;
+            }
+
+
+            .home-page .hero-btn {
+
+                flex-direction: column;
+
+                width: 100%;
+            }
+
+
+            .home-page .hero-btn .btn {
+
+                width: 220px;
+
+                height: 52px;
+            }
+
+
+            .home-page .why-us,
+
+            .home-page .featured,
+
+            .home-page .news {
+
+                padding:
+                    70px 20px;
+            }
+
+
+            .home-page .section-heading h2,
+
+            .home-page .why-us-header h2,
+
+            .home-page .news-header h2 {
+
+                font-size: 31px;
+            }
+
+
+            .home-page .why-us-grid,
+
+            .home-page .card,
+
+            .home-page .products {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .home-page .why-us-card {
+
+                min-height: 240px;
+            }
+
+
+            .home-page .about-home {
+
+                width:
+                    calc(100% - 30px);
+
+                margin:
+                    15px auto 60px;
+
+                padding: 25px 20px;
+
+                border-radius: 20px;
+            }
+
+
+            .home-page .about-image {
+
+                height: 330px;
+            }
+
+
+            .home-page .about-badge {
+
+                right: -5px;
+
+                bottom: 15px;
+            }
+
+
+            .home-page .about-text h2 {
+
+                font-size: 31px;
+            }
+
+
+            .home-page .service {
+
+                width:
+                    calc(100% - 30px);
+
+                padding:
+                    70px 15px;
+
+                border-radius: 20px;
+            }
+
+
+            .home-page .product-image {
+
+                height: 300px;
+            }
+
+
+            .home-page .home-cta-content h2 {
+
+                font-size: 32px;
+            }
+
+
+            .home-page .news-card {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .home-page .news-image {
+
+                height: 230px;
+
+                min-height: 230px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE NHỎ
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
             .home-page header .logo {
-                gap: 7px;
+
+                font-size: 23px;
+            }
+
+
+            .home-page header .logo img {
+
+                height: 38px;
+
+                max-width: 48px;
+            }
+
+
+            .home-page header nav ul {
+
+                gap:
+                    4px 10px;
+            }
+
+
+            .home-page header nav ul li a {
+
+                font-size: 11px;
+            }
+
+
+            .home-page .hero {
+
+                min-height: 570px;
+            }
+
+
+            .home-page .hero h1 {
+
+                font-size: 31px;
+            }
+
+
+            .home-page .hero-intro {
+
+                font-size: 14px;
+            }
+
+
+            .home-page .hero-categories span {
+
+                font-size: 12px;
+            }
+
+
+            .home-page .section-heading h2,
+
+            .home-page .why-us-header h2,
+
+            .home-page .news-header h2 {
+
+                font-size: 27px;
+            }
+
+
+            .home-page .about-text h2 {
+
+                font-size: 28px;
+            }
+
+
+            .home-page .product-image {
+
+                height: 270px;
+            }
+
+
+            .home-page .home-cta {
+
+                min-height: 390px;
+            }
+
+
+            .home-page .home-cta-content h2 {
+
+                font-size: 28px;
             }
 
         }
@@ -375,9 +2423,10 @@
 
 <header>
 
-    <!-- LOGO GỐC -->
-
-    <a href="index.html" class="logo">
+    <a
+        href="index.html"
+        class="logo"
+    >
 
         <img
             src="images/logo.png"
@@ -390,8 +2439,6 @@
 
     </a>
 
-
-    <!-- MENU -->
 
     <nav>
 
@@ -441,11 +2488,14 @@
                 </a>
             </li>
 
-            <!-- ĐĂNG NHẬP -->
+
             <li>
                 <a href="dangnhap.html">
+
                     <i class="fa-solid fa-right-to-bracket"></i>
+
                     Đăng nhập
+
                 </a>
             </li>
 
@@ -458,7 +2508,7 @@
 
 
 <!-- =====================================================
-     HERO BANNER
+     HERO
 ===================================================== -->
 
 <section class="hero">
@@ -474,8 +2524,13 @@
 
 
         <h1>
+
             Mang Sắc Hoa
-            <span>Đến Mọi Khoảnh Khắc</span>
+
+            <span>
+                Đến Mọi Khoảnh Khắc
+            </span>
+
         </h1>
 
 
@@ -493,25 +2548,33 @@
 
                 <span>
                     🌹
-                    <strong>Hoa sinh nhật</strong>
+                    <strong>
+                        Hoa sinh nhật
+                    </strong>
                 </span>
 
 
                 <span>
                     💍
-                    <strong>Hoa cưới</strong>
+                    <strong>
+                        Hoa cưới
+                    </strong>
                 </span>
 
 
                 <span>
                     🎉
-                    <strong>Hoa khai trương</strong>
+                    <strong>
+                        Hoa khai trương
+                    </strong>
                 </span>
 
 
                 <span>
                     🤍
-                    <strong>Hoa chia buồn</strong>
+                    <strong>
+                        Hoa chia buồn
+                    </strong>
                 </span>
 
             </div>
@@ -525,8 +2588,11 @@
                 href="shop.html"
                 class="btn"
             >
+
                 Mua Hoa Ngay
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
 
@@ -534,7 +2600,9 @@
                 href="gioithieu.html"
                 class="btn btn-outline"
             >
+
                 Xem Thêm
+
             </a>
 
         </div>
@@ -553,14 +2621,19 @@
 
     <div class="why-us-header">
 
-        <span class="why-us-label section-label">
+        <span class="section-label">
             ✦ VÌ SAO CHỌN FLOWER SHOP
         </span>
 
 
         <h2>
+
             Trao hoa,
-            <span>trao cả yêu thương</span>
+
+            <span>
+                trao cả yêu thương
+            </span>
+
         </h2>
 
 
@@ -581,74 +2654,100 @@
         <div class="why-us-card">
 
             <div class="why-us-icon">
+
                 <i class="fa-solid fa-leaf"></i>
+
             </div>
+
 
             <h3>
                 Hoa tươi mỗi ngày
             </h3>
 
+
             <p>
+
                 Những bông hoa được tuyển chọn kỹ lưỡng
                 để luôn giữ được vẻ đẹp tự nhiên.
+
             </p>
 
         </div>
 
 
+
         <div class="why-us-card">
 
             <div class="why-us-icon">
+
                 <i class="fa-solid fa-heart"></i>
+
             </div>
+
 
             <h3>
                 Thiết kế tinh tế
             </h3>
 
+
             <p>
+
                 Mỗi bó hoa được thiết kế riêng
                 để truyền tải trọn vẹn cảm xúc.
+
             </p>
 
         </div>
 
 
+
         <div class="why-us-card">
 
             <div class="why-us-icon">
+
                 <i class="fa-solid fa-truck-fast"></i>
+
             </div>
+
 
             <h3>
                 Giao hàng tận nơi
             </h3>
 
+
             <p>
+
                 Giao hoa nhanh chóng, đúng hẹn
                 và được đóng gói cẩn thận.
+
             </p>
 
         </div>
+
 
 
         <div class="why-us-card">
 
             <div class="why-us-icon">
+
                 <i class="fa-solid fa-star"></i>
+
             </div>
+
 
             <h3>
                 Phục vụ tận tâm
             </h3>
 
+
             <p>
+
                 Luôn lắng nghe và đồng hành
                 để bạn chọn được món quà phù hợp nhất.
+
             </p>
 
         </div>
-
 
     </div>
 
@@ -690,14 +2789,21 @@
     <div class="about-text">
 
         <span class="about-label section-label">
+
             🌸 VỀ CHÚNG TÔI
+
         </span>
 
 
         <h2>
 
-            Mang yêu thương<br>
-            <span>đến mọi khoảnh khắc</span>
+            Mang yêu thương
+
+            <br>
+
+            <span>
+                đến mọi khoảnh khắc
+            </span>
 
         </h2>
 
@@ -775,7 +2881,6 @@
 
             </div>
 
-
         </div>
 
 
@@ -797,11 +2902,10 @@
 
 
 <!-- =====================================================
-     DỊCH VỤ NỔI BẬT
+     DỊCH VỤ
 ===================================================== -->
 
 <section class="service">
-
 
     <div class="section-heading">
 
@@ -811,14 +2915,21 @@
 
 
         <h2>
+
             Dịch vụ
-            <span>nổi bật</span>
+
+            <span>
+                nổi bật
+            </span>
+
         </h2>
 
 
         <p>
+
             Những dịch vụ được thiết kế
             để mỗi khoảnh khắc trao hoa trở nên đặc biệt hơn.
+
         </p>
 
     </div>
@@ -830,22 +2941,32 @@
         <div class="box">
 
             <div class="service-icon">
+
                 <i class="fa-solid fa-gift"></i>
+
             </div>
+
 
             <h3>
                 Hoa Theo Dịp
             </h3>
 
+
             <p>
+
                 Hoa sinh nhật, hoa khai trương,
                 hoa cưới, hoa chúc mừng,
                 hoa chia buồn và nhiều mẫu hoa theo yêu cầu.
+
             </p>
 
+
             <a href="shop.html">
+
                 Xem sản phẩm
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
         </div>
@@ -855,22 +2976,32 @@
         <div class="box">
 
             <div class="service-icon">
+
                 <i class="fa-solid fa-truck-fast"></i>
+
             </div>
+
 
             <h3>
                 Giao Hoa Nhanh
             </h3>
 
+
             <p>
+
                 Giao hoa tận nơi trong ngày,
                 đúng giờ, đảm bảo hoa luôn tươi mới
                 và được đóng gói cẩn thận.
+
             </p>
 
+
             <a href="dichvu.html">
+
                 Tìm hiểu thêm
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
         </div>
@@ -880,23 +3011,33 @@
         <div class="box">
 
             <div class="service-icon">
+
                 <i class="fa-solid fa-building"></i>
+
             </div>
+
 
             <h3>
                 Hoa Doanh Nghiệp
             </h3>
 
+
             <p>
+
                 Thiết kế hoa văn phòng,
                 hoa hội nghị,
                 hoa sự kiện,
                 hoa khai trương chuyên nghiệp.
+
             </p>
 
+
             <a href="dichvu.html">
+
                 Tìm hiểu thêm
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
         </div>
@@ -906,27 +3047,36 @@
         <div class="box">
 
             <div class="service-icon">
+
                 <i class="fa-solid fa-book-open"></i>
+
             </div>
+
 
             <h3>
                 Blog Hoa
             </h3>
 
+
             <p>
+
                 Chia sẻ kiến thức,
                 cách chăm sóc hoa,
                 ý nghĩa từng loài hoa
                 và xu hướng cắm hoa hiện đại.
+
             </p>
 
+
             <a href="blog.html">
+
                 Đọc Blog
+
                 <i class="fa-solid fa-arrow-right"></i>
+
             </a>
 
         </div>
-
 
     </div>
 
@@ -940,7 +3090,6 @@
 
 <section class="featured">
 
-
     <div class="section-heading">
 
         <span class="section-label">
@@ -949,14 +3098,21 @@
 
 
         <h2>
+
             Sản phẩm
-            <span>nổi bật</span>
+
+            <span>
+                nổi bật
+            </span>
+
         </h2>
 
 
         <p>
+
             Một vài mẫu hoa được yêu thích
             dành cho những dịp đặc biệt.
+
         </p>
 
     </div>
@@ -975,19 +3131,32 @@
                     BÁN CHẠY
                 </span>
 
+
                 <img
                     src="images/rose.jpg"
                     alt="Bó Hoa Hồng Đỏ"
                 >
 
+
                 <div class="product-actions">
 
-                    <button aria-label="Yêu thích">
+                    <button
+                        type="button"
+                        aria-label="Yêu thích"
+                    >
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
-                    <button aria-label="Xem sản phẩm">
+
+                    <button
+                        type="button"
+                        aria-label="Xem sản phẩm"
+                    >
+
                         <i class="fa-regular fa-eye"></i>
+
                     </button>
 
                 </div>
@@ -1001,13 +3170,17 @@
                     HOA TƯƠI
                 </span>
 
+
                 <h3>
                     Bó Hoa Hồng Đỏ
                 </h3>
 
+
                 <p>
+
                     Những đóa hồng đỏ tươi,
                     thích hợp dành tặng người thương.
+
                 </p>
 
 
@@ -1031,7 +3204,9 @@
                         class="product-buy"
                         aria-label="Mua sản phẩm"
                     >
+
                         <i class="fa-solid fa-bag-shopping"></i>
+
                     </a>
 
                 </div>
@@ -1052,19 +3227,32 @@
                     MỚI
                 </span>
 
+
                 <img
                     src="images/tulip.jpg"
                     alt="Bó Hoa Tulip"
                 >
 
+
                 <div class="product-actions">
 
-                    <button aria-label="Yêu thích">
+                    <button
+                        type="button"
+                        aria-label="Yêu thích"
+                    >
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
-                    <button aria-label="Xem sản phẩm">
+
+                    <button
+                        type="button"
+                        aria-label="Xem sản phẩm"
+                    >
+
                         <i class="fa-regular fa-eye"></i>
+
                     </button>
 
                 </div>
@@ -1078,13 +3266,17 @@
                     HOA TƯƠI
                 </span>
 
+
                 <h3>
                     Bó Hoa Tulip
                 </h3>
 
+
                 <p>
+
                     Vẻ đẹp nhẹ nhàng và tinh tế,
                     phù hợp cho những dịp đặc biệt.
+
                 </p>
 
 
@@ -1104,7 +3296,9 @@
                         class="product-buy"
                         aria-label="Mua sản phẩm"
                     >
+
                         <i class="fa-solid fa-bag-shopping"></i>
+
                     </a>
 
                 </div>
@@ -1125,19 +3319,32 @@
                     YÊU THÍCH
                 </span>
 
+
                 <img
                     src="images/sunflower.jpg"
                     alt="Hoa Hướng Dương"
                 >
 
+
                 <div class="product-actions">
 
-                    <button aria-label="Yêu thích">
+                    <button
+                        type="button"
+                        aria-label="Yêu thích"
+                    >
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
-                    <button aria-label="Xem sản phẩm">
+
+                    <button
+                        type="button"
+                        aria-label="Xem sản phẩm"
+                    >
+
                         <i class="fa-regular fa-eye"></i>
+
                     </button>
 
                 </div>
@@ -1151,13 +3358,17 @@
                     HOA TƯƠI
                 </span>
 
+
                 <h3>
                     Hoa Hướng Dương
                 </h3>
 
+
                 <p>
+
                     Màu vàng rực rỡ mang đến
                     năng lượng và niềm vui.
+
                 </p>
 
 
@@ -1177,7 +3388,9 @@
                         class="product-buy"
                         aria-label="Mua sản phẩm"
                     >
+
                         <i class="fa-solid fa-bag-shopping"></i>
+
                     </a>
 
                 </div>
@@ -1199,14 +3412,26 @@
                     alt="Hoa Lan Hồ Điệp"
                 >
 
+
                 <div class="product-actions">
 
-                    <button aria-label="Yêu thích">
+                    <button
+                        type="button"
+                        aria-label="Yêu thích"
+                    >
+
                         <i class="fa-regular fa-heart"></i>
+
                     </button>
 
-                    <button aria-label="Xem sản phẩm">
+
+                    <button
+                        type="button"
+                        aria-label="Xem sản phẩm"
+                    >
+
                         <i class="fa-regular fa-eye"></i>
+
                     </button>
 
                 </div>
@@ -1220,13 +3445,17 @@
                     HOA CAO CẤP
                 </span>
 
+
                 <h3>
                     Hoa Lan Hồ Điệp
                 </h3>
 
+
                 <p>
+
                     Một lựa chọn thanh lịch,
                     sang trọng dành cho người đặc biệt.
+
                 </p>
 
 
@@ -1246,7 +3475,9 @@
                         class="product-buy"
                         aria-label="Mua sản phẩm"
                     >
+
                         <i class="fa-solid fa-bag-shopping"></i>
+
                     </a>
 
                 </div>
@@ -1254,7 +3485,6 @@
             </div>
 
         </div>
-
 
     </div>
 
@@ -1265,8 +3495,11 @@
             href="shop.html"
             class="btn"
         >
+
             Xem toàn bộ sản phẩm
+
             <i class="fa-solid fa-arrow-right"></i>
+
         </a>
 
     </div>
@@ -1287,13 +3520,17 @@
     <div class="home-cta-content">
 
         <span>
+
             🌷 MÓN QUÀ ĐẶC BIỆT CHO NGƯỜI BẠN YÊU THƯƠNG
+
         </span>
 
 
         <h2>
 
-            Một bó hoa nhỏ,<br>
+            Một bó hoa nhỏ,
+
+            <br>
 
             <strong>
                 một tình cảm thật lớn
@@ -1314,8 +3551,11 @@
             href="shop.html"
             class="btn"
         >
+
             Khám phá các mẫu hoa
+
             <i class="fa-solid fa-arrow-right"></i>
+
         </a>
 
     </div>
@@ -1325,16 +3565,17 @@
 
 
 <!-- =====================================================
-     BLOG / TIN TỨC
+     BLOG
 ===================================================== -->
 
 <section class="news">
 
-
     <div class="news-header">
 
         <span class="news-label section-label">
+
             ✦ BLOG FLOWER SHOP
+
         </span>
 
 
@@ -1379,19 +3620,25 @@
             <div class="news-card-content">
 
                 <span class="news-category">
+
                     🌹 Ý NGHĨA LOÀI HOA
+
                 </span>
 
 
                 <h3>
+
                     Hoa Hồng và những thông điệp đầy cảm xúc
+
                 </h3>
 
 
                 <p>
+
                     Tìm hiểu ý nghĩa đặc biệt của hoa hồng
                     và cách mỗi màu sắc truyền tải một thông điệp
                     riêng trong tình yêu, tình bạn và cuộc sống.
+
                 </p>
 
 
@@ -1399,8 +3646,11 @@
                     href="blog.html"
                     class="btn2"
                 >
+
                     Khám phá bài viết
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1426,19 +3676,25 @@
             <div class="news-card-content">
 
                 <span class="news-category">
+
                     🌿 CHĂM SÓC HOA
+
                 </span>
 
 
                 <h3>
+
                     Bí quyết giữ hoa tươi đẹp lâu hơn
+
                 </h3>
 
 
                 <p>
+
                     Những cách đơn giản giúp hoa giữ được
                     vẻ tươi tắn lâu hơn, từ việc thay nước,
                     cắt gốc đến lựa chọn vị trí đặt hoa.
+
                 </p>
 
 
@@ -1446,14 +3702,16 @@
                     href="blog.html"
                     class="btn2"
                 >
+
                     Khám phá bài viết
+
                     <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
 
         </article>
-
 
     </div>
 
@@ -1466,7 +3724,6 @@
 ===================================================== -->
 
 <footer>
-
 
     <div class="footer-content">
 
@@ -1481,9 +3738,11 @@
 
 
             <p>
+
                 Mang sắc hoa đến mọi khoảnh khắc.
                 Những bó hoa tươi đẹp được tạo nên
                 để gửi gắm yêu thương và cảm xúc.
+
             </p>
 
 
@@ -1543,11 +3802,13 @@
                     </a>
                 </li>
 
+
                 <li>
                     <a href="shop.html">
                         Shop Hoa
                     </a>
                 </li>
+
 
                 <li>
                     <a href="dichvu.html">
@@ -1555,17 +3816,20 @@
                     </a>
                 </li>
 
+
                 <li>
                     <a href="blog.html">
                         Blog
                     </a>
                 </li>
 
+
                 <li>
                     <a href="gioithieu.html">
                         Giới thiệu
                     </a>
                 </li>
+
 
                 <li>
                     <a href="hotro.html">
@@ -1591,6 +3855,7 @@
             <p>
 
                 <i class="fa-solid fa-location-dot"></i>
+
                 Bến Tre, Việt Nam
 
             </p>
@@ -1599,6 +3864,7 @@
             <p>
 
                 <i class="fa-solid fa-phone"></i>
+
                 0123 456 789
 
             </p>
@@ -1607,12 +3873,12 @@
             <p>
 
                 <i class="fa-solid fa-envelope"></i>
+
                 flowershop@gmail.com
 
             </p>
 
         </div>
-
 
     </div>
 
