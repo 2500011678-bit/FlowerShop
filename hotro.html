@@ -5,7 +5,10 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
@@ -15,7 +18,10 @@
     <title>Hỗ trợ | Flower Shop</title>
 
 
-    <!-- GOOGLE FONT -->
+    <!-- =====================================================
+         GOOGLE FONT - ĐỒNG BỘ VỚI SHOP.HTML
+    ====================================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -25,97 +31,177 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
-
-
-    <!-- FONT AWESOME -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
-
-    <!-- CSS CHÍNH -->
-    <link rel="stylesheet" href="style.css">
 
 
     <!-- =====================================================
-         CSS RIÊNG CHO TRANG HỖ TRỢ
-         Dùng tiền tố support- để tránh xung đột
-         với các trang khác.
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS CHÍNH
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =====================================================
+         CSS RIÊNG TRANG HỖ TRỢ
     ====================================================== -->
 
     <style>
 
         /* =====================================================
-           SUPPORT PAGE - GLOBAL
+           FONT TOÀN TRANG
         ====================================================== */
 
-        .support-page {
-            width: 100%;
-            overflow: hidden;
-            background: #fff;
+        html,
+        body {
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
+
+        }
+
+
+        .support-page,
+        .support-page h1,
+        .support-page h2,
+        .support-page h3,
+        .support-page h4,
+        .support-page h5,
+        .support-page h6,
+        .support-page p,
+        .support-page a,
+        .support-page span,
+        .support-page strong,
+        .support-page button,
+        .support-page input,
+        .support-page textarea,
+        .support-page select {
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
+
         }
 
 
         /* =====================================================
-           HEADER LOGO - ĐỒNG BỘ VỚI CÁC TRANG KHÁC
+           SUPPORT PAGE
         ====================================================== */
 
-        .support-page header {
-            position: sticky;
-            top: 0;
-            z-index: 9999;
+        .support-page {
 
             width: 100%;
-            min-height: 88px;
 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            min-height: 100vh;
 
-            padding: 12px 7%;
+            overflow: hidden;
 
-            background: rgba(255, 255, 255, 0.96);
+            background: #ffffff;
 
-            backdrop-filter: blur(12px);
-
-            border-bottom: 1px solid rgba(255, 79, 135, 0.08);
-
-            box-shadow:
-                0 3px 18px rgba(0, 0, 0, 0.06);
         }
 
 
-        .support-page .logo {
+        /* =====================================================
+           HEADER
+           KÍCH THƯỚC GẦN GIỐNG SHOP.HTML
+        ====================================================== */
+
+        .support-page header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 9999;
+
+            width: 100%;
+
+            min-height: 80px;
+
             display: flex;
+
             align-items: center;
-            gap: 14px;
+
+            justify-content: space-between;
+
+            padding:
+                12px 7%;
+
+            background:
+                rgba(255, 255, 255, 0.97);
+
+            backdrop-filter:
+                blur(12px);
+
+            border-bottom:
+                1px solid
+                rgba(255, 79, 135, 0.08);
+
+            box-shadow:
+                0 3px 18px
+                rgba(0, 0, 0, 0.05);
+
+        }
+
+
+        /* =====================================================
+           LOGO
+        ====================================================== */
+
+        .support-page .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
 
             flex-shrink: 0;
 
             text-decoration: none;
 
-            transition: 0.3s ease;
+            transition:
+                0.3s ease;
+
         }
 
 
         .support-page .logo img {
-            width: 58px;
-            height: 58px;
+
+            display: block;
+
+            width: auto;
+
+            height: 45px;
+
+            max-width: 55px;
 
             object-fit: contain;
 
-            display: block;
         }
 
 
         .support-page .logo span {
-            font-family: 'Poppins', sans-serif;
 
-            font-size: 29px;
+            display: inline-block;
+
+            font-size: 25px;
+
             font-weight: 800;
 
             line-height: 1;
@@ -128,14 +214,19 @@
                 );
 
             -webkit-background-clip: text;
+
             -webkit-text-fill-color: transparent;
 
             background-clip: text;
+
         }
 
 
         .support-page .logo:hover {
-            transform: translateY(-1px);
+
+            transform:
+                translateY(-1px);
+
         }
 
 
@@ -144,61 +235,77 @@
         ====================================================== */
 
         .support-page nav ul {
+
             display: flex;
+
             align-items: center;
 
-            gap: 32px;
+            gap: 28px;
 
             margin: 0;
+
             padding: 0;
 
             list-style: none;
+
         }
 
 
         .support-page nav ul li {
+
             margin: 0;
+
             padding: 0;
+
         }
 
 
         .support-page nav ul li a {
+
             position: relative;
 
             display: inline-block;
 
             padding: 10px 0;
 
-            color: #444;
-
-            font-family: 'Poppins', sans-serif;
+            color: #444444;
 
             font-size: 15px;
+
             font-weight: 600;
+
+            line-height: 1.4;
 
             white-space: nowrap;
 
             text-decoration: none;
 
-            transition: 0.3s ease;
+            transition:
+                0.3s ease;
+
         }
 
 
         .support-page nav ul li a:hover,
         .support-page nav ul li a.active {
+
             color: #ff4f87;
+
         }
 
 
         .support-page nav ul li a::after {
+
             content: "";
 
             position: absolute;
 
             left: 0;
+
             bottom: 0;
 
             width: 0;
+
             height: 3px;
 
             border-radius: 10px;
@@ -210,121 +317,156 @@
                     #ff9800
                 );
 
-            transition: 0.3s ease;
+            transition:
+                0.3s ease;
+
         }
 
 
         .support-page nav ul li a:hover::after,
         .support-page nav ul li a.active::after {
+
             width: 100%;
+
         }
 
 
         /* =====================================================
-           SUPPORT HERO
+           HERO
         ====================================================== */
 
         .support-hero {
+
             position: relative;
 
             width: 100%;
 
-            padding: 100px 20px 90px;
+            padding:
+                90px 20px 85px;
 
             text-align: center;
 
             overflow: hidden;
 
             background:
+
                 radial-gradient(
                     circle at 15% 20%,
                     rgba(255, 79, 135, 0.10),
                     transparent 28%
                 ),
+
                 radial-gradient(
                     circle at 85% 30%,
                     rgba(255, 152, 0, 0.09),
                     transparent 28%
                 ),
+
                 linear-gradient(
                     135deg,
                     #fff7fa 0%,
                     #ffffff 50%,
                     #fff8fb 100%
                 );
+
         }
 
 
         .support-hero::before {
+
             content: "✿";
 
             position: absolute;
 
             top: -75px;
+
             right: 5%;
 
-            color: rgba(255, 79, 135, 0.045);
+            color:
+                rgba(255, 79, 135, 0.045);
 
             font-size: 240px;
 
             line-height: 1;
+
+            pointer-events: none;
+
         }
 
 
         .support-hero::after {
+
             content: "✿";
 
             position: absolute;
 
             bottom: -90px;
+
             left: 5%;
 
-            color: rgba(255, 152, 0, 0.04);
+            color:
+                rgba(255, 152, 0, 0.04);
 
             font-size: 210px;
 
             line-height: 1;
+
+            pointer-events: none;
+
         }
 
 
         .support-hero-content {
+
             position: relative;
+
             z-index: 2;
 
             width: 100%;
+
             max-width: 850px;
 
-            margin: 0 auto;
+            margin:
+                0 auto;
+
         }
 
 
         .support-label {
+
             display: inline-block;
 
-            margin-bottom: 18px;
+            margin-bottom: 16px;
 
             color: #e94d7a;
 
             font-size: 13px;
+
             font-weight: 700;
 
             letter-spacing: 2px;
+
         }
 
 
         .support-hero h1 {
-            margin: 0 0 20px;
+
+            margin:
+                0 0 20px;
 
             color: #292929;
 
-            font-size: 50px;
+            font-size: 48px;
+
             font-weight: 800;
 
             line-height: 1.25;
+
         }
 
 
         .support-hero h1 span {
+
             background:
                 linear-gradient(
                     90deg,
@@ -333,22 +475,29 @@
                 );
 
             -webkit-background-clip: text;
+
             -webkit-text-fill-color: transparent;
 
             background-clip: text;
+
         }
 
 
         .support-hero p {
+
             max-width: 700px;
 
-            margin: 0 auto;
+            margin:
+                0 auto;
 
             color: #707070;
 
-            font-size: 16px;
+            font-size: 15px;
+
+            font-weight: 400;
 
             line-height: 1.8;
+
         }
 
 
@@ -357,19 +506,25 @@
         ====================================================== */
 
         .support-contact {
+
             width: 100%;
 
-            padding: 0 20px 80px;
+            padding:
+                0 20px 75px;
 
-            background: #fff;
+            background: #ffffff;
+
         }
 
 
         .support-contact-grid {
+
             width: 100%;
+
             max-width: 1200px;
 
-            margin: -25px auto 0;
+            margin:
+                -25px auto 0;
 
             display: grid;
 
@@ -381,50 +536,64 @@
             position: relative;
 
             z-index: 5;
+
         }
 
 
         .support-contact-card {
-            min-height: 125px;
+
+            min-height: 120px;
 
             display: flex;
+
             align-items: center;
 
-            gap: 18px;
+            gap: 17px;
 
-            padding: 25px;
+            padding: 24px;
 
             background: #ffffff;
 
-            border: 1px solid #f2e6ea;
+            border:
+                1px solid #f2e6ea;
 
             border-radius: 20px;
 
             box-shadow:
-                0 12px 35px rgba(65, 30, 45, 0.07);
+                0 12px 35px
+                rgba(65, 30, 45, 0.07);
 
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
+
         }
 
 
         .support-contact-card:hover {
-            transform: translateY(-7px);
+
+            transform:
+                translateY(-6px);
 
             box-shadow:
-                0 20px 45px rgba(65, 30, 45, 0.12);
+                0 20px 45px
+                rgba(65, 30, 45, 0.12);
+
         }
 
 
         .support-icon {
-            width: 60px;
-            height: 60px;
 
-            min-width: 60px;
+            width: 58px;
+
+            height: 58px;
+
+            min-width: 58px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             border-radius: 50%;
@@ -438,11 +607,13 @@
                     #fff7ef
                 );
 
-            font-size: 21px;
+            font-size: 20px;
+
         }
 
 
         .support-contact-text span {
+
             display: block;
 
             margin-bottom: 4px;
@@ -450,59 +621,78 @@
             color: #e94d7a;
 
             font-size: 11px;
+
             font-weight: 700;
 
             letter-spacing: 1.5px;
+
         }
 
 
         .support-contact-text h3 {
-            margin: 0 0 5px;
+
+            margin:
+                0 0 5px;
 
             color: #303030;
 
-            font-size: 17px;
+            font-size: 16px;
+
             font-weight: 700;
+
+            line-height: 1.4;
+
         }
 
 
         .support-contact-text p {
-            margin: 0 0 2px;
 
-            color: #444;
+            margin:
+                0 0 2px;
+
+            color: #444444;
 
             font-size: 14px;
+
             font-weight: 600;
+
         }
 
 
         .support-contact-text small {
-            color: #999;
+
+            color: #999999;
 
             font-size: 12px;
+
         }
 
 
         /* =====================================================
-           MAIN SUPPORT AREA
+           MAIN SUPPORT
         ====================================================== */
 
         .support-main {
+
             width: 100%;
+
             max-width: 1200px;
 
-            margin: 0 auto;
+            margin:
+                0 auto;
 
-            padding: 40px 20px 100px;
+            padding:
+                35px 20px 95px;
 
             display: grid;
 
             grid-template-columns:
                 0.9fr 1.1fr;
 
-            gap: 70px;
+            gap: 65px;
 
             align-items: start;
+
         }
 
 
@@ -511,37 +701,47 @@
         ====================================================== */
 
         .support-info {
-            padding-top: 15px;
+
+            padding-top: 10px;
+
         }
 
 
         .support-small-title {
+
             display: inline-block;
 
             color: #e94d7a;
 
             font-size: 12px;
+
             font-weight: 700;
 
             letter-spacing: 1.8px;
+
         }
 
 
         .support-info h2,
         .support-form-box h2 {
-            margin: 15px 0 17px;
+
+            margin:
+                14px 0 16px;
 
             color: #292929;
 
-            font-size: 36px;
+            font-size: 34px;
+
             font-weight: 800;
 
-            line-height: 1.25;
+            line-height: 1.3;
+
         }
 
 
         .support-info h2 span,
         .support-form-box h2 span {
+
             background:
                 linear-gradient(
                     90deg,
@@ -550,49 +750,65 @@
                 );
 
             -webkit-background-clip: text;
+
             -webkit-text-fill-color: transparent;
 
             background-clip: text;
+
         }
 
 
         .support-description {
-            margin-bottom: 35px;
 
-            color: #777;
+            margin-bottom: 32px;
+
+            color: #777777;
 
             font-size: 14px;
 
             line-height: 1.8;
+
         }
 
 
+        /* =====================================================
+           DETAILS
+        ====================================================== */
+
         .support-details {
+
             display: flex;
 
             flex-direction: column;
 
-            gap: 22px;
+            gap: 20px;
+
         }
 
 
         .support-detail {
+
             display: flex;
 
             align-items: center;
 
             gap: 15px;
+
         }
 
 
         .detail-icon {
-            width: 46px;
-            height: 46px;
 
-            min-width: 46px;
+            width: 45px;
+
+            height: 45px;
+
+            min-width: 45px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             border-radius: 13px;
@@ -602,40 +818,54 @@
             background: #fff1f5;
 
             font-size: 16px;
+
         }
 
 
         .support-detail strong {
+
             display: block;
 
             margin-bottom: 3px;
 
-            color: #333;
+            color: #333333;
 
             font-size: 14px;
+
             font-weight: 700;
+
         }
 
 
         .support-detail p {
+
             margin: 0;
 
-            color: #777;
+            color: #777777;
 
             font-size: 13px;
+
+            line-height: 1.5;
+
         }
 
 
+        /* =====================================================
+           NOTE
+        ====================================================== */
+
         .support-note {
+
             display: flex;
 
             align-items: center;
 
             gap: 13px;
 
-            margin-top: 38px;
+            margin-top: 35px;
 
-            padding: 18px 20px;
+            padding:
+                17px 19px;
 
             border-radius: 15px;
 
@@ -646,80 +876,104 @@
                     #fffaf5
                 );
 
-            border: 1px solid #f8e5eb;
+            border:
+                1px solid #f8e5eb;
+
         }
 
 
         .support-note i {
+
             color: #e94d7a;
 
             font-size: 17px;
+
         }
 
 
         .support-note p {
+
             margin: 0;
 
-            color: #777;
+            color: #777777;
 
             font-size: 13px;
 
             line-height: 1.6;
+
         }
 
 
         /* =====================================================
-           FORM
+           FORM BOX
         ====================================================== */
 
         .support-form-box {
-            padding: 40px;
+
+            padding: 38px;
 
             background: #ffffff;
 
-            border: 1px solid #f2e6ea;
+            border:
+                1px solid #f2e6ea;
 
             border-radius: 24px;
 
             box-shadow:
-                0 15px 45px rgba(65, 30, 45, 0.08);
+                0 15px 45px
+                rgba(65, 30, 45, 0.08);
+
         }
 
 
         .support-form-box > p {
-            margin-bottom: 28px;
 
-            color: #777;
+            margin-bottom: 26px;
+
+            color: #777777;
 
             font-size: 14px;
 
             line-height: 1.7;
+
         }
 
 
         .support-form-box form {
+
             width: 100%;
+
         }
 
 
         .form-group {
-            margin-bottom: 19px;
+
+            margin-bottom: 18px;
+
         }
 
 
         .form-group label {
+
             display: block;
 
             margin-bottom: 8px;
 
-            color: #444;
+            color: #444444;
 
             font-size: 13px;
+
             font-weight: 600;
+
         }
 
 
+        /* =====================================================
+           INPUT
+        ====================================================== */
+
         .input-box {
+
             width: 100%;
 
             display: flex;
@@ -730,25 +984,31 @@
 
             background: #ffffff;
 
-            border: 1px solid #eadde2;
+            border:
+                1px solid #eadde2;
 
             border-radius: 12px;
 
             transition:
                 border-color 0.25s ease,
                 box-shadow 0.25s ease;
+
         }
 
 
         .input-box:focus-within {
+
             border-color: #ed6b91;
 
             box-shadow:
-                0 0 0 4px rgba(237, 107, 145, 0.09);
+                0 0 0 4px
+                rgba(237, 107, 145, 0.09);
+
         }
 
 
         .input-box i {
+
             width: 50px;
 
             min-width: 50px;
@@ -758,62 +1018,84 @@
             color: #d98ba4;
 
             font-size: 15px;
+
         }
 
 
         .input-box input,
         .input-box textarea {
+
             width: 100%;
 
             border: none;
+
             outline: none;
 
             background: transparent;
 
-            padding: 14px 15px 14px 0;
+            padding:
+                14px 15px 14px 0;
 
-            color: #333;
+            color: #333333;
 
-            font-family: inherit;
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
 
             font-size: 14px;
+
         }
 
 
         .input-box input {
+
             height: 52px;
+
         }
 
 
         .input-box textarea {
-            min-height: 125px;
+
+            min-height: 120px;
 
             resize: vertical;
 
             line-height: 1.6;
+
         }
 
 
         .input-box input::placeholder,
         .input-box textarea::placeholder {
+
             color: #b3a9ad;
+
         }
 
 
         .textarea-box {
+
             align-items: flex-start;
+
         }
 
 
         .textarea-box i {
+
             padding-top: 17px;
+
         }
 
 
+        /* =====================================================
+           BUTTON
+        ====================================================== */
+
         .support-submit {
+
             width: 100%;
 
-            min-height: 55px;
+            min-height: 54px;
 
             margin-top: 5px;
 
@@ -830,39 +1112,54 @@
                     #ff9800
                 );
 
-            font-family: inherit;
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
 
             font-size: 14px;
+
             font-weight: 700;
 
             cursor: pointer;
 
             box-shadow:
-                0 8px 20px rgba(255, 79, 135, 0.20);
+                0 8px 20px
+                rgba(255, 79, 135, 0.20);
 
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
+
         }
 
 
         .support-submit i {
+
             margin-left: 8px;
 
-            transition: transform 0.3s ease;
+            transition:
+                transform 0.3s ease;
+
         }
 
 
         .support-submit:hover {
-            transform: translateY(-3px);
+
+            transform:
+                translateY(-3px);
 
             box-shadow:
-                0 13px 28px rgba(255, 79, 135, 0.28);
+                0 13px 28px
+                rgba(255, 79, 135, 0.28);
+
         }
 
 
         .support-submit:hover i {
-            transform: translateX(4px);
+
+            transform:
+                translateX(4px);
+
         }
 
 
@@ -871,9 +1168,11 @@
         ====================================================== */
 
         .support-faq {
+
             width: 100%;
 
-            padding: 90px 20px 100px;
+            padding:
+                85px 20px 95px;
 
             background:
                 linear-gradient(
@@ -881,91 +1180,116 @@
                     #fff8fa,
                     #fffdfd
                 );
+
         }
 
 
         .support-faq-header {
+
             max-width: 720px;
 
-            margin: 0 auto 50px;
+            margin:
+                0 auto 48px;
 
             text-align: center;
+
         }
 
 
         .support-faq-header h2 {
-            margin: 14px 0;
+
+            margin:
+                13px 0;
 
             color: #292929;
 
-            font-size: 34px;
+            font-size: 32px;
+
             font-weight: 800;
 
             line-height: 1.3;
+
         }
 
 
         .support-faq-header p {
+
             margin: 0;
 
-            color: #777;
+            color: #777777;
 
             font-size: 14px;
 
             line-height: 1.7;
+
         }
 
 
         .faq-grid {
+
             width: 100%;
+
             max-width: 1200px;
 
-            margin: 0 auto;
+            margin:
+                0 auto;
 
             display: grid;
 
             grid-template-columns:
                 repeat(2, 1fr);
 
-            gap: 22px;
+            gap: 20px;
+
         }
 
 
         .faq-card {
+
             display: flex;
 
-            gap: 17px;
+            gap: 16px;
 
-            padding: 25px;
+            padding: 24px;
 
             background: #ffffff;
 
-            border: 1px solid #f2e6ea;
+            border:
+                1px solid #f2e6ea;
 
             border-radius: 18px;
 
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
+
         }
 
 
         .faq-card:hover {
-            transform: translateY(-5px);
+
+            transform:
+                translateY(-5px);
 
             box-shadow:
-                0 15px 35px rgba(65, 30, 45, 0.08);
+                0 15px 35px
+                rgba(65, 30, 45, 0.08);
+
         }
 
 
         .faq-icon {
-            width: 45px;
-            height: 45px;
 
-            min-width: 45px;
+            width: 44px;
+
+            height: 44px;
+
+            min-width: 44px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             border-radius: 12px;
@@ -975,38 +1299,47 @@
             background: #fff0f5;
 
             font-size: 16px;
+
         }
 
 
         .faq-card h3 {
-            margin: 0 0 8px;
 
-            color: #333;
+            margin:
+                0 0 8px;
+
+            color: #333333;
 
             font-size: 15px;
+
             font-weight: 700;
 
             line-height: 1.5;
+
         }
 
 
         .faq-card p {
+
             margin: 0;
 
-            color: #777;
+            color: #777777;
 
             font-size: 13px;
 
             line-height: 1.7;
+
         }
 
 
         /* =====================================================
-           FOOTER RIÊNG ĐỒNG BỘ
+           FOOTER
         ====================================================== */
 
         .support-page footer {
+
             margin-top: 0;
+
         }
 
 
@@ -1017,39 +1350,53 @@
         @media (max-width: 1000px) {
 
             .support-page header {
-                padding: 12px 5%;
+
+                padding:
+                    12px 5%;
+
             }
 
 
             .support-page nav ul {
+
                 gap: 20px;
+
             }
 
 
             .support-main {
+
                 grid-template-columns: 1fr;
 
                 gap: 50px;
 
                 padding-left: 5%;
+
                 padding-right: 5%;
+
             }
 
 
             .support-info {
+
                 padding-top: 0;
+
             }
 
 
             .support-contact-grid {
+
                 grid-template-columns:
                     repeat(2, 1fr);
+
             }
 
 
             .faq-grid {
+
                 grid-template-columns:
                     1fr 1fr;
+
             }
 
         }
@@ -1062,136 +1409,184 @@
         @media (max-width: 768px) {
 
             .support-page header {
+
                 min-height: auto;
 
                 flex-direction: column;
 
                 gap: 12px;
 
-                padding: 12px 20px;
+                padding:
+                    12px 20px;
+
             }
 
 
             .support-page .logo span {
-                font-size: 25px;
+
+                font-size: 24px;
+
             }
 
 
             .support-page .logo img {
-                width: 52px;
-                height: 52px;
+
+                height: 43px;
+
             }
 
 
             .support-page nav ul {
+
                 flex-wrap: wrap;
 
                 justify-content: center;
 
-                gap: 6px 17px;
+                gap:
+                    6px 17px;
+
             }
 
 
             .support-page nav ul li a {
+
                 font-size: 13px;
+
             }
 
 
             .support-hero {
-                padding: 75px 20px 70px;
+
+                padding:
+                    70px 20px 65px;
+
             }
 
 
             .support-hero h1 {
+
                 font-size: 38px;
+
             }
 
 
             .support-hero p {
-                font-size: 15px;
+
+                font-size: 14px;
+
             }
 
 
             .support-contact {
-                padding: 0 15px 65px;
+
+                padding:
+                    0 15px 65px;
+
             }
 
 
             .support-contact-grid {
+
                 grid-template-columns: 1fr;
 
                 gap: 15px;
+
             }
 
 
             .support-contact-card {
+
                 min-height: 110px;
 
-                padding: 22px;
+                padding: 21px;
+
             }
 
 
             .support-main {
+
                 padding:
                     25px 20px 75px;
 
                 gap: 40px;
+
             }
 
 
             .support-info {
+
                 text-align: center;
+
             }
 
 
             .support-info h2,
             .support-form-box h2 {
+
                 font-size: 30px;
+
             }
 
 
             .support-description {
+
                 font-size: 14px;
+
             }
 
 
             .support-details {
+
                 text-align: left;
+
             }
 
 
             .support-note {
+
                 text-align: left;
+
             }
 
 
             .support-form-box {
-                padding: 30px 22px;
+
+                padding:
+                    30px 22px;
 
                 border-radius: 20px;
+
             }
 
 
             .support-faq {
+
                 padding:
                     70px 20px 80px;
+
             }
 
 
             .support-faq-header {
+
                 margin-bottom: 35px;
+
             }
 
 
             .support-faq-header h2 {
+
                 font-size: 29px;
+
             }
 
 
             .faq-grid {
+
                 grid-template-columns: 1fr;
 
                 gap: 15px;
+
             }
 
         }
@@ -1204,73 +1599,101 @@
         @media (max-width: 480px) {
 
             .support-page .logo span {
-                font-size: 23px;
+
+                font-size: 22px;
+
             }
 
 
             .support-page .logo img {
-                width: 48px;
-                height: 48px;
+
+                height: 40px;
+
             }
 
 
             .support-page nav ul {
-                gap: 5px 11px;
+
+                gap:
+                    5px 11px;
+
             }
 
 
             .support-page nav ul li a {
+
                 font-size: 12px;
+
             }
 
 
             .support-hero {
+
                 padding:
-                    65px 18px 60px;
+                    60px 18px 55px;
+
             }
 
 
             .support-hero h1 {
-                font-size: 32px;
+
+                font-size: 31px;
+
             }
 
 
             .support-hero p {
-                font-size: 14px;
+
+                font-size: 13px;
+
             }
 
 
             .support-contact-card {
-                padding: 20px;
+
+                padding: 19px;
+
             }
 
 
             .support-icon {
-                width: 52px;
-                height: 52px;
 
-                min-width: 52px;
+                width: 51px;
+
+                height: 51px;
+
+                min-width: 51px;
+
             }
 
 
             .support-info h2,
             .support-form-box h2 {
+
                 font-size: 27px;
+
             }
 
 
             .support-form-box {
-                padding: 25px 18px;
+
+                padding:
+                    24px 18px;
+
             }
 
 
             .support-faq-header h2 {
+
                 font-size: 26px;
+
             }
 
 
             .faq-card {
-                padding: 20px;
+
+                padding: 19px;
+
             }
 
         }
@@ -1280,163 +1703,358 @@
 </head>
 
 
-<body>
-
-<div class="support-page">
+<body class="support-page">
 
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    <header>
-
-
-        <!-- LOGO -->
-
-        <a href="index.html" class="logo">
-
-            <img
-                src="images/logo.png"
-                alt="Flower Shop Logo"
-            >
-
-            <span>Flower Shop</span>
-
-        </a>
+<header>
 
 
-        <!-- MENU -->
+    <!-- LOGO -->
 
-        <nav>
+    <a
+        href="index.html"
+        class="logo"
+    >
 
-            <ul>
+        <img
+            src="images/logo.png"
+            alt="Flower Shop Logo"
+        >
 
-                <li>
-                    <a href="index.html">
-                        Trang chủ
-                    </a>
-                </li>
+        <span>
+            Flower Shop
+        </span>
 
-
-                <li>
-                    <a href="shop.html">
-                        Shop Hoa
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="dichvu.html">
-                        Dịch vụ
-                    </a>
-                </li>
+    </a>
 
 
-                <li>
-                    <a href="blog.html">
-                        Blog
-                    </a>
-                </li>
+    <!-- MENU -->
+
+    <nav>
+
+        <ul>
+
+            <li>
+
+                <a href="index.html">
+                    Trang chủ
+                </a>
+
+            </li>
 
 
-                <li>
-                    <a href="gioithieu.html">
-                        Giới thiệu
-                    </a>
-                </li>
+            <li>
+
+                <a href="shop.html">
+                    Shop Hoa
+                </a>
+
+            </li>
 
 
-                <li>
-                    <a
-                        href="hotro.html"
-                        class="active"
-                    >
-                        Hỗ trợ
-                    </a>
-                </li>
+            <li>
 
-            </ul>
+                <a href="dichvu.html">
+                    Dịch vụ
+                </a>
 
-        </nav>
-
-    </header>
+            </li>
 
 
+            <li>
 
-    <!-- =====================================================
-         SUPPORT HERO
-    ====================================================== -->
+                <a href="blog.html">
+                    Blog
+                </a>
 
-    <section class="support-hero">
+            </li>
 
-        <div class="support-hero-content">
 
-            <span class="support-label">
-                ✦ FLOWER SHOP SUPPORT
+            <li>
+
+                <a href="gioithieu.html">
+                    Giới thiệu
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a
+                    href="hotro.html"
+                    class="active"
+                >
+                    Hỗ trợ
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="support-hero">
+
+    <div class="support-hero-content">
+
+
+        <span class="support-label">
+
+            ✦ FLOWER SHOP SUPPORT
+
+        </span>
+
+
+        <h1>
+
+            Chúng tôi luôn sẵn sàng
+
+            <br>
+
+            <span>
+                hỗ trợ bạn
             </span>
 
-
-            <h1>
-
-                Chúng tôi luôn sẵn sàng
-                <br>
-
-                <span>hỗ trợ bạn</span>
-
-            </h1>
+        </h1>
 
 
-            <p>
+        <p>
 
-                Mọi thắc mắc của bạn đều quan trọng với chúng tôi.
-                Hãy liên hệ để được tư vấn và hỗ trợ nhanh chóng.
+            Mọi thắc mắc của bạn đều quan trọng với chúng tôi.
+            Hãy liên hệ để được tư vấn và hỗ trợ nhanh chóng.
 
-            </p>
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT INFORMATION
+===================================================== -->
+
+<section class="support-contact">
+
+    <div class="support-contact-grid">
+
+
+        <!-- PHONE -->
+
+        <div class="support-contact-card">
+
+            <div class="support-icon">
+
+                <i class="fa-solid fa-phone"></i>
+
+            </div>
+
+
+            <div class="support-contact-text">
+
+                <span>
+                    HOTLINE
+                </span>
+
+                <h3>
+                    Gọi cho chúng tôi
+                </h3>
+
+                <p>
+                    0123 456 789
+                </p>
+
+                <small>
+                    Hỗ trợ nhanh chóng
+                </small>
+
+            </div>
 
         </div>
 
-    </section>
+
+
+        <!-- EMAIL -->
+
+        <div class="support-contact-card">
+
+            <div class="support-icon">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </div>
+
+
+            <div class="support-contact-text">
+
+                <span>
+                    EMAIL
+                </span>
+
+                <h3>
+                    Email hỗ trợ
+                </h3>
+
+                <p>
+                    flowershop@gmail.com
+                </p>
+
+                <small>
+                    Phản hồi trong 24 giờ
+                </small>
+
+            </div>
+
+        </div>
 
 
 
-    <!-- =====================================================
-         CONTACT INFORMATION
-    ====================================================== -->
+        <!-- TIME -->
 
-    <section class="support-contact">
+        <div class="support-contact-card">
 
-        <div class="support-contact-grid">
+            <div class="support-icon">
+
+                <i class="fa-solid fa-clock"></i>
+
+            </div>
+
+
+            <div class="support-contact-text">
+
+                <span>
+                    THỜI GIAN
+                </span>
+
+                <h3>
+                    Giờ làm việc
+                </h3>
+
+                <p>
+                    08:00 - 21:00
+                </p>
+
+                <small>
+                    Tất cả các ngày trong tuần
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN SUPPORT
+===================================================== -->
+
+<section class="support-main">
+
+
+    <!-- LEFT -->
+
+    <div class="support-info">
+
+
+        <span class="support-small-title">
+
+            LIÊN HỆ VỚI CHÚNG TÔI
+
+        </span>
+
+
+        <h2>
+
+            Bạn cần chúng tôi
+
+            <br>
+
+            <span>
+                giúp đỡ?
+            </span>
+
+        </h2>
+
+
+        <p class="support-description">
+
+            Đội ngũ Flower Shop luôn sẵn sàng lắng nghe
+            và hỗ trợ bạn trong quá trình lựa chọn hoa,
+            đặt hàng hoặc sử dụng dịch vụ.
+
+        </p>
+
+
+        <!-- DETAILS -->
+
+        <div class="support-details">
+
+
+            <!-- ADDRESS -->
+
+            <div class="support-detail">
+
+                <div class="detail-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Địa chỉ
+                    </strong>
+
+                    <p>
+                        Bến Tre, Việt Nam
+                    </p>
+
+                </div>
+
+            </div>
+
 
 
             <!-- PHONE -->
 
-            <div class="support-contact-card">
+            <div class="support-detail">
 
-                <div class="support-icon">
+                <div class="detail-icon">
 
                     <i class="fa-solid fa-phone"></i>
 
                 </div>
 
 
-                <div class="support-contact-text">
+                <div>
 
-                    <span>
-                        HOTLINE
-                    </span>
-
-                    <h3>
-                        Gọi cho chúng tôi
-                    </h3>
+                    <strong>
+                        Hotline
+                    </strong>
 
                     <p>
                         0123 456 789
                     </p>
-
-                    <small>
-                        Hỗ trợ nhanh chóng
-                    </small>
 
                 </div>
 
@@ -1446,713 +2064,600 @@
 
             <!-- EMAIL -->
 
-            <div class="support-contact-card">
+            <div class="support-detail">
 
-                <div class="support-icon">
+                <div class="detail-icon">
 
                     <i class="fa-solid fa-envelope"></i>
 
                 </div>
 
 
-                <div class="support-contact-text">
+                <div>
 
-                    <span>
-                        EMAIL
-                    </span>
-
-                    <h3>
-                        Email hỗ trợ
-                    </h3>
+                    <strong>
+                        Email
+                    </strong>
 
                     <p>
                         flowershop@gmail.com
                     </p>
 
-                    <small>
-                        Phản hồi trong 24 giờ
-                    </small>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- TIME -->
-
-            <div class="support-contact-card">
-
-                <div class="support-icon">
-
-                    <i class="fa-solid fa-clock"></i>
-
-                </div>
-
-
-                <div class="support-contact-text">
-
-                    <span>
-                        THỜI GIAN
-                    </span>
-
-                    <h3>
-                        Giờ làm việc
-                    </h3>
-
-                    <p>
-                        08:00 - 21:00
-                    </p>
-
-                    <small>
-                        Tất cả các ngày trong tuần
-                    </small>
-
                 </div>
 
             </div>
 
         </div>
 
-    </section>
 
 
+        <!-- NOTE -->
 
-    <!-- =====================================================
-         SUPPORT MAIN
-    ====================================================== -->
+        <div class="support-note">
 
-    <section class="support-main">
-
-
-        <!-- LEFT -->
-
-        <div class="support-info">
-
-            <span class="support-small-title">
-                LIÊN HỆ VỚI CHÚNG TÔI
-            </span>
-
-
-            <h2>
-
-                Bạn cần chúng tôi
-                <br>
-
-                <span>giúp đỡ?</span>
-
-            </h2>
-
-
-            <p class="support-description">
-
-                Đội ngũ Flower Shop luôn sẵn sàng lắng nghe
-                và hỗ trợ bạn trong quá trình lựa chọn hoa,
-                đặt hàng hoặc sử dụng dịch vụ.
-
-            </p>
-
-
-            <!-- INFORMATION -->
-
-            <div class="support-details">
-
-
-                <!-- ADDRESS -->
-
-                <div class="support-detail">
-
-                    <div class="detail-icon">
-
-                        <i class="fa-solid fa-location-dot"></i>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            Địa chỉ
-                        </strong>
-
-                        <p>
-                            Bến Tre, Việt Nam
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- PHONE -->
-
-                <div class="support-detail">
-
-                    <div class="detail-icon">
-
-                        <i class="fa-solid fa-phone"></i>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            Hotline
-                        </strong>
-
-                        <p>
-                            0123 456 789
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- EMAIL -->
-
-                <div class="support-detail">
-
-                    <div class="detail-icon">
-
-                        <i class="fa-solid fa-envelope"></i>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            Email
-                        </strong>
-
-                        <p>
-                            flowershop@gmail.com
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- NOTE -->
-
-            <div class="support-note">
-
-                <i class="fa-solid fa-heart"></i>
-
-                <p>
-
-                    Flower Shop luôn trân trọng từng câu hỏi
-                    và phản hồi của khách hàng.
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- RIGHT - FORM -->
-
-        <div class="support-form-box">
-
-            <span class="support-small-title">
-                GỬI YÊU CẦU HỖ TRỢ
-            </span>
-
-
-            <h2>
-
-                Hãy để chúng tôi
-                <br>
-
-                <span>giúp bạn</span>
-
-            </h2>
-
+            <i class="fa-solid fa-heart"></i>
 
             <p>
 
-                Điền thông tin bên dưới, chúng tôi sẽ liên hệ
-                với bạn trong thời gian sớm nhất.
+                Flower Shop luôn trân trọng từng câu hỏi
+                và phản hồi của khách hàng.
 
             </p>
 
-
-            <form>
-
-
-                <!-- NAME -->
-
-                <div class="form-group">
-
-                    <label for="support-name">
-                        Họ và tên
-                    </label>
-
-
-                    <div class="input-box">
-
-                        <i class="fa-regular fa-user"></i>
-
-
-                        <input
-                            type="text"
-                            id="support-name"
-                            name="name"
-                            placeholder="Nhập họ và tên"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- EMAIL -->
-
-                <div class="form-group">
-
-                    <label for="support-email">
-                        Email
-                    </label>
-
-
-                    <div class="input-box">
-
-                        <i class="fa-regular fa-envelope"></i>
-
-
-                        <input
-                            type="email"
-                            id="support-email"
-                            name="email"
-                            placeholder="Nhập email của bạn"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- PHONE -->
-
-                <div class="form-group">
-
-                    <label for="support-phone">
-                        Số điện thoại
-                    </label>
-
-
-                    <div class="input-box">
-
-                        <i class="fa-solid fa-phone"></i>
-
-
-                        <input
-                            type="tel"
-                            id="support-phone"
-                            name="phone"
-                            placeholder="Nhập số điện thoại"
-                        >
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- MESSAGE -->
-
-                <div class="form-group">
-
-                    <label for="support-message">
-                        Nội dung cần hỗ trợ
-                    </label>
-
-
-                    <div class="input-box textarea-box">
-
-                        <i class="fa-regular fa-comment"></i>
-
-
-                        <textarea
-                            id="support-message"
-                            name="message"
-                            rows="5"
-                            placeholder="Bạn cần Flower Shop hỗ trợ điều gì?"
-                            required
-                        ></textarea>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- BUTTON -->
-
-                <button
-                    type="submit"
-                    class="support-submit"
-                >
-
-                    Gửi yêu cầu hỗ trợ
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </button>
-
-            </form>
-
         </div>
 
-    </section>
+    </div>
 
 
 
-    <!-- =====================================================
-         FAQ
-    ====================================================== -->
+    <!-- RIGHT FORM -->
 
-    <section class="support-faq">
+    <div class="support-form-box">
 
 
-        <div class="support-faq-header">
+        <span class="support-small-title">
 
-            <span class="support-small-title">
-                CÂU HỎI THƯỜNG GẶP
+            GỬI YÊU CẦU HỖ TRỢ
+
+        </span>
+
+
+        <h2>
+
+            Hãy để chúng tôi
+
+            <br>
+
+            <span>
+                giúp bạn
             </span>
 
+        </h2>
 
-            <h2>
-                Chúng tôi có thể giúp gì cho bạn?
-            </h2>
 
+        <p>
 
-            <p>
-                Một số câu hỏi thường gặp từ khách hàng của Flower Shop.
-            </p>
-
-        </div>
-
-
-
-        <div class="faq-grid">
-
-
-            <!-- FAQ 1 -->
-
-            <div class="faq-card">
-
-                <div class="faq-icon">
-
-                    <i class="fa-solid fa-truck-fast"></i>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Flower Shop có giao hoa tận nơi không?
-                    </h3>
-
-
-                    <p>
-
-                        Có. Flower Shop hỗ trợ giao hoa tận nơi
-                        và cố gắng đảm bảo hoa được giao đúng thời gian.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- FAQ 2 -->
-
-            <div class="faq-card">
-
-                <div class="faq-icon">
-
-                    <i class="fa-solid fa-gift"></i>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Tôi có thể đặt hoa theo yêu cầu không?
-                    </h3>
-
-
-                    <p>
-
-                        Có. Bạn có thể liên hệ với chúng tôi
-                        để được tư vấn và thiết kế mẫu hoa phù hợp.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- FAQ 3 -->
-
-            <div class="faq-card">
-
-                <div class="faq-icon">
-
-                    <i class="fa-solid fa-credit-card"></i>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Có những hình thức thanh toán nào?
-                    </h3>
-
-
-                    <p>
-
-                        Flower Shop hỗ trợ nhiều phương thức
-                        thanh toán thuận tiện cho khách hàng.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- FAQ 4 -->
-
-            <div class="faq-card">
-
-                <div class="faq-icon">
-
-                    <i class="fa-solid fa-comments"></i>
-
-                </div>
-
-
-                <div>
-
-                    <h3>
-                        Tôi cần tư vấn chọn hoa thì làm sao?
-                    </h3>
-
-
-                    <p>
-
-                        Bạn có thể gọi hotline hoặc gửi yêu cầu
-                        hỗ trợ để được tư vấn mẫu hoa phù hợp.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer>
-
-        <div class="footer-content">
-
-
-            <!-- THÔNG TIN -->
-
-            <div class="footer-box">
-
-                <h3>
-                    Flower Shop 🌸
-                </h3>
-
-
-                <p>
-
-                    Mang sắc hoa đến mọi khoảnh khắc.
-                    Những bó hoa tươi đẹp được tạo nên
-                    để gửi gắm yêu thương và cảm xúc.
-
-                </p>
-
-
-                <div class="social">
-
-                    <a
-                        href="#"
-                        aria-label="Facebook"
-                    >
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        aria-label="Instagram"
-                    >
-                        <i class="fab fa-instagram"></i>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        aria-label="TikTok"
-                    >
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-
-
-                    <a
-                        href="#"
-                        aria-label="YouTube"
-                    >
-                        <i class="fab fa-youtube"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- LIÊN KẾT -->
-
-            <div class="footer-box">
-
-                <h3>
-                    Liên kết
-                </h3>
-
-
-                <ul>
-
-                    <li>
-                        <a href="index.html">
-                            Trang chủ
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="shop.html">
-                            Shop Hoa
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="dichvu.html">
-                            Dịch vụ
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="blog.html">
-                            Blog
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="gioithieu.html">
-                            Giới thiệu
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="hotro.html">
-                            Hỗ trợ
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-
-            <!-- LIÊN HỆ -->
-
-            <div class="footer-box">
-
-                <h3>
-                    Liên hệ
-                </h3>
-
-
-                <p>
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    Bến Tre, Việt Nam
-
-                </p>
-
-
-                <p>
-
-                    <i class="fa-solid fa-phone"></i>
-
-                    0123 456 789
-
-                </p>
-
-
-                <p>
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                    flowershop@gmail.com
-
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <hr>
-
-
-        <p class="copyright">
-
-            © 2026 Flower Shop | All Rights Reserved.
+            Điền thông tin bên dưới, chúng tôi sẽ liên hệ
+            với bạn trong thời gian sớm nhất.
 
         </p>
 
-    </footer>
+
+        <form>
+
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label for="support-name">
+
+                    Họ và tên
+
+                </label>
+
+
+                <div class="input-box">
+
+                    <i class="fa-regular fa-user"></i>
+
+
+                    <input
+                        type="text"
+                        id="support-name"
+                        name="name"
+                        placeholder="Nhập họ và tên"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="support-email">
+
+                    Email
+
+                </label>
+
+
+                <div class="input-box">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+
+                    <input
+                        type="email"
+                        id="support-email"
+                        name="email"
+                        placeholder="Nhập email của bạn"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label for="support-phone">
+
+                    Số điện thoại
+
+                </label>
+
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-phone"></i>
+
+
+                    <input
+                        type="tel"
+                        id="support-phone"
+                        name="phone"
+                        placeholder="Nhập số điện thoại"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+
+                <label for="support-message">
+
+                    Nội dung cần hỗ trợ
+
+                </label>
+
+
+                <div class="input-box textarea-box">
+
+                    <i class="fa-regular fa-comment"></i>
+
+
+                    <textarea
+                        id="support-message"
+                        name="message"
+                        rows="5"
+                        placeholder="Bạn cần Flower Shop hỗ trợ điều gì?"
+                        required
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="support-submit"
+            >
+
+                Gửi yêu cầu hỗ trợ
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="support-faq">
+
+
+    <div class="support-faq-header">
+
+
+        <span class="support-small-title">
+
+            CÂU HỎI THƯỜNG GẶP
+
+        </span>
+
+
+        <h2>
+
+            Chúng tôi có thể giúp gì cho bạn?
+
+        </h2>
+
+
+        <p>
+
+            Một số câu hỏi thường gặp từ khách hàng
+            của Flower Shop.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="faq-grid">
+
+
+        <!-- FAQ 1 -->
+
+        <div class="faq-card">
+
+            <div class="faq-icon">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Flower Shop có giao hoa tận nơi không?
+
+                </h3>
+
+
+                <p>
+
+                    Có. Flower Shop hỗ trợ giao hoa tận nơi
+                    và cố gắng đảm bảo hoa được giao đúng thời gian.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FAQ 2 -->
+
+        <div class="faq-card">
+
+            <div class="faq-icon">
+
+                <i class="fa-solid fa-gift"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Tôi có thể đặt hoa theo yêu cầu không?
+
+                </h3>
+
+
+                <p>
+
+                    Có. Bạn có thể liên hệ với chúng tôi
+                    để được tư vấn và thiết kế mẫu hoa phù hợp.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FAQ 3 -->
+
+        <div class="faq-card">
+
+            <div class="faq-icon">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Có những hình thức thanh toán nào?
+
+                </h3>
+
+
+                <p>
+
+                    Flower Shop hỗ trợ nhiều phương thức
+                    thanh toán thuận tiện cho khách hàng.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FAQ 4 -->
+
+        <div class="faq-card">
+
+            <div class="faq-icon">
+
+                <i class="fa-solid fa-comments"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+
+                    Tôi cần tư vấn chọn hoa thì làm sao?
+
+                </h3>
+
+
+                <p>
+
+                    Bạn có thể gọi hotline hoặc gửi yêu cầu
+                    hỗ trợ để được tư vấn mẫu hoa phù hợp.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-content">
+
+
+        <!-- THÔNG TIN -->
+
+        <div class="footer-box">
+
+            <h3>
+                Flower Shop 🌸
+            </h3>
+
+
+            <p>
+
+                Mang sắc hoa đến mọi khoảnh khắc.
+                Những bó hoa tươi đẹp được tạo nên
+                để gửi gắm yêu thương và cảm xúc.
+
+            </p>
+
+
+            <div class="social">
+
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                >
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                >
+
+                    <i class="fab fa-tiktok"></i>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="YouTube"
+                >
+
+                    <i class="fab fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LIÊN KẾT -->
+
+        <div class="footer-box">
+
+            <h3>
+                Liên kết
+            </h3>
+
+
+            <ul>
+
+
+                <li>
+
+                    <a href="index.html">
+                        Trang chủ
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="shop.html">
+                        Shop Hoa
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="dichvu.html">
+                        Dịch vụ
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="blog.html">
+                        Blog
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="gioithieu.html">
+                        Giới thiệu
+                    </a>
+
+                </li>
+
+
+                <li>
+
+                    <a href="hotro.html">
+                        Hỗ trợ
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- LIÊN HỆ -->
+
+        <div class="footer-box">
+
+            <h3>
+                Liên hệ
+            </h3>
+
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Bến Tre, Việt Nam
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-phone"></i>
+
+                0123 456 789
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-envelope"></i>
+
+                flowershop@gmail.com
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 Flower Shop | All Rights Reserved.
+
+    </p>
+
+</footer>
+
 
 </div>
 
