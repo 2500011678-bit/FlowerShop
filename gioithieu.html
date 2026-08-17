@@ -4,22 +4,31 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
         content="Giới thiệu Flower Shop - Mang sắc hoa đến mọi khoảnh khắc"
     >
 
-    <title>Giới thiệu - Flower Shop</title>
+    <title>Giới thiệu | Flower Shop</title>
 
 
     <!-- =====================================================
-         GOOGLE FONT - FIX TIẾNG VIỆT
+         GOOGLE FONT
     ====================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap"
@@ -28,7 +37,7 @@
 
 
     <!-- =====================================================
-         FONT AWESOME - ICON
+         FONT AWESOME
     ====================================================== -->
 
     <link
@@ -37,60 +46,271 @@
     >
 
 
-    <!-- CSS CHUNG -->
+    <!-- =====================================================
+         CSS CHUNG
+    ====================================================== -->
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 
     <!-- =====================================================
-         CSS RIÊNG TRANG GIỚI THIỆU
+         CSS TRANG GIỚI THIỆU
     ====================================================== -->
 
     <style>
 
         /* =====================================================
-           FIX FONT + BOX
+           RESET RIÊNG
         ====================================================== */
 
         .about-page,
         .about-page * {
-            font-family: "Be Vietnam Pro", sans-serif;
             box-sizing: border-box;
         }
 
+
         .about-page {
-            overflow-x: hidden;
-            background: #fffafc;
+            margin: 0;
+
+            font-family: "Be Vietnam Pro", sans-serif;
+
             color: #3b3033;
+
+            background: #fffafc;
+
+            line-height: 1.7;
+
+            overflow-x: hidden;
+        }
+
+
+        .about-page img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        .about-page a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           MÀU CHUNG
+        ====================================================== */
+
+        :root {
+
+            --pink: #d96c8b;
+
+            --pink-dark: #b94f70;
+
+            --pink-light: #fcecef;
+
+            --pink-soft: #fff4f7;
+
+            --text: #3b3033;
+
+            --text-light: #75666b;
+
+            --border: #f1dce2;
+
+            --white: #ffffff;
+
         }
 
 
         /* =====================================================
            HEADER
+           ĐỒNG BỘ VỚI SHOP
         ====================================================== */
 
         .about-page header {
-            position: relative;
-            z-index: 100;
+
+            width: 100%;
+
+            min-height: 88px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: rgba(255, 255, 255, 0.97);
+
+            border-bottom: 1px solid #f3e5e9;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow:
+                0 4px 18px rgba(90, 50, 60, 0.04);
+
         }
+
+
+        /* =====================================================
+           LOGO
+        ====================================================== */
 
         .about-page header .logo {
+
             display: flex;
+
             align-items: center;
+
             gap: 10px;
-            text-decoration: none;
+
+            color: #f13f78;
+
+            font-size: 28px;
+
+            font-weight: 800;
+
+            line-height: 1;
+
+            white-space: nowrap;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
         }
+
+
+        .about-page header .logo:hover {
+
+            color: #d92f68;
+
+            transform: translateY(-1px);
+
+        }
+
 
         .about-page header .logo img {
+
             width: auto;
+
             height: 45px;
-            max-width: 60px;
+
+            max-width: 55px;
+
             object-fit: contain;
-            display: block;
+
+            flex-shrink: 0;
+
         }
 
+
         .about-page header .logo span {
-            white-space: nowrap;
+
+            color: inherit;
+
+            font-family: "Be Vietnam Pro", sans-serif;
+
+            font-size: inherit;
+
+            font-weight: inherit;
+
+            line-height: 1;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ====================================================== */
+
+        .about-page nav ul {
+
+            list-style: none;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 34px;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+        .about-page nav ul li {
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+        .about-page nav ul li a {
+
+            position: relative;
+
+            display: block;
+
+            padding: 32px 0;
+
+            color: #40383b;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            transition: color 0.25s ease;
+
+        }
+
+
+        .about-page nav ul li a:hover {
+
+            color: var(--pink);
+
+        }
+
+
+        .about-page nav ul li a.active {
+
+            color: #f13f78;
+
+        }
+
+
+        .about-page nav ul li a.active::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 16px;
+
+            height: 3px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff4f8b,
+                    #ff9d36
+                );
+
         }
 
 
@@ -99,125 +319,143 @@
         ====================================================== */
 
         .about-hero {
+
             position: relative;
 
-            min-height: 470px;
+            min-height: 420px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
-            padding: 90px 20px;
+            padding: 75px 20px;
 
             text-align: center;
 
+            overflow: hidden;
+
             background:
-                linear-gradient(
-                    rgba(74, 24, 44, 0.55),
-                    rgba(74, 24, 44, 0.58)
+                radial-gradient(
+                    circle at 15% 30%,
+                    rgba(255, 194, 210, 0.35),
+                    transparent 30%
                 ),
-                url("images/about-banner.jpg");
+                radial-gradient(
+                    circle at 85% 70%,
+                    rgba(255, 222, 232, 0.4),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff8fa,
+                    #fffdfc
+                );
 
-            background-size: cover;
-            background-position: center;
-
-            color: #ffffff;
         }
 
 
         .about-hero::before {
-            content: "✦";
 
-            position: absolute;
-
-            top: 70px;
-            left: 10%;
-
-            color: rgba(255, 255, 255, 0.45);
-
-            font-size: 28px;
-
-            animation: aboutFloat 3s ease-in-out infinite;
-        }
-
-
-        .about-hero::after {
             content: "✿";
 
             position: absolute;
 
-            right: 10%;
-            bottom: 70px;
+            left: 7%;
 
-            color: rgba(255, 255, 255, 0.4);
+            top: 55px;
 
-            font-size: 32px;
+            color: rgba(217, 108, 139, 0.10);
 
-            animation: aboutFloat 4s ease-in-out infinite;
+            font-size: 75px;
+
+            transform: rotate(-15deg);
+
+        }
+
+
+        .about-hero::after {
+
+            content: "❀";
+
+            position: absolute;
+
+            right: 8%;
+
+            bottom: 35px;
+
+            color: rgba(217, 108, 139, 0.10);
+
+            font-size: 90px;
+
+            transform: rotate(15deg);
+
         }
 
 
         .about-hero-content {
+
             position: relative;
 
             z-index: 2;
 
-            max-width: 850px;
+            max-width: 780px;
+
         }
 
 
         .about-hero-label {
+
             display: inline-block;
 
-            margin-bottom: 18px;
+            margin-bottom: 12px;
 
-            padding: 8px 18px;
+            color: var(--pink);
 
-            border: 1px solid rgba(255, 255, 255, 0.4);
-
-            border-radius: 50px;
-
-            background: rgba(255, 255, 255, 0.12);
-
-            backdrop-filter: blur(8px);
-
-            font-size: 13px;
+            font-size: 14px;
 
             font-weight: 700;
 
             letter-spacing: 1.5px;
+
         }
 
 
         .about-hero h1 {
-            margin: 0 0 22px;
 
-            font-size: 52px;
+            margin: 0 0 18px;
+
+            color: var(--text);
+
+            font-size: clamp(34px, 4vw, 52px);
 
             line-height: 1.2;
 
             font-weight: 800;
 
-            text-shadow:
-                0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
 
         .about-hero h1 span {
-            color: #ffd2df;
+
+            color: var(--pink);
+
         }
 
 
         .about-hero p {
+
             max-width: 720px;
 
-            margin: auto;
+            margin: 0 auto;
 
-            font-size: 18px;
+            color: var(--text-light);
+
+            font-size: 16px;
 
             line-height: 1.8;
 
-            color: rgba(255, 255, 255, 0.94);
         }
 
 
@@ -226,92 +464,102 @@
         ====================================================== */
 
         .about-stats {
+
+            width: min(1100px, 90%);
+
+            margin: -45px auto 75px;
+
             position: relative;
 
             z-index: 5;
-
-            max-width: 1100px;
-
-            margin: -65px auto 90px;
-
-            padding: 0 20px;
 
             display: grid;
 
             grid-template-columns: repeat(4, 1fr);
 
-            gap: 20px;
+            gap: 18px;
+
         }
 
 
         .stat-box {
-            padding: 32px 20px;
+
+            padding: 28px 18px;
 
             text-align: center;
 
-            background: #ffffff;
+            background: var(--white);
 
-            border: 1px solid #f8dce5;
+            border: 1px solid var(--border);
 
             border-radius: 20px;
 
             box-shadow:
-                0 15px 40px rgba(86, 39, 54, 0.10);
+                0 8px 28px rgba(80, 40, 50, 0.06);
 
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
+
         }
 
 
         .stat-box:hover {
-            transform: translateY(-8px);
+
+            transform: translateY(-7px);
 
             box-shadow:
-                0 20px 45px rgba(217, 108, 139, 0.18);
+                0 18px 40px rgba(170, 70, 100, 0.14);
+
         }
 
 
         .stat-box i {
+
+            width: 55px;
+
+            height: 55px;
+
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
-            width: 58px;
-            height: 58px;
-
-            margin-bottom: 16px;
+            margin-bottom: 13px;
 
             border-radius: 50%;
 
-            background: #fff0f4;
+            background: var(--pink-light);
 
-            color: #d96c8b;
+            color: var(--pink);
 
-            font-size: 24px;
+            font-size: 22px;
+
         }
 
 
         .stat-box strong {
+
             display: block;
 
-            margin-bottom: 6px;
+            margin-bottom: 4px;
 
-            color: #d96c8b;
+            color: var(--pink);
 
-            font-size: 31px;
+            font-size: 28px;
 
             font-weight: 800;
+
         }
 
 
         .stat-box span {
-            color: #777;
 
-            font-size: 14px;
+            color: var(--text-light);
 
-            line-height: 1.5;
+            font-size: 13px;
+
         }
 
 
@@ -320,11 +568,10 @@
         ====================================================== */
 
         .story-section {
-            max-width: 1200px;
 
-            margin: 0 auto 110px;
+            width: min(1180px, 90%);
 
-            padding: 0 30px;
+            margin: 0 auto 90px;
 
             display: grid;
 
@@ -332,116 +579,135 @@
 
             align-items: center;
 
-            gap: 70px;
+            gap: 55px;
+
         }
 
 
         .story-image {
+
             position: relative;
+
         }
 
 
         .story-image::after {
+
             content: "";
 
             position: absolute;
 
-            left: -15px;
-            bottom: -15px;
+            left: -12px;
+
+            bottom: -12px;
 
             width: 100%;
+
             height: 100%;
 
             border: 2px solid #f3bfd0;
 
-            border-radius: 25px;
+            border-radius: 20px;
 
             z-index: -1;
+
         }
 
 
         .story-image img {
-            display: block;
 
             width: 100%;
 
-            height: 450px;
+            height: 420px;
 
             object-fit: cover;
 
-            border-radius: 25px;
+            border-radius: 20px;
 
             box-shadow:
-                0 20px 45px rgba(0, 0, 0, 0.14);
+                0 12px 35px rgba(80, 40, 50, 0.10);
 
-            transition: transform 0.5s ease;
+            transition:
+                transform 0.4s ease;
+
         }
 
 
         .story-image:hover img {
+
             transform: scale(1.025);
+
         }
 
 
         .story-text {
-            padding: 10px 0;
+
+            padding: 5px 0;
+
         }
 
 
         .story-label {
+
             display: inline-block;
 
-            margin-bottom: 14px;
+            margin-bottom: 10px;
 
-            color: #d96c8b;
+            color: var(--pink);
 
             font-size: 13px;
 
             font-weight: 700;
 
-            letter-spacing: 1.5px;
+            letter-spacing: 1.4px;
+
         }
 
 
         .story-text h2 {
-            margin: 0 0 22px;
 
-            color: #342c2f;
+            margin: 0 0 18px;
 
-            font-size: 40px;
+            color: var(--text);
 
-            line-height: 1.25;
+            font-size: 34px;
+
+            line-height: 1.3;
 
             font-weight: 800;
+
         }
 
 
         .story-text h2 span {
-            color: #d96c8b;
+
+            color: var(--pink);
+
         }
 
 
         .story-text p {
-            margin-bottom: 18px;
 
-            color: #6c6265;
+            margin: 0 0 16px;
 
-            font-size: 16px;
+            color: var(--text-light);
 
-            line-height: 1.85;
+            font-size: 15px;
+
+            line-height: 1.8;
+
         }
 
 
         .story-quote {
-            position: relative;
 
-            margin-top: 28px;
+            margin-top: 22px;
 
-            padding: 22px 24px 22px 28px;
+            padding: 18px 20px;
 
-            border-left: 4px solid #d96c8b;
+            border-left: 4px solid var(--pink);
 
-            border-radius: 0 15px 15px 0;
+            border-radius: 0 14px 14px 0;
 
             background:
                 linear-gradient(
@@ -452,11 +718,12 @@
 
             color: #63575b;
 
-            font-size: 15px;
+            font-size: 14px;
 
             font-style: italic;
 
             line-height: 1.8;
+
         }
 
 
@@ -465,55 +732,65 @@
         ====================================================== */
 
         .section-title-wrap {
+
+            width: min(700px, 90%);
+
+            margin: 0 auto 40px;
+
             text-align: center;
 
-            margin-bottom: 48px;
         }
 
 
         .section-label {
-            display: inline-block;
 
-            margin-bottom: 12px;
+            display: block;
 
-            color: #d96c8b;
+            margin-bottom: 8px;
+
+            color: var(--pink);
 
             font-size: 13px;
 
             font-weight: 700;
 
-            letter-spacing: 1.5px;
+            letter-spacing: 1.4px;
+
         }
 
 
         .section-title {
-            margin: 0 0 12px;
 
-            color: #342c2f;
+            margin: 0 0 10px;
 
-            font-size: 40px;
+            color: var(--text);
 
-            line-height: 1.25;
+            font-size: 32px;
+
+            line-height: 1.3;
 
             font-weight: 800;
+
         }
 
 
         .section-title span {
-            color: #d96c8b;
+
+            color: var(--pink);
+
         }
 
 
         .section-subtitle {
-            max-width: 680px;
 
-            margin: 0 auto;
+            margin: 0;
 
-            color: #777;
+            color: var(--text-light);
 
-            font-size: 16px;
+            font-size: 14px;
 
             line-height: 1.8;
+
         }
 
 
@@ -522,144 +799,172 @@
         ====================================================== */
 
         .timeline-section {
-            max-width: 1000px;
 
-            margin: 0 auto 110px;
+            width: min(1000px, 90%);
 
-            padding: 0 30px;
+            margin: 0 auto 90px;
+
         }
 
 
         .timeline {
+
             position: relative;
 
-            margin-top: 50px;
+            margin-top: 45px;
+
         }
 
 
         .timeline::before {
+
             content: "";
 
             position: absolute;
 
             top: 0;
+
             bottom: 0;
 
             left: 50%;
 
-            width: 3px;
+            width: 2px;
 
             background:
                 linear-gradient(
                     to bottom,
-                    #f3b4c7,
-                    #d96c8b,
-                    #f3b4c7
+                    #f3bfd0,
+                    var(--pink),
+                    #f3bfd0
                 );
 
             transform: translateX(-50%);
+
         }
 
 
         .timeline-item {
+
             position: relative;
 
             width: 50%;
 
-            padding: 18px 40px;
+            padding: 15px 35px;
+
         }
 
 
         .timeline-item:nth-child(odd) {
+
             left: 0;
 
             text-align: right;
+
         }
 
 
         .timeline-item:nth-child(even) {
+
             left: 50%;
+
         }
 
 
         .timeline-content {
+
             position: relative;
 
-            padding: 28px;
+            padding: 23px;
 
-            background: #ffffff;
+            background: var(--white);
 
-            border: 1px solid #f6dce4;
+            border: 1px solid var(--border);
 
-            border-radius: 20px;
+            border-radius: 18px;
 
             box-shadow:
-                0 12px 35px rgba(70, 30, 45, 0.08);
+                0 8px 28px rgba(80, 40, 50, 0.06);
 
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
+
         }
 
 
         .timeline-content:hover {
+
             transform: translateY(-5px);
 
             box-shadow:
-                0 18px 40px rgba(217, 108, 139, 0.15);
+                0 16px 35px rgba(170, 70, 100, 0.13);
+
         }
 
 
         .timeline-content::after {
+
             content: "";
 
             position: absolute;
 
-            top: 30px;
+            top: 28px;
 
-            width: 14px;
-            height: 14px;
+            width: 13px;
+
+            height: 13px;
 
             border-radius: 50%;
 
-            background: #d96c8b;
+            background: var(--pink);
 
             border: 4px solid #ffffff;
 
             box-shadow:
-                0 0 0 3px #f4bfd0;
+                0 0 0 2px #f4bfd0;
+
         }
 
 
         .timeline-item:nth-child(odd)
         .timeline-content::after {
-            right: -48px;
+
+            right: -44px;
+
         }
 
 
         .timeline-item:nth-child(even)
         .timeline-content::after {
-            left: -48px;
+
+            left: -44px;
+
         }
 
 
         .timeline-content h3 {
-            margin: 0 0 10px;
 
-            color: #d96c8b;
+            margin: 0 0 8px;
 
-            font-size: 20px;
+            color: var(--pink);
+
+            font-size: 18px;
 
             font-weight: 800;
+
         }
 
 
         .timeline-content p {
+
             margin: 0;
 
-            color: #6c6265;
+            color: var(--text-light);
+
+            font-size: 14px;
 
             line-height: 1.75;
+
         }
 
 
@@ -668,27 +973,30 @@
         ====================================================== */
 
         .values-section {
-            max-width: 1200px;
 
-            margin: 0 auto 110px;
+            width: min(1180px, 90%);
 
-            padding: 0 30px;
+            margin: 0 auto 90px;
+
         }
 
 
         .values-grid {
+
             display: grid;
 
             grid-template-columns: repeat(3, 1fr);
 
-            gap: 25px;
+            gap: 22px;
+
         }
 
 
         .value-card {
+
             position: relative;
 
-            padding: 38px 30px;
+            padding: 32px 25px;
 
             text-align: center;
 
@@ -696,111 +1004,371 @@
                 linear-gradient(
                     135deg,
                     #ffffff,
-                    #fff2f6
+                    #fff4f7
                 );
 
-            border: 1px solid #f5dce4;
+            border: 1px solid var(--border);
 
-            border-radius: 23px;
+            border-radius: 20px;
 
             overflow: hidden;
 
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
+
         }
 
 
         .value-card::before {
+
             content: "";
 
             position: absolute;
 
             top: 0;
+
             left: 0;
 
             width: 100%;
-            height: 4px;
+
+            height: 3px;
 
             background:
                 linear-gradient(
                     90deg,
                     #f4bfd0,
-                    #d96c8b,
+                    var(--pink),
                     #f4bfd0
                 );
+
         }
 
 
         .value-card:hover {
-            transform: translateY(-8px);
+
+            transform: translateY(-7px);
 
             box-shadow:
-                0 18px 40px rgba(217, 108, 139, 0.14);
+                0 16px 35px rgba(170, 70, 100, 0.13);
+
         }
 
 
         .value-card i {
+
+            width: 65px;
+
+            height: 65px;
+
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
-            width: 72px;
-            height: 72px;
-
-            margin-bottom: 20px;
+            margin-bottom: 17px;
 
             border-radius: 50%;
 
-            background: #fff0f4;
+            background: var(--pink-light);
 
-            color: #d96c8b;
+            color: var(--pink);
 
-            font-size: 30px;
+            font-size: 27px;
+
         }
 
 
         .value-card h3 {
-            margin: 0 0 14px;
 
-            color: #393134;
+            margin: 0 0 10px;
 
-            font-size: 21px;
+            color: var(--text);
+
+            font-size: 20px;
+
+            font-weight: 700;
+
         }
 
 
         .value-card p {
+
             margin: 0;
 
-            color: #6d6367;
+            color: var(--text-light);
+
+            font-size: 14px;
 
             line-height: 1.75;
+
         }
 
 
         /* =====================================================
            FOOTER
+           ĐỒNG BỘ VỚI BLOG / SHOP
         ====================================================== */
 
         .about-page footer {
+
             margin-top: 0;
+
+            padding: 60px 7% 24px;
+
+            background: #342b2e;
+
+            color: #ffffff;
+
+        }
+
+
+        .about-page .footer-content {
+
+            width: min(1180px, 100%);
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: 1.4fr 1fr 1fr;
+
+            gap: 55px;
+
+        }
+
+
+        .about-page .footer-box h3 {
+
+            margin: 0 0 17px;
+
+            color: #ffffff;
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+        }
+
+
+        .about-page .footer-box p {
+
+            margin: 0;
+
+            color: #d8cdd0;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .about-page .footer-box p + p {
+
+            margin-top: 8px;
+
+        }
+
+
+        .about-page .footer-box p i {
+
+            width: 22px;
+
+            color: #ff91ae;
+
+        }
+
+
+        .about-page .footer-box ul {
+
+            list-style: none;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+        .about-page .footer-box ul li {
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .about-page .footer-box ul li a {
+
+            color: #d8cdd0;
+
+            font-size: 14px;
+
+            transition: color 0.25s ease;
+
+        }
+
+
+        .about-page .footer-box ul li a:hover {
+
+            color: #ff91ae;
+
         }
 
 
         /* =====================================================
-           ANIMATION
+           SOCIAL
         ====================================================== */
 
-        @keyframes aboutFloat {
+        .about-page .social {
 
-            0%,
-            100% {
-                transform: translateY(0);
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 18px;
+
+        }
+
+
+        .about-page .social a {
+
+            width: 37px;
+
+            height: 37px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            color: #ffffff;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .about-page .social a:hover {
+
+            background: var(--pink);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .about-page footer hr {
+
+            width: min(1180px, 100%);
+
+            margin: 40px auto 18px;
+
+            border: 0;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+        }
+
+
+        .about-page .copyright {
+
+            margin: 0;
+
+            text-align: center;
+
+            color: #a99da1;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           TABLET
+        ====================================================== */
+
+        @media (max-width: 900px) {
+
+            .about-page header {
+
+                padding: 0 4%;
+
             }
 
-            50% {
-                transform: translateY(-10px);
+
+            .about-page nav ul {
+
+                gap: 18px;
+
+            }
+
+
+            .about-page nav ul li a {
+
+                font-size: 14px;
+
+            }
+
+
+            .about-page header .logo {
+
+                font-size: 24px;
+
+            }
+
+
+            .about-page header .logo img {
+
+                height: 42px;
+
+                max-width: 50px;
+
+            }
+
+
+            .about-stats {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+
+            .story-section {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+
+            }
+
+
+            .story-image img {
+
+                height: 380px;
+
+            }
+
+
+            .values-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .about-page .footer-content {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 35px;
+
             }
 
         }
@@ -810,154 +1378,233 @@
            MOBILE
         ====================================================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 650px) {
 
-            .about-hero h1 {
-                font-size: 42px;
+            .about-page header {
+
+                min-height: 75px;
+
+                padding: 14px 5%;
+
+                flex-direction: column;
+
+                gap: 12px;
+
             }
 
-            .about-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .story-section {
-                grid-template-columns: 1fr;
-
-                gap: 45px;
-            }
-
-            .story-image img {
-                height: 380px;
-            }
-
-            .values-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-
-        @media (max-width: 768px) {
-
-            .about-page header .logo img {
-                height: 38px;
-
-                max-width: 52px;
-            }
 
             .about-page header .logo {
-                gap: 7px;
+
+                font-size: 24px;
+
+            }
+
+
+            .about-page header .logo img {
+
+                height: 40px;
+
+                max-width: 48px;
+
+            }
+
+
+            .about-page nav {
+
+                width: 100%;
+
+                overflow-x: auto;
+
+                padding-bottom: 3px;
+
+            }
+
+
+            .about-page nav ul {
+
+                width: max-content;
+
+                gap: 22px;
+
+                margin: auto;
+
+            }
+
+
+            .about-page nav ul li a {
+
+                padding: 5px 0;
+
+                font-size: 13px;
+
+            }
+
+
+            .about-page nav ul li a.active::after {
+
+                bottom: -4px;
+
             }
 
 
             .about-hero {
-                min-height: 400px;
 
-                padding: 70px 20px;
+                min-height: 350px;
+
+                padding: 55px 20px;
+
             }
 
 
             .about-hero h1 {
+
                 font-size: 32px;
+
             }
 
 
             .about-hero p {
-                font-size: 15px;
+
+                font-size: 14px;
+
             }
 
 
             .about-stats {
-                margin-top: -40px;
 
-                gap: 14px;
+                width: 90%;
 
-                padding: 0 15px;
+                margin-top: -35px;
+
+                gap: 12px;
+
             }
 
 
             .stat-box {
-                padding: 24px 10px;
+
+                padding: 23px 10px;
+
             }
 
 
             .stat-box i {
-                width: 48px;
-                height: 48px;
 
-                font-size: 20px;
+                width: 47px;
+
+                height: 47px;
+
+                font-size: 19px;
+
             }
 
 
             .stat-box strong {
-                font-size: 25px;
+
+                font-size: 24px;
+
             }
 
 
             .stat-box span {
-                font-size: 12px;
+
+                font-size: 11px;
+
             }
 
 
-            .story-section,
-            .timeline-section,
-            .values-section {
-                padding-left: 20px;
+            .story-section {
 
-                padding-right: 20px;
+                width: 90%;
+
+                margin-bottom: 70px;
+
             }
 
 
             .story-image img {
-                height: 300px;
+
+                height: 290px;
+
             }
 
 
             .story-text {
+
                 text-align: center;
+
             }
 
 
             .story-text h2 {
-                font-size: 30px;
+
+                font-size: 29px;
+
             }
 
 
             .story-text p {
-                font-size: 15px;
+
+                font-size: 14px;
+
             }
 
 
             .section-title {
-                font-size: 30px;
+
+                font-size: 28px;
+
             }
 
 
             .section-subtitle {
-                font-size: 14px;
+
+                font-size: 13px;
+
+            }
+
+
+            .timeline-section {
+
+                width: 90%;
+
             }
 
 
             .timeline {
-                margin-top: 35px;
+
+                margin-top: 30px;
+
             }
 
 
             .timeline::before {
-                left: 10px;
+
+                left: 8px;
+
             }
 
 
             .timeline-item,
             .timeline-item:nth-child(even) {
+
                 left: 0;
 
                 width: 100%;
 
                 padding:
-                    15px 0 15px 35px;
+
+                    12px 0 12px 30px;
 
                 text-align: left;
+
+            }
+
+
+            .timeline-content {
+
+                padding: 20px;
+
             }
 
 
@@ -967,23 +1614,39 @@
             .timeline-item:nth-child(even)
             .timeline-content::after {
 
-                left: -31px;
+                left: -27px;
 
                 right: auto;
 
                 width: 12px;
 
                 height: 12px;
+
             }
 
 
-            .timeline-content {
-                padding: 22px;
+            .values-section {
+
+                width: 90%;
+
+                margin-bottom: 70px;
+
             }
 
 
             .value-card {
-                padding: 32px 22px;
+
+                padding: 30px 20px;
+
+            }
+
+
+            .about-page .footer-content {
+
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+
             }
 
         }
@@ -1002,7 +1665,10 @@
 
 <header>
 
-    <a href="index.html" class="logo">
+    <a
+        href="index.html"
+        class="logo"
+    >
 
         <img
             src="images/logo.png"
@@ -1071,6 +1737,7 @@
 </header>
 
 
+
 <!-- =====================================================
      HERO
 ====================================================== -->
@@ -1098,7 +1765,6 @@
         <p>
 
             Flower Shop không chỉ bán hoa.
-
             Chúng tôi tạo nên những món quà chứa đựng
             cảm xúc, yêu thương và những khoảnh khắc
             đáng nhớ.
@@ -1108,6 +1774,7 @@
     </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -1180,6 +1847,7 @@
 </section>
 
 
+
 <!-- =====================================================
      CÂU CHUYỆN
 ====================================================== -->
@@ -1218,7 +1886,6 @@
         <p>
 
             Flower Shop được bắt đầu từ một niềm tin đơn giản:
-
             một bó hoa đẹp có thể thay lời muốn nói và khiến
             một ngày bình thường trở nên đặc biệt hơn.
 
@@ -1228,11 +1895,9 @@
         <p>
 
             Năm 2026 đánh dấu cột mốc Flower Shop chính thức
-            bắt đầu hành trình của mình.
-
-            Từ những ý tưởng đầu tiên, chúng tôi mong muốn
-            tạo nên những thiết kế hoa tinh tế, phù hợp
-            với từng cảm xúc và khoảnh khắc đặc biệt
+            bắt đầu hành trình của mình. Từ những ý tưởng đầu tiên,
+            chúng tôi mong muốn tạo nên những thiết kế hoa tinh tế,
+            phù hợp với từng cảm xúc và khoảnh khắc đặc biệt
             của khách hàng.
 
         </p>
@@ -1248,6 +1913,7 @@
     </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -1316,6 +1982,7 @@
     </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -1427,6 +2094,7 @@
 </section>
 
 
+
 <!-- =====================================================
      FOOTER
 ====================================================== -->
@@ -1448,12 +2116,50 @@
 
             <p>
 
-                Mang yêu thương đến mọi người
-                bằng những bó hoa tươi đẹp.
+                Mang sắc hoa đến mọi khoảnh khắc.
+                Những bó hoa tươi đẹp được tạo nên
+                để gửi gắm yêu thương và cảm xúc.
 
             </p>
 
+
+            <div class="social">
+
+                <a
+                    href="#"
+                    aria-label="Facebook"
+                >
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                >
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="TikTok"
+                >
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+
+                <a
+                    href="#"
+                    aria-label="YouTube"
+                >
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
+
         </div>
+
 
 
         <!-- LIÊN KẾT -->
@@ -1461,7 +2167,7 @@
         <div class="footer-box">
 
             <h3>
-                Liên kết nhanh
+                Liên kết
             </h3>
 
 
@@ -1513,6 +2219,7 @@
         </div>
 
 
+
         <!-- LIÊN HỆ -->
 
         <div class="footer-box">
@@ -1524,9 +2231,18 @@
 
             <p>
 
+                <i class="fa-solid fa-location-dot"></i>
+
+                Bến Tre, Việt Nam
+
+            </p>
+
+
+            <p>
+
                 <i class="fa-solid fa-phone"></i>
 
-                Hotline: 0123 456 789
+                0123 456 789
 
             </p>
 
@@ -1539,19 +2255,11 @@
 
             </p>
 
-
-            <p>
-
-                <i class="fa-solid fa-location-dot"></i>
-
-                TP. HCM, Việt Nam
-
-            </p>
-
         </div>
 
 
     </div>
+
 
 
     <hr>
@@ -1567,8 +2275,9 @@
 </footer>
 
 
+
 <!-- =====================================================
-     JAVASCRIPT
+     JAVASCRIPT CHUNG
 ====================================================== -->
 
 <script src="script.js"></script>
