@@ -1,1 +1,1300 @@
+<!DOCTYPE html>
+<html lang="vi">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Đăng ký tài khoản Flower Shop"
+    >
+
+    <title>Đăng ký | Flower Shop</title>
+
+    <!-- GOOGLE FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS CHUNG -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS RIÊNG TRANG ĐĂNG KÝ -->
+    <style>
+
+        /* ==============================
+           TRANG ĐĂNG KÝ
+        ============================== */
+
+        .register-page {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8fb 0%,
+                    #fff0f5 50%,
+                    #fff8f3 100%
+                );
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
+        }
+
+
+        /* ==============================
+           HEADER
+        ============================== */
+
+        .register-page header {
+            width: 100%;
+            min-height: 92px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 12px 7%;
+
+            box-sizing: border-box;
+
+            background:
+                rgba(255, 248, 251, 0.97);
+
+            border-bottom:
+                1px solid
+                rgba(232, 93, 139, 0.12);
+
+            box-shadow:
+                0 3px 18px
+                rgba(100, 45, 65, 0.07);
+        }
+
+
+        /* ==============================
+           LOGO
+        ============================== */
+
+        .register-logo {
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            text-decoration: none;
+
+            flex-shrink: 0;
+        }
+
+        .register-logo img {
+            width: 56px;
+            height: 56px;
+
+            object-fit: contain;
+        }
+
+        .register-logo span {
+            font-size: 30px;
+
+            font-weight: 800;
+
+            line-height: 1;
+
+            white-space: nowrap;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff6f9f,
+                    #ff7fa8,
+                    #ffb36b
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+        }
+
+
+        /* ==============================
+           MENU HEADER
+        ============================== */
+
+        .register-nav {
+            display: flex;
+            align-items: center;
+
+            gap: 28px;
+        }
+
+        .register-nav a {
+            color: #4a3b40;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            transition:
+                color 0.25s ease;
+        }
+
+        .register-nav a:hover {
+            color: #e85d8b;
+        }
+
+
+        /* ==============================
+           MAIN
+        ============================== */
+
+        .register-main {
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding:
+                55px 20px 75px;
+        }
+
+
+        /* ==============================
+           CONTAINER
+        ============================== */
+
+        .register-container {
+            width: 100%;
+
+            max-width: 480px;
+        }
+
+
+        /* ==============================
+           CARD
+        ============================== */
+
+        .register-card {
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 40px;
+
+            background:
+                rgba(255, 255, 255, 0.97);
+
+            border:
+                1px solid
+                rgba(232, 93, 139, 0.13);
+
+            border-radius: 24px;
+
+            box-shadow:
+                0 20px 55px
+                rgba(130, 65, 85, 0.12);
+
+            animation:
+                registerFade 0.6s ease;
+        }
+
+
+        /* ==============================
+           ICON
+        ============================== */
+
+        .register-icon {
+            width: 72px;
+            height: 72px;
+
+            margin:
+                0 auto 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe0eb,
+                    #fff0f5
+                );
+
+            color: #e85d8b;
+
+            font-size: 27px;
+        }
+
+
+        /* ==============================
+           TITLE
+        ============================== */
+
+        .register-card h1 {
+            margin: 0;
+
+            text-align: center;
+
+            color: #4a3b40;
+
+            font-size: 30px;
+
+            font-weight: 800;
+        }
+
+        .register-subtitle {
+            margin:
+                8px 0 28px;
+
+            text-align: center;
+
+            color: #8a777e;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           FORM
+        ============================== */
+
+        .register-form .form-group {
+            margin-bottom: 17px;
+        }
+
+        .register-form label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #4a3b40;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+        /* ==============================
+           INPUT
+        ============================== */
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box > i {
+            position: absolute;
+
+            left: 16px;
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            color: #d4869d;
+
+            font-size: 15px;
+
+            pointer-events: none;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 50px;
+
+            box-sizing: border-box;
+
+            padding:
+                0 46px;
+
+            border:
+                1px solid
+                #eadce1;
+
+            border-radius: 14px;
+
+            outline: none;
+
+            background: #fff;
+
+            color: #4a3b40;
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
+
+            font-size: 14px;
+
+            transition:
+                border-color .25s ease,
+                box-shadow .25s ease,
+                background .25s ease;
+        }
+
+        .input-box input::placeholder {
+            color: #b5a5ab;
+        }
+
+        .input-box input:focus {
+            border-color: #ff8eae;
+
+            background: #fffafd;
+
+            box-shadow:
+                0 0 0 4px
+                rgba(255, 111, 159, 0.10);
+        }
+
+
+        /* ==============================
+           NÚT HIỆN MẬT KHẨU
+        ============================== */
+
+        .password-toggle {
+            position: absolute;
+
+            right: 15px;
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            border: 0;
+
+            background: transparent;
+
+            color: #a9969d;
+
+            cursor: pointer;
+
+            padding: 4px;
+        }
+
+        .password-toggle:hover {
+            color: #e85d8b;
+        }
+
+
+        /* ==============================
+           GỢI Ý MẬT KHẨU
+        ============================== */
+
+        .password-note {
+            margin:
+                6px 2px 0;
+
+            color: #a08e95;
+
+            font-size: 11px;
+        }
+
+
+        /* ==============================
+           ĐIỀU KHOẢN
+        ============================== */
+
+        .terms {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 9px;
+
+            margin:
+                18px 0 22px;
+
+            color: #76666c;
+
+            font-size: 12px;
+
+            line-height: 1.55;
+        }
+
+        .terms input {
+            width: 16px;
+            height: 16px;
+
+            margin-top: 2px;
+
+            flex-shrink: 0;
+
+            accent-color: #e85d8b;
+        }
+
+        .terms a {
+            color: #e85d8b;
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ==============================
+           NÚT ĐĂNG KÝ
+        ============================== */
+
+        .register-button {
+            width: 100%;
+            height: 52px;
+
+            border: 0;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff6f9f,
+                    #e85d8b
+                );
+
+            color: #fff;
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 22px
+                rgba(232, 93, 139, 0.22);
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+        .register-button:hover {
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 14px 28px
+                rgba(232, 93, 139, 0.28);
+        }
+
+        .register-button:active {
+            transform:
+                translateY(0);
+        }
+
+
+        /* ==============================
+           ĐƯỜNG NGĂN
+        ============================== */
+
+        .register-divider {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin:
+                27px 0 21px;
+
+            color: #b4a4aa;
+
+            font-size: 12px;
+        }
+
+        .register-divider::before,
+        .register-divider::after {
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: #eee2e7;
+        }
+
+
+        /* ==============================
+           ĐĂNG NHẬP
+        ============================== */
+
+        .login-text {
+            margin: 0;
+
+            text-align: center;
+
+            color: #76666c;
+
+            font-size: 14px;
+        }
+
+        .login-text a {
+            color: #e85d8b;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        .register-footer {
+            padding: 20px;
+
+            text-align: center;
+
+            color: #9a878f;
+
+            font-size: 12px;
+
+            background:
+                rgba(255, 255, 255, .55);
+
+            border-top:
+                1px solid
+                rgba(232, 93, 139, .08);
+        }
+
+
+        /* ==============================
+           ANIMATION
+        ============================== */
+
+        @keyframes registerFade {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+        /* ==============================
+           TABLET
+        ============================== */
+
+        @media (max-width: 768px) {
+
+            .register-page header {
+                padding:
+                    12px 5%;
+            }
+
+            .register-logo img {
+                width: 52px;
+                height: 52px;
+            }
+
+            .register-logo span {
+                font-size: 27px;
+            }
+
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 600px) {
+
+            .register-page header {
+                min-height: auto;
+
+                flex-direction: column;
+
+                gap: 12px;
+
+                padding:
+                    14px 20px;
+            }
+
+            .register-nav {
+                gap: 18px;
+            }
+
+            .register-nav a {
+                font-size: 13px;
+            }
+
+            .register-main {
+                padding:
+                    35px 16px 55px;
+            }
+
+            .register-card {
+                padding:
+                    30px 22px;
+
+                border-radius: 20px;
+            }
+
+            .register-card h1 {
+                font-size: 26px;
+            }
+
+        }
+
+
+        /* ==============================
+           MOBILE NHỎ
+        ============================== */
+
+        @media (max-width: 400px) {
+
+            .register-logo span {
+                font-size: 23px;
+            }
+
+            .register-card {
+                padding:
+                    28px 18px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div class="register-page">
+
+
+    <!-- =================================================
+         HEADER
+    ================================================== -->
+
+    <header>
+
+        <a
+            href="index.html"
+            class="register-logo"
+            aria-label="Flower Shop - Trang chủ"
+        >
+
+            <img
+                src="images/logo.png"
+                alt="Flower Shop"
+            >
+
+            <span>
+                Flower Shop
+            </span>
+
+        </a>
+
+
+        <nav class="register-nav">
+
+            <a href="index.html">
+                Trang chủ
+            </a>
+
+            <a href="shop.html">
+                Shop Hoa
+            </a>
+
+            <a href="dangnhap.html">
+                Đăng nhập
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =================================================
+         MAIN
+    ================================================== -->
+
+    <main class="register-main">
+
+        <div class="register-container">
+
+            <section class="register-card">
+
+
+                <!-- ICON -->
+
+                <div class="register-icon">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                </div>
+
+
+                <!-- TITLE -->
+
+                <h1>
+                    Đăng ký
+                </h1>
+
+                <p class="register-subtitle">
+
+                    Tạo tài khoản để bắt đầu mua hoa tại
+                    <strong>Flower Shop</strong> 🌸
+
+                </p>
+
+
+                <!-- FORM -->
+
+                <form
+                    class="register-form"
+                    id="registerForm"
+                >
+
+
+                    <!-- HỌ TÊN -->
+
+                    <div class="form-group">
+
+                        <label for="fullname">
+                            Họ và tên
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                placeholder="Nhập họ và tên"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Nhập email của bạn"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MẬT KHẨU -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Mật khẩu
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Tạo mật khẩu"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="password"
+                                aria-label="Hiện hoặc ẩn mật khẩu"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                        <p class="password-note">
+                            Mật khẩu tối thiểu 6 ký tự.
+                        </p>
+
+                    </div>
+
+
+                    <!-- XÁC NHẬN MẬT KHẨU -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Xác nhận mật khẩu
+                        </label>
+
+                        <div class="input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Nhập lại mật khẩu"
+                                autocomplete="new-password"
+                                minlength="6"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="confirmPassword"
+                                aria-label="Hiện hoặc ẩn mật khẩu"
+                            >
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ĐIỀU KHOẢN -->
+
+                    <label class="terms">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            required
+                        >
+
+                        <span>
+
+                            Tôi đồng ý với
+
+                            <a
+                                href="#"
+                                id="termsLink"
+                            >
+                                điều khoản sử dụng
+                            </a>
+
+                            và chính sách của Flower Shop.
+
+                        </span>
+
+                    </label>
+
+
+                    <!-- NÚT ĐĂNG KÝ -->
+
+                    <button
+                        type="submit"
+                        class="register-button"
+                    >
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Tạo tài khoản
+
+                    </button>
+
+                </form>
+
+
+                <!-- DIVIDER -->
+
+                <div class="register-divider">
+                    hoặc
+                </div>
+
+
+                <!-- ĐĂNG NHẬP -->
+
+                <p class="login-text">
+
+                    Đã có tài khoản?
+
+                    <a href="dangnhap.html">
+                        Đăng nhập ngay
+                    </a>
+
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================== -->
+
+    <footer class="register-footer">
+
+        © 2026 Flower Shop.
+        Mang sắc hoa đến mọi khoảnh khắc 🌷
+
+    </footer>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+    /* ================================================
+       HIỆN / ẨN MẬT KHẨU
+    ================================================= */
+
+    document
+        .querySelectorAll(".password-toggle")
+        .forEach(function(button) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    const targetId =
+                        this.dataset.target;
+
+                    const input =
+                        document.getElementById(
+                            targetId
+                        );
+
+                    const icon =
+                        this.querySelector("i");
+
+
+                    if (
+                        input.type === "password"
+                    ) {
+
+                        input.type =
+                            "text";
+
+                        icon.classList.remove(
+                            "fa-eye"
+                        );
+
+                        icon.classList.add(
+                            "fa-eye-slash"
+                        );
+
+                    } else {
+
+                        input.type =
+                            "password";
+
+                        icon.classList.remove(
+                            "fa-eye-slash"
+                        );
+
+                        icon.classList.add(
+                            "fa-eye"
+                        );
+
+                    }
+
+                }
+            );
+
+        });
+
+
+
+    /* ================================================
+       ĐĂNG KÝ TÀI KHOẢN
+       
+       Lưu tài khoản demo vào localStorage.
+    ================================================= */
+
+    document
+        .getElementById("registerForm")
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const fullname =
+                    document
+                        .getElementById("fullname")
+                        .value
+                        .trim();
+
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim()
+                        .toLowerCase();
+
+
+                const password =
+                    document
+                        .getElementById("password")
+                        .value;
+
+
+                const confirmPassword =
+                    document
+                        .getElementById(
+                            "confirmPassword"
+                        )
+                        .value;
+
+
+                const terms =
+                    document
+                        .getElementById("terms")
+                        .checked;
+
+
+
+                /* Kiểm tra thông tin */
+
+                if (
+                    !fullname ||
+                    !email ||
+                    !password ||
+                    !confirmPassword
+                ) {
+
+                    alert(
+                        "Vui lòng nhập đầy đủ thông tin."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* Kiểm tra độ dài mật khẩu */
+
+                if (
+                    password.length < 6
+                ) {
+
+                    alert(
+                        "Mật khẩu phải có ít nhất 6 ký tự."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* Kiểm tra 2 mật khẩu */
+
+                if (
+                    password !==
+                    confirmPassword
+                ) {
+
+                    alert(
+                        "Mật khẩu xác nhận không khớp."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* Kiểm tra điều khoản */
+
+                if (!terms) {
+
+                    alert(
+                        "Vui lòng đồng ý với điều khoản sử dụng."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* =====================================
+                   KIỂM TRA EMAIL ĐÃ ĐĂNG KÝ
+                ====================================== */
+
+                const existingUser =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "flowerShopUser"
+                        )
+                    );
+
+
+                if (
+                    existingUser &&
+                    existingUser.email === email
+                ) {
+
+                    alert(
+                        "Email này đã được đăng ký. Vui lòng dùng email khác."
+                    );
+
+                    return;
+
+                }
+
+
+
+                /* =====================================
+                   TẠO TÀI KHOẢN
+                ====================================== */
+
+                const user = {
+
+                    fullname:
+                        fullname,
+
+                    email:
+                        email,
+
+                    password:
+                        password
+
+                };
+
+
+                localStorage.setItem(
+                    "flowerShopUser",
+                    JSON.stringify(user)
+                );
+
+
+                /* Lưu tên người dùng */
+
+                localStorage.setItem(
+                    "flowerShopUserName",
+                    fullname
+                );
+
+
+
+                /* =====================================
+                   THÔNG BÁO THÀNH CÔNG
+                ====================================== */
+
+                alert(
+                    "Đăng ký tài khoản thành công! 🌸\n\nBạn sẽ được chuyển đến trang đăng nhập."
+                );
+
+
+
+                /* Chuyển sang đăng nhập */
+
+                window.location.href =
+                    "dangnhap.html";
+
+            }
+        );
+
+
+
+    /* ================================================
+       ĐIỀU KHOẢN
+    ================================================= */
+
+    document
+        .getElementById("termsLink")
+        .addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+                alert(
+                    "Điều khoản sử dụng Flower Shop sẽ được bổ sung ở bước tiếp theo."
+                );
+
+            }
+        );
+
+</script>
+
+</body>
+
+</html>
