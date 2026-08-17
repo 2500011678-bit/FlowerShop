@@ -4,7 +4,11 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
@@ -15,7 +19,7 @@
 
 
     <!-- =====================================================
-         GOOGLE FONT - HỖ TRỢ TIẾNG VIỆT
+         GOOGLE FONT
     ====================================================== -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +47,8 @@
 
 
     <!-- =====================================================
-         CSS BLOG
+         BLOG CSS
+         ĐỒNG BỘ KÍCH CỠ VỚI SHOP.HTML
     ====================================================== -->
 
     <style>
@@ -89,7 +94,7 @@
         input,
         textarea,
         select {
-            font-family: inherit;
+            font-family: "Be Vietnam Pro", sans-serif;
         }
 
 
@@ -110,12 +115,15 @@
 
             --flower-border: #f1dce2;
 
+            --flower-header-pink: #f13f78;
+            --flower-button: #ff4f81;
+
         }
 
 
         /* =====================================================
            HEADER
-           ĐỒNG BỘ LOGO VỚI CÁC TRANG KHÁC
+           KÍCH THƯỚC ĐỒNG BỘ SHOP
         ====================================================== */
 
         header {
@@ -145,7 +153,7 @@
 
 
         /* =====================================================
-           LOGO - ĐÃ ĐỒNG BỘ
+           LOGO
         ====================================================== */
 
         header .logo {
@@ -236,6 +244,7 @@
             position: relative;
 
             font-size: 16px;
+
             font-weight: 600;
 
             color: #40383b;
@@ -294,19 +303,29 @@
 
             position: relative;
 
-            padding: 80px 20px 75px;
+            min-height: 350px;
+
+            padding: 85px 7% 80px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
 
             text-align: center;
 
             background:
                 radial-gradient(
                     circle at 15% 30%,
-                    rgba(255, 194, 210, 0.35),
+                    rgba(255, 194, 210, 0.38),
                     transparent 30%
                 ),
                 radial-gradient(
                     circle at 85% 70%,
-                    rgba(255, 222, 232, 0.4),
+                    rgba(255, 222, 232, 0.42),
                     transparent 30%
                 ),
                 linear-gradient(
@@ -375,7 +394,7 @@
 
         .blog-hero h1 {
 
-            font-size: clamp(32px, 4vw, 52px);
+            font-size: 48px;
 
             line-height: 1.2;
 
@@ -397,7 +416,7 @@
 
         .blog-hero p {
 
-            max-width: 750px;
+            width: min(750px, 90%);
 
             margin: 0 auto;
 
@@ -405,16 +424,19 @@
 
             font-size: 16px;
 
+            line-height: 1.8;
+
         }
 
 
         /* =====================================================
-           BLOG CONTAINER
+           MAIN CONTAINER
+           ĐỒNG BỘ ĐỘ RỘNG VỚI SHOP
         ====================================================== */
 
         .blog-container {
 
-            width: min(1180px, 90%);
+            width: min(1180px, 86%);
 
             margin: 0 auto;
 
@@ -424,7 +446,7 @@
 
 
         /* =====================================================
-           SECTION TITLE
+           SECTION HEADING
         ====================================================== */
 
         .section-heading {
@@ -438,6 +460,8 @@
 
         .section-heading .label {
 
+            display: block;
+
             color: var(--flower-pink);
 
             font-size: 13px;
@@ -446,8 +470,6 @@
 
             letter-spacing: 1.4px;
 
-            display: block;
-
             margin-bottom: 8px;
 
         }
@@ -455,7 +477,9 @@
 
         .section-heading h2 {
 
-            font-size: 32px;
+            font-size: 34px;
+
+            line-height: 1.25;
 
             color: var(--flower-text);
 
@@ -475,13 +499,184 @@
 
         .section-heading p {
 
-            max-width: 650px;
+            max-width: 680px;
 
-            margin: auto;
+            margin: 0 auto;
 
             color: var(--flower-text-light);
 
             font-size: 15px;
+
+            line-height: 1.8;
+
+        }
+
+
+        /* =====================================================
+           FEATURED BLOG
+        ====================================================== */
+
+        .featured-blog {
+
+            display: grid;
+
+            grid-template-columns: 1.15fr 0.85fr;
+
+            min-height: 420px;
+
+            margin-bottom: 75px;
+
+            background: #ffffff;
+
+            border: 1px solid var(--flower-border);
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 28px rgba(80, 40, 50, 0.06);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        .featured-blog:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 18px 40px rgba(170, 70, 100, 0.13);
+
+        }
+
+
+        .featured-image {
+
+            min-height: 420px;
+
+            overflow: hidden;
+
+            background: #f9edf0;
+
+        }
+
+
+        .featured-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+
+        }
+
+
+        .featured-blog:hover .featured-image img {
+
+            transform: scale(1.04);
+
+        }
+
+
+        .featured-content {
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            padding: 45px;
+
+        }
+
+
+        .featured-content .small-label {
+
+            color: var(--flower-pink);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .featured-content h2 {
+
+            color: var(--flower-text);
+
+            font-size: 30px;
+
+            line-height: 1.35;
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .featured-content p {
+
+            color: var(--flower-text-light);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 23px;
+
+        }
+
+
+        .featured-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            width: fit-content;
+
+            padding: 12px 22px;
+
+            border-radius: 30px;
+
+            background: var(--flower-pink);
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: all 0.25s ease;
+
+        }
+
+
+        .featured-button:hover {
+
+            background: var(--flower-pink-dark);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(185, 79, 112, 0.25);
 
         }
 
@@ -651,7 +846,7 @@
 
             line-height: 1.35;
 
-            font-weight: 750;
+            font-weight: 700;
 
             margin-bottom: 11px;
 
@@ -709,155 +904,6 @@
 
 
         /* =====================================================
-           FEATURED ARTICLE
-        ====================================================== */
-
-        .featured-blog {
-
-            display: grid;
-
-            grid-template-columns: 1.15fr 0.85fr;
-
-            margin-bottom: 70px;
-
-            background: #ffffff;
-
-            border: 1px solid var(--flower-border);
-
-            border-radius: 22px;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 8px 28px rgba(80, 40, 50, 0.06);
-
-        }
-
-
-        .featured-image {
-
-            min-height: 420px;
-
-            overflow: hidden;
-
-        }
-
-
-        .featured-image img {
-
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-            transition: transform 0.5s ease;
-
-        }
-
-
-        .featured-blog:hover .featured-image img {
-
-            transform: scale(1.04);
-
-        }
-
-
-        .featured-content {
-
-            display: flex;
-
-            flex-direction: column;
-
-            justify-content: center;
-
-            padding: 45px;
-
-        }
-
-
-        .featured-content .small-label {
-
-            color: var(--flower-pink);
-
-            font-size: 13px;
-
-            font-weight: 700;
-
-            letter-spacing: 1px;
-
-            margin-bottom: 12px;
-
-        }
-
-
-        .featured-content h2 {
-
-            color: var(--flower-text);
-
-            font-size: 30px;
-
-            line-height: 1.3;
-
-            margin-bottom: 15px;
-
-        }
-
-
-        .featured-content p {
-
-            color: var(--flower-text-light);
-
-            font-size: 15px;
-
-            line-height: 1.8;
-
-            margin-bottom: 23px;
-
-        }
-
-
-        .featured-button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 10px;
-
-            width: fit-content;
-
-            padding: 12px 22px;
-
-            border-radius: 30px;
-
-            background: var(--flower-pink);
-
-            color: white;
-
-            font-size: 14px;
-
-            font-weight: 700;
-
-            transition: all 0.25s ease;
-
-        }
-
-
-        .featured-button:hover {
-
-            background: var(--flower-pink-dark);
-
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 8px 20px rgba(185, 79, 112, 0.25);
-
-        }
-
-
-        /* =====================================================
            CTA
         ====================================================== */
 
@@ -905,6 +951,8 @@
             color: var(--flower-text);
 
             font-size: 30px;
+
+            line-height: 1.35;
 
             margin-bottom: 10px;
 
@@ -960,6 +1008,7 @@
 
         /* =====================================================
            FOOTER
+           ĐỒNG BỘ SHOP
         ====================================================== */
 
         footer {
@@ -1083,7 +1132,7 @@
 
             border-radius: 50%;
 
-            background: rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.08);
 
             color: white;
 
@@ -1109,7 +1158,7 @@
 
             border: 0;
 
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
 
         }
 
@@ -1126,7 +1175,7 @@
 
 
         /* =====================================================
-           RESPONSIVE TABLET
+           TABLET
         ====================================================== */
 
         @media (max-width: 900px) {
@@ -1201,7 +1250,7 @@
 
 
         /* =====================================================
-           RESPONSIVE MOBILE
+           MOBILE
         ====================================================== */
 
         @media (max-width: 650px) {
@@ -1278,6 +1327,8 @@
 
 
             .blog-hero {
+
+                min-height: 300px;
 
                 padding: 55px 20px;
 
@@ -1392,20 +1443,16 @@
 </head>
 
 
+
 <body>
 
 
 <!-- =====================================================
      HEADER
-====================================================== -->
+===================================================== -->
 
 <header>
 
-
-    <!-- =================================================
-         LOGO
-         ĐỒNG BỘ VỚI INDEX + SHOP
-    ================================================== -->
 
     <a
         href="index.html"
@@ -1424,9 +1471,6 @@
     </a>
 
 
-    <!-- =================================================
-         NAVIGATION
-    ================================================== -->
 
     <nav>
 
@@ -1492,15 +1536,17 @@
 
     </nav>
 
+
 </header>
 
 
 
 <!-- =====================================================
-     BLOG HERO
-====================================================== -->
+     HERO
+===================================================== -->
 
 <section class="blog-hero">
+
 
     <span class="blog-label">
         ✦ BLOG FLOWER SHOP
@@ -1525,19 +1571,20 @@
 
     </p>
 
+
 </section>
 
 
 
 <!-- =====================================================
-     BLOG CONTENT
-====================================================== -->
+     MAIN
+===================================================== -->
 
 <main class="blog-container">
 
 
     <!-- =================================================
-         BÀI NỔI BẬT
+         SECTION INTRO
     ================================================== -->
 
     <div class="section-heading">
@@ -1570,7 +1617,7 @@
 
 
     <!-- =================================================
-         FEATURED BLOG
+         FEATURED
     ================================================== -->
 
     <article class="featured-blog">
@@ -1587,6 +1634,7 @@
 
 
         <div class="featured-content">
+
 
             <span class="small-label">
                 🌹 Ý NGHĨA LOÀI HOA
@@ -1619,14 +1667,16 @@
 
             </a>
 
+
         </div>
+
 
     </article>
 
 
 
     <!-- =================================================
-         DANH SÁCH BÀI VIẾT
+         BLOG LIST TITLE
     ================================================== -->
 
     <div
@@ -1653,12 +1703,14 @@
 
 
 
+    <!-- =================================================
+         BLOG GRID
+    ================================================== -->
+
     <div class="blog-grid">
 
 
-        <!-- =================================================
-             BLOG 1
-        ================================================== -->
+        <!-- BLOG 1 -->
 
         <article class="blog-card">
 
@@ -1673,13 +1725,10 @@
 
 
                 <span class="blog-category">
-
                     🌹 Ý NGHĨA HOA
-
                 </span>
 
             </div>
-
 
 
             <div class="blog-content">
@@ -1720,15 +1769,15 @@
 
                 </a>
 
+
             </div>
+
 
         </article>
 
 
 
-        <!-- =================================================
-             BLOG 2
-        ================================================== -->
+        <!-- BLOG 2 -->
 
         <article class="blog-card">
 
@@ -1743,13 +1792,10 @@
 
 
                 <span class="blog-category">
-
                     🌿 CHĂM SÓC HOA
-
                 </span>
 
             </div>
-
 
 
             <div class="blog-content">
@@ -1789,15 +1835,15 @@
 
                 </a>
 
+
             </div>
+
 
         </article>
 
 
 
-        <!-- =================================================
-             BLOG 3
-        ================================================== -->
+        <!-- BLOG 3 -->
 
         <article class="blog-card">
 
@@ -1812,13 +1858,10 @@
 
 
                 <span class="blog-category">
-
                     🌸 HOA THEO MÙA
-
                 </span>
 
             </div>
-
 
 
             <div class="blog-content">
@@ -1858,15 +1901,15 @@
 
                 </a>
 
+
             </div>
+
 
         </article>
 
 
 
-        <!-- =================================================
-             BLOG 4
-        ================================================== -->
+        <!-- BLOG 4 -->
 
         <article class="blog-card">
 
@@ -1881,13 +1924,10 @@
 
 
                 <span class="blog-category">
-
                     💐 KINH NGHIỆM
-
                 </span>
 
             </div>
-
 
 
             <div class="blog-content">
@@ -1927,7 +1967,9 @@
 
                 </a>
 
+
             </div>
+
 
         </article>
 
@@ -1972,6 +2014,7 @@
 
         </a>
 
+
     </section>
 
 
@@ -1981,17 +2024,13 @@
 
 <!-- =====================================================
      FOOTER
-====================================================== -->
+===================================================== -->
 
 <footer>
 
 
     <div class="footer-content">
 
-
-        <!-- =================================================
-             THÔNG TIN
-        ================================================== -->
 
         <div class="footer-box">
 
@@ -2052,15 +2091,13 @@
 
                 </a>
 
+
             </div>
+
 
         </div>
 
 
-
-        <!-- =================================================
-             LIÊN KẾT
-        ================================================== -->
 
         <div class="footer-box">
 
@@ -2074,68 +2111,53 @@
 
 
                 <li>
-
                     <a href="index.html">
                         Trang chủ
                     </a>
-
                 </li>
 
 
                 <li>
-
                     <a href="shop.html">
                         Shop Hoa
                     </a>
-
                 </li>
 
 
                 <li>
-
                     <a href="dichvu.html">
                         Dịch vụ
                     </a>
-
                 </li>
 
 
                 <li>
-
                     <a href="blog.html">
                         Blog
                     </a>
-
                 </li>
 
 
                 <li>
-
                     <a href="gioithieu.html">
                         Giới thiệu
                     </a>
-
                 </li>
 
 
                 <li>
-
                     <a href="hotro.html">
                         Hỗ trợ
                     </a>
-
                 </li>
 
 
             </ul>
 
+
         </div>
 
 
-
-        <!-- =================================================
-             LIÊN HỆ
-        ================================================== -->
 
         <div class="footer-box">
 
@@ -2170,6 +2192,7 @@
                 flowershop@gmail.com
 
             </p>
+
 
         </div>
 
