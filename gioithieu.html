@@ -4,6 +4,7 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
@@ -49,35 +50,57 @@
          CSS CHUNG
     ====================================================== -->
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 
     <!-- =====================================================
-         CSS RIÊNG TRANG GIỚI THIỆU
-         TONE ĐỒNG BỘ VỚI SHOP
+         CSS RIÊNG GIỚI THIỆU
     ====================================================== -->
 
     <style>
 
         /* =====================================================
-           FONT + BOX
+           FONT
         ====================================================== */
 
+        html,
+        body,
         .about-page,
-        .about-page * {
+        .about-page *,
+        .about-page h1,
+        .about-page h2,
+        .about-page h3,
+        .about-page h4,
+        .about-page h5,
+        .about-page h6,
+        .about-page p,
+        .about-page a,
+        .about-page span,
+        .about-page button {
             font-family: "Be Vietnam Pro", sans-serif;
-            box-sizing: border-box;
         }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
 
         .about-page {
             margin: 0;
-            padding: 0;
-
             overflow-x: hidden;
+            background: #fffafd;
+            color: #3b3033;
+        }
 
-            background: #fffafc;
 
-            color: #3d3337;
+        .about-page *,
+        .about-page *::before,
+        .about-page *::after {
+            box-sizing: border-box;
         }
 
 
@@ -87,7 +110,12 @@
 
         .about-page header {
             position: relative;
-            z-index: 100;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+
+            width: 100%;
         }
 
 
@@ -107,15 +135,13 @@
             width: auto;
             height: 45px;
 
-            max-width: 55px;
+            max-width: 60px;
 
             object-fit: contain;
         }
 
 
         .about-page header .logo span {
-            display: inline-block;
-
             white-space: nowrap;
         }
 
@@ -127,7 +153,7 @@
         .about-hero {
             position: relative;
 
-            min-height: 480px;
+            min-height: 470px;
 
             display: flex;
             align-items: center;
@@ -137,17 +163,14 @@
 
             text-align: center;
 
-            overflow: hidden;
-
             background:
                 linear-gradient(
-                    rgba(255, 79, 129, 0.40),
-                    rgba(177, 76, 108, 0.48)
+                    rgba(110, 47, 68, 0.48),
+                    rgba(110, 47, 68, 0.52)
                 ),
                 url("images/about-banner.jpg");
 
             background-size: cover;
-
             background-position: center;
 
             color: #ffffff;
@@ -162,7 +185,7 @@
             top: 70px;
             left: 10%;
 
-            color: rgba(255, 255, 255, 0.65);
+            color: rgba(255,255,255,0.5);
 
             font-size: 28px;
 
@@ -178,7 +201,7 @@
             right: 10%;
             bottom: 70px;
 
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(255,255,255,0.45);
 
             font-size: 32px;
 
@@ -191,8 +214,6 @@
 
             z-index: 2;
 
-            width: 100%;
-
             max-width: 850px;
         }
 
@@ -204,11 +225,11 @@
 
             padding: 8px 18px;
 
-            border: 1px solid rgba(255, 255, 255, 0.45);
+            border: 1px solid rgba(255,255,255,0.45);
 
             border-radius: 50px;
 
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255,255,255,0.12);
 
             backdrop-filter: blur(8px);
 
@@ -232,21 +253,21 @@
             font-weight: 800;
 
             text-shadow:
-                0 4px 15px rgba(0, 0, 0, 0.22);
+                0 4px 15px rgba(0,0,0,0.25);
         }
 
 
         .about-hero h1 span {
-            color: #ffe0ea;
+            color: #ffd8e4;
         }
 
 
         .about-hero p {
             max-width: 720px;
 
-            margin: 0 auto;
+            margin: auto;
 
-            color: rgba(255, 255, 255, 0.95);
+            color: rgba(255,255,255,0.95);
 
             font-size: 18px;
 
@@ -284,12 +305,12 @@
 
             background: #ffffff;
 
-            border: 1px solid #f8dce5;
+            border: 1px solid #f6dce5;
 
             border-radius: 20px;
 
             box-shadow:
-                0 15px 40px rgba(255, 79, 129, 0.10);
+                0 15px 40px rgba(90, 45, 60, 0.09);
 
             transition:
                 transform 0.3s ease,
@@ -298,15 +319,19 @@
 
 
         .stat-box:hover {
-            transform: translateY(-8px);
+            transform: translateY(-7px);
 
             box-shadow:
-                0 20px 45px rgba(255, 79, 129, 0.18);
+                0 20px 45px rgba(217,108,139,0.16);
         }
 
 
+        /* =====================================================
+           ICON - STAT
+        ====================================================== */
+
         .stat-box i {
-            display: inline-flex;
+            display: flex;
 
             align-items: center;
             justify-content: center;
@@ -314,15 +339,21 @@
             width: 58px;
             height: 58px;
 
-            margin-bottom: 16px;
+            margin: 0 auto 16px;
 
             border-radius: 50%;
 
             background: #fff0f5;
 
-            color: #ff4f81;
+            color: #d96c8b;
 
-            font-size: 24px;
+            font-family: "Font Awesome 6 Free" !important;
+
+            font-size: 23px;
+
+            font-style: normal;
+
+            line-height: 1;
         }
 
 
@@ -331,7 +362,7 @@
 
             margin-bottom: 6px;
 
-            color: #ff4f81;
+            color: #d96c8b;
 
             font-size: 31px;
 
@@ -385,7 +416,7 @@
             width: 100%;
             height: 100%;
 
-            border: 2px solid #ffc5d7;
+            border: 2px solid #f3bfd0;
 
             border-radius: 25px;
 
@@ -404,7 +435,7 @@
             border-radius: 25px;
 
             box-shadow:
-                0 20px 45px rgba(255, 79, 129, 0.14);
+                0 20px 45px rgba(0,0,0,0.13);
 
             transition: transform 0.5s ease;
         }
@@ -425,7 +456,7 @@
 
             margin-bottom: 14px;
 
-            color: #ff4f81;
+            color: #d96c8b;
 
             font-size: 13px;
 
@@ -438,7 +469,7 @@
         .story-text h2 {
             margin: 0 0 22px;
 
-            color: #393134;
+            color: #342c2f;
 
             font-size: 40px;
 
@@ -449,12 +480,12 @@
 
 
         .story-text h2 span {
-            color: #ff4f81;
+            color: #d96c8b;
         }
 
 
         .story-text p {
-            margin: 0 0 18px;
+            margin-bottom: 18px;
 
             color: #6c6265;
 
@@ -465,20 +496,18 @@
 
 
         .story-quote {
-            position: relative;
-
             margin-top: 28px;
 
             padding: 22px 24px 22px 28px;
 
-            border-left: 4px solid #ff4f81;
+            border-left: 4px solid #d96c8b;
 
             border-radius: 0 15px 15px 0;
 
             background:
                 linear-gradient(
                     135deg,
-                    #fff1f5,
+                    #fff4f7,
                     #fffafd
                 );
 
@@ -497,9 +526,9 @@
         ====================================================== */
 
         .section-title-wrap {
-            text-align: center;
-
             margin-bottom: 48px;
+
+            text-align: center;
         }
 
 
@@ -508,7 +537,7 @@
 
             margin-bottom: 12px;
 
-            color: #ff4f81;
+            color: #d96c8b;
 
             font-size: 13px;
 
@@ -521,7 +550,7 @@
         .section-title {
             margin: 0 0 12px;
 
-            color: #393134;
+            color: #342c2f;
 
             font-size: 40px;
 
@@ -532,7 +561,7 @@
 
 
         .section-title span {
-            color: #ff4f81;
+            color: #d96c8b;
         }
 
 
@@ -584,9 +613,9 @@
             background:
                 linear-gradient(
                     to bottom,
-                    #ffc4d6,
-                    #ff4f81,
-                    #ffc4d6
+                    #f3b4c7,
+                    #d96c8b,
+                    #f3b4c7
                 );
 
             transform: translateX(-50%);
@@ -626,7 +655,7 @@
             border-radius: 20px;
 
             box-shadow:
-                0 12px 35px rgba(255, 79, 129, 0.08);
+                0 12px 35px rgba(70,30,45,0.08);
 
             transition:
                 transform 0.3s ease,
@@ -638,7 +667,7 @@
             transform: translateY(-5px);
 
             box-shadow:
-                0 18px 40px rgba(255, 79, 129, 0.15);
+                0 18px 40px rgba(217,108,139,0.14);
         }
 
 
@@ -654,12 +683,12 @@
 
             border-radius: 50%;
 
-            background: #ff4f81;
+            background: #d96c8b;
 
             border: 4px solid #ffffff;
 
             box-shadow:
-                0 0 0 3px #ffc5d7;
+                0 0 0 3px #f4bfd0;
         }
 
 
@@ -678,7 +707,7 @@
         .timeline-content h3 {
             margin: 0 0 10px;
 
-            color: #ff4f81;
+            color: #d96c8b;
 
             font-size: 20px;
 
@@ -728,7 +757,7 @@
                 linear-gradient(
                     135deg,
                     #ffffff,
-                    #fff1f5
+                    #fff3f7
                 );
 
             border: 1px solid #f5dce4;
@@ -757,9 +786,9 @@
             background:
                 linear-gradient(
                     90deg,
-                    #ffc5d7,
-                    #ff4f81,
-                    #ffc5d7
+                    #f4bfd0,
+                    #d96c8b,
+                    #f4bfd0
                 );
         }
 
@@ -768,12 +797,16 @@
             transform: translateY(-8px);
 
             box-shadow:
-                0 18px 40px rgba(255, 79, 129, 0.14);
+                0 18px 40px rgba(217,108,139,0.13);
         }
 
 
+        /* =====================================================
+           ICON - GIÁ TRỊ
+        ====================================================== */
+
         .value-card i {
-            display: inline-flex;
+            display: flex;
 
             align-items: center;
             justify-content: center;
@@ -781,15 +814,21 @@
             width: 72px;
             height: 72px;
 
-            margin-bottom: 20px;
+            margin: 0 auto 20px;
 
             border-radius: 50%;
 
             background: #fff0f5;
 
-            color: #ff4f81;
+            color: #d96c8b;
 
-            font-size: 30px;
+            font-family: "Font Awesome 6 Free" !important;
+
+            font-size: 29px;
+
+            font-style: normal;
+
+            line-height: 1;
         }
 
 
@@ -808,134 +847,6 @@
             color: #6d6367;
 
             line-height: 1.75;
-        }
-
-
-        /* =====================================================
-           CTA
-        ====================================================== */
-
-        .about-cta {
-            max-width: 1200px;
-
-            margin: 0 auto 100px;
-
-            padding: 0 30px;
-        }
-
-
-        .about-cta-box {
-            position: relative;
-
-            padding: 65px 30px;
-
-            text-align: center;
-
-            border-radius: 28px;
-
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #ff7fa2,
-                    #ff4f81
-                );
-
-            color: #ffffff;
-
-            box-shadow:
-                0 20px 50px rgba(255, 79, 129, 0.20);
-        }
-
-
-        .about-cta-box::before {
-            content: "✿";
-
-            position: absolute;
-
-            top: -20px;
-            left: 8%;
-
-            color: rgba(255,255,255,0.18);
-
-            font-size: 100px;
-        }
-
-
-        .about-cta-box::after {
-            content: "✦";
-
-            position: absolute;
-
-            right: 10%;
-            bottom: -30px;
-
-            color: rgba(255,255,255,0.18);
-
-            font-size: 100px;
-        }
-
-
-        .about-cta-box > * {
-            position: relative;
-
-            z-index: 2;
-        }
-
-
-        .about-cta-box h2 {
-            margin: 0 0 15px;
-
-            font-size: 36px;
-
-            font-weight: 800;
-        }
-
-
-        .about-cta-box p {
-            max-width: 650px;
-
-            margin: 0 auto 28px;
-
-            color: rgba(255,255,255,0.92);
-
-            line-height: 1.8;
-        }
-
-
-        .about-cta-button {
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 10px;
-
-            padding: 13px 25px;
-
-            border-radius: 50px;
-
-            background: #ffffff;
-
-            color: #ff4f81;
-
-            text-decoration: none;
-
-            font-size: 14px;
-
-            font-weight: 700;
-
-            transition: all 0.3s ease;
-        }
-
-
-        .about-cta-button:hover {
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 10px 25px rgba(0,0,0,0.12);
         }
 
 
@@ -967,7 +878,7 @@
 
 
         /* =====================================================
-           TABLET
+           MOBILE
         ====================================================== */
 
         @media (max-width: 900px) {
@@ -1000,10 +911,6 @@
 
         }
 
-
-        /* =====================================================
-           MOBILE
-        ====================================================== */
 
         @media (max-width: 768px) {
 
@@ -1070,10 +977,8 @@
 
             .story-section,
             .timeline-section,
-            .values-section,
-            .about-cta {
+            .values-section {
                 padding-left: 20px;
-
                 padding-right: 20px;
             }
 
@@ -1142,7 +1047,6 @@
                 right: auto;
 
                 width: 12px;
-
                 height: 12px;
             }
 
@@ -1154,16 +1058,6 @@
 
             .value-card {
                 padding: 32px 22px;
-            }
-
-
-            .about-cta-box {
-                padding: 50px 22px;
-            }
-
-
-            .about-cta-box h2 {
-                font-size: 28px;
             }
 
         }
@@ -1182,9 +1076,6 @@
 
 <header>
 
-
-    <!-- LOGO -->
-
     <a
         href="index.html"
         class="logo"
@@ -1201,8 +1092,6 @@
 
     </a>
 
-
-    <!-- MENU -->
 
     <nav>
 
@@ -1265,9 +1154,7 @@
 
 <section class="about-hero">
 
-
     <div class="about-hero-content">
-
 
         <span class="about-hero-label">
             ✦ VỀ FLOWER SHOP
@@ -1295,9 +1182,7 @@
 
         </p>
 
-
     </div>
-
 
 </section>
 
@@ -1391,7 +1276,6 @@
 
     <div class="story-text">
 
-
         <span class="story-label">
             ✦ CÂU CHUYỆN CỦA CHÚNG TÔI
         </span>
@@ -1438,9 +1322,7 @@
 
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -1453,7 +1335,6 @@
 
 
     <div class="section-title-wrap">
-
 
         <span class="section-label">
             ✦ HÀNH TRÌNH CỦA CHÚNG TÔI
@@ -1480,7 +1361,6 @@
 
         </p>
 
-
     </div>
 
 
@@ -1489,9 +1369,7 @@
 
         <div class="timeline-item">
 
-
             <div class="timeline-content">
-
 
                 <h3>
                     2026 - Khởi nghiệp
@@ -1507,15 +1385,12 @@
 
                 </p>
 
-
             </div>
-
 
         </div>
 
 
     </div>
-
 
 </section>
 
@@ -1528,7 +1403,6 @@
 
 
     <div class="section-title-wrap">
-
 
         <span class="section-label">
             ✦ GIÁ TRỊ FLOWER SHOP
@@ -1553,22 +1427,17 @@
 
         </p>
 
-
     </div>
 
 
     <div class="values-grid">
 
 
-        <!-- =================================================
-             SỨ MỆNH
-        ================================================== -->
+        <!-- SỨ MỆNH -->
 
         <div class="value-card">
 
-
             <i class="fa-solid fa-heart"></i>
-
 
             <h3>
                 Sứ Mệnh
@@ -1583,19 +1452,14 @@
 
             </p>
 
-
         </div>
 
 
-        <!-- =================================================
-             TẦM NHÌN
-        ================================================== -->
+        <!-- TẦM NHÌN -->
 
         <div class="value-card">
 
-
             <i class="fa-solid fa-eye"></i>
-
 
             <h3>
                 Tầm Nhìn
@@ -1610,19 +1474,14 @@
 
             </p>
 
-
         </div>
 
 
-        <!-- =================================================
-             GIÁ TRỊ CỐT LÕI
-        ================================================== -->
+        <!-- GIÁ TRỊ -->
 
         <div class="value-card">
 
-
             <i class="fa-solid fa-gem"></i>
-
 
             <h3>
                 Giá Trị Cốt Lõi
@@ -1637,55 +1496,10 @@
 
             </p>
 
-
         </div>
 
 
     </div>
-
-
-</section>
-
-
-<!-- =====================================================
-     CTA
-====================================================== -->
-
-<section class="about-cta">
-
-
-    <div class="about-cta-box">
-
-
-        <h2>
-            Trao yêu thương bằng một bó hoa 🌸
-        </h2>
-
-
-        <p>
-
-            Hãy để Flower Shop đồng hành cùng bạn
-            trong những khoảnh khắc đặc biệt.
-            Một bó hoa nhỏ có thể mang theo
-            cả một câu chuyện lớn.
-
-        </p>
-
-
-        <a
-            href="shop.html"
-            class="about-cta-button"
-        >
-
-            Khám phá Shop Hoa
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-
-    </div>
-
 
 </section>
 
@@ -1700,12 +1514,9 @@
     <div class="footer-content">
 
 
-        <!-- =================================================
-             THÔNG TIN
-        ================================================== -->
+        <!-- THÔNG TIN -->
 
         <div class="footer-box">
-
 
             <h3>
                 Flower Shop 🌸
@@ -1715,7 +1526,6 @@
             <p>
 
                 Mang sắc hoa đến mọi khoảnh khắc.
-
                 Những bó hoa tươi đẹp được tạo nên
                 để gửi gắm yêu thương và cảm xúc.
 
@@ -1724,12 +1534,11 @@
 
             <div class="social">
 
-
                 <a
                     href="#"
                     aria-label="Facebook"
                 >
-                    <i class="fab fa-facebook-f"></i>
+                    <i class="fa-brands fa-facebook-f"></i>
                 </a>
 
 
@@ -1737,7 +1546,7 @@
                     href="#"
                     aria-label="Instagram"
                 >
-                    <i class="fab fa-instagram"></i>
+                    <i class="fa-brands fa-instagram"></i>
                 </a>
 
 
@@ -1745,7 +1554,7 @@
                     href="#"
                     aria-label="TikTok"
                 >
-                    <i class="fab fa-tiktok"></i>
+                    <i class="fa-brands fa-tiktok"></i>
                 </a>
 
 
@@ -1753,22 +1562,17 @@
                     href="#"
                     aria-label="YouTube"
                 >
-                    <i class="fab fa-youtube"></i>
+                    <i class="fa-brands fa-youtube"></i>
                 </a>
 
-
             </div>
-
 
         </div>
 
 
-        <!-- =================================================
-             LIÊN KẾT
-        ================================================== -->
+        <!-- LIÊN KẾT -->
 
         <div class="footer-box">
-
 
             <h3>
                 Liên kết
@@ -1776,7 +1580,6 @@
 
 
             <ul>
-
 
                 <li>
                     <a href="index.html">
@@ -1819,19 +1622,14 @@
                     </a>
                 </li>
 
-
             </ul>
-
 
         </div>
 
 
-        <!-- =================================================
-             LIÊN HỆ
-        ================================================== -->
+        <!-- LIÊN HỆ -->
 
         <div class="footer-box">
-
 
             <h3>
                 Liên hệ
@@ -1863,7 +1661,6 @@
                 flowershop@gmail.com
 
             </p>
-
 
         </div>
 
