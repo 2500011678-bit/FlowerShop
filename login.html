@@ -1,38 +1,1268 @@
-<section class="login">
+<!DOCTYPE html>
+<html lang="vi">
 
-    <div class="login-box">
+<head>
 
-        <h2>Đăng nhập</h2>
+    <meta charset="UTF-8">
 
-        <form>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-            <input
-                type="email"
-                placeholder="Email"
-                required
+    <meta
+        name="description"
+        content="Đăng nhập tài khoản Flower Shop"
+    >
+
+    <title>Đăng nhập | Flower Shop</title>
+
+
+    <!-- GOOGLE FONT -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- CSS CHUNG -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <style>
+
+        /* ==========================================
+           LOGIN PAGE
+        ========================================== */
+
+        .login-page {
+
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8fb 0%,
+                    #fff0f5 50%,
+                    #fff8f3 100%
+                );
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
+        }
+
+
+
+        /* ==========================================
+           HEADER
+        ========================================== */
+
+        .login-header {
+
+            width: 100%;
+            min-height: 92px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding:
+                12px 7%;
+
+            box-sizing: border-box;
+
+            background:
+                rgba(255, 248, 251, 0.97);
+
+            border-bottom:
+                1px solid
+                rgba(232, 93, 139, 0.12);
+
+            box-shadow:
+                0 3px 18px
+                rgba(100, 45, 65, 0.07);
+        }
+
+
+
+        /* ==========================================
+           LOGO
+        ========================================== */
+
+        .login-logo {
+
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            text-decoration: none;
+        }
+
+
+        .login-logo img {
+
+            width: 56px;
+            height: 56px;
+
+            object-fit: contain;
+        }
+
+
+        .login-logo span {
+
+            font-size: 30px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff6f9f,
+                    #ff7fa8,
+                    #ffb36b
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            background-clip: text;
+        }
+
+
+
+        /* ==========================================
+           MENU
+        ========================================== */
+
+        .login-nav {
+
+            display: flex;
+            align-items: center;
+
+            gap: 28px;
+        }
+
+
+        .login-nav a {
+
+            color: #4a3b40;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            transition:
+                color 0.25s ease;
+        }
+
+
+        .login-nav a:hover {
+
+            color: #e85d8b;
+        }
+
+
+
+        /* ==========================================
+           MAIN
+        ========================================== */
+
+        .login-main {
+
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding:
+                55px 20px 75px;
+        }
+
+
+
+        /* ==========================================
+           LOGIN BOX
+        ========================================== */
+
+        .login-container {
+
+            width: 100%;
+
+            max-width: 440px;
+        }
+
+
+        .login-box {
+
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding: 40px;
+
+            background:
+                rgba(255, 255, 255, 0.97);
+
+            border:
+                1px solid
+                rgba(232, 93, 139, 0.13);
+
+            border-radius: 24px;
+
+            box-shadow:
+                0 20px 55px
+                rgba(130, 65, 85, 0.12);
+
+            animation:
+                loginFade 0.6s ease;
+        }
+
+
+
+        /* ==========================================
+           ICON
+        ========================================== */
+
+        .login-icon {
+
+            width: 72px;
+            height: 72px;
+
+            margin:
+                0 auto 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffe0eb,
+                    #fff0f5
+                );
+
+            color: #e85d8b;
+
+            font-size: 27px;
+        }
+
+
+
+        /* ==========================================
+           TITLE
+        ========================================== */
+
+        .login-box h1 {
+
+            margin: 0;
+
+            text-align: center;
+
+            color: #4a3b40;
+
+            font-size: 30px;
+
+            font-weight: 800;
+        }
+
+
+        .login-subtitle {
+
+            margin:
+                8px 0 28px;
+
+            text-align: center;
+
+            color: #8a777e;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+
+
+        /* ==========================================
+           FORM
+        ========================================== */
+
+        .login-form .form-group {
+
+            margin-bottom: 18px;
+        }
+
+
+        .login-form label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #4a3b40;
+
+            font-size: 14px;
+
+            font-weight: 600;
+        }
+
+
+
+        /* ==========================================
+           INPUT
+        ========================================== */
+
+        .login-input-box {
+
+            position: relative;
+        }
+
+
+        .login-input-box > i {
+
+            position: absolute;
+
+            left: 16px;
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            color: #d4869d;
+
+            font-size: 15px;
+
+            pointer-events: none;
+        }
+
+
+        .login-input-box input {
+
+            width: 100%;
+            height: 50px;
+
+            box-sizing: border-box;
+
+            padding:
+                0 46px;
+
+            border:
+                1px solid
+                #eadce1;
+
+            border-radius: 14px;
+
+            outline: none;
+
+            background: #fff;
+
+            color: #4a3b40;
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
+
+            font-size: 14px;
+
+            transition:
+                border-color .25s ease,
+                box-shadow .25s ease,
+                background .25s ease;
+        }
+
+
+        .login-input-box input::placeholder {
+
+            color: #b5a5ab;
+        }
+
+
+        .login-input-box input:focus {
+
+            border-color: #ff8eae;
+
+            background: #fffafd;
+
+            box-shadow:
+                0 0 0 4px
+                rgba(255, 111, 159, 0.10);
+        }
+
+
+
+        /* ==========================================
+           HIỆN MẬT KHẨU
+        ========================================== */
+
+        .login-password-toggle {
+
+            position: absolute;
+
+            right: 15px;
+            top: 50%;
+
+            transform:
+                translateY(-50%);
+
+            border: 0;
+
+            background: transparent;
+
+            color: #a9969d;
+
+            cursor: pointer;
+
+            padding: 4px;
+        }
+
+
+        .login-password-toggle:hover {
+
+            color: #e85d8b;
+        }
+
+
+
+        /* ==========================================
+           QUÊN MẬT KHẨU
+        ========================================== */
+
+        .login-options {
+
+            display: flex;
+
+            justify-content: flex-end;
+
+            margin:
+                -4px 0 20px;
+        }
+
+
+        .login-options a {
+
+            color: #e85d8b;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+        }
+
+
+        .login-options a:hover {
+
+            text-decoration: underline;
+        }
+
+
+
+        /* ==========================================
+           NÚT ĐĂNG NHẬP
+        ========================================== */
+
+        .login-button {
+
+            width: 100%;
+            height: 52px;
+
+            border: 0;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff6f9f,
+                    #e85d8b
+                );
+
+            color: #fff;
+
+            font-family:
+                "Be Vietnam Pro",
+                sans-serif;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 22px
+                rgba(232, 93, 139, 0.22);
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+
+        .login-button:hover {
+
+            transform:
+                translateY(-2px);
+
+            box-shadow:
+                0 14px 28px
+                rgba(232, 93, 139, 0.28);
+        }
+
+
+        .login-button:active {
+
+            transform:
+                translateY(0);
+        }
+
+
+
+        /* ==========================================
+           DIVIDER
+        ========================================== */
+
+        .login-divider {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin:
+                27px 0 21px;
+
+            color: #b4a4aa;
+
+            font-size: 12px;
+        }
+
+
+        .login-divider::before,
+        .login-divider::after {
+
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: #eee2e7;
+        }
+
+
+
+        /* ==========================================
+           ĐĂNG KÝ
+        ========================================== */
+
+        .register-text {
+
+            margin: 0;
+
+            text-align: center;
+
+            color: #76666c;
+
+            font-size: 14px;
+        }
+
+
+        .register-text a {
+
+            color: #e85d8b;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+
+        .register-text a:hover {
+
+            text-decoration: underline;
+        }
+
+
+
+        /* ==========================================
+           FOOTER
+        ========================================== */
+
+        .login-footer {
+
+            padding: 20px;
+
+            text-align: center;
+
+            color: #9a878f;
+
+            font-size: 12px;
+
+            background:
+                rgba(255, 255, 255, .55);
+
+            border-top:
+                1px solid
+                rgba(232, 93, 139, .08);
+        }
+
+
+
+        /* ==========================================
+           ANIMATION
+        ========================================== */
+
+        @keyframes loginFade {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(20px);
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+
+        /* ==========================================
+           TABLET
+        ========================================== */
+
+        @media (max-width: 768px) {
+
+            .login-header {
+
+                padding:
+                    12px 5%;
+            }
+
+
+            .login-logo img {
+
+                width: 52px;
+                height: 52px;
+            }
+
+
+            .login-logo span {
+
+                font-size: 27px;
+            }
+
+        }
+
+
+
+        /* ==========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 600px) {
+
+            .login-header {
+
+                min-height: auto;
+
+                flex-direction: column;
+
+                gap: 12px;
+
+                padding:
+                    14px 20px;
+            }
+
+
+            .login-nav {
+
+                gap: 18px;
+            }
+
+
+            .login-nav a {
+
+                font-size: 13px;
+            }
+
+
+            .login-main {
+
+                padding:
+                    35px 16px 55px;
+            }
+
+
+            .login-box {
+
+                padding:
+                    30px 22px;
+
+                border-radius: 20px;
+            }
+
+
+            .login-box h1 {
+
+                font-size: 26px;
+            }
+
+        }
+
+
+
+        /* ==========================================
+           MOBILE NHỎ
+        ========================================== */
+
+        @media (max-width: 400px) {
+
+            .login-logo span {
+
+                font-size: 23px;
+            }
+
+
+            .login-box {
+
+                padding:
+                    28px 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="login-page">
+
+
+    <!-- ==========================================
+         HEADER
+    ========================================== -->
+
+    <header class="login-header">
+
+
+        <a
+            href="index.html"
+            class="login-logo"
+        >
+
+            <img
+                src="images/logo.png"
+                alt="Flower Shop"
             >
 
-            <input
-                type="password"
-                placeholder="Mật khẩu"
-                required
-            >
+            <span>
+                Flower Shop
+            </span>
 
-            <button type="submit" class="btn">
-                Đăng nhập
-            </button>
+        </a>
 
-        </form>
 
-        <p>
-            Chưa có tài khoản?
+        <nav class="login-nav">
 
-            <a href="register.html">
-                Đăng ký ngay
+            <a href="index.html">
+                Trang chủ
             </a>
 
-        </p>
+            <a href="shop.html">
+                Shop Hoa
+            </a>
 
-    </div>
+            <a href="dangky.html">
+                Đăng ký
+            </a>
 
-</section>
+        </nav>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN
+    ========================================== -->
+
+    <main class="login-main">
+
+
+        <div class="login-container">
+
+
+            <section class="login-box">
+
+
+                <!-- ICON -->
+
+                <div class="login-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <!-- TITLE -->
+
+                <h1>
+                    Đăng nhập
+                </h1>
+
+
+                <p class="login-subtitle">
+
+                    Chào mừng bạn quay trở lại
+                    <strong>Flower Shop</strong> 🌸
+
+                </p>
+
+
+
+                <!-- FORM -->
+
+                <form
+                    class="login-form"
+                    id="loginForm"
+                >
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email
+                        </label>
+
+
+                        <div class="login-input-box">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Nhập email của bạn"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MẬT KHẨU -->
+
+                    <div class="form-group">
+
+                        <label for="loginPassword">
+                            Mật khẩu
+                        </label>
+
+
+                        <div class="login-input-box">
+
+                            <i class="fa-solid fa-lock"></i>
+
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Nhập mật khẩu"
+                                autocomplete="current-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="login-password-toggle"
+                                id="passwordToggle"
+                                aria-label="Hiện hoặc ẩn mật khẩu"
+                            >
+
+                                <i
+                                    class="fa-solid fa-eye"
+                                ></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUÊN MẬT KHẨU -->
+
+                    <div class="login-options">
+
+                        <a
+                            href="#"
+                            id="forgotPassword"
+                        >
+                            Quên mật khẩu?
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+
+                        <i
+                            class="fa-solid fa-right-to-bracket"
+                        ></i>
+
+                        Đăng nhập
+
+                    </button>
+
+                </form>
+
+
+
+                <!-- DIVIDER -->
+
+                <div class="login-divider">
+                    hoặc
+                </div>
+
+
+
+                <!-- ĐĂNG KÝ -->
+
+                <p class="register-text">
+
+                    Chưa có tài khoản?
+
+                    <a href="dangky.html">
+                        Đăng ký ngay
+                    </a>
+
+                </p>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="login-footer">
+
+        © 2026 Flower Shop.
+        Mang sắc hoa đến mọi khoảnh khắc 🌷
+
+    </footer>
+
+
+</div>
+
+
+
+<script>
+
+
+    /* ==========================================
+       HIỆN / ẨN MẬT KHẨU
+    ========================================== */
+
+    document
+        .getElementById("passwordToggle")
+        .addEventListener(
+            "click",
+            function() {
+
+
+                const password =
+                    document.getElementById(
+                        "loginPassword"
+                    );
+
+
+                const icon =
+                    this.querySelector("i");
+
+
+                if (
+                    password.type === "password"
+                ) {
+
+                    password.type =
+                        "text";
+
+
+                    icon.classList.remove(
+                        "fa-eye"
+                    );
+
+
+                    icon.classList.add(
+                        "fa-eye-slash"
+                    );
+
+                } else {
+
+                    password.type =
+                        "password";
+
+
+                    icon.classList.remove(
+                        "fa-eye-slash"
+                    );
+
+
+                    icon.classList.add(
+                        "fa-eye"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+    /* ==========================================
+       ĐĂNG NHẬP
+       
+       Kiểm tra tài khoản được tạo
+       từ dangky.html
+    ========================================== */
+
+    document
+        .getElementById("loginForm")
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    document
+                        .getElementById(
+                            "loginEmail"
+                        )
+                        .value
+                        .trim()
+                        .toLowerCase();
+
+
+                const password =
+                    document
+                        .getElementById(
+                            "loginPassword"
+                        )
+                        .value;
+
+
+
+                /* ==================================
+                   LẤY TÀI KHOẢN ĐÃ ĐĂNG KÝ
+                ================================== */
+
+                const savedUser =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "flowerShopUser"
+                        )
+                    );
+
+
+
+                /* ==================================
+                   CHƯA CÓ TÀI KHOẢN
+                ================================== */
+
+                if (!savedUser) {
+
+                    alert(
+                        "Bạn chưa có tài khoản. Vui lòng đăng ký trước nhé! 🌸"
+                    );
+
+
+                    window.location.href =
+                        "dangky.html";
+
+
+                    return;
+
+                }
+
+
+
+                /* ==================================
+                   KIỂM TRA EMAIL
+                ================================== */
+
+                if (
+                    email !==
+                    savedUser.email
+                ) {
+
+                    alert(
+                        "Email không đúng. Vui lòng kiểm tra lại."
+                    );
+
+
+                    return;
+
+                }
+
+
+
+                /* ==================================
+                   KIỂM TRA MẬT KHẨU
+                ================================== */
+
+                if (
+                    password !==
+                    savedUser.password
+                ) {
+
+                    alert(
+                        "Mật khẩu không đúng. Vui lòng thử lại."
+                    );
+
+
+                    return;
+
+                }
+
+
+
+                /* ==================================
+                   ĐĂNG NHẬP THÀNH CÔNG
+                ================================== */
+
+                localStorage.setItem(
+                    "flowerShopLoggedIn",
+                    "true"
+                );
+
+
+                localStorage.setItem(
+                    "flowerShopUserName",
+                    savedUser.fullname
+                );
+
+
+                alert(
+                    "Đăng nhập thành công! 🌸\n\nChào mừng " +
+                    savedUser.fullname +
+                    " đến với Flower Shop."
+                );
+
+
+                /* Chuyển về trang chủ */
+
+                window.location.href =
+                    "index.html";
+
+            }
+        );
+
+
+
+    /* ==========================================
+       QUÊN MẬT KHẨU
+    ========================================== */
+
+    document
+        .getElementById("forgotPassword")
+        .addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const savedUser =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "flowerShopUser"
+                        )
+                    );
+
+
+                if (!savedUser) {
+
+                    alert(
+                        "Bạn chưa có tài khoản. Vui lòng đăng ký trước."
+                    );
+
+
+                    return;
+
+                }
+
+
+                alert(
+                    "Chức năng khôi phục mật khẩu sẽ được bổ sung sau. 🌷"
+                );
+
+            }
+        );
+
+</script>
+
+
+</body>
+
+</html>
